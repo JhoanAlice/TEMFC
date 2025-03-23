@@ -1,7 +1,10 @@
-//
-//  Untitled.swift
-//  TEMFC
-//
-//  Created by Jhoan Franco on 3/22/25.
-//
+import Foundation
 
+struct UserAnswer: Identifiable, Codable {
+    var id = UUID()
+    var questionId: Int
+    var selectedOption: Int
+    var isCorrect: Bool
+    var examId: String
+    var timestamp: Date
+}

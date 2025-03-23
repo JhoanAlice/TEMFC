@@ -1,0 +1,78 @@
+{
+  "id": "TEMFC35",
+  "name": "Prova TEMFC 35",
+  "type": "Teórica",
+  "totalQuestions": 80,
+  "questions": [
+    {
+      "id": 180,
+      "number": 1,
+      "statement": "Uma gestante de 26 anos, primigesta, na 32ª semana de gestação, apresenta queixa de corrimento vaginal esbranquiçado, grumoso, com prurido vaginal intenso. Ao exame, observa-se corrimento em grumos, aderido às paredes vaginais, sem odor fétido. Qual o diagnóstico mais provável e a conduta adequada?",
+      "options": [
+        "A - Candidíase vaginal; prescrever miconazol creme vaginal por 7 dias.",
+        "B - Tricomoníase; prescrever metronidazol 2g via oral em dose única para a paciente e seu parceiro.",
+        "C - Vaginose bacteriana; prescrever metronidazol 250mg via oral 3 vezes ao dia por 7 dias.",
+        "D - Clamídia; solicitar PCR e aguardar resultado para iniciar tratamento específico."
+      ],
+      "correctOption": 0,
+      "explanation": "O quadro descrito (corrimento esbranquiçado, grumoso, aderido às paredes vaginais, associado a prurido intenso e sem odor fétido) é característico de candidíase vaginal. Durante a gestação, o tratamento de escolha é com antifúngicos tópicos, como o miconazol creme vaginal, por 7 dias. Os antifúngicos orais, como o fluconazol, devem ser evitados na gestação.",
+      "tags": ["Saúde da Mulher", "Pré-natal", "Doenças Infecciosas", "Condutas terapêuticas"]
+    },
+    {
+      "id": 181,
+      "number": 2,
+      "statement": "Um médico da Estratégia Saúde da Família está atendendo um paciente de 72 anos com múltiplas comorbidades, polifarmácia e consultas frequentes. Para qualificar o cuidado, o médico decide utilizar o método clínico centrado na pessoa. Qual das seguintes abordagens melhor representa este método?",
+      "options": [
+        "A - Simplificar a prescrição medicamentosa e encaminhar para especialistas para cada problema de saúde identificado.",
+        "B - Explorar a doença e a experiência da doença, entender a pessoa como um todo, elaborar um plano conjunto e fortalecer a relação médico-pessoa.",
+        "C - Concentrar-se exclusivamente no controle das doenças crônicas, priorizando exames laboratoriais e ajustes medicamentosos.",
+        "D - Transferir a responsabilidade do cuidado para os familiares, orientando-os sobre os sinais de alerta para buscar serviços de emergência."
+      ],
+      "correctOption": 1,
+      "explanation": "O método clínico centrado na pessoa possui componentes essenciais que incluem: explorar a doença e a experiência da doença; entender a pessoa como um todo (contexto pessoal, familiar e social); elaborar um plano conjunto de manejo dos problemas; incorporar prevenção e promoção da saúde; fortalecer a relação médico-pessoa; e ser realista quanto aos recursos e tempo disponíveis. Esta abordagem promove um cuidado mais humanizado, integral e efetivo, especialmente para pessoas idosas com múltiplas condições crônicas.",
+      "tags": ["Medicina centrada na pessoa", "Abordagem holística", "Continuidade do cuidado", "Saúde do Idoso", "Gestão de condições crônicas"]
+    },
+    {
+      "id": 182,
+      "number": 3,
+      "statement": "Um homem de 55 anos chega à UBS com resultado de PSA de 5,4 ng/mL. Está assintomático e o exame foi solicitado pelo urologista durante check-up de rotina. O paciente está bastante preocupado com o resultado e insiste em reencaminhamento urgente. Qual a melhor conduta para o médico de família neste momento?",
+      "options": [
+        "A - Tranquilizar o paciente informando que o PSA elevado é esperado para sua idade e não requer investigação adicional.",
+        "B - Solicitar uma nova dosagem de PSA em 2 semanas para confirmar o resultado, antes de qualquer encaminhamento.",
+        "C - Realizar anamnese e exame físico detalhados, incluindo toque retal, e tomar decisão sobre encaminhamento com base na avaliação completa.",
+        "D - Encaminhar imediatamente ao urologista, pois valores de PSA acima de 4 ng/mL são altamente sugestivos de câncer de próstata."
+      ],
+      "correctOption": 2,
+      "explanation": "Frente a um PSA elevado, o médico de família deve inicialmente realizar uma avaliação clínica completa, incluindo anamnese detalhada (identificando possíveis fatores que podem alterar o PSA como prostatite, trauma, atividade sexual recente), exame físico com toque retal (que pode fornecer informações importantes sobre o tamanho, consistência e presença de nódulos na próstata). A decisão sobre encaminhamento deve ser baseada na avaliação global do paciente, e não apenas no valor isolado do PSA.",
+      "tags": ["Saúde do Homem", "Rastreamento", "Diagnóstico diferencial", "Exames complementares", "Tomada de decisão baseada em evidências"]
+    },
+    {
+      "id": 183,
+      "number": 4,
+      "statement": "Uma adolescente de 16 anos procura atendimento na UBS, sem a presença dos pais, solicitando orientações sobre métodos contraceptivos. Ela relata que iniciou atividade sexual há 2 meses com o namorado e está preocupada com a possibilidade de gravidez. Quanto à autonomia do adolescente nesta situação, qual a conduta apropriada?",
+      "options": [
+        "A - Solicitar obrigatoriamente a presença de um responsável para a consulta, por se tratar de menor de idade.",
+        "B - Realizar o atendimento, oferecer orientações sobre métodos contraceptivos e saúde sexual, preservando o sigilo conforme o desejo da adolescente.",
+        "C - Atender apenas para orientações gerais, mas exigir autorização dos pais para prescrever qualquer método contraceptivo.",
+        "D - Negar o atendimento individual e orientar que retorne apenas com um dos pais, por questões legais."
+      ],
+      "correctOption": 1,
+      "explanation": "Segundo as recomendações do Estatuto da Criança e do Adolescente e os princípios éticos, adolescentes têm direito à privacidade e confidencialidade no atendimento à saúde, especialmente em questões relacionadas à saúde sexual e reprodutiva. O médico deve realizar o atendimento, oferecer orientações e prescrever métodos contraceptivos quando necessário, respeitando a autonomia da adolescente. A quebra do sigilo só é justificável em situações de risco à vida ou quando a adolescente não tem condições de avaliar seu problema e tomar decisões.",
+      "tags": ["Saúde do Adolescente", "Confidencialidade", "Autonomia do paciente", "Princípios éticos na prática médica", "Saúde sexual"]
+    },
+    {
+      "id": 184,
+      "number": 5,
+      "statement": "Durante uma reunião de equipe, os Agentes Comunitários de Saúde (ACS) relatam dificuldades em abordar famílias com problemas de uso abusivo de álcool. A equipe decide realizar uma ação de capacitação sobre o tema. Qual das seguintes abordagens representa melhor o papel da equipe de Saúde da Família frente ao manejo dos problemas relacionados ao uso de álcool na comunidade?",
+      "options": [
+        "A - Identificar e encaminhar todos os casos de uso de álcool para centros especializados em dependência química, pois a atenção primária não tem recursos para manejar esses problemas.",
+        "B - Realizar triagem universal com instrumentos validados, oferecer intervenções breves para casos de uso de risco, desenvolver ações preventivas na comunidade e atuar junto às famílias afetadas.",
+        "C - Focar exclusivamente em atividades educativas sobre os malefícios do álcool, evitando o rastreamento ativo para não estigmatizar os usuários.",
+        "D - Implementar uma política proibicionista na área de abrangência, com denúncias dos pontos de venda e campanhas de abstinência total."
+      ],
+      "correctOption": 1,
+      "explanation": "A atenção primária tem papel fundamental no manejo dos problemas relacionados ao uso de álcool, desde a prevenção até o tratamento de casos menos graves e acompanhamento dos casos mais severos. A abordagem ideal inclui a triagem universal com instrumentos validados (como o AUDIT), intervenções breves para casos de uso de risco, desenvolvimento de ações preventivas na comunidade, acompanhamento das famílias afetadas, e coordenação do cuidado com serviços especializados quando necessário, seguindo os princípios da redução de danos e do cuidado compartilhado.",
+      "tags": ["Saúde Mental", "Abuso de substâncias", "Estratégia de Saúde da Família (ESF)", "Promoção e prevenção em saúde", "Abordagem familiar e comunitária"]
+    }
+  ]
+}

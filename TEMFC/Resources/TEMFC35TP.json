@@ -1,0 +1,83 @@
+{
+  "id": "TEMFC35TP",
+  "name": "Prova TEMFC 35 - Teórico-Prática",
+  "type": "Teórico-Prática",
+  "totalQuestions": 10,
+  "questions": [
+    {
+      "id": 190,
+      "number": 1,
+      "statement": "Paciente de 58 anos, tabagista, com dor torácica em repouso há 30 minutos. Assista ao vídeo da consulta e selecione a conduta mais apropriada para o caso.",
+      "videoUrl": "https://exemplo.com/videos/123.mp4",
+      "options": [
+        "A - Administrar ácido acetilsalicílico e encaminhar para hospital.",
+        "B - Realizar um eletrocardiograma de repouso e observar o paciente por 24 horas.",
+        "C - Administrar dipirona e liberar o paciente.",
+        "D - Solicitar exame de sangue e orientar alta após 12 horas."
+      ],
+      "correctOption": 0,
+      "explanation": "Paciente com dor torácica em repouso e fatores de risco para síndrome coronariana aguda deve receber ácido acetilsalicílico e ser encaminhado para hospital com suporte de terapia intensiva. O quadro sugere uma possível síndrome coronariana aguda, e o rápido encaminhamento pode ser determinante para o prognóstico do paciente.",
+      "tags": ["Urgências em APS", "Dor torácica e IAM", "Doenças Cardiovasculares", "Manejo de urgências em APS", "Tomada de decisão baseada em evidências"]
+    },
+    {
+      "id": 191,
+      "number": 2,
+      "statement": "Maria, 45 anos, apresenta sintomas sugestivos de infecção urinária. No vídeo, a médica realiza o exame físico. Qual é o diagnóstico mais provável e a conduta adequada?",
+      "videoUrl": "https://exemplo.com/videos/124.mp4",
+      "options": [
+        "A - Cistite não complicada; prescrever antibioticoterapia por 3 dias.",
+        "B - Pielonefrite aguda; encaminhar para internação hospitalar.",
+        "C - Vulvovaginite; prescrever antifúngico tópico.",
+        "D - Infecção urinária complicada; coletar urocultura e iniciar antibiótico empírico."
+      ],
+      "correctOption": 0,
+      "explanation": "Baseando-se no vídeo, os sinais e sintomas apresentados são compatíveis com cistite não complicada (disúria, polaciúria, ausência de febre ou dor lombar). Seguindo as diretrizes atuais, o tratamento recomendado é antibioticoterapia por 3 dias para mulheres não gestantes.",
+      "tags": ["Saúde da Mulher", "Doenças Renais e Urológicas", "Condutas terapêuticas", "Medicina baseada em evidências (MBE)", "Uso racional de medicamentos em APS"]
+    },
+    {
+      "id": 192,
+      "number": 3,
+      "statement": "Observe no vídeo a consulta de um paciente de 67 anos com diagnóstico recente de hipertensão arterial e diabetes mellitus tipo 2. Considerando a abordagem do médico no vídeo, qual princípio da medicina de família e comunidade não foi adequadamente aplicado?",
+      "videoUrl": "https://exemplo.com/videos/125.mp4",
+      "options": [
+        "A - Integralidade do cuidado, pois o médico focou apenas nos aspectos biológicos sem considerar fatores psicossociais.",
+        "B - Medicina centrada na pessoa, pois não foi estabelecido um plano terapêutico compartilhado.",
+        "C - Abordagem familiar, pois não foram investigados fatores familiares que poderiam influenciar o tratamento.",
+        "D - Coordenação do cuidado, pois não houve referência a especialistas para avaliação das comorbidades."
+      ],
+      "correctOption": 1,
+      "explanation": "O vídeo demonstra uma consulta onde o médico dirige o atendimento de forma predominantemente verticalizada, estabelecendo condutas e prescrições sem dialogar com o paciente sobre suas preferências, expectativas, preocupações e possibilidades reais de seguir o tratamento. A medicina centrada na pessoa requer compartilhamento de decisões, valorização da experiência do paciente com sua doença e elaboração conjunta de um plano de cuidados que faça sentido para a realidade do paciente.",
+      "tags": ["Medicina centrada na pessoa", "Gestão de condições crônicas", "Doenças Crônicas não Transmissíveis", "Autonomia do paciente", "Saúde do Idoso"]
+    },
+    {
+      "id": 193,
+      "number": 4,
+      "statement": "No vídeo, é apresentada uma visita domiciliar a um paciente acamado de 78 anos com sequelas de AVC. A equipe realiza diversos procedimentos. Qual aspecto do cuidado domiciliar foi realizado de forma inadequada, conforme observado no vídeo?",
+      "videoUrl": "https://exemplo.com/videos/126.mp4",
+      "options": [
+        "A - A técnica de curativo da úlcera por pressão, que não respeitou princípios de assepsia.",
+        "B - A capacitação dos cuidadores, que não foram incluídos ativamente no planejamento dos cuidados.",
+        "C - A avaliação do ambiente domiciliar, que não considerou riscos potenciais e adaptações necessárias.",
+        "D - O registro das informações, que foi fragmentado e não integrado ao prontuário único do paciente."
+      ],
+      "correctOption": 1,
+      "explanation": "No vídeo, observa-se que a equipe realiza os procedimentos e fornece orientações aos cuidadores de forma unilateral, sem incluí-los no planejamento e na tomada de decisões. O cuidado domiciliar efetivo requer a participação ativa dos cuidadores, que devem ser capacitados e empoderados para realizar os cuidados diários. É essencial considerar suas dúvidas, dificuldades e também seus conhecimentos prévios, co-construindo um plano de cuidados viável e adequado à realidade familiar.",
+      "tags": ["Atenção domiciliar", "Cuidados paliativos", "Abordagem familiar e comunitária", "Saúde do Idoso", "Continuidade do cuidado"]
+    },
+    {
+      "id": 194,
+      "number": 5,
+      "statement": "No vídeo, uma adolescente de 15 anos procura a unidade de saúde com queixas de irregularidade menstrual e dor abdominal. Durante a consulta, a médica identifica sinais de possível violência doméstica. Qual seria a conduta mais adequada neste caso?",
+      "videoUrl": "https://exemplo.com/videos/127.mp4",
+      "options": [
+        "A - Abordar diretamente o assunto da violência na presença do acompanhante, solicitando sua versão dos fatos.",
+        "B - Registrar os achados no prontuário, mas não questionar a adolescente para evitar constrangimentos.",
+        "C - Solicitar um momento a sós com a adolescente, acolher seu relato e, confirmada a violência, acionar a rede de proteção, mantendo sigilo conforme a situação.",
+        "D - Encaminhar imediatamente para o serviço social sem abordar o tema, pois não é competência do médico de família lidar com casos de violência."
+      ],
+      "correctOption": 2,
+      "explanation": "A conduta adequada diante da suspeita de violência doméstica envolvendo adolescentes inclui garantir um momento de privacidade para acolher o relato da vítima. É importante estabelecer um ambiente seguro e de confiança, explicar os limites do sigilo (que pode ser quebrado em casos que envolvam risco à vida), avaliar a gravidade e o risco iminente, e acionar os órgãos de proteção quando necessário (Conselho Tutelar, CREAS, etc.). O médico de família tem papel fundamental na identificação e manejo inicial desses casos, articulando-se com a rede de proteção social.",
+      "tags": ["Saúde do Adolescente", "Violência e vulnerabilidade", "Abordagem familiar e comunitária", "Confidencialidade", "Redes de apoio social"]
+    }
+  ]
+}

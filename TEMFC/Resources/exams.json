@@ -1,0 +1,162 @@
+[
+    {
+        "id": "TEMFC36",
+        "name": "Prova TEMFC 36",
+        "type": "Teórica",
+        "totalQuestions": 80,
+        "questions": [
+            {
+                "id": 120,
+                "number": 2,
+                "statement": "Fernanda, 35 anos, é usuária do SUS em um município situado na zona litorânea no Nordeste brasileiro. Recentemente ela buscou a Secretaria de Saúde para formular uma denúncia sobre a dificuldade de acesso a consultas e exames especializados em um dado serviço por parte da população assistida no sistema de saúde local.\n\nConsiderando-se os diferentes mecanismos do Ministério da Saúde do Brasil para efetivar a participação da sociedade na construção das políticas públicas no SUS, pode-se afirmar que:",
+                "options": [
+                    "A - A Ouvidoria do SUS é o melhor mecanismo a ser acessado, pois é um canal de mediação entre os cidadãos e o SUS.",
+                    "B - A Mesa de Negociação deve ser acessada, pois é responsável por recepcionar todas as denúncias de usuários no SUS.",
+                    "C - O canal Disque-saúde é um meio disponível, eficaz e exclusivo para a realização de denúncias no SUS.",
+                    "D - Uma petição ao Ministério Público para que seja apurada \"in loco\" a situação é a melhor forma de resolver a questão."
+                ],
+                "correctOption": 0,
+                "explanation": "A Ouvidoria do SUS é o canal oficial do Ministério da Saúde para o recebimento de denúncias, sugestões e reclamações dos usuários. Ela é um mecanismo de escuta que permite a mediação entre os cidadãos e o sistema de saúde, tornando-a o canal mais apropriado para esse tipo de situação.",
+                "tags": ["Atenção Primária à Saúde", "Gestão de Serviços", "Participação Social", "Sistema Único de Saúde (SUS)"]
+            },
+            {
+                "id": 121,
+                "number": 3,
+                "statement": "A Estimativa rápida como ferramenta para a elaboração do diagnóstico comunitário é reconhecidamente relevante para o processo de planejamento das ações de saúde nos territórios da atenção primária e requer dos profissionais de saúde competências profissionais que, se não observadas, podem ser limitações importantes para o seu uso, devendo ser ponderadas pela equipe para verificar uma adequação da técnica às necessidades de planejamento.\n\nDiante do exposto, qual das alternativas define competências profissionais imprescindíveis ao uso da técnica da Estimativa Rápida para um diagnóstico comunitário?",
+                "options": [
+                    "A - Capacidade analítica (para fundamentar suas argumentações) e discernimento (para distinguir situações críticas).",
+                    "B - Conhecimento (para detalhar os problemas da população local) e escuta (para percepção de entrevistas e conversas informais).",
+                    "C - Atenção (para busca de pistas sobre problemas potenciais) e bom senso (para reexaminar a interpretação dos dados caso se mostrem muito diferentes do seu conhecimento profissional ou experiência técnica).",
+                    "D - Disposição (para negociar prioridades junto à população) e articulação política (para encontrar-se com as necessidades da população local)."
+                ],
+                "correctOption": 1,
+                "explanation": "O uso da técnica de Estimativa Rápida requer conhecimento profundo das condições locais e capacidade de escuta para captar informações relevantes de entrevistas e conversas informais, o que possibilita um diagnóstico mais preciso das necessidades da comunidade.",
+                "tags": ["Diagnóstico Comunitário", "Planejamento em Saúde", "Atenção Primária à Saúde", "Abordagem Familiar e Comunitária"]
+            }
+        ]
+    },
+    {
+        "id": "TEMFC35TP",
+        "name": "Prova TEMFC 35 - Teórico-Prática",
+        "type": "Teórico-Prática",
+        "totalQuestions": 10,
+        "questions": [
+            {
+                "id": 123,
+                "number": 1,
+                "statement": "Paciente de 58 anos, tabagista, com dor torácica em repouso há 30 minutos. Assista ao vídeo e selecione a conduta mais apropriada para o caso.",
+                "videoUrl": "https://exemplo.com/videos/123.mp4",
+                "options": [
+                    "A - Administrar ácido acetilsalicílico e encaminhar para hospital.",
+                    "B - Realizar um eletrocardiograma de repouso e observar o paciente por 24 horas.",
+                    "C - Administrar dipirona e liberar o paciente.",
+                    "D - Solicitar exame de sangue e orientar alta após 12 horas."
+                ],
+                "correctOption": 0,
+                "explanation": "Paciente com dor torácica em repouso e fatores de risco para síndrome coronariana aguda deve receber ácido acetilsalicílico e ser encaminhado para hospital com suporte de terapia intensiva.",
+                "tags": ["Urgências em APS", "Dor Torácica", "Emergência Cardiovascular", "Protocolo Clínico"]
+            },
+            {
+                "id": 124,
+                "number": 2,
+                "statement": "Maria, 45 anos, apresenta sintomas sugestivos de infecção urinária. No vídeo, a médica realiza o exame físico. Qual é o diagnóstico mais provável e a conduta adequada?",
+                "videoUrl": "https://exemplo.com/videos/124.mp4",
+                "options": [
+                    "A - Cistite não complicada; prescrever antibioticoterapia por 3 dias.",
+                    "B - Pielonefrite aguda; encaminhar para internação hospitalar.",
+                    "C - Vulvovaginite; prescrever antifúngico tópico.",
+                    "D - Infecção urinária complicada; coletar urocultura e iniciar antibiótico empírico."
+                ],
+                "correctOption": 0,
+                "explanation": "Baseando-se no vídeo, os sinais e sintomas apresentados são compatíveis com cistite não complicada (disúria, polaciúria, ausência de febre ou dor lombar). Seguindo as diretrizes atuais, o tratamento recomendado é antibioticoterapia por 3 dias para mulheres não gestantes.",
+                "tags": ["Saúde da Mulher", "Infecção Urinária", "Antibioticoterapia", "Medicina Baseada em Evidências"]
+            }
+        ]
+    }
+    {
+        "id": "TEMFC34",
+        "name": "Prova TEMFC 34",
+        "type": "Teórica",
+        "totalQuestions": 80,
+        "questions": [
+          {
+            "id": 150,
+            "number": 1,
+            "statement": "João, 45 anos, procura a unidade básica de saúde com queixas de dores articulares, febre baixa, fadiga e manchas avermelhadas pelo corpo. Durante a consulta, o médico descobre que o paciente trabalha em uma indústria química há 10 anos, manipulando diversos solventes. Considerando a saúde do trabalhador no contexto da atenção primária, qual a abordagem mais adequada?",
+            "options": [
+              "A - Tratar as manifestações clínicas sem investigar a relação com o trabalho, pois esta avaliação deve ser feita por um médico do trabalho.",
+              "B - Solicitar hemograma completo e provas inflamatórias para investigar possível doença autoimune, descartando relação ocupacional.",
+              "C - Notificar o caso como acidente de trabalho e encaminhar imediatamente para um centro de referência em saúde do trabalhador sem realizar o atendimento inicial.",
+              "D - Investigar a possível relação entre os sintomas e a exposição ocupacional, notificar o caso suspeito e orientar sobre direitos trabalhistas."
+            ],
+            "correctOption": 3,
+            "explanation": "Na atenção primária à saúde, é fundamental reconhecer e investigar a relação entre as condições de trabalho e o processo saúde-doença. O médico de família deve considerar os riscos ocupacionais na avaliação diagnóstica, notificar casos suspeitos de doenças relacionadas ao trabalho e orientar o paciente sobre seus direitos, mesmo que posteriormente seja necessário o encaminhamento para serviços especializados.",
+            "tags": ["Saúde do Trabalhador", "Riscos Ocupacionais", "Notificação Compulsória", "Atenção Primária à Saúde"]
+          },
+          {
+            "id": 151,
+            "number": 2,
+            "statement": "Uma equipe de Saúde da Família enfrenta um surto de dengue em seu território. O agente comunitário de saúde identificou vários casos suspeitos durante suas visitas domiciliares. Qual estratégia de enfrentamento demonstra melhor aplicação dos princípios da vigilância em saúde no contexto da atenção primária?",
+            "options": [
+              "A - Encaminhar todos os casos suspeitos para o hospital de referência, já que a unidade básica não possui recursos para atender epidemias.",
+              "B - Realizar busca ativa de casos, mapear áreas de risco, notificar casos suspeitos e desenvolver ações educativas com a comunidade.",
+              "C - Aguardar orientações da secretaria de saúde antes de tomar qualquer medida, pois o controle de epidemias é responsabilidade exclusiva da vigilância epidemiológica.",
+              "D - Priorizar o atendimento clínico dos casos já confirmados e suspender as atividades preventivas rotineiras até o controle do surto."
+            ],
+            "correctOption": 1,
+            "explanation": "A abordagem adequada de um surto de dengue no território da Estratégia Saúde da Família envolve ações integradas de vigilância e assistência. A busca ativa de casos, o mapeamento das áreas de maior risco, a notificação dos casos suspeitos e as ações educativas com a comunidade são essenciais para o controle da situação, refletindo os princípios da vigilância em saúde no contexto da atenção primária.",
+            "tags": ["Vigilância em Saúde", "Epidemiologia", "Controle de Surtos", "Saúde Coletiva", "Dengue"]
+          },
+          {
+            "id": 152,
+            "number": 3,
+            "statement": "Em uma consulta de rotina, um paciente de 65 anos, sem sintomas, solicita a realização de uma tomografia computadorizada de tórax como \"check-up\", pois ouviu dizer que o exame pode detectar câncer de pulmão precocemente. Considerando os princípios da prevenção quaternária, qual seria a conduta mais adequada?",
+            "options": [
+              "A - Solicitar o exame conforme desejo do paciente, pois o diagnóstico precoce sempre traz benefícios.",
+              "B - Negar o pedido, informando apenas que não há indicação médica para o exame.",
+              "C - Discutir com o paciente os potenciais benefícios, riscos e limitações do rastreamento, oferecendo recomendações baseadas em evidências.",
+              "D - Encaminhar para um pneumologista, pois a decisão sobre rastreamento de câncer de pulmão deve ser feita por especialista."
+            ],
+            "correctOption": 2,
+            "explanation": "A prevenção quaternária consiste em evitar a medicalização desnecessária e proteger os pacientes do excesso de intervenções médicas. No caso apresentado, a conduta adequada envolve o compartilhamento de informações baseadas em evidências sobre os benefícios e riscos potenciais do rastreamento (incluindo resultados falso-positivos, sobrediagnóstico e exposição à radiação), considerando as características individuais do paciente e suas preferências em um processo de decisão compartilhada.",
+            "tags": ["Prevenção Quaternária", "Rastreamento", "Medicina Baseada em Evidências", "Sobrediagnóstico", "Decisão Compartilhada"]
+          }
+        ]
+      },
+      {
+        "id": "TEMFC33",
+        "name": "Prova TEMFC 33",
+        "type": "Teórica",
+        "totalQuestions": 80,
+        "questions": [
+          {
+            "id": 180,
+            "number": 1,
+            "statement": "Uma gestante de 26 anos, primigesta, na 32ª semana de gestação, apresenta queixa de corrimento vaginal esbranquiçado, grumoso, com prurido vaginal intenso. Ao exame, observa-se corrimento em grumos, aderido às paredes vaginais, sem odor fétido. Qual o diagnóstico mais provável e a conduta adequada?",
+            "options": [
+              "A - Candidíase vaginal; prescrever miconazol creme vaginal por 7 dias.",
+              "B - Tricomoníase; prescrever metronidazol 2g via oral em dose única para a paciente e seu parceiro.",
+              "C - Vaginose bacteriana; prescrever metronidazol 250mg via oral 3 vezes ao dia por 7 dias.",
+              "D - Clamídia; solicitar PCR e aguardar resultado para iniciar tratamento específico."
+            ],
+            "correctOption": 0,
+            "explanation": "O quadro descrito (corrimento esbranquiçado, grumoso, aderido às paredes vaginais, associado a prurido intenso e sem odor fétido) é característico de candidíase vaginal. Durante a gestação, o tratamento de escolha é com antifúngicos tópicos, como o miconazol creme vaginal, por 7 dias. Os antifúngicos orais, como o fluconazol, devem ser evitados na gestação.",
+            "tags": ["Saúde da Mulher", "Pré-natal", "Infecções Vaginais", "Candidíase"]
+          },
+          {
+            "id": 181,
+            "number": 2,
+            "statement": "Um médico da Estratégia Saúde da Família está atendendo um paciente de 72 anos com múltiplas comorbidades, polifarmácia e consultas frequentes. Para qualificar o cuidado, o médico decide utilizar o método clínico centrado na pessoa. Qual das seguintes abordagens melhor representa este método?",
+            "options": [
+              "A - Simplificar a prescrição medicamentosa e encaminhar para especialistas para cada problema de saúde identificado.",
+              "B - Explorar a doença e a experiência da doença, entender a pessoa como um todo, elaborar um plano conjunto e fortalecer a relação médico-pessoa.",
+              "C - Concentrar-se exclusivamente no controle das doenças crônicas, priorizando exames laboratoriais e ajustes medicamentosos.",
+              "D - Transferir a responsabilidade do cuidado para os familiares, orientando-os sobre os sinais de alerta para buscar serviços de emergência."
+            ],
+            "correctOption": 1,
+            "explanation": "O método clínico centrado na pessoa possui componentes essenciais que incluem: explorar a doença e a experiência da doença; entender a pessoa como um todo (contexto pessoal, familiar e social); elaborar um plano conjunto de manejo dos problemas; incorporar prevenção e promoção da saúde; fortalecer a relação médico-pessoa; e ser realista quanto aos recursos e tempo disponíveis. Esta abordagem promove um cuidado mais humanizado, integral e efetivo, especialmente para pessoas idosas com múltiplas condições crônicas.",
+            "tags": ["Medicina Centrada na Pessoa", "Abordagem Holística", "Continuidade do Cuidado", "Saúde do Idoso"]
+          }
+        ]
+      }
+    ]
