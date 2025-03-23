@@ -12,10 +12,6 @@ struct ExamResultView: View {
         dataManager.exams.first(where: { $0.id == completedExam.examId })
     }
     
-    init(completedExam: CompletedExam) {
-        self.completedExam = completedExam
-    }
-    
     // Propriedade atualizada para usar o número real de questões
     private var totalQuestions: Int {
         return completedExam.actualQuestionCount
@@ -32,7 +28,7 @@ struct ExamResultView: View {
                 
                 // Performance por categoria
                 if let exam = exam {
-                    PerformanceByCategoryView(completedExam: completedExam, exam: exam)
+                    categoryPerformanceView(exam: exam)
                 }
                 
                 // Botões de ação
@@ -74,6 +70,8 @@ struct ExamResultView: View {
             }
         )
     }
+    
+    // MARK: - Subviews
     
     // Cabeçalho com informações gerais
     private var headerView: some View {
@@ -278,12 +276,68 @@ struct ExamResultView: View {
         )
     }
     
+    // Visualização de desempenho por categoria
+    private func categoryPerformanceView(exam: Exam) -> some View {
+        VStack(alignment: .leading, spacing: 16) {
+            Text("Desempenho por Categoria")
+                .font(TEMFCDesign.Typography.headline)
+                .foregroundColor(TEMFCDesign.Colors.text)
+                .padding(.bottom, 4)
+            
+            ForEach(topCategoryPerformance().prefix(5), id: \.category) { category in
+                VStack(spacing: 8) {
+                    HStack {
+                        Text(category.category)
+                            .font(TEMFCDesign.Typography.subheadline)
+                            .lineLimit(1)
+                            .foregroundColor(TEMFCDesign.Colors.text)
+                        
+                        Spacer()
+                        
+                        Text("\(category.correctCount)/\(category.questionCount)")
+                            .font(TEMFCDesign.Typography.subheadline)
+                            .foregroundColor(TEMFCDesign.Colors.secondaryText)
+                    }
+                    
+                    GeometryReader { geometry in
+                        ZStack(alignment: .leading) {
+                            Rectangle()
+                                .fill(Color.gray.opacity(0.2))
+                                .frame(height: 8)
+                                .cornerRadius(4)
+                            
+                            Rectangle()
+                                .fill(progressColor(category.percentage))
+                                .frame(width: animateChart ? geometry.size.width * CGFloat(category.percentage) / 100 : 0, height: 8)
+                                .cornerRadius(4)
+                        }
+                    }
+                    .frame(height: 8)
+                    
+                    HStack {
+                        Spacer()
+                        Text(String(format: "%.1f%%", category.percentage))
+                            .font(TEMFCDesign.Typography.caption)
+                            .foregroundColor(progressColor(category.percentage))
+                    }
+                }
+                .padding(.vertical, 6)
+            }
+        }
+        .padding()
+        .background(
+            RoundedRectangle(cornerRadius: TEMFCDesign.BorderRadius.medium)
+                .fill(TEMFCDesign.Colors.background)
+                .shadow(color: Color.black.opacity(0.05), radius: 5, x: 0, y: 2)
+        )
+    }
+    
     // Botões de ação
     private var actionButtonsView: some View {
         HStack(spacing: 16) {
-            // Botão de compartilhar resultados
+            // Botão de compartilhar resultados detalhados
             Button(action: {
-                shareResults()
+                shareDetailedResults()
             }) {
                 HStack {
                     Image(systemName: "square.and.arrow.up")
@@ -320,7 +374,8 @@ struct ExamResultView: View {
         }
     }
     
-    // Propriedades calculadas
+    // MARK: - Propriedades Calculadas e Auxiliares
+    
     private var scoreColor: Color {
         if completedExam.score >= 60 {
             return .green
@@ -337,7 +392,6 @@ struct ExamResultView: View {
         return completedExam.answers.filter { !$0.isCorrect }.count
     }
     
-    // Funções auxiliares
     private func formattedDate(_ date: Date) -> String {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
@@ -349,7 +403,6 @@ struct ExamResultView: View {
         let hours = Int(timeInterval) / 3600
         let minutes = Int(timeInterval) / 60 % 60
         let seconds = Int(timeInterval) % 60
-        
         return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
     }
     
@@ -361,10 +414,78 @@ struct ExamResultView: View {
         textToShare += "Tempo: \(formattedTime(completedExam.timeSpent))"
         
         let activityVC = UIActivityViewController(activityItems: [textToShare], applicationActivities: nil)
-        
         if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
            let rootVC = scene.windows.first?.rootViewController {
             rootVC.present(activityVC, animated: true, completion: nil)
+        }
+    }
+    
+    // Método para compartilhar resultados detalhados
+    private func shareDetailedResults() {
+        // Criar um texto detalhado para compartilhamento
+        var textToShare = "Resultado TEMFC - \(exam?.name ?? "Simulado")\n"
+        textToShare += "Pontuação: \(String(format: "%.1f%%", completedExam.score))\n"
+        textToShare += "Status: \(completedExam.score >= 60 ? "Aprovado" : "Reprovado")\n"
+        textToShare += "Tempo: \(formattedTime(completedExam.timeSpent))\n\n"
+        
+        // Adicionar detalhes por categorias
+        textToShare += "Desempenho por categoria:\n"
+        
+        let categories = topCategoryPerformance().prefix(5)
+        for (index, category) in categories.enumerated() {
+            textToShare += "\(index + 1). \(category.category): \(String(format: "%.1f%%", category.percentage))\n"
+        }
+        
+        let activityVC = UIActivityViewController(activityItems: [textToShare], applicationActivities: nil)
+        if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let rootVC = scene.windows.first?.rootViewController {
+            rootVC.present(activityVC, animated: true, completion: nil)
+        }
+    }
+    
+    // Método para salvar questão como favorita
+    private func toggleFavorite(questionId: Int) {
+        if dataManager.isFavorite(questionId: questionId) {
+            dataManager.removeFromFavorites(questionId: questionId)
+        } else {
+            dataManager.addToFavorites(questionId: questionId)
+        }
+    }
+    
+    // Função de análise de desempenho por categoria
+    private func topCategoryPerformance() -> [(category: String, percentage: Double, correctCount: Int, questionCount: Int)] {
+        guard let exam = exam else { return [] }
+        var categoryStats: [String: (correct: Int, total: Int)] = [:]
+        for answer in completedExam.answers {
+            if let question = exam.questions.first(where: { $0.id == answer.questionId }) {
+                for tag in question.tags {
+                    var stats = categoryStats[tag] ?? (0, 0)
+                    stats.total += 1
+                    if answer.isCorrect {
+                        stats.correct += 1
+                    }
+                    categoryStats[tag] = stats
+                }
+            }
+        }
+        return categoryStats
+            .map { (category: $0.key,
+                   percentage: $0.value.total > 0 ? Double($0.value.correct) / Double($0.value.total) * 100 : 0,
+                   correctCount: $0.value.correct,
+                   questionCount: $0.value.total) }
+            .sorted { $0.percentage > $1.percentage }
+    }
+    
+    // Cor baseada na porcentagem
+    private func progressColor(_ percentage: Double) -> Color {
+        if percentage >= 80 {
+            return .green
+        } else if percentage >= 60 {
+            return .blue
+        } else if percentage >= 40 {
+            return .orange
+        } else {
+            return .red
         }
     }
 }
@@ -372,8 +493,6 @@ struct ExamResultView: View {
 struct ExamResultView_Previews: PreviewProvider {
     static var previews: some View {
         let dataManager = DataManager()
-        
-        // Criar um exame e completedExam de exemplo para o preview
         let sampleQuestion = Question(
             id: 1,
             number: 1,
@@ -383,14 +502,12 @@ struct ExamResultView_Previews: PreviewProvider {
             explanation: "Explicação",
             tags: ["Tag1", "Tag2"]
         )
-        
         let sampleExam = Exam(
             id: "SAMPLE",
             name: "Exame Exemplo",
             type: .theoretical,
             questions: [sampleQuestion]
         )
-        
         let sampleCompletedExam = CompletedExam(
             examId: "SAMPLE",
             startTime: Date().addingTimeInterval(-3600),
@@ -405,135 +522,13 @@ struct ExamResultView_Previews: PreviewProvider {
                 )
             ],
             score: 75.0,
-            actualQuestionCount: 1 // Parâmetro adicionado
+            actualQuestionCount: 1
         )
         
-        // Adicionar exame ao dataManager para que possa ser encontrado
         dataManager.exams = [sampleExam]
-        
         return NavigationView {
             ExamResultView(completedExam: sampleCompletedExam)
                 .environmentObject(dataManager)
-        }
-    }
-}
-
-// MARK: - Performance por Categoria
-struct PerformanceByCategoryView: View {
-    let completedExam: CompletedExam
-    let exam: Exam
-    @State private var animateProgress = false
-    
-    // Extrai as tags únicas das questões
-    private var uniqueTags: [String] {
-        var tags = Set<String>()
-        for question in exam.questions {
-            for tag in question.tags {
-                tags.insert(tag)
-            }
-        }
-        return Array(tags).sorted()
-    }
-    
-    // Calcula o desempenho por tag
-    private func performanceByTag(_ tag: String) -> (correct: Int, total: Int, percentage: Double) {
-        var correctCount = 0
-        var totalCount = 0
-        
-        for question in exam.questions {
-            if question.tags.contains(tag) {
-                totalCount += 1
-                
-                if let answer = completedExam.answers.first(where: { $0.questionId == question.id }),
-                   answer.isCorrect {
-                    correctCount += 1
-                }
-            }
-        }
-        
-        let percentage = totalCount > 0 ? (Double(correctCount) / Double(totalCount) * 100) : 0
-        return (correctCount, totalCount, percentage)
-    }
-    
-    var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            Text("Desempenho por Categoria")
-                .font(TEMFCDesign.Typography.headline)
-                .foregroundColor(TEMFCDesign.Colors.text)
-                .padding(.bottom, 4)
-            
-            ForEach(uniqueTags, id: \.self) { tag in
-                let performance = performanceByTag(tag)
-                
-                if performance.total > 0 {
-                    VStack(alignment: .leading, spacing: 8) {
-                        HStack {
-                            Text(tag)
-                                .font(TEMFCDesign.Typography.subheadline)
-                                .lineLimit(1)
-                                .foregroundColor(TEMFCDesign.Colors.text)
-                            
-                            Spacer()
-                            
-                            Text("\(performance.correct)/\(performance.total)")
-                                .font(TEMFCDesign.Typography.subheadline)
-                                .foregroundColor(TEMFCDesign.Colors.secondaryText)
-                        }
-                        
-                        GeometryReader { geometry in
-                            ZStack(alignment: .leading) {
-                                // Fundo da barra
-                                RoundedRectangle(cornerRadius: 6)
-                                    .fill(Color.gray.opacity(0.2))
-                                    .frame(height: 10)
-                                
-                                // Progresso
-                                RoundedRectangle(cornerRadius: 6)
-                                    .fill(progressColor(performance.percentage))
-                                    .frame(
-                                        width: animateProgress ?
-                                            min(CGFloat(performance.percentage) / 100.0 * geometry.size.width, geometry.size.width) : 0,
-                                        height: 10
-                                    )
-                            }
-                        }
-                        .frame(height: 10)
-                        
-                        HStack {
-                            Spacer()
-                            Text(String(format: "%.1f%%", performance.percentage))
-                                .font(TEMFCDesign.Typography.caption)
-                                .foregroundColor(progressColor(performance.percentage))
-                        }
-                    }
-                    .padding(.vertical, 6)
-                }
-            }
-        }
-        .padding()
-        .background(
-            RoundedRectangle(cornerRadius: TEMFCDesign.BorderRadius.medium)
-                .fill(TEMFCDesign.Colors.background)
-                .shadow(color: Color.black.opacity(0.05), radius: 5, x: 0, y: 2)
-        )
-        .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
-                withAnimation(.spring(response: 0.7, dampingFraction: 0.7)) {
-                    animateProgress = true
-                }
-            }
-        }
-    }
-    
-    private func progressColor(_ percentage: Double) -> Color {
-        if percentage >= 80 {
-            return .green
-        } else if percentage >= 60 {
-            return TEMFCDesign.Colors.primary
-        } else if percentage >= 40 {
-            return .orange
-        } else {
-            return .red
         }
     }
 }

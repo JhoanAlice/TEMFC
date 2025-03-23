@@ -1,7 +1,9 @@
-// Caminho: /Users/jhoanfranco/Documents/01 - Projetos/TEMFC/TEMFC/ViewModels/DataManager.swift
+// Caminho: /TEMFC/ViewModels/DataManager.swift
 
 import Foundation
 import Combine
+
+// MARK: - DataManager Class
 
 class DataManager: ObservableObject {
     @Published var exams: [Exam] = []
@@ -11,6 +13,10 @@ class DataManager: ObservableObject {
     // New publishers to trigger UI updates automatically
     @Published var isLoadingData: Bool = false
     @Published var lastUpdated: Date = Date()
+    
+    // Propriedade para gerenciar os IDs das questões favoritas
+    @Published var favoriteQuestions: Set<Int> = []
+    private let favoritesKey = "favoriteQuestions"
     
     private let userDefaultsKey = "completedExams"
     private let inProgressExamsKey = "inProgressExams"
@@ -22,19 +28,21 @@ class DataManager: ObservableObject {
     init() {
         print("📊 Inicializando o DataManager...")
         
-        // Load saved data first
+        // Carregar dados salvos
         print("Carregando exames completados...")
         loadCompletedExams()
         print("Carregando exames em andamento...")
         loadInProgressExams()
+        print("Carregando favoritos...")
+        initializeFavorites()
         
-        // Load exams from bundle using the improved asynchronous method
+        // Carregar exames do bundle usando método assíncrono melhorado
         loadAndProcessExams {
             if self.exams.isEmpty {
                 print("⚠️ Nenhum exame carregado ainda. Verificando novamente...")
                 self.createSampleExams()
             }
-            // Notify that exams have been loaded
+            // Notificar que os exames foram carregados
             NotificationCenter.default.post(name: Notification.Name("examsLoaded"), object: nil)
             self.printDebugInfo()
         }
@@ -44,42 +52,15 @@ class DataManager: ObservableObject {
     
     private func validateExams(_ exams: [Exam]) -> [Exam] {
         return exams.map { exam in
-            // Criar uma cópia do exame com totalQuestions atualizado
             var updatedExam = exam
             let actualCount = exam.questions.count
             
-            // Se totalQuestions for diferente do número real, atualize-o
             if updatedExam.totalQuestions != actualCount {
                 print("⚠️ Exame \(exam.id): totalQuestions era \(exam.totalQuestions), mas tem \(actualCount) questões. Corrigindo...")
                 updatedExam.totalQuestions = actualCount
             }
             
             return updatedExam
-        }
-    }
-    
-    // MARK: - Método de Log de Depuração Detalhado
-    
-    func printExamDetails(exam: Exam) {
-        print("📋 Exame: \(exam.name) (\(exam.id))")
-        print("   - Tipo: \(exam.type.rawValue)")
-        print("   - Total de questões declarado: \(exam.totalQuestions)")
-        print("   - Total de questões real: \(exam.questions.count)")
-        
-        if exam.totalQuestions != exam.questions.count {
-            print("   ⚠️ AVISO: Discrepância na contagem de questões!")
-        }
-        
-        // Verificar questões sem opção correta (anuladas)
-        let nullifiedQuestions = exam.questions.filter { $0.correctOption == nil }
-        if !nullifiedQuestions.isEmpty {
-            print("   ℹ️ \(nullifiedQuestions.count) questões anuladas")
-        }
-        
-        // Verificar questões com tags
-        let questionsWithoutTags = exam.questions.filter { $0.tags.isEmpty }
-        if !questionsWithoutTags.isEmpty {
-            print("   ⚠️ \(questionsWithoutTags.count) questões sem tags!")
         }
     }
     
@@ -93,7 +74,6 @@ class DataManager: ObservableObject {
         backgroundQueue.async { [weak self] in
             guard let self = self else { return }
             
-            // Validate JSON files first
             let filesAreValid = self.validateJSONFiles()
             if !filesAreValid {
                 mainQueue.async {
@@ -105,10 +85,9 @@ class DataManager: ObservableObject {
                 return
             }
             
-            // Load exams in parallel for optimization
             let group = DispatchGroup()
             var loadedExams: [Exam] = []
-            let loadedExamsLock = NSLock() // For thread safety
+            let loadedExamsLock = NSLock()
             
             for fileName in self.examFileNames {
                 group.enter()
@@ -140,7 +119,6 @@ class DataManager: ObservableObject {
                     print("⚠️ Nenhum exame carregado. Criando exames de exemplo como fallback...")
                     self.createSampleExams()
                 } else {
-                    // Validar os exames antes de armazená-los
                     self.exams = self.validateExams(loadedExams)
                     print("✅ Carregados \(loadedExams.count) exames com sucesso")
                 }
@@ -237,7 +215,6 @@ class DataManager: ObservableObject {
     func saveCompletedExam(_ exam: CompletedExam) {
         completedExams.append(exam)
         saveCompletedExamsToUserDefaults()
-        // Update lastUpdated to notify views of changes
         lastUpdated = Date()
     }
     
@@ -260,6 +237,16 @@ class DataManager: ObservableObject {
         return completedExams.filter { examIds.contains($0.examId) }
     }
     
+    // New Method: Obtain a specific completed exam by its UUID
+    func getCompletedExam(id: UUID) -> CompletedExam? {
+        return completedExams.first { $0.id == id }
+    }
+    
+    // New Method: Get all completed exams ordered by date (most recent first)
+    func getAllCompletedExams() -> [CompletedExam] {
+        return completedExams.sorted { $0.endTime > $1.endTime }
+    }
+    
     // MARK: - In-Progress Exams Methods
     
     private func loadInProgressExams() {
@@ -278,7 +265,6 @@ class DataManager: ObservableObject {
         inProgressExams.removeAll { $0.examId == exam.examId }
         inProgressExams.append(exam)
         saveInProgressExamsToUserDefaults()
-        // Update lastUpdated to notify views of changes
         lastUpdated = Date()
     }
     
@@ -372,7 +358,6 @@ class DataManager: ObservableObject {
         let now = Date()
         var removedCount = 0
         
-        // Remove in-progress exams older than 7 days
         inProgressExams.removeAll { exam in
             let isStale = now.timeIntervalSince(exam.startTime) > (7 * 24 * 60 * 60)
             if isStale {
@@ -385,5 +370,107 @@ class DataManager: ObservableObject {
             print("🧹 Removidos \(removedCount) exames em andamento antigos")
             saveInProgressExamsToUserDefaults()
         }
+    }
+}
+
+// MARK: - Extension para Exportação e Importação de Dados
+
+extension DataManager {
+    // Função para exportar os dados para um formato JSON
+    func getExportData() -> Data? {
+        let exportData = ExportData(
+            exams: exams,
+            completedExams: completedExams,
+            inProgressExams: inProgressExams
+        )
+        
+        do {
+            let encoder = JSONEncoder()
+            encoder.outputFormatting = .prettyPrinted
+            return try encoder.encode(exportData)
+        } catch {
+            print("Error encoding export data: \(error.localizedDescription)")
+            return nil
+        }
+    }
+    
+    // Função para importar dados a partir de um JSON
+    func importData(_ data: Data) throws {
+        let decoder = JSONDecoder()
+        let importedData = try decoder.decode(ExportData.self, from: data)
+        
+        self.exams = importedData.exams
+        self.completedExams = importedData.completedExams
+        self.inProgressExams = importedData.inProgressExams
+        
+        saveCompletedExamsToUserDefaults()
+        saveInProgressExamsToUserDefaults()
+        
+        self.lastUpdated = Date()
+        NotificationCenter.default.post(name: Notification.Name("examsLoaded"), object: nil)
+    }
+}
+
+// MARK: - Estrutura para Exportação/Importação de Dados
+
+struct ExportData: Codable {
+    let exams: [Exam]
+    let completedExams: [CompletedExam]
+    let inProgressExams: [InProgressExam]
+}
+
+// MARK: - Extensão para Questões Favoritas
+
+extension DataManager {
+    // Carregar favoritos
+    func loadFavorites() {
+        if let data = UserDefaults.standard.data(forKey: favoritesKey),
+           let favorites = try? JSONDecoder().decode(Set<Int>.self, from: data) {
+            self.favoriteQuestions = favorites
+        }
+    }
+    
+    // Salvar favoritos
+    private func saveFavorites() {
+        if let data = try? JSONEncoder().encode(favoriteQuestions) {
+            UserDefaults.standard.set(data, forKey: favoritesKey)
+        }
+    }
+    
+    // Adicionar questão aos favoritos
+    func addToFavorites(questionId: Int) {
+        favoriteQuestions.insert(questionId)
+        saveFavorites()
+    }
+    
+    // Remover questão dos favoritos
+    func removeFromFavorites(questionId: Int) {
+        favoriteQuestions.remove(questionId)
+        saveFavorites()
+    }
+    
+    // Verificar se uma questão está nos favoritos
+    func isFavorite(questionId: Int) -> Bool {
+        return favoriteQuestions.contains(questionId)
+    }
+    
+    // Obter todas as questões favoritas
+    func getFavoriteQuestions() -> [Question] {
+        var questions: [Question] = []
+        
+        for exam in exams {
+            for question in exam.questions {
+                if favoriteQuestions.contains(question.id) {
+                    questions.append(question)
+                }
+            }
+        }
+        
+        return questions
+    }
+    
+    // Carregar favoritos quando o DataManager é inicializado (opcional)
+    func initializeFavorites() {
+        loadFavorites()
     }
 }

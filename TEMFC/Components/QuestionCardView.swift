@@ -6,20 +6,30 @@ struct QuestionCardView: View {
     let selectedOption: Int?
     let isRevealed: Bool
     let onOptionSelected: (Int) -> Void
-    
+    let onToggleFavorite: () -> Void
+
+    @EnvironmentObject var dataManager: DataManager
+
     // Feedback háptico
     private let impactFeedback = UIImpactFeedbackGenerator(style: .medium)
     private let notificationFeedback = UINotificationFeedbackGenerator()
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            // Header da questão
+            // Header da questão com botão de favorito e tags
             HStack {
                 Text("Questão \(question.number)")
                     .font(TEMFCDesign.Typography.headline)
                     .foregroundColor(TEMFCDesign.Colors.primary)
                 
                 Spacer()
+                
+                // Botão de favorito
+                Button(action: onToggleFavorite) {
+                    Image(systemName: dataManager.isFavorite(questionId: question.id) ? "star.fill" : "star")
+                        .foregroundColor(dataManager.isFavorite(questionId: question.id) ? .yellow : .gray)
+                }
+                .padding(.trailing, 8)
                 
                 // Tags da questão
                 ScrollView(.horizontal, showsIndicators: false) {
@@ -83,7 +93,7 @@ struct QuestionCardView: View {
                     if !isRevealed {
                         impactFeedback.impactOccurred()
                         
-                        // Feedback baseado na resposta (só após clicar)
+                        // Feedback baseado na resposta (após clique)
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                             if question.isNullified || index == question.correctOption {
                                 notificationFeedback.notificationOccurred(.success)
@@ -109,7 +119,7 @@ struct QuestionCardView: View {
                             .font(TEMFCDesign.Typography.headline)
                             .foregroundColor(TEMFCDesign.Colors.primary)
                     }
-                    .id("explanationSection") // ID adicionado para permitir scroll
+                    .id("explanationSection")
                     
                     // Aviso de questão anulada (se aplicável)
                     if question.isNullified {
@@ -173,10 +183,12 @@ struct QuestionCardView_Previews: PreviewProvider {
                 ),
                 selectedOption: 0,
                 isRevealed: true,
-                onOptionSelected: { _ in }
+                onOptionSelected: { _ in },
+                onToggleFavorite: { }
             )
             .padding()
         }
+        .environmentObject(DataManager())
         .background(Color(.systemGray6))
     }
 }

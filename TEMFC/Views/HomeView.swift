@@ -1,3 +1,5 @@
+// Caminho: /Users/jhoanfranco/Documents/01 - Projetos/TEMFC/TEMFC/Views/HomeView.swift
+
 import SwiftUI
 
 struct HomeView: View {
@@ -95,14 +97,21 @@ struct HomeView: View {
         .onAppear {
             print("HomeView appeared with \(dataManager.exams.count) exams loaded")
         }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                NavigationLink(destination: ExamHistoryListView()) {
+                    Image(systemName: "clock.arrow.circlepath")
+                        .font(.title3)
+                }
+            }
+            // Outros ToolbarItems existentes podem ser adicionados aqui
+        }
     }
     
     private func tabButton(index: Int) -> some View {
         Button(action: {
             selectedTab = index
-            if settingsManager.settings.hapticFeedbackEnabled {
-                TEMFCDesign.HapticFeedback.lightImpact()
-            }
+            TEMFCDesign.HapticFeedback.lightImpact()
         }) {
             VStack(spacing: 4) {
                 Group {
@@ -120,12 +129,12 @@ struct HomeView: View {
                     }
                 }
                 .font(.system(size: 20))
-                .foregroundColor(selectedTab == index ? settingsManager.settings.colorTheme.primaryColor : .gray)
+                .foregroundColor(selectedTab == index ? TEMFCDesign.Colors.primary : .gray)
                 
                 Text(tabTitle(for: index))
                     .font(.caption2)
                     .fontWeight(selectedTab == index ? .bold : .regular)
-                    .foregroundColor(selectedTab == index ? settingsManager.settings.colorTheme.primaryColor : .gray)
+                    .foregroundColor(selectedTab == index ? TEMFCDesign.Colors.primary : .gray)
             }
         }
     }
@@ -154,7 +163,6 @@ struct CustomTopBar: View {
                 showingProfile = true
             }) {
                 HStack(spacing: 8) {
-                    // Foto de perfil ou iniciais
                     if let imageData = userManager.currentUser.profileImage,
                        let uiImage = UIImage(data: imageData) {
                         Image(uiImage: uiImage)
@@ -163,11 +171,9 @@ struct CustomTopBar: View {
                             .frame(width: 36, height: 36)
                             .clipShape(Circle())
                     } else {
-                        // Avatar com iniciais
                         ZStack {
                             Circle()
                                 .fill(TEMFCDesign.Colors.primary.opacity(0.1))
-                            
                             Text(initialsFromName)
                                 .font(.system(size: 14, weight: .bold))
                                 .foregroundColor(TEMFCDesign.Colors.primary)
@@ -175,7 +181,6 @@ struct CustomTopBar: View {
                         .frame(width: 36, height: 36)
                     }
                     
-                    // Nome do usuário
                     Text(userManager.currentUser.displayName)
                         .font(.headline)
                         .foregroundColor(TEMFCDesign.Colors.text)
@@ -202,15 +207,12 @@ struct CustomTopBar: View {
         if userManager.currentUser.name.isEmpty {
             return "?"
         }
-        
         let components = userManager.currentUser.name.components(separatedBy: " ")
         if components.count > 1 {
-            // Pegar a primeira letra do primeiro e último nome
             let firstInitial = components.first?.prefix(1) ?? ""
             let lastInitial = components.last?.prefix(1) ?? ""
             return "\(firstInitial)\(lastInitial)".uppercased()
         } else {
-            // Apenas a primeira letra do nome
             return String(userManager.currentUser.name.prefix(1)).uppercased()
         }
     }

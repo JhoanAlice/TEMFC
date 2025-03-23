@@ -1,3 +1,5 @@
+// Caminho: /Users/jhoanfranco/Documents/01 - Projetos/TEMFC/TEMFC/Views/WelcomeView.swift
+
 import SwiftUI
 
 struct WelcomeView: View {
@@ -9,9 +11,17 @@ struct WelcomeView: View {
     @State private var specialization: User.Specialization = .resident
     @State private var graduationYear = Calendar.current.component(.year, from: Date())
     
+    // Propriedade para controle do foco dos campos de texto
+    @FocusState private var focusedField: Field?
+    
+    // Enum para identificar os campos que podem receber foco
+    enum Field {
+        case name, email
+    }
+    
     // Valores para o picker de ano de formatura
     private let currentYear = Calendar.current.component(.year, from: Date())
-    private let yearRange = Calendar.current.component(.year, from: Date()) - 30...Calendar.current.component(.year, from: Date()) + 5
+    private let yearRange = Calendar.current.component(.year, from: Date()) - 30 ... Calendar.current.component(.year, from: Date()) + 5
     
     var body: some View {
         ZStack {
@@ -21,6 +31,13 @@ struct WelcomeView: View {
                 settingsManager.settings.colorTheme.secondaryColor,
                 settingsManager.settings.colorTheme.primaryColor.opacity(0.8)
             ])
+            
+            // Gesto para fechar o teclado ao tocar fora dos campos
+            Color.clear
+                .contentShape(Rectangle())
+                .onTapGesture {
+                    focusedField = nil
+                }
             
             VStack {
                 // Conteúdo do onboarding
@@ -47,7 +64,6 @@ struct WelcomeView: View {
                 
                 // Botões de navegação
                 HStack {
-                    // Botão Voltar (esconde na primeira página)
                     if currentPage > 0 {
                         Button {
                             DispatchQueue.main.async {
@@ -69,10 +85,8 @@ struct WelcomeView: View {
                     
                     Spacer()
                     
-                    // Botão Avançar ou Concluir
                     Button {
                         if currentPage == 2 {
-                            // Concluir registro de forma segura na thread principal
                             completeRegistration()
                         } else {
                             DispatchQueue.main.async {
@@ -101,7 +115,8 @@ struct WelcomeView: View {
         }
     }
     
-    // Simplified Welcome Page
+    // MARK: - Páginas do Onboarding
+    
     private var welcomePage: some View {
         VStack(spacing: 30) {
             Text("TEMFC")
@@ -136,7 +151,6 @@ struct WelcomeView: View {
         .padding()
     }
     
-    // Simplified Features Page
     private var featuresPage: some View {
         VStack(alignment: .leading, spacing: 30) {
             Text("Prepare-se para o TEMFC")
@@ -156,7 +170,6 @@ struct WelcomeView: View {
         .padding(30)
     }
     
-    // Registration Page utilizando SafeSwiftUITextField para "Nome" e "E-mail"
     private var registrationPage: some View {
         VStack(alignment: .leading, spacing: 30) {
             Text("Crie seu Perfil")
@@ -176,6 +189,7 @@ struct WelcomeView: View {
                     autocapitalization: .words,
                     foregroundColor: .white
                 )
+                .focused($focusedField, equals: .name)
                 .padding()
                 .background(Color.white.opacity(0.2))
                 .cornerRadius(10)
@@ -193,9 +207,14 @@ struct WelcomeView: View {
                     autocapitalization: .none,
                     foregroundColor: .white
                 )
+                .focused($focusedField, equals: .email)
                 .padding()
                 .background(Color.white.opacity(0.2))
                 .cornerRadius(10)
+                .submitLabel(.done)
+                .onSubmit {
+                    focusedField = nil
+                }
             }
             
             VStack(alignment: .leading, spacing: 8) {
@@ -256,7 +275,6 @@ struct WelcomeView: View {
         .padding(30)
     }
     
-    // Componente auxiliar para exibição de itens de recurso
     private func featureItem(icon: String, title: String, description: String) -> some View {
         HStack(alignment: .center, spacing: 16) {
             Image(systemName: icon)
@@ -277,7 +295,6 @@ struct WelcomeView: View {
         }
     }
     
-    // Validação do formulário
     private var isFormValid: Bool {
         !name.isEmpty &&
         !email.isEmpty &&
@@ -285,7 +302,6 @@ struct WelcomeView: View {
         email.contains(".")
     }
     
-    // Finaliza o registro, garantindo a execução na thread principal
     private func completeRegistration() {
         DispatchQueue.main.async {
             userManager.updateUser(

@@ -2,31 +2,41 @@ import Foundation
 import SwiftUI
 
 struct AppSettings: Codable, Equatable {
-    // Aparência
+    // Appearance
     var isDarkModeEnabled: Bool
     var colorTheme: ColorTheme
     
-    // Som e Vibração
+    // Sound and Vibration
     var soundEnabled: Bool
     var hapticFeedbackEnabled: Bool
     
-    // Notificações
+    // Notifications
     var dailyReminderEnabled: Bool
     var dailyReminderTime: Date
     
-    // Comportamento do app
+    // Quiz Behavior
     var automaticallyContinueQuizzes: Bool
     var showCorrectAnswerImmediately: Bool
     var showConfettiOnCorrectAnswer: Bool
+    var randomizeQuestionOrder: Bool // New option
     
-    // Opções de estudo
+    // Study Options
     var defaultQuizSize: Int
+    var studySessionDuration: Int // New: Study session duration in minutes
+    var favoriteCategories: [String] // New: User's favorite categories
+    var useSpacedRepetition: Bool // New: Whether to use spaced repetition
+    
+    // New: Theme Options
+    var useDynamicTypeSize: Bool
+    var isReduceMotionEnabled: Bool
     
     enum ColorTheme: String, Codable, CaseIterable {
         case blue = "Azul"
         case green = "Verde"
         case purple = "Roxo"
         case orange = "Laranja"
+        case red = "Vermelho"   // New color
+        case teal = "Turquesa"  // New color
         
         var primaryColor: Color {
             switch self {
@@ -34,6 +44,8 @@ struct AppSettings: Codable, Equatable {
             case .green: return Color(red: 0.0, green: 0.8, blue: 0.6)
             case .purple: return Color(red: 0.6, green: 0.0, blue: 0.9)
             case .orange: return Color(red: 1.0, green: 0.6, blue: 0.0)
+            case .red: return Color(red: 0.9, green: 0.2, blue: 0.3)
+            case .teal: return Color(red: 0.0, green: 0.7, blue: 0.7)
             }
         }
         
@@ -43,6 +55,8 @@ struct AppSettings: Codable, Equatable {
             case .green: return Color(red: 0.3, green: 0.7, blue: 0.5)
             case .purple: return Color(red: 0.5, green: 0.3, blue: 0.8)
             case .orange: return Color(red: 0.9, green: 0.5, blue: 0.2)
+            case .red: return Color(red: 0.8, green: 0.3, blue: 0.4)
+            case .teal: return Color(red: 0.2, green: 0.6, blue: 0.6)
             }
         }
     }
@@ -56,7 +70,14 @@ struct AppSettings: Codable, Equatable {
          automaticallyContinueQuizzes: Bool = true,
          showCorrectAnswerImmediately: Bool = true,
          showConfettiOnCorrectAnswer: Bool = true,
-         defaultQuizSize: Int = 10) {
+         randomizeQuestionOrder: Bool = false,
+         defaultQuizSize: Int = 10,
+         studySessionDuration: Int = 30,
+         favoriteCategories: [String] = [],
+         useSpacedRepetition: Bool = true,
+         useDynamicTypeSize: Bool = true,
+         isReduceMotionEnabled: Bool = false) {
+        
         self.isDarkModeEnabled = isDarkModeEnabled
         self.colorTheme = colorTheme
         self.soundEnabled = soundEnabled
@@ -66,6 +87,12 @@ struct AppSettings: Codable, Equatable {
         self.automaticallyContinueQuizzes = automaticallyContinueQuizzes
         self.showCorrectAnswerImmediately = showCorrectAnswerImmediately
         self.showConfettiOnCorrectAnswer = showConfettiOnCorrectAnswer
+        self.randomizeQuestionOrder = randomizeQuestionOrder
         self.defaultQuizSize = defaultQuizSize
+        self.studySessionDuration = studySessionDuration
+        self.favoriteCategories = favoriteCategories
+        self.useSpacedRepetition = useSpacedRepetition
+        self.useDynamicTypeSize = useDynamicTypeSize
+        self.isReduceMotionEnabled = isReduceMotionEnabled
     }
 }

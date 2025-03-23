@@ -1,3 +1,5 @@
+// Caminho: /TEMFC/Views/ExamSessionView.swift
+
 import SwiftUI
 import AVKit
 
@@ -40,6 +42,13 @@ struct ExamSessionView: View {
                                     isRevealed: showingExplanation,
                                     onOptionSelected: { index in
                                         handleOptionSelected(question: question, index: index)
+                                    },
+                                    onToggleFavorite: {
+                                        if dataManager.isFavorite(questionId: question.id) {
+                                            dataManager.removeFromFavorites(questionId: question.id)
+                                        } else {
+                                            dataManager.addToFavorites(questionId: question.id)
+                                        }
                                     }
                                 )
                                 .id("questionCard")
@@ -266,11 +275,14 @@ struct ExamSessionView: View {
             }
         }
         
+        // Removido o código de navegação automática para impedir a transição imediata:
+        /*
         if settingsManager.settings.automaticallyContinueQuizzes && !isLastQuestion {
             DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
                 navigateToNextQuestion()
             }
         }
+        */
     }
     
     private func navigateToPreviousQuestion() {
@@ -370,6 +382,12 @@ struct ExamSessionView: View {
         let seconds = Int(timeInterval) % 60
         return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
     }
+}
+
+// MARK: - Extension with Additional Methods
+
+extension ExamSessionView {
+    // O callback onToggleFavorite já está integrado na instância de QuestionCardView acima.
 }
 
 struct ExamSessionView_Previews: PreviewProvider {

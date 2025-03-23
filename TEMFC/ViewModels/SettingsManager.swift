@@ -12,9 +12,14 @@ class SettingsManager: ObservableObject {
         if let settingsData = UserDefaults.standard.data(forKey: userDefaultsKey),
            let decodedSettings = try? JSONDecoder().decode(AppSettings.self, from: settingsData) {
             self.settings = decodedSettings
-        } else {
-            self.settings = AppSettings()
+        }   else {
+            self.settings = AppSettings(
+                // Outras configurações...
+                automaticallyContinueQuizzes: false, // Alterar para false por padrão
+                showCorrectAnswerImmediately: true // Remove the trailing comma if there are no more parameters.
+            )
         }
+
         
         // Configurar atualizações de tema e notificações quando mudar a configuração
         updateAppAppearance()

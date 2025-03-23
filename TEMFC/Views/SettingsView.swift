@@ -3,384 +3,397 @@ import SwiftUI
 struct SettingsView: View {
     @EnvironmentObject var settingsManager: SettingsManager
     @EnvironmentObject var userManager: UserManager
+    @EnvironmentObject var dataManager: DataManager
     @State private var tempSettings: AppSettings
     @State private var showingResetAlert = false
-    @State private var showingLogoutAlert = false
+    @State private var showingExportSheet = false
+    @State private var showingImportPicker = false
+    @State private var exportURL: URL?
     
-    @Environment(\.presentationMode) var presentationMode
+    // Novas opções de configuração
+    @State private var isAutoBackupEnabled = false
+    @State private var selectedAppIcon = "Default"
+    
+    @Environment(\.dismiss) var dismiss
     
     init(settingsManager: SettingsManager) {
         _tempSettings = State(initialValue: settingsManager.settings)
     }
     
     var body: some View {
-        ZStack {
-            TEMFCDesign.Colors.groupedBackground.ignoresSafeArea()
-            
-            ScrollView {
-                VStack(spacing: 24) {
-                    // Seção de aparência
-                    appearanceSection
-                    
-                    // Seção de som e vibração
-                    soundAndHapticsSection
-                    
-                    // Seção de notificações
-                    notificationsSection
-                    
-                    // Seção de comportamento
-                    behaviorSection
-                    
-                    // Seção de reinicialização
-                    resetSection
-                    
-                    // Logout
-                    if userManager.isLoggedIn {
-                        logoutSection
-                    }
-                    
-                    // Informações do app
-                    appInfoSection
-                    
-                    Spacer(minLength: 30)
-                }
-                .padding(.horizontal)
-                .padding(.vertical, 16)
-            }
-        }
-        .navigationTitle("Configurações")
-        .navigationBarItems(trailing: Button("Salvar") {
-            settingsManager.settings = tempSettings
-            settingsManager.saveSettings()
-            presentationMode.wrappedValue.dismiss()
-        })
-        .alert(isPresented: $showingResetAlert) {
-            Alert(
-                title: Text("Restaurar Padrões"),
-                message: Text("Tem certeza que deseja restaurar todas as configurações para os valores padrão?"),
-                primaryButton: .destructive(Text("Restaurar")) {
-                    tempSettings = AppSettings()
-                },
-                secondaryButton: .cancel(Text("Cancelar"))
-            )
-        }
-        .onChange(of: tempSettings.dailyReminderEnabled) { newValue, _ in
-            if newValue {
-                // Solicitar permissão de notificação quando ativado
-                UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { _, _ in }
-            }
-        }
-    }
-    
-    // MARK: - Seções da interface
-    
-    private var appearanceSection: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            sectionHeader("Aparência")
-            
-            VStack(spacing: 0) {
-                // Modo escuro
-                Toggle("Modo Escuro", isOn: $tempSettings.isDarkModeEnabled)
-                    .padding()
-                    .background(TEMFCDesign.Colors.background)
-                    .cornerRadius(tempSettings.colorTheme == .blue ? TEMFCDesign.BorderRadius.medium : 0)
-                
-                Divider().padding(.leading)
-                
-                // Tema de cores
-                VStack(alignment: .leading, spacing: 6) {
-                    Text("Tema de cores")
-                        .font(TEMFCDesign.Typography.body)
-                        .foregroundColor(TEMFCDesign.Colors.text)
-                    
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 12) {
-                            ForEach(AppSettings.ColorTheme.allCases, id: \.self) { theme in
-                                colorThemeButton(theme)
+        NavigationStack {
+            List {
+                // Seção de Perfil
+                Section {
+                    NavigationLink {
+                        UserProfileView(userManager: userManager)
+                    } label: {
+                        HStack {
+                            ProfileAvatarView(user: userManager.currentUser, size: 50)
+                            
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text(userManager.currentUser.displayName)
+                                    .font(.headline)
+                                
+                                Text(userManager.currentUser.professionalDescription)
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
                             }
                         }
-                        .padding(.bottom, 8)
+                        .padding(.vertical, 4)
                     }
                 }
-                .padding()
-                .background(TEMFCDesign.Colors.background)
-                .cornerRadius(TEMFCDesign.BorderRadius.medium)
-            }
-            .temfcCard(padding: 0)
-        }
-    }
-    
-    private var soundAndHapticsSection: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            sectionHeader("Som e Vibração")
-            
-            VStack(spacing: 0) {
-                // Som
-                Toggle("Sons de Feedback", isOn: $tempSettings.soundEnabled)
-                    .padding()
-                    .background(TEMFCDesign.Colors.background)
                 
-                Divider().padding(.leading)
-                
-                // Vibração
-                Toggle("Feedback Háptico", isOn: $tempSettings.hapticFeedbackEnabled)
-                    .padding()
-                    .background(TEMFCDesign.Colors.background)
-                    .cornerRadius(TEMFCDesign.BorderRadius.medium)
-            }
-            .temfcCard(padding: 0)
-        }
-    }
-    
-    private var notificationsSection: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            sectionHeader("Notificações")
-            
-            VStack(spacing: 0) {
-                // Lembrete diário
-                Toggle("Lembrete Diário", isOn: $tempSettings.dailyReminderEnabled)
-                    .padding()
-                    .background(TEMFCDesign.Colors.background)
-                
-                if tempSettings.dailyReminderEnabled {
-                    Divider().padding(.leading)
+                // Seção de Aparência
+                Section("Aparência") {
+                    Toggle("Modo Escuro", isOn: $tempSettings.isDarkModeEnabled)
+                        .onChange(of: tempSettings.isDarkModeEnabled) { _, newValue in
+                            settingsManager.settings.isDarkModeEnabled = newValue
+                            settingsManager.saveSettings()
+                        }
                     
-                    // Horário do lembrete
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text("Horário do Lembrete")
-                            .font(TEMFCDesign.Typography.subheadline)
-                            .foregroundColor(TEMFCDesign.Colors.secondaryText)
+                    // Seleção de Ícone do Aplicativo
+                    NavigationLink {
+                        AppIconSelectionView(selectedIcon: $selectedAppIcon)
+                    } label: {
+                        HStack {
+                            Text("Ícone do Aplicativo")
+                            Spacer()
+                            Text(selectedAppIcon)
+                                .foregroundStyle(.secondary)
+                        }
+                    }
+                    
+                    // Seletor de Tema de Cores
+                    VStack(alignment: .leading, spacing: 12) {
+                        Text("Tema de Cores")
                         
-                        DatePicker("", selection: $tempSettings.dailyReminderTime, displayedComponents: .hourAndMinute)
-                            .datePickerStyle(WheelDatePickerStyle())
-                            .labelsHidden()
-                            .frame(maxWidth: .infinity, alignment: .center)
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(spacing: 14) {
+                                ForEach(AppSettings.ColorTheme.allCases, id: \.self) { theme in
+                                    ThemeColorButton(
+                                        theme: theme,
+                                        isSelected: tempSettings.colorTheme == theme,
+                                        action: {
+                                            tempSettings.colorTheme = theme
+                                            settingsManager.settings.colorTheme = theme
+                                            settingsManager.saveSettings()
+                                        }
+                                    )
+                                }
+                            }
+                            .padding(.vertical, 8)
+                        }
                     }
-                    .padding()
-                    .background(TEMFCDesign.Colors.background)
-                    .cornerRadius(TEMFCDesign.BorderRadius.medium)
                 }
-            }
-            .temfcCard(padding: 0)
-        }
-    }
-    
-    private var behaviorSection: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            sectionHeader("Comportamento")
-            
-            VStack(spacing: 0) {
-                // Continuar automaticamente
-                Toggle("Continuar Automaticamente", isOn: $tempSettings.automaticallyContinueQuizzes)
-                    .padding()
-                    .background(TEMFCDesign.Colors.background)
                 
-                Divider().padding(.leading)
-                
-                // Mostrar resposta correta
-                Toggle("Mostrar Resposta Imediatamente", isOn: $tempSettings.showCorrectAnswerImmediately)
-                    .padding()
-                    .background(TEMFCDesign.Colors.background)
-                
-                Divider().padding(.leading)
-                
-                // Confete em respostas corretas
-                Toggle("Comemorar Respostas Corretas", isOn: $tempSettings.showConfettiOnCorrectAnswer)
-                    .padding()
-                    .background(TEMFCDesign.Colors.background)
-                
-                Divider().padding(.leading)
-                
-                // Tamanho padrão do quiz
-                VStack(alignment: .leading, spacing: 8) {
-                    Text("Tamanho padrão do quiz")
-                        .font(TEMFCDesign.Typography.body)
-                        .foregroundColor(TEMFCDesign.Colors.text)
-                    
-                    Picker("", selection: $tempSettings.defaultQuizSize) {
+                // Seção de Preferências de Estudo
+                Section("Preferências de Estudo") {
+                    // Tamanho Padrão de Quiz
+                    Picker("Tamanho Padrão de Quiz", selection: $tempSettings.defaultQuizSize) {
                         Text("5 questões").tag(5)
                         Text("10 questões").tag(10)
                         Text("15 questões").tag(15)
                         Text("20 questões").tag(20)
                     }
-                    .pickerStyle(SegmentedPickerStyle())
-                }
-                .padding()
-                .background(TEMFCDesign.Colors.background)
-                .cornerRadius(TEMFCDesign.BorderRadius.medium)
-            }
-            .temfcCard(padding: 0)
-        }
-    }
-    
-    private var resetSection: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            sectionHeader("Restaurar")
-            
-            Button(action: {
-                showingResetAlert = true
-            }) {
-                HStack {
-                    Text("Restaurar Configurações Padrão")
-                        .foregroundColor(.red)
-                    Spacer()
-                    Image(systemName: "arrow.counterclockwise")
-                        .foregroundColor(.red)
-                }
-                .padding()
-                .background(TEMFCDesign.Colors.background)
-                .cornerRadius(TEMFCDesign.BorderRadius.medium)
-            }
-            .buttonStyle(PlainButtonStyle())
-        }
-    }
-    
-    private var logoutSection: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            sectionHeader("Conta")
-            
-            Button(action: {
-                showingLogoutAlert = true
-            }) {
-                HStack {
-                    Text("Sair da Conta")
-                        .foregroundColor(.red)
-                    Spacer()
-                    Image(systemName: "rectangle.portrait.and.arrow.right")
-                        .foregroundColor(.red)
-                }
-                .padding()
-                .background(TEMFCDesign.Colors.background)
-                .cornerRadius(TEMFCDesign.BorderRadius.medium)
-            }
-            .buttonStyle(PlainButtonStyle())
-            .alert(isPresented: $showingLogoutAlert) {
-                Alert(
-                    title: Text("Sair da Conta"),
-                    message: Text("Tem certeza que deseja sair da sua conta?"),
-                    primaryButton: .destructive(Text("Sair")) {
-                        userManager.logout()
-                        presentationMode.wrappedValue.dismiss()
-                    },
-                    secondaryButton: .cancel(Text("Cancelar"))
-                )
-            }
-        }
-    }
-    
-    private var appInfoSection: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            sectionHeader("Sobre o Aplicativo")
-            
-            VStack(spacing: 16) {
-                Image("AppIcon") // Certifique-se de ter uma imagem "AppIcon" em Assets
-                    .resizable()
-                    .frame(width: 80, height: 80)
-                    .cornerRadius(16)
-                    .padding(.top, 16)
-                
-                VStack(spacing: 4) {
-                    Text("TEMFC")
-                        .font(TEMFCDesign.Typography.title2)
-                        .foregroundColor(TEMFCDesign.Colors.text)
                     
-                    Text("Versão 1.0")
-                        .font(TEMFCDesign.Typography.caption)
-                        .foregroundColor(TEMFCDesign.Colors.secondaryText)
+                    // Lembrete Diário de Estudo
+                    Toggle("Lembrete Diário de Estudo", isOn: $tempSettings.dailyReminderEnabled)
+                    
+                    if tempSettings.dailyReminderEnabled {
+                        DatePicker("Horário do Lembrete",
+                                   selection: $tempSettings.dailyReminderTime,
+                                   displayedComponents: .hourAndMinute)
+                    }
+                    
+                    // Duração da Sessão de Estudo
+                    Picker("Duração da Sessão", selection: $tempSettings.studySessionDuration) {
+                        Text("15 minutos").tag(15)
+                        Text("30 minutos").tag(30)
+                        Text("45 minutos").tag(45)
+                        Text("60 minutos").tag(60)
+                    }
                 }
                 
-                Text("Desenvolvido com ❤️ para médicos e estudantes de Medicina de Família e Comunidade.")
-                    .font(TEMFCDesign.Typography.subheadline)
-                    .foregroundColor(TEMFCDesign.Colors.secondaryText)
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal)
+                // Seção de Comportamento dos Quizzes
+                Section("Comportamento dos Quizzes") {
+                    Toggle("Continuar Automaticamente", isOn: $tempSettings.automaticallyContinueQuizzes)
+                    
+                    Toggle("Mostrar Resposta Imediatamente", isOn: $tempSettings.showCorrectAnswerImmediately)
+                    
+                    Toggle("Comemorar Respostas Corretas", isOn: $tempSettings.showConfettiOnCorrectAnswer)
+                    
+                    // Nova opção: Ordem Aleatória de Questões
+                    Toggle("Ordem Aleatória de Questões", isOn: $tempSettings.randomizeQuestionOrder)
+                }
                 
-                Link(destination: URL(string: "mailto:contato@temfcapp.com.br")!) {
+                // Seção de Feedback
+                Section("Feedback") {
+                    Toggle("Sons", isOn: $tempSettings.soundEnabled)
+                    
+                    Toggle("Feedback Háptico", isOn: $tempSettings.hapticFeedbackEnabled)
+                }
+                
+                // Seção de Gerenciamento de Dados
+                Section("Gerenciamento de Dados") {
+                    // Exportar Dados de Estudo
+                    Button {
+                        exportStudyData()
+                    } label: {
+                        Label("Exportar Dados de Estudo", systemImage: "square.and.arrow.up")
+                    }
+                    
+                    // Importar Dados de Estudo
+                    Button {
+                        showingImportPicker = true
+                    } label: {
+                        Label("Importar Dados de Estudo", systemImage: "square.and.arrow.down")
+                    }
+                    
+                    // Nova opção: Backup Automático
+                    Toggle("Backup Automático", isOn: $isAutoBackupEnabled)
+                    
+                    // Restaurar Configurações Padrão
+                    Button(role: .destructive) {
+                        showingResetAlert = true
+                    } label: {
+                        Label("Restaurar Configurações Padrão", systemImage: "arrow.triangle.2.circlepath")
+                    }
+                }
+                
+                // Seção Sobre o App
+                Section {
                     HStack {
-                        Image(systemName: "envelope")
-                        Text("Contato e Suporte")
+                        Spacer()
+                        VStack(spacing: 8) {
+                            Image("AppLogo")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 60, height: 60)
+                                .cornerRadius(12)
+                            
+                            Text("TEMFC")
+                                .font(.headline)
+                            
+                            Text("Versão 1.1.0")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
+                        Spacer()
                     }
-                    .foregroundColor(TEMFCDesign.Colors.primary)
-                }
-                .padding(.bottom, 16)
-            }
-            .frame(maxWidth: .infinity)
-            .background(TEMFCDesign.Colors.background)
-            .cornerRadius(TEMFCDesign.BorderRadius.medium)
-        }
-    }
-    
-    // MARK: - Componentes auxiliares
-    
-    private func sectionHeader(_ title: String) -> some View {
-        Text(title)
-            .font(TEMFCDesign.Typography.headline)
-            .foregroundColor(TEMFCDesign.Colors.text)
-            .padding(.leading, 8)
-    }
-    
-    private func colorThemeButton(_ theme: AppSettings.ColorTheme) -> some View {
-        Button(action: {
-            tempSettings.colorTheme = theme
-        }) {
-            VStack(spacing: 8) {
-                ZStack {
-                    Circle()
-                        .fill(theme.primaryColor)
-                        .frame(width: 56, height: 56)
+                    .padding(.vertical, 8)
                     
-                    if tempSettings.colorTheme == theme {
-                        Circle()
-                            .strokeBorder(Color.white, lineWidth: 2)
-                            .frame(width: 46, height: 46)
-                        
-                        Image(systemName: "checkmark")
-                            .foregroundColor(.white)
-                            .font(.system(size: 18, weight: .bold))
+                    Link(destination: URL(string: "https://temfc.com.br/privacidade")!) {
+                        Label("Política de Privacidade", systemImage: "hand.raised.fill")
+                    }
+                    
+                    Link(destination: URL(string: "https://temfc.com.br/termos")!) {
+                        Label("Termos de Uso", systemImage: "doc.text.fill")
                     }
                 }
                 
-                Text(theme.rawValue)
-                    .font(TEMFCDesign.Typography.caption)
-                    .foregroundColor(tempSettings.colorTheme == theme ? theme.primaryColor : TEMFCDesign.Colors.secondaryText)
+                // Seção de Acompanhamento
+                Section("Acompanhamento") {
+                    NavigationLink {
+                        AchievementsView()
+                            .environmentObject(dataManager)
+                    } label: {
+                        Label("Conquistas", systemImage: "trophy.fill")
+                    }
+                    
+                    NavigationLink {
+                        PerformanceAnalyticsView()
+                    } label: {
+                        Label("Estatísticas de Estudo", systemImage: "chart.bar.fill")
+                    }
+                }
+            }
+            .onChange(of: tempSettings) { _, newSettings in
+                settingsManager.settings = newSettings
+                settingsManager.saveSettings()
+            }
+            .navigationTitle("Configurações")
+            .alert("Restaurar Padrões", isPresented: $showingResetAlert) {
+                Button("Cancelar", role: .cancel) { }
+                Button("Restaurar", role: .destructive) {
+                    tempSettings = AppSettings()
+                    settingsManager.resetToDefaults()
+                }
+            } message: {
+                Text("Todas as configurações serão restauradas para os valores padrão. Esta ação não pode ser desfeita.")
+            }
+            .sheet(isPresented: $showingExportSheet) {
+                if let url = exportURL {
+                    ActivityViewController(items: [url])
+                }
+            }
+            .fileImporter(
+                isPresented: $showingImportPicker,
+                allowedContentTypes: [.json],
+                allowsMultipleSelection: false
+            ) { result in
+                switch result {
+                case .success(let urls):
+                    guard let url = urls.first else { return }
+                    importStudyData(from: url)
+                case .failure(let error):
+                    print("Import error: \(error.localizedDescription)")
+                }
             }
         }
-        .buttonStyle(PlainButtonStyle())
     }
     
-    // MARK: - Ações
-    
-    private var isFormValid: Bool {
-        !tempSettings.isDarkModeEnabled || !tempSettings.isDarkModeEnabled // Exemplo de validação, ajuste conforme necessário
-        // Na verdade, aqui você deve validar os campos de usuário, por exemplo:
-        // return !name.isEmpty && !email.isEmpty && email.contains("@") && email.contains(".")
-    }
-    
-    private func completeRegistration() {
-        DispatchQueue.main.async {
-            // Exemplo de atualização do usuário; ajuste conforme sua lógica
-            userManager.updateUser(
-                name: "", // Aqui insira a lógica para atualizar o nome, se aplicável
-                email: "", // Lógica para email
-                specialization: .resident, // Lógica para especialização
-                graduationYear: 2023 // Lógica para ano de formatura
-            )
-            userManager.login()
+    // Função de exportação ajustada para usar os dados já codificados
+    private func exportStudyData() {
+        if let exportData = dataManager.getExportData() {
+            let tempDir = FileManager.default.temporaryDirectory
+            let fileName = "TEMFC_Dados_\(Date().ISO8601Format()).json"
+            let fileURL = tempDir.appendingPathComponent(fileName)
             
-            if settingsManager.settings.hapticFeedbackEnabled {
-                let generator = UIImpactFeedbackGenerator(style: .medium)
-                generator.impactOccurred()
+            do {
+                try exportData.write(to: fileURL)
+                exportURL = fileURL
+                showingExportSheet = true
+            } catch {
+                print("Export error: \(error.localizedDescription)")
             }
+        }
+    }
+    
+    private func importStudyData(from url: URL) {
+        guard url.startAccessingSecurityScopedResource() else { return }
+        defer { url.stopAccessingSecurityScopedResource() }
+        
+        do {
+            let data = try Data(contentsOf: url)
+            try dataManager.importData(data)
+        } catch {
+            print("Import reading error: \(error.localizedDescription)")
         }
     }
 }
 
-struct SettingsView_Previews: PreviewProvider {
-    static var previews: some View {
-        // Crie uma instância do SettingsManager para o preview
-        let manager = SettingsManager()
-        return SettingsView(settingsManager: manager)
-            .environmentObject(manager)
-            .environmentObject(UserManager())
+// MARK: - Views de Suporte
+
+struct ActivityViewController: UIViewControllerRepresentable {
+    var items: [Any]
+    
+    func makeUIViewController(context: Context) -> UIActivityViewController {
+        UIActivityViewController(activityItems: items, applicationActivities: nil)
+    }
+    
+    func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {}
+}
+
+struct ThemeColorButton: View {
+    let theme: AppSettings.ColorTheme
+    let isSelected: Bool
+    let action: () -> Void
+    
+    var body: some View {
+        Button(action: action) {
+            VStack(spacing: 8) {
+                Circle()
+                    .fill(theme.primaryColor)
+                    .frame(width: 32, height: 32)
+                    .overlay {
+                        if isSelected {
+                            Circle()
+                                .stroke(Color.white, lineWidth: 2)
+                                .padding(2)
+                            
+                            Image(systemName: "checkmark")
+                                .font(.system(size: 14, weight: .bold))
+                                .foregroundStyle(.white)
+                        }
+                    }
+                
+                Text(theme.rawValue)
+                    .font(.caption)
+                    .foregroundStyle(isSelected ? theme.primaryColor : .secondary)
+            }
+        }
+        .buttonStyle(.plain)
+    }
+}
+
+struct AppIconSelectionView: View {
+    @Binding var selectedIcon: String
+    let availableIcons = ["Default", "Dark", "Blue", "Green"]
+    
+    var body: some View {
+        List {
+            ForEach(availableIcons, id: \.self) { icon in
+                Button {
+                    selectedIcon = icon
+                    changeAppIcon(to: icon)
+                } label: {
+                    HStack {
+                        Image("\(icon)Icon")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 60, height: 60)
+                            .cornerRadius(12)
+                        
+                        Text(icon)
+                            .padding(.leading)
+                        
+                        Spacer()
+                        
+                        if selectedIcon == icon {
+                            Image(systemName: "checkmark")
+                                .foregroundStyle(.blue)
+                        }
+                    }
+                }
+                .buttonStyle(.plain)
+            }
+        }
+        .navigationTitle("Escolha o Ícone")
+    }
+    
+    func changeAppIcon(to iconName: String) {
+        // A implementação real usaria UIApplication.shared.setAlternateIconName
+        print("Changing app icon to: \(iconName)")
+    }
+}
+
+struct ProfileAvatarView: View {
+    let user: User
+    let size: CGFloat
+    
+    var body: some View {
+        if let imageData = user.profileImage,
+           let uiImage = UIImage(data: imageData) {
+            Image(uiImage: uiImage)
+                .resizable()
+                .scaledToFill()
+                .frame(width: size, height: size)
+                .clipShape(Circle())
+        } else {
+            // Avatar com iniciais
+            ZStack {
+                Circle()
+                    .fill(TEMFCDesign.Colors.primary.opacity(0.2))
+                
+                Text(userInitials)
+                    .font(.system(size: size / 2.5, weight: .semibold))
+                    .foregroundStyle(TEMFCDesign.Colors.primary)
+            }
+            .frame(width: size, height: size)
+        }
+    }
+    
+    private var userInitials: String {
+        let components = user.name.components(separatedBy: " ")
+        if components.count > 1,
+           let first = components.first?.prefix(1),
+           let last = components.last?.prefix(1) {
+            return "\(first)\(last)".uppercased()
+        } else if let first = components.first?.prefix(1) {
+            return String(first).uppercased()
+        } else {
+            return "?"
+        }
     }
 }
