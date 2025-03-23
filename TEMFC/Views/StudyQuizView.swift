@@ -21,14 +21,10 @@ struct StudyQuizView: View {
                     Text("Fechar")
                         .foregroundColor(.red)
                 }
-                
                 Spacer()
-                
                 Text("Questão \(viewModel.currentQuestionIndex + 1) de \(viewModel.questions.count)")
                     .font(.headline)
-                
                 Spacer()
-                
                 Button(action: {
                     viewModel.finishQuiz()
                     presentationMode.wrappedValue.dismiss()
@@ -64,7 +60,7 @@ struct StudyQuizView: View {
                             .font(.body)
                             .padding(.bottom, 8)
                         
-                        // Player de vídeo, se houver URL válida
+                        // Player de vídeo, se disponível
                         if let videoUrlString = question.videoUrl,
                            let videoUrl = URL(string: videoUrlString) {
                             VideoPlayer(player: AVPlayer(url: videoUrl))
@@ -73,9 +69,9 @@ struct StudyQuizView: View {
                                 .padding(.bottom, 8)
                         }
                         
-                        // Exibição das opções de resposta usando EnhancedOptionButton
+                        // Opções de resposta
                         ForEach(question.options.indices, id: \.self) { index in
-                            EnhancedOptionButton(
+                            OptionButtonView(
                                 option: question.options[index],
                                 index: index,
                                 selectedIndex: selectedOption,
@@ -85,12 +81,11 @@ struct StudyQuizView: View {
                                 if !showingExplanation {
                                     selectedOption = index
                                     viewModel.answerCurrentQuestion(optionIndex: index)
-                                    showingExplanation = true
                                 }
                             }
                         }
                         
-                        // Seção de explicação
+                        // Exibição da explicação
                         if showingExplanation {
                             VStack(alignment: .leading, spacing: 8) {
                                 Text("Explicação")
@@ -103,7 +98,6 @@ struct StudyQuizView: View {
                                         .foregroundColor(.orange)
                                         .padding(.bottom, 4)
                                 }
-                                
                                 Text(question.explanation)
                                     .font(.body)
                             }
@@ -134,7 +128,15 @@ struct StudyQuizView: View {
                     
                     Spacer()
                     
-                    if showingExplanation {
+                    if !showingExplanation && selectedOption != nil {
+                        Button(action: {
+                            showingExplanation = true
+                        }) {
+                            Text("Ver Explicação")
+                                .padding()
+                                .foregroundColor(.green)
+                        }
+                    } else if showingExplanation {
                         Button(action: {
                             showingExplanation = false
                             selectedOption = nil
@@ -161,7 +163,6 @@ struct StudyQuizView: View {
                 .background(Color.white)
                 .shadow(color: Color.gray.opacity(0.2), radius: 2, x: 0, y: -2)
             } else {
-                // Mensagem para quando não há questões disponíveis
                 VStack {
                     Text("Nenhuma questão encontrada para as categorias selecionadas.")
                         .font(.headline)
@@ -184,7 +185,6 @@ struct StudyQuizView: View {
             }
         }
         .onAppear {
-            // Utiliza o parâmetro quizSize para carregar as questões dinamicamente
             viewModel.loadQuestions(from: dataManager.exams, with: selectedTags, size: quizSize)
         }
         .onChange(of: viewModel.currentQuestionIndex) { _ in
@@ -193,57 +193,8 @@ struct StudyQuizView: View {
     }
 }
 
-// Extensão para acesso seguro a coleções
 extension Collection {
     subscript(safe index: Index) -> Element? {
         return indices.contains(index) ? self[index] : nil
-    }
-}
-
-// MARK: - Preview
-struct StudyQuizView_Previews: PreviewProvider {
-    static var previews: some View {
-        let dataManager = DataManager()
-        return StudyQuizView(
-            selectedTags: ["Saúde da Mulher", "Saúde Mental"],
-            quizSize: 5
-        )
-        .environmentObject(dataManager)
-    }
-}
-// MARK: - StudyTagSelectionRow
-struct StudyTagSelectionRow: View {
-    let tag: String
-    let isSelected: Bool
-    let action: () -> Void
-    
-    var body: some View {
-        Button(action: action) {
-            HStack {
-                Text(tag)
-                    .font(.caption)
-                    .foregroundColor(isSelected ? .blue : .gray)
-                
-                Spacer()
-                
-                Image(systemName: isSelected ? "checkmark.circle.fill" : "circle")
-                    .foregroundColor(isSelected ? .blue : .gray)
-                    .font(.system(size: 22))
-                    .scaleEffect(isSelected ? 1.1 : 1.0)
-                    .animation(.spring(response: 0.2, dampingFraction: 0.6), value: isSelected)
-            }
-            .contentShape(Rectangle())
-        }
-        .buttonStyle(PlainButtonStyle())
-        .padding()
-        .background(
-            RoundedRectangle(cornerRadius: 12)
-                .fill(Color.white)
-                .shadow(color: isSelected ? Color.blue.opacity(0.1) : Color.black.opacity(0.05),
-                        radius: isSelected ? 6 : 4,
-                        x: 0,
-                        y: isSelected ? 3 : 2)
-                .animation(.easeInOut(duration: 0.2), value: isSelected)
-        )
     }
 }

@@ -199,9 +199,10 @@ struct ExamDetailView: View {
             .padding()
         }
         .navigationBarTitleDisplayMode(.inline)
+        // Definição da fullScreenCover:
         .fullScreenCover(isPresented: $viewModel.isExamActive) {
-            if viewModel.completedExam != nil {
-                ExamResultView(completedExam: viewModel.completedExam!)
+            if let completedExam = viewModel.completedExam {
+                ExamResultView(completedExam: completedExam)
                     .environmentObject(dataManager)
             } else {
                 ExamSessionView(viewModel: viewModel)

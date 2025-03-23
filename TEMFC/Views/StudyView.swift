@@ -1,3 +1,5 @@
+// Caminho: /Users/jhoanfranco/Documents/01 - Projetos/TEMFC/TEMFC/Views/StudyView.swift
+
 import SwiftUI
 
 struct StudyView: View {
@@ -67,13 +69,26 @@ struct StudyView: View {
                             .font(TEMFCDesign.Typography.subheadline)
                             .foregroundColor(TEMFCDesign.Colors.secondaryText)
                         
-                        // Barra de pesquisa
+                        // Versão alternativa da barra de pesquisa para evitar problemas de thread
                         HStack {
                             Image(systemName: "magnifyingglass")
                                 .foregroundColor(TEMFCDesign.Colors.secondaryText)
                             
-                            TextField("Buscar área temática", text: $searchText)
-                                .font(TEMFCDesign.Typography.body)
+                            // Usando ZStack para simular o placeholder manualmente
+                            ZStack(alignment: .leading) {
+                                if searchText.isEmpty {
+                                    Text("Buscar área temática")
+                                        .foregroundColor(Color(.placeholderText))
+                                        .font(TEMFCDesign.Typography.body)
+                                }
+                                
+                                // Texto básico com input para evitar propriedades UIKit
+                                TextEditor(text: $searchText)
+                                    .font(TEMFCDesign.Typography.body)
+                                    .frame(height: 22)
+                                    .background(Color.clear)
+                                    .padding(.vertical, -8)
+                            }
                         }
                         .padding()
                         .background(TEMFCDesign.Colors.background)
@@ -97,31 +112,17 @@ struct StudyView: View {
                             Spacer()
                             
                             if availableQuestionsCount > 0 {
+                                // Picker sem eventos complexos
+                                let pickerOptions = [(5, "5"), (10, "10"), (15, "15"), (20, "20"),
+                                                     (availableQuestionsCount, "Todas (\(availableQuestionsCount))")]
+                                
                                 Picker("", selection: $quizSize) {
-                                    // Só mostrar opções que não excedam o número disponível
-                                    if availableQuestionsCount >= 5 {
-                                        Text("5").tag(5)
+                                    ForEach(pickerOptions.filter { $0.0 <= availableQuestionsCount }, id: \.0) { value, label in
+                                        Text(label).tag(value)
                                     }
-                                    if availableQuestionsCount >= 10 {
-                                        Text("10").tag(10)
-                                    }
-                                    if availableQuestionsCount >= 15 {
-                                        Text("15").tag(15)
-                                    }
-                                    if availableQuestionsCount >= 20 {
-                                        Text("20").tag(20)
-                                    }
-                                    // Opção "Todas" que usa todas as questões disponíveis
-                                    Text("Todas (\(availableQuestionsCount))").tag(availableQuestionsCount)
                                 }
                                 .pickerStyle(SegmentedPickerStyle())
                                 .frame(width: 200)
-                                // Atualiza quizSize se exceder o disponível
-                                .onChange(of: selectedTags) { _ in
-                                    if quizSize > availableQuestionsCount {
-                                        quizSize = availableQuestionsCount
-                                    }
-                                }
                             } else {
                                 Text("Selecione tags primeiro")
                                     .font(TEMFCDesign.Typography.caption)
@@ -143,7 +144,7 @@ struct StudyView: View {
                     .padding(.horizontal)
                     .padding(.top, TEMFCDesign.Spacing.m)
                     
-                    // Lista de tags
+                    // Lista de tags usando ForEach otimizado
                     ScrollView {
                         VStack(alignment: .leading, spacing: TEMFCDesign.Spacing.s) {
                             Text("Áreas Temáticas")
@@ -159,19 +160,25 @@ struct StudyView: View {
                                     .frame(maxWidth: .infinity, alignment: .center)
                                     .padding()
                             } else {
+                                // ForEach com ID seguro para evitar problemas de identidade de view
                                 ForEach(filteredTags, id: \.self) { tag in
-                                    TEMFCTagSelectionRow(
+                                    TagSelectionRowSafe(
                                         tag: tag,
                                         isSelected: selectedTags.contains(tag),
-                                        tagColor: TEMFCDesign.Colors.tagColor(for: tag)
-                                    ) {
-                                        TEMFCDesign.HapticFeedback.selectionChanged()
-                                        if selectedTags.contains(tag) {
-                                            selectedTags.remove(tag)
-                                        } else {
-                                            selectedTags.insert(tag)
+                                        tagColor: TEMFCDesign.Colors.tagColor(for: tag),
+                                        onSelect: {
+                                            if selectedTags.contains(tag) {
+                                                selectedTags.remove(tag)
+                                            } else {
+                                                selectedTags.insert(tag)
+                                            }
+                                            
+                                            // Atualizar o tamanho do quiz se necessário
+                                            if quizSize > availableQuestionsCount && availableQuestionsCount > 0 {
+                                                quizSize = availableQuestionsCount
+                                            }
                                         }
-                                    }
+                                    )
                                 }
                             }
                             
@@ -186,7 +193,6 @@ struct StudyView: View {
                 VStack {
                     Spacer()
                     Button(action: {
-                        TEMFCDesign.HapticFeedback.buttonPressed()
                         if !selectedTags.isEmpty {
                             showingQuizSheet = true
                         }
@@ -217,6 +223,57 @@ struct StudyView: View {
                         .environmentObject(dataManager)
                 }
             }
+            .navigationViewStyle(StackNavigationViewStyle())
+            .onAppear {
+                // Configuração inicial segura
+                if quizSize > availableQuestionsCount && availableQuestionsCount > 0 {
+                    quizSize = availableQuestionsCount
+                }
+            }
         }
+    }
+}
+
+// View auxiliar segura para seleção de tags
+struct TagSelectionRowSafe: View {
+    let tag: String
+    let isSelected: Bool
+    let tagColor: Color
+    let onSelect: () -> Void
+    
+    var body: some View {
+        Button(action: onSelect) {
+            HStack {
+                Text(tag)
+                    .font(TEMFCDesign.Typography.body)
+                    .foregroundColor(isSelected ? .white : TEMFCDesign.Colors.text)
+                
+                Spacer()
+                
+                // Pequeno círculo com a cor da tag
+                Circle()
+                    .fill(tagColor)
+                    .frame(width: 12, height: 12)
+                
+                Spacer()
+                
+                Image(systemName: isSelected ? "checkmark.circle.fill" : "circle")
+                    .foregroundColor(isSelected ? tagColor : TEMFCDesign.Colors.secondaryText)
+                    .font(.system(size: 22))
+            }
+            .padding()
+            .background(
+                RoundedRectangle(cornerRadius: TEMFCDesign.BorderRadius.medium)
+                    .fill(isSelected ? tagColor.opacity(0.15) : TEMFCDesign.Colors.background)
+                    .shadow(color: Color.black.opacity(0.05), radius: 4, x: 0, y: 2)
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: TEMFCDesign.BorderRadius.medium)
+                    .stroke(isSelected ? tagColor : Color.clear, lineWidth: isSelected ? 1 : 0)
+            )
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(PlainButtonStyle())
+        .padding(.horizontal, 4)
     }
 }

@@ -1,11 +1,10 @@
-// TEMFC/Views/ExamListView.swift
-
 import SwiftUI
 
 struct ExamListView: View {
     @EnvironmentObject var dataManager: DataManager
     let examType: Exam.ExamType
-    
+    @State private var showingCreateExamSheet = false  // Property to control the sheet
+
     var body: some View {
         NavigationView {
             ZStack {
@@ -13,7 +12,7 @@ struct ExamListView: View {
                 
                 ScrollView {
                     VStack(spacing: TEMFCDesign.Spacing.l) {
-                        // Cabeçalho
+                        // Header
                         VStack(alignment: .leading, spacing: TEMFCDesign.Spacing.xs) {
                             Text("Simulados \(examType.rawValue)")
                                 .font(TEMFCDesign.Typography.title3)
@@ -26,7 +25,7 @@ struct ExamListView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal, TEMFCDesign.Spacing.m)
                         
-                        // Simulados disponíveis
+                        // List of available exams
                         ForEach(dataManager.getExamsByType(type: examType)) { exam in
                             NavigationLink(destination: ExamDetailView(exam: exam)) {
                                 EnhancedExamRowView(exam: exam)
@@ -37,14 +36,14 @@ struct ExamListView: View {
                     .padding(.vertical, TEMFCDesign.Spacing.m)
                 }
                 
-                // Botão flutuante para criar simulado personalizado
+                // Floating button for creating custom exam
                 VStack {
                     Spacer()
                     HStack {
                         Spacer()
                         Button(action: {
                             TEMFCDesign.HapticFeedback.buttonPressed()
-                            // Ação para criar simulado personalizado
+                            showingCreateExamSheet = true
                         }) {
                             Image(systemName: "plus")
                                 .font(.title2)
@@ -61,6 +60,13 @@ struct ExamListView: View {
                     }
                 }
             }
+            .onAppear {
+                print("ExamListView for \(examType.rawValue) appeared with \(dataManager.getExamsByType(type: examType).count) exams")
+            }
+            .sheet(isPresented: $showingCreateExamSheet) {
+                CreateCustomExamView(examType: examType)
+                    .environmentObject(dataManager)
+            }
             .navigationTitle(examType == .theoretical ? "Prova Teórica" : "Prova Teórico-Prática")
             .navigationBarTitleDisplayMode(.large)
         }
@@ -72,7 +78,7 @@ struct EnhancedExamRowView: View {
     
     var body: some View {
         HStack(alignment: .top, spacing: TEMFCDesign.Spacing.m) {
-            // Ícone
+            // Icon
             ZStack {
                 Circle()
                     .fill(exam.type == .theoretical ?
@@ -96,7 +102,7 @@ struct EnhancedExamRowView: View {
                     .font(TEMFCDesign.Typography.subheadline)
                     .foregroundColor(TEMFCDesign.Colors.secondaryText)
                 
-                // Tags das principais áreas
+                // Display main tags
                 if !uniqueTags(exam).isEmpty {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: TEMFCDesign.Spacing.xxs) {
@@ -148,7 +154,7 @@ struct EnhancedExamRowView: View {
     }
     
     private func estimatedTime(_ questionCount: Int) -> String {
-        let estimatedMinutes = questionCount * 2 // ~2 min por questão
+        let estimatedMinutes = questionCount * 2 // Approximately 2 minutes per question
         if estimatedMinutes < 60 {
             return "\(estimatedMinutes) min"
         } else {

@@ -1,3 +1,5 @@
+// Caminho: /Users/jhoanfranco/Documents/01 - Projetos/TEMFC/TEMFC/ViewModels/ExamViewModel.swift
+
 import Foundation
 import Combine
 
@@ -6,12 +8,13 @@ class ExamViewModel: ObservableObject {
     @Published var currentQuestionIndex: Int = 0
     @Published var userAnswers: [Int: Int] = [:]  // questionId: selectedOption
     @Published var isExamActive: Bool = false
+    @Published var shouldShowResults: Bool = false  // New property for navigation control
     @Published var startTime: Date?
     @Published var elapsedTime: TimeInterval = 0
     @Published var timer: Timer?
     @Published var completedExam: CompletedExam?
     
-    // Flag para verificar se o exame foi carregado de um estado em andamento
+    // Flag to indicate if the exam was resumed from an in-progress state
     @Published var isResumedExam: Bool = false
     
     var currentQuestion: Question? {
@@ -26,10 +29,11 @@ class ExamViewModel: ObservableObject {
         self.currentQuestionIndex = 0
         self.userAnswers = [:]
         self.isExamActive = true
+        self.shouldShowResults = false
         self.startTime = Date()
         self.completedExam = nil
         
-        // Inicia o timer
+        // Start the timer
         self.timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
             guard let self = self, let startTime = self.startTime else { return }
             self.elapsedTime = Date().timeIntervalSince(startTime)
@@ -53,9 +57,10 @@ class ExamViewModel: ObservableObject {
         }
     }
     
+    // Modified finishExam() using the actual number of questions
     func finishExam() -> CompletedExam? {
         guard let exam = currentExam, let startTime = startTime else {
-            print("Não foi possível finalizar o exame: exame ou tempo de início nulos")
+            print("❌ Não foi possível finalizar o exame: exame ou tempo de início nulos")
             return nil
         }
         
@@ -68,7 +73,9 @@ class ExamViewModel: ObservableObject {
         var correctAnswers = 0
         var answeredQuestions = 0
         
-        print("Calculando resultado para \(exam.questions.count) questões")
+        // Usar a contagem real de questões do exame
+        let actualQuestionCount = exam.questions.count
+        print("📊 Calculando resultado para \(actualQuestionCount) questões")
         
         for question in exam.questions {
             if let selectedOption = userAnswers[question.id] {
@@ -91,23 +98,27 @@ class ExamViewModel: ObservableObject {
             }
         }
         
-        let score = exam.totalQuestions > 0 ? Double(correctAnswers) / Double(exam.totalQuestions) * 100.0 : 0
-        print("Exame finalizado: \(correctAnswers)/\(exam.questions.count) acertos, Score: \(score)%")
-        print("Questões respondidas: \(answeredQuestions) de \(exam.totalQuestions)")
+        // Calcular pontuação usando a contagem real de questões
+        let score = actualQuestionCount > 0 ? Double(correctAnswers) / Double(actualQuestionCount) * 100.0 : 0
+        print("✅ Exame finalizado: \(correctAnswers)/\(actualQuestionCount) acertos, Score: \(score)%")
+        print("Questões respondidas: \(answeredQuestions) de \(actualQuestionCount)")
         
         let completed = CompletedExam(
             examId: exam.id,
             startTime: startTime,
             endTime: endTime,
             answers: answers,
-            score: score
+            score: score,
+            actualQuestionCount: actualQuestionCount
         )
         
         self.completedExam = completed
+        NotificationCenter.default.post(name: Notification.Name("examCompleted"), object: completed)
+        self.shouldShowResults = true
         return completed
     }
     
-    // MARK: - Métodos para carregar e salvar progresso (exames em andamento)
+    // MARK: - Methods for in-progress exams
     
     func loadInProgressExam(inProgressExam: InProgressExam, exam: Exam) {
         self.currentExam = exam

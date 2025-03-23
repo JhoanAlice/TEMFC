@@ -1,3 +1,5 @@
+// Caminho: /Users/jhoanfranco/Documents/01 - Projetos/TEMFC/TEMFC/Models/Exam.swift
+
 import Foundation
 
 struct Exam: Identifiable, Codable {

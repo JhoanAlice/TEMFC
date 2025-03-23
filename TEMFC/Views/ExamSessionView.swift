@@ -6,112 +6,53 @@ struct ExamSessionView: View {
     @EnvironmentObject var dataManager: DataManager
     @Environment(\.presentationMode) var presentationMode
     @State private var showingExplanation = false
-    @State private var selectedOption: Int? = nil
     @State private var showingActionSheet = false
     @State private var showConfetti = false
+    @State private var animateTransition = false
     
-    // Adicionar ScrollViewReader para controlar a rolagem
+    // ScrollViewReader para controle de navegação
     @State private var scrollProxy: ScrollViewProxy? = nil
     
     // Geradores de feedback háptico
     let impactMedium = UIImpactFeedbackGenerator(style: .medium)
-    let impactLight = UIImpactFeedbackGenerator(style: .light)
     let notificationFeedback = UINotificationFeedbackGenerator()
     
     var body: some View {
         ZStack {
             // Fundo
-            Color(UIColor.systemBackground)
+            TEMFCDesign.Colors.background
                 .ignoresSafeArea()
             
-            // Conteúdo principal em uma única ScrollView
+            // Conteúdo principal
             VStack(spacing: 0) {
-                // Cabeçalho fixo
+                // Cabeçalho com cronômetro e número da questão
                 headerView
+                    .padding(.bottom, 1)
                 
                 // Barra de progresso
                 progressBarView
                 
                 if let question = viewModel.currentQuestion {
-                    // Todo o conteúdo em uma única ScrollView para evitar problemas de layout
+                    // Conteúdo principal em ScrollView
                     ScrollView(.vertical, showsIndicators: true) {
                         ScrollViewReader { proxy in
-                            VStack(alignment: .leading, spacing: 20) {
-                                // Título da questão
-                                Text("Questão \(question.number)")
-                                    .font(.headline)
-                                    .foregroundColor(.blue)
-                                    .padding(.horizontal)
-                                    .padding(.top)
-                                    .id("questionHeader") // ID para rolagem
-                                
-                                // Enunciado
-                                Text(question.statement)
-                                    .font(.body)
-                                    .padding(.horizontal)
-                                    .lineLimit(nil)
-                                    .fixedSize(horizontal: false, vertical: true)
-                                
-                                // Player de vídeo (se houver)
-                                if let videoUrlString = question.videoUrl, let videoUrl = URL(string: videoUrlString) {
-                                    VideoPlayer(player: AVPlayer(url: videoUrl))
-                                        .frame(height: 200)
-                                        .cornerRadius(8)
-                                        .padding(.horizontal)
-                                }
-                                
-                                // Título das alternativas
-                                Text("Alternativas")
-                                    .font(.headline)
-                                    .padding(.horizontal)
-                                    .padding(.top, 10)
-                                
-                                // Alternativas simplificadas
-                                VStack(spacing: 10) {
-                                    ForEach(question.options.indices, id: \.self) { index in
-                                        simpleOptionButton(
-                                            option: question.options[index],
-                                            index: index,
-                                            isSelected: selectedOption == index,
-                                            isCorrect: showingExplanation ? index == question.correctOption : nil,
-                                            isNullified: question.isNullified
-                                        ) {
-                                            if !showingExplanation {
-                                                handleOptionSelected(question: question, index: index, proxy: proxy)
-                                            }
-                                        }
-                                        .padding(.horizontal)
+                            VStack(spacing: 20) {
+                                // Cartão da questão
+                                QuestionCardView(
+                                    question: question,
+                                    selectedOption: viewModel.userAnswers[question.id],
+                                    isRevealed: showingExplanation,
+                                    onOptionSelected: { index in
+                                        handleOptionSelected(question: question, index: index)
                                     }
-                                }
+                                )
+                                .id("questionCard")
+                                .padding(.horizontal)
+                                .padding(.top)
+                                .opacity(animateTransition ? 1 : 0)
+                                .animation(.easeInOut(duration: 0.5), value: animateTransition)
                                 
-                                // Explicação (se visível)
-                                if showingExplanation {
-                                    VStack(alignment: .leading, spacing: 10) {
-                                        Text("Explicação")
-                                            .font(.headline)
-                                            .foregroundColor(.orange)
-                                            .id("explanationHeader") // ID para rolagem
-                                        
-                                        if question.isNullified {
-                                            Text("Esta questão foi anulada. Qualquer resposta será considerada correta.")
-                                                .font(.subheadline)
-                                                .foregroundColor(.orange)
-                                                .padding()
-                                                .background(Color.orange.opacity(0.1))
-                                                .cornerRadius(8)
-                                        }
-                                        
-                                        Text(question.explanation)
-                                            .font(.body)
-                                            .fixedSize(horizontal: false, vertical: true)
-                                    }
-                                    .padding()
-                                    .background(Color.yellow.opacity(0.1))
-                                    .cornerRadius(10)
-                                    .padding(.horizontal)
-                                }
-                                
-                                // Espaço para garantir que o conteúdo não seja coberto pela barra de navegação
+                                // Espaço para navegação
                                 Spacer(minLength: 80)
                             }
                             .padding(.bottom, 50)
@@ -119,17 +60,32 @@ struct ExamSessionView: View {
                                 // Armazenar a referência para o ScrollViewProxy
                                 scrollProxy = proxy
                                 
-                                // Rolar para o topo ao carregar uma nova questão
-                                withAnimation {
-                                    proxy.scrollTo("questionHeader", anchor: .top)
+                                // Animar a entrada da questão
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                                    withAnimation {
+                                        animateTransition = true
+                                    }
                                 }
                             }
                         }
                     }
+                } else {
+                    // Fallback se não houver questão
+                    VStack {
+                        Spacer()
+                        ProgressView()
+                            .progressViewStyle(CircularProgressViewStyle())
+                            .scaleEffect(1.5)
+                            .padding()
+                        Text("Carregando questão...")
+                            .font(TEMFCDesign.Typography.headline)
+                            .foregroundColor(TEMFCDesign.Colors.secondaryText)
+                        Spacer()
+                    }
                 }
             }
             
-            // Barra de navegação inferior sobreposta ao conteúdo
+            // Barra de navegação inferior sobreposta
             VStack {
                 Spacer()
                 navigationButtons
@@ -139,19 +95,24 @@ struct ExamSessionView: View {
             if showConfetti {
                 ExamConfettiView()
                     .ignoresSafeArea()
+                    .allowsHitTesting(false)
             }
         }
         .onAppear {
             setupOnAppear()
         }
         .onChange(of: viewModel.currentQuestionIndex) { _ in
-            selectedOption = viewModel.userAnswers[viewModel.currentQuestion?.id ?? 0]
+            // Reset state e animar nova questão
+            showingExplanation = false
+            animateTransition = false
             
-            // Rolar para o topo quando mudar de questão
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 withAnimation {
-                    scrollProxy?.scrollTo("questionHeader", anchor: .top)
+                    animateTransition = true
                 }
+                
+                // Rolar para o topo
+                scrollProxy?.scrollTo("questionCard", anchor: .top)
             }
         }
         .actionSheet(isPresented: $showingActionSheet) {
@@ -162,145 +123,83 @@ struct ExamSessionView: View {
     
     // MARK: - Componentes
     
-    // Cabeçalho com cronômetro e número da questão
+    // Cabeçalho com cronômetro e botões
     private var headerView: some View {
         ZStack {
             HStack {
-                Label(
-                    formattedTime(viewModel.elapsedTime),
-                    systemImage: "clock.fill"
-                )
-                .font(.headline)
+                // Cronômetro
+                HStack(spacing: 5) {
+                    Image(systemName: "clock.fill")
+                        .foregroundColor(TEMFCDesign.Colors.secondaryText)
+                    
+                    Text(formattedTime(viewModel.elapsedTime))
+                        .font(TEMFCDesign.Typography.headline)
+                        .monospacedDigit()
+                        .foregroundColor(TEMFCDesign.Colors.text)
+                }
                 .padding(.horizontal)
                 
                 Spacer()
                 
+                // Menu de opções
                 Button(action: {
+                    TEMFCDesign.HapticFeedback.lightImpact()
                     showingActionSheet = true
                 }) {
                     Image(systemName: "ellipsis.circle.fill")
-                        .font(.title2)
-                        .foregroundColor(.blue)
+                        .font(.system(size: 22))
+                        .foregroundColor(TEMFCDesign.Colors.primary)
                         .padding(.horizontal)
                 }
             }
             
+            // Número da questão
             if let exam = viewModel.currentExam {
-                Text("\(viewModel.currentQuestionIndex + 1)/\(exam.questions.count)")
-                    .font(.headline)
+                HStack(spacing: 4) {
+                    Text("\(viewModel.currentQuestionIndex + 1)")
+                        .font(TEMFCDesign.Typography.headline)
+                        .foregroundColor(TEMFCDesign.Colors.primary)
+                    
+                    Text("/")
+                        .font(TEMFCDesign.Typography.subheadline)
+                        .foregroundColor(TEMFCDesign.Colors.secondaryText)
+                    
+                    Text("\(exam.questions.count)")
+                        .font(TEMFCDesign.Typography.subheadline)
+                        .foregroundColor(TEMFCDesign.Colors.secondaryText)
+                }
             }
         }
         .padding(.vertical, 12)
-        .background(Color.white)
-        .shadow(color: Color.black.opacity(0.1), radius: 3, x: 0, y: 2)
+        .background(TEMFCDesign.Colors.background)
+        .shadow(color: Color.black.opacity(0.05), radius: 3, x: 0, y: 2)
     }
     
-    // Barra de progresso simplificada
+    // Barra de progresso aprimorada
     private var progressBarView: some View {
         GeometryReader { geometry in
             ZStack(alignment: .leading) {
+                // Fundo da barra
                 Rectangle()
                     .fill(Color.gray.opacity(0.2))
                     .frame(height: 4)
                 
+                // Progresso
                 if let exam = viewModel.currentExam {
                     Rectangle()
-                        .fill(Color.blue)
+                        .fill(TEMFCDesign.Colors.primary)
                         .frame(
                             width: geometry.size.width * CGFloat(viewModel.currentQuestionIndex + 1) / CGFloat(exam.questions.count),
                             height: 4
                         )
+                        .animation(.spring(response: 0.3, dampingFraction: 0.7), value: viewModel.currentQuestionIndex)
                 }
             }
         }
         .frame(height: 4)
     }
     
-    // Alternativa simplificada
-    private func simpleOptionButton(
-        option: String,
-        index: Int,
-        isSelected: Bool,
-        isCorrect: Bool?,
-        isNullified: Bool,
-        action: @escaping () -> Void
-    ) -> some View {
-        let letters = ["A", "B", "C", "D"]
-        
-        // Determinar as cores
-        let backgroundColor: Color
-        let textColor: Color
-        let borderColor: Color
-        
-        if let isCorrect = isCorrect {
-            if isNullified {
-                backgroundColor = Color.orange.opacity(0.1)
-                textColor = .primary
-                borderColor = .orange
-            } else if isCorrect {
-                backgroundColor = Color.green.opacity(0.1)
-                textColor = .primary
-                borderColor = .green
-            } else if isSelected {
-                backgroundColor = Color.red.opacity(0.1)
-                textColor = .primary
-                borderColor = .red
-            } else {
-                backgroundColor = Color.white
-                textColor = .primary
-                borderColor = Color.gray.opacity(0.3)
-            }
-        } else {
-            if isSelected {
-                backgroundColor = Color.blue.opacity(0.1)
-                textColor = .primary
-                borderColor = .blue
-            } else {
-                backgroundColor = Color.white
-                textColor = .primary
-                borderColor = Color.gray.opacity(0.3)
-            }
-        }
-        
-        return Button(action: action) {
-            HStack(alignment: .top, spacing: 12) {
-                // Letra da opção
-                ZStack {
-                    Circle()
-                        .fill(isSelected ? .blue : Color.gray.opacity(0.2))
-                        .frame(width: 32, height: 32)
-                    
-                    Text(letters[index])
-                        .font(.headline)
-                        .foregroundColor(isSelected ? .white : .primary)
-                }
-                
-                // Texto da opção
-                Text(option)
-                    .font(.body)
-                    .foregroundColor(textColor)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                
-                // Ícone de status
-                if isSelected, let isCorrect = isCorrect {
-                    Image(systemName: isCorrect ? "checkmark.circle.fill" : "xmark.circle.fill")
-                        .foregroundColor(isCorrect ? .green : .red)
-                }
-            }
-            .padding()
-            .background(backgroundColor)
-            .cornerRadius(10)
-            .overlay(
-                RoundedRectangle(cornerRadius: 10)
-                    .stroke(borderColor, lineWidth: 1)
-            )
-        }
-        .buttonStyle(PlainButtonStyle())
-        .disabled(isCorrect != nil)
-    }
-    
-    // Botões de navegação
+    // Botões de navegação inferiores
     private var navigationButtons: some View {
         HStack(spacing: 20) {
             // Botão Anterior
@@ -312,17 +211,19 @@ struct ExamSessionView: View {
                     Text("Anterior")
                 }
                 .padding(.vertical, 12)
-                .padding(.horizontal, 16)
-                .background(Color.blue.opacity(0.1))
-                .foregroundColor(.blue)
-                .cornerRadius(25)
+                .padding(.horizontal, 20)
+                .background(
+                    Capsule()
+                        .fill(TEMFCDesign.Colors.primary.opacity(0.1))
+                )
+                .foregroundColor(TEMFCDesign.Colors.primary)
             }
             .disabled(viewModel.currentQuestionIndex == 0)
             .opacity(viewModel.currentQuestionIndex == 0 ? 0.5 : 1)
             
             Spacer()
             
-            // Botão Próxima
+            // Botão Próxima/Finalizar
             if showingExplanation {
                 Button(action: {
                     navigateToNextQuestion()
@@ -332,87 +233,97 @@ struct ExamSessionView: View {
                         Image(systemName: isLastQuestion ? "checkmark" : "chevron.right")
                     }
                     .padding(.vertical, 12)
-                    .padding(.horizontal, 16)
-                    .background(Color.blue)
+                    .padding(.horizontal, 20)
+                    .background(
+                        Capsule()
+                            .fill(TEMFCDesign.Colors.primary)
+                    )
                     .foregroundColor(.white)
-                    .cornerRadius(25)
                 }
             }
         }
-        .padding()
-        .background(Color.white)
+        .padding(.horizontal, 20)
+        .padding(.vertical, 10)
+        .background(TEMFCDesign.Colors.background)
         .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: -3)
     }
     
     // MARK: - Funções Auxiliares
     
     private func setupOnAppear() {
-        selectedOption = viewModel.userAnswers[viewModel.currentQuestion?.id ?? 0]
         impactMedium.prepare()
-        impactLight.prepare()
         notificationFeedback.prepare()
+        
+        // Iniciar com animação
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            withAnimation {
+                animateTransition = true
+            }
+        }
     }
     
-    // Modificado para incluir a rolagem para a explicação
-    private func handleOptionSelected(question: Question, index: Int, proxy: ScrollViewProxy) {
-        // Feedback háptico
-        impactMedium.impactOccurred()
+    private func handleOptionSelected(question: Question, index: Int) {
+        // Registrar a resposta
+        viewModel.selectAnswer(questionId: question.id, optionIndex: index)
         
-        // Feedback de acerto/erro
+        // Feedback tátil e visual
         if viewModel.isAnswerCorrect(questionId: question.id, optionIndex: index) {
-            notificationFeedback.notificationOccurred(.success)
-            
-            // Mostrar confete para respostas corretas
+            TEMFCDesign.HapticFeedback.success()
             withAnimation {
                 showConfetti = true
             }
+            
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 withAnimation {
                     showConfetti = false
                 }
             }
         } else {
-            notificationFeedback.notificationOccurred(.error)
+            TEMFCDesign.HapticFeedback.error()
         }
-        
-        // Atualizar estado
-        selectedOption = index
-        viewModel.selectAnswer(questionId: question.id, optionIndex: index)
         
         // Mostrar explicação com animação
         withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
             showingExplanation = true
         }
         
-        // Rolar para a explicação com um leve atraso
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-            withAnimation {
-                proxy.scrollTo("explanationHeader", anchor: .top)
+        // Agendar a rolagem após a animação de mostrar explicação
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            withAnimation(.easeInOut(duration: 0.7)) {
+                scrollProxy?.scrollTo("explanationSection", anchor: .top)
             }
         }
     }
     
     private func navigateToPreviousQuestion() {
-        impactLight.impactOccurred()
-        showingExplanation = false
+        TEMFCDesign.HapticFeedback.lightImpact()
         
+        // Animar transição de saída
         withAnimation {
-            viewModel.moveToPreviousQuestion()
+            animateTransition = false
         }
         
-        selectedOption = viewModel.userAnswers[viewModel.currentQuestion?.id ?? 0]
+        // Navegar após breve delay para animação
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            showingExplanation = false
+            viewModel.moveToPreviousQuestion()
+        }
     }
     
     private func navigateToNextQuestion() {
-        impactLight.impactOccurred()
+        TEMFCDesign.HapticFeedback.lightImpact()
         
         if isLastQuestion {
             showingActionSheet = true
         } else {
-            showingExplanation = false
-            selectedOption = nil
-            
+            // Animar transição de saída
             withAnimation {
+                animateTransition = false
+            }
+            
+            // Navegar após breve delay para animação
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                showingExplanation = false
                 viewModel.moveToNextQuestion()
             }
         }
@@ -421,6 +332,40 @@ struct ExamSessionView: View {
     private var isLastQuestion: Bool {
         guard let exam = viewModel.currentExam else { return false }
         return viewModel.currentQuestionIndex == exam.questions.count - 1
+    }
+    
+    // MARK: - Método finishExam atualizado
+    
+    private func finishExam() {
+        print("🏁 Iniciando processo de finalização do exame")
+        
+        guard let currentExam = viewModel.currentExam else {
+            print("❌ Erro: Nenhum exame atual encontrado")
+            return
+        }
+        
+        if let completedExam = viewModel.finishExam() {
+            print("✅ Exame finalizado com sucesso: \(completedExam.score)%")
+            
+            // Salvar no DataManager
+            dataManager.saveCompletedExam(completedExam)
+            print("💾 Exame salvo no DataManager")
+            
+            // Limpar o exame em andamento
+            dataManager.removeInProgressExam(examId: currentExam.id)
+            
+            // Garantir que o viewModel tenha o completedExam definido
+            viewModel.completedExam = completedExam
+            
+            // Forçar a atualização da interface para navegar para a tela de resultados
+            DispatchQueue.main.async {
+                presentationMode.wrappedValue.dismiss()
+            }
+            
+            print("🔄 Navegação para tela de resultados iniciada")
+        } else {
+            print("❌ Erro: Falha ao finalizar o exame")
+        }
     }
     
     private func createActionSheet() -> ActionSheet {
@@ -455,15 +400,6 @@ struct ExamSessionView: View {
         }
     }
     
-    private func finishExam() {
-        if let completedExam = viewModel.finishExam(),
-           let examId = viewModel.currentExam?.id {
-            dataManager.saveCompletedExam(completedExam)
-            dataManager.removeInProgressExam(examId: examId)
-            presentationMode.wrappedValue.dismiss()
-        }
-    }
-    
     private func saveAndExit() {
         let inProgressExam = viewModel.saveProgressAndExit()
         dataManager.saveInProgressExam(inProgressExam)
@@ -475,5 +411,30 @@ struct ExamSessionView: View {
         let minutes = Int(timeInterval) / 60 % 60
         let seconds = Int(timeInterval) % 60
         return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+    }
+}
+
+struct ExamSessionView_Previews: PreviewProvider {
+    static var previews: some View {
+        let viewModel = ExamViewModel()
+        viewModel.startExam(exam: Exam(
+            id: "EXAMPLE",
+            name: "Exemplo de Prova",
+            type: .theoretical,
+            questions: [
+                Question(
+                    id: 1,
+                    number: 1,
+                    statement: "Exemplo de questão para preview.",
+                    options: ["A - Opção A", "B - Opção B", "C - Opção C", "D - Opção D"],
+                    correctOption: 0,
+                    explanation: "Esta é a explicação da questão.",
+                    tags: ["Tag1", "Tag2"]
+                )
+            ]
+        ))
+        
+        return ExamSessionView(viewModel: viewModel)
+            .environmentObject(DataManager())
     }
 }

@@ -1,5 +1,3 @@
-// TEMFC/Utils/TEMFCDesign.swift
-
 import SwiftUI
 
 /// Design System do App TEMFC
@@ -24,16 +22,23 @@ struct TEMFCDesign {
     
     // MARK: - Cores
     struct Colors {
-        // Cores principais
-        static let primary = Color.blue
-        static let secondary = Color(red: 0.25, green: 0.54, blue: 0.89)
-        static let tertiary = Color(red: 0.0, green: 0.65, blue: 0.85)
+        // Cores principais (tons de azul mais modernos)
+        static let primary = Color(red: 0.0, green: 0.478, blue: 1.0) // Azul mais vibrante
+        static let secondary = Color(red: 0.25, green: 0.54, blue: 0.89) // Azul médio
+        static let tertiary = Color(red: 0.0, green: 0.65, blue: 0.85) // Azul esverdeado
         
-        // Cores de acento
+        // Cores de acento (mais vibrantes)
         static let accent = Color.orange
-        static let accentSecondary = Color.yellow
+        static let accentSecondary = Color(red: 1.0, green: 0.8, blue: 0.0) // Amarelo ouro
         
-        // Cores de estado
+        // Esquemas de gradiente
+        static let mainGradient = LinearGradient(
+            gradient: Gradient(colors: [primary, secondary.opacity(0.8)]),
+            startPoint: .topLeading,
+            endPoint: .bottomTrailing
+        )
+        
+        // Cores adicionais
         static let success = Color.green
         static let error = Color.red
         static let warning = Color.orange
@@ -68,33 +73,44 @@ struct TEMFCDesign {
             endPoint: .bottomTrailing
         )
         
+        // Método para gerar cor para tags baseado no hash da string
         static func tagColor(for tag: String) -> Color {
-            // Gera uma cor consistente baseada no hash da string
-            let hash = abs(tag.hashValue)
-            
-            // Use cores previamente definidas para categorias comuns
-            // Adicione mais mapeamentos conforme necessário
+            // Mapeamento de categorias para cores harmoniosas
             let tagMap: [String: Color] = [
-                "Saúde da Mulher": Color(red: 0.9, green: 0.4, blue: 0.7),
-                "Saúde da Criança": Color(red: 0.4, green: 0.7, blue: 0.9),
-                "Saúde Mental": Color(red: 0.5, green: 0.3, blue: 0.8),
-                "Medicina centrada na pessoa": Color(red: 0.3, green: 0.8, blue: 0.5),
-                "Atenção Primária à Saúde": Color(red: 0.2, green: 0.6, blue: 0.9),
-                "Saúde do Idoso": Color(red: 0.7, green: 0.5, blue: 0.2),
-                "Urgências em APS": Color(red: 0.9, green: 0.3, blue: 0.3),
-                "Doenças Crônicas": Color(red: 0.6, green: 0.2, blue: 0.6)
+                // Cores principais por área temática
+                "Saúde da Mulher": Color(red: 0.9, green: 0.4, blue: 0.6),         // Rosa suave
+                "Saúde da Criança": Color(red: 0.3, green: 0.7, blue: 0.9),        // Azul claro
+                "Saúde Mental": Color(red: 0.5, green: 0.4, blue: 0.8),            // Roxo médio
+                "Saúde do Idoso": Color(red: 0.8, green: 0.6, blue: 0.3),          // Âmbar dourado
+                "Medicina centrada na pessoa": Color(red: 0.3, green: 0.7, blue: 0.5), // Verde médio
+                "Atenção Primária à Saúde": Color(red: 0.2, green: 0.5, blue: 0.8), // Azul médio
+                "Urgências em APS": Color(red: 0.9, green: 0.4, blue: 0.3),        // Vermelho suave
+                "Doenças Crônicas": Color(red: 0.6, green: 0.3, blue: 0.7),        // Roxo médio
+                
+                // Categorias adicionais com cores harmoniosas
+                "SUS": Color(red: 0.2, green: 0.6, blue: 0.8),                    // Azul celeste
+                "Prevenção e Promoção": Color(red: 0.4, green: 0.8, blue: 0.4),    // Verde limão suave
+                "Saúde Coletiva": Color(red: 0.5, green: 0.7, blue: 0.3),          // Verde oliva
+                "Procedimentos": Color(red: 0.7, green: 0.4, blue: 0.3),           // Terracota
+                "Diagnóstico": Color(red: 0.3, green: 0.5, blue: 0.7),             // Azul aço
+                "Terapêutica": Color(red: 0.5, green: 0.3, blue: 0.5),             // Púrpura média
+                "Ética e Bioética": Color(red: 0.7, green: 0.7, blue: 0.3)         // Amarelo mostarda
             ]
             
-            // Verifique por correspondências parciais
+            // Verifique correspondências exatas e parciais
             for (key, color) in tagMap {
                 if tag.contains(key) || key.contains(tag) {
                     return color
                 }
             }
             
-            // Gera uma cor baseada no hash se não encontrou correspondência
+            // Geração de cor baseada no hash (refinada para cores mais agradáveis)
+            let hash = abs(tag.hashValue)
             let hue = Double(hash % 1000) / 1000.0
-            return Color(hue: hue, saturation: 0.7, brightness: 0.9)
+            let saturation = 0.6 + (Double(hash % 200) / 1000.0) // 0.6-0.8
+            let brightness = 0.7 + (Double(hash % 200) / 1000.0)   // 0.7-0.9
+            
+            return Color(hue: hue, saturation: saturation, brightness: brightness)
         }
     }
     
@@ -146,7 +162,6 @@ struct TEMFCDesign {
         private static let impactHeavy = UIImpactFeedbackGenerator(style: .heavy)
         private static let notificationFeedback = UINotificationFeedbackGenerator()
         
-        // Preparar geradores (chame no início da view)
         static func prepareAll() {
             impactLight.prepare()
             impactMedium.prepare()
@@ -154,7 +169,6 @@ struct TEMFCDesign {
             notificationFeedback.prepare()
         }
         
-        // Impactos
         static func lightImpact() {
             impactLight.impactOccurred()
         }
@@ -167,7 +181,6 @@ struct TEMFCDesign {
             impactHeavy.impactOccurred()
         }
         
-        // Notificações
         static func success() {
             notificationFeedback.notificationOccurred(.success)
         }
@@ -180,7 +193,6 @@ struct TEMFCDesign {
             notificationFeedback.notificationOccurred(.error)
         }
         
-        // Feedback de seleção
         static func selectionChanged() {
             lightImpact()
         }
@@ -262,7 +274,7 @@ struct TEMFCDesign {
         }
     }
     
-    // MARK: - Extensions para uso fácil
+    // MARK: - Extensões para uso fácil
     
     // Card extension
     static func card(
