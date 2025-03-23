@@ -1,15 +1,21 @@
-// Caminho: /Users/jhoanfranco/Documents/01 - Projetos/TEMFC/TEMFC/Views/HomeView.swift
-
 import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var dataManager: DataManager
+    @EnvironmentObject var userManager: UserManager
+    @EnvironmentObject var settingsManager: SettingsManager
     @State private var selectedTab = 0
+    @State private var showingSettings = false
+    @State private var showingProfile = false
     
     var body: some View {
         ZStack(alignment: .bottom) {
             // Main content area – changes based on selectedTab
             VStack(spacing: 0) {
+                // Barra superior personalizada com nome do usuário
+                CustomTopBar(showingProfile: $showingProfile, showingSettings: $showingSettings)
+                    .environmentObject(userManager)
+                
                 // Main content based on selected tab
                 Group {
                     if selectedTab == 0 {
@@ -19,7 +25,7 @@ struct HomeView: View {
                                 .navigationTitle("Prova Teórica")
                                 .navigationBarTitleDisplayMode(.large)
                         }
-                        .navigationViewStyle(StackNavigationViewStyle()) // Adicionado
+                        .navigationViewStyle(StackNavigationViewStyle())
                     } else if selectedTab == 1 {
                         NavigationView {
                             ExamListView(examType: .theoretical_practical)
@@ -27,7 +33,7 @@ struct HomeView: View {
                                 .navigationTitle("Prova Teórico-Prática")
                                 .navigationBarTitleDisplayMode(.large)
                         }
-                        .navigationViewStyle(StackNavigationViewStyle()) // Adicionado
+                        .navigationViewStyle(StackNavigationViewStyle())
                     } else if selectedTab == 2 {
                         NavigationView {
                             StudyView()
@@ -35,7 +41,7 @@ struct HomeView: View {
                                 .navigationTitle("Estudo")
                                 .navigationBarTitleDisplayMode(.large)
                         }
-                        .navigationViewStyle(StackNavigationViewStyle()) // Adicionado
+                        .navigationViewStyle(StackNavigationViewStyle())
                     } else {
                         NavigationView {
                             PerformanceView()
@@ -43,7 +49,7 @@ struct HomeView: View {
                                 .navigationTitle("Desempenho")
                                 .navigationBarTitleDisplayMode(.large)
                         }
-                        .navigationViewStyle(StackNavigationViewStyle()) // Adicionado
+                        .navigationViewStyle(StackNavigationViewStyle())
                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -68,6 +74,24 @@ struct HomeView: View {
             .padding(.bottom, 20)
         }
         .edgesIgnoringSafeArea(.bottom)
+        .sheet(isPresented: $showingSettings) {
+            NavigationView {
+                SettingsView(settingsManager: settingsManager)
+                    .environmentObject(settingsManager)
+                    .environmentObject(userManager)
+                    .navigationTitle("Configurações")
+                    .navigationBarTitleDisplayMode(.inline)
+            }
+        }
+        .sheet(isPresented: $showingProfile) {
+            NavigationView {
+                UserProfileView(userManager: userManager)
+                    .environmentObject(userManager)
+                    .environmentObject(dataManager)
+                    .navigationTitle("Meu Perfil")
+                    .navigationBarTitleDisplayMode(.inline)
+            }
+        }
         .onAppear {
             print("HomeView appeared with \(dataManager.exams.count) exams loaded")
         }
@@ -76,7 +100,9 @@ struct HomeView: View {
     private func tabButton(index: Int) -> some View {
         Button(action: {
             selectedTab = index
-            TEMFCDesign.HapticFeedback.lightImpact()
+            if settingsManager.settings.hapticFeedbackEnabled {
+                TEMFCDesign.HapticFeedback.lightImpact()
+            }
         }) {
             VStack(spacing: 4) {
                 Group {
@@ -94,12 +120,12 @@ struct HomeView: View {
                     }
                 }
                 .font(.system(size: 20))
-                .foregroundColor(selectedTab == index ? TEMFCDesign.Colors.primary : .gray)
+                .foregroundColor(selectedTab == index ? settingsManager.settings.colorTheme.primaryColor : .gray)
                 
                 Text(tabTitle(for: index))
                     .font(.caption2)
                     .fontWeight(selectedTab == index ? .bold : .regular)
-                    .foregroundColor(selectedTab == index ? TEMFCDesign.Colors.primary : .gray)
+                    .foregroundColor(selectedTab == index ? settingsManager.settings.colorTheme.primaryColor : .gray)
             }
         }
     }
@@ -111,6 +137,81 @@ struct HomeView: View {
         case 2: return "Estudo"
         case 3: return "Desempenho"
         default: return ""
+        }
+    }
+}
+
+// Componente de barra superior personalizada
+struct CustomTopBar: View {
+    @EnvironmentObject var userManager: UserManager
+    @Binding var showingProfile: Bool
+    @Binding var showingSettings: Bool
+    
+    var body: some View {
+        HStack {
+            // Botão de perfil
+            Button(action: {
+                showingProfile = true
+            }) {
+                HStack(spacing: 8) {
+                    // Foto de perfil ou iniciais
+                    if let imageData = userManager.currentUser.profileImage,
+                       let uiImage = UIImage(data: imageData) {
+                        Image(uiImage: uiImage)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 36, height: 36)
+                            .clipShape(Circle())
+                    } else {
+                        // Avatar com iniciais
+                        ZStack {
+                            Circle()
+                                .fill(TEMFCDesign.Colors.primary.opacity(0.1))
+                            
+                            Text(initialsFromName)
+                                .font(.system(size: 14, weight: .bold))
+                                .foregroundColor(TEMFCDesign.Colors.primary)
+                        }
+                        .frame(width: 36, height: 36)
+                    }
+                    
+                    // Nome do usuário
+                    Text(userManager.currentUser.displayName)
+                        .font(.headline)
+                        .foregroundColor(TEMFCDesign.Colors.text)
+                }
+            }
+            .buttonStyle(PlainButtonStyle())
+            
+            Spacer()
+            
+            // Botão de configurações
+            Button(action: {
+                showingSettings = true
+            }) {
+                Image(systemName: "gearshape.fill")
+                    .font(.system(size: 22))
+                    .foregroundColor(TEMFCDesign.Colors.secondaryText)
+            }
+        }
+        .padding()
+        .background(TEMFCDesign.Colors.background)
+    }
+    
+    private var initialsFromName: String {
+        if userManager.currentUser.name.isEmpty {
+            return "?"
+        }
+        
+        let components = userManager.currentUser.name.components(separatedBy: " ")
+        if components.count > 1 {
+            // Pegar a primeira letra do primeiro e último nome
+            let firstInitial = components.first?.prefix(1) ?? ""
+            let lastInitial = components.last?.prefix(1) ?? ""
+            return "\(firstInitial)\(lastInitial)".uppercased()
+        } else {
+            // Apenas a primeira letra do nome
+            return String(userManager.currentUser.name.prefix(1)).uppercased()
         }
     }
 }

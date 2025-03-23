@@ -4,6 +4,7 @@ import AVKit
 struct ExamSessionView: View {
     @ObservedObject var viewModel: ExamViewModel
     @EnvironmentObject var dataManager: DataManager
+    @EnvironmentObject var settingsManager: SettingsManager  // Supondo que exista um SettingsManager
     @Environment(\.presentationMode) var presentationMode
     @State private var showingExplanation = false
     @State private var showingActionSheet = false
@@ -13,7 +14,7 @@ struct ExamSessionView: View {
     // ScrollViewReader para controle de navegação
     @State private var scrollProxy: ScrollViewProxy? = nil
     
-    // Geradores de feedback háptico
+    // Geradores de feedback háptico (caso não seja usado o settingsManager)
     let impactMedium = UIImpactFeedbackGenerator(style: .medium)
     let notificationFeedback = UINotificationFeedbackGenerator()
     
@@ -25,19 +26,14 @@ struct ExamSessionView: View {
             
             // Conteúdo principal
             VStack(spacing: 0) {
-                // Cabeçalho com cronômetro e número da questão
                 headerView
                     .padding(.bottom, 1)
-                
-                // Barra de progresso
                 progressBarView
                 
                 if let question = viewModel.currentQuestion {
-                    // Conteúdo principal em ScrollView
                     ScrollView(.vertical, showsIndicators: true) {
                         ScrollViewReader { proxy in
                             VStack(spacing: 20) {
-                                // Cartão da questão
                                 QuestionCardView(
                                     question: question,
                                     selectedOption: viewModel.userAnswers[question.id],
@@ -52,15 +48,11 @@ struct ExamSessionView: View {
                                 .opacity(animateTransition ? 1 : 0)
                                 .animation(.easeInOut(duration: 0.5), value: animateTransition)
                                 
-                                // Espaço para navegação
                                 Spacer(minLength: 80)
                             }
                             .padding(.bottom, 50)
                             .onAppear {
-                                // Armazenar a referência para o ScrollViewProxy
                                 scrollProxy = proxy
-                                
-                                // Animar a entrada da questão
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                                     withAnimation {
                                         animateTransition = true
@@ -70,7 +62,6 @@ struct ExamSessionView: View {
                         }
                     }
                 } else {
-                    // Fallback se não houver questão
                     VStack {
                         Spacer()
                         ProgressView()
@@ -85,13 +76,13 @@ struct ExamSessionView: View {
                 }
             }
             
-            // Barra de navegação inferior sobreposta
+            // Barra de navegação inferior
             VStack {
                 Spacer()
                 navigationButtons
             }
             
-            // Confetti para respostas corretas
+            // Confetti para feedback de respostas corretas
             if showConfetti {
                 ExamConfettiView()
                     .ignoresSafeArea()
@@ -101,8 +92,7 @@ struct ExamSessionView: View {
         .onAppear {
             setupOnAppear()
         }
-        .onChange(of: viewModel.currentQuestionIndex) { _ in
-            // Reset state e animar nova questão
+        .onChange(of: viewModel.currentQuestionIndex) { newValue, oldValue in
             showingExplanation = false
             animateTransition = false
             
@@ -110,8 +100,6 @@ struct ExamSessionView: View {
                 withAnimation {
                     animateTransition = true
                 }
-                
-                // Rolar para o topo
                 scrollProxy?.scrollTo("questionCard", anchor: .top)
             }
         }
@@ -121,27 +109,21 @@ struct ExamSessionView: View {
         .navigationBarHidden(true)
     }
     
-    // MARK: - Componentes
+    // MARK: - Componentes da Interface
     
-    // Cabeçalho com cronômetro e botões
     private var headerView: some View {
         ZStack {
             HStack {
-                // Cronômetro
                 HStack(spacing: 5) {
                     Image(systemName: "clock.fill")
                         .foregroundColor(TEMFCDesign.Colors.secondaryText)
-                    
                     Text(formattedTime(viewModel.elapsedTime))
                         .font(TEMFCDesign.Typography.headline)
                         .monospacedDigit()
                         .foregroundColor(TEMFCDesign.Colors.text)
                 }
                 .padding(.horizontal)
-                
                 Spacer()
-                
-                // Menu de opções
                 Button(action: {
                     TEMFCDesign.HapticFeedback.lightImpact()
                     showingActionSheet = true
@@ -152,18 +134,14 @@ struct ExamSessionView: View {
                         .padding(.horizontal)
                 }
             }
-            
-            // Número da questão
             if let exam = viewModel.currentExam {
                 HStack(spacing: 4) {
                     Text("\(viewModel.currentQuestionIndex + 1)")
                         .font(TEMFCDesign.Typography.headline)
                         .foregroundColor(TEMFCDesign.Colors.primary)
-                    
                     Text("/")
                         .font(TEMFCDesign.Typography.subheadline)
                         .foregroundColor(TEMFCDesign.Colors.secondaryText)
-                    
                     Text("\(exam.questions.count)")
                         .font(TEMFCDesign.Typography.subheadline)
                         .foregroundColor(TEMFCDesign.Colors.secondaryText)
@@ -175,16 +153,12 @@ struct ExamSessionView: View {
         .shadow(color: Color.black.opacity(0.05), radius: 3, x: 0, y: 2)
     }
     
-    // Barra de progresso aprimorada
     private var progressBarView: some View {
         GeometryReader { geometry in
             ZStack(alignment: .leading) {
-                // Fundo da barra
                 Rectangle()
                     .fill(Color.gray.opacity(0.2))
                     .frame(height: 4)
-                
-                // Progresso
                 if let exam = viewModel.currentExam {
                     Rectangle()
                         .fill(TEMFCDesign.Colors.primary)
@@ -199,10 +173,8 @@ struct ExamSessionView: View {
         .frame(height: 4)
     }
     
-    // Botões de navegação inferiores
     private var navigationButtons: some View {
         HStack(spacing: 20) {
-            // Botão Anterior
             Button(action: {
                 navigateToPreviousQuestion()
             }) {
@@ -223,7 +195,6 @@ struct ExamSessionView: View {
             
             Spacer()
             
-            // Botão Próxima/Finalizar
             if showingExplanation {
                 Button(action: {
                     navigateToNextQuestion()
@@ -254,7 +225,6 @@ struct ExamSessionView: View {
         impactMedium.prepare()
         notificationFeedback.prepare()
         
-        // Iniciar com animação
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             withAnimation {
                 animateTransition = true
@@ -263,47 +233,51 @@ struct ExamSessionView: View {
     }
     
     private func handleOptionSelected(question: Question, index: Int) {
-        // Registrar a resposta
         viewModel.selectAnswer(questionId: question.id, optionIndex: index)
         
-        // Feedback tátil e visual
         if viewModel.isAnswerCorrect(questionId: question.id, optionIndex: index) {
-            TEMFCDesign.HapticFeedback.success()
-            withAnimation {
-                showConfetti = true
+            if settingsManager.settings.hapticFeedbackEnabled {
+                TEMFCDesign.HapticFeedback.success()
             }
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            if settingsManager.settings.showConfettiOnCorrectAnswer {
                 withAnimation {
-                    showConfetti = false
+                    showConfetti = true
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    withAnimation {
+                        showConfetti = false
+                    }
                 }
             }
         } else {
-            TEMFCDesign.HapticFeedback.error()
+            if settingsManager.settings.hapticFeedbackEnabled {
+                TEMFCDesign.HapticFeedback.error()
+            }
         }
         
-        // Mostrar explicação com animação
-        withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
-            showingExplanation = true
+        if settingsManager.settings.showCorrectAnswerImmediately {
+            withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
+                showingExplanation = true
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                withAnimation(.easeInOut(duration: 0.7)) {
+                    scrollProxy?.scrollTo("explanationSection", anchor: .top)
+                }
+            }
         }
         
-        // Agendar a rolagem após a animação de mostrar explicação
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            withAnimation(.easeInOut(duration: 0.7)) {
-                scrollProxy?.scrollTo("explanationSection", anchor: .top)
+        if settingsManager.settings.automaticallyContinueQuizzes && !isLastQuestion {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                navigateToNextQuestion()
             }
         }
     }
     
     private func navigateToPreviousQuestion() {
         TEMFCDesign.HapticFeedback.lightImpact()
-        
-        // Animar transição de saída
         withAnimation {
             animateTransition = false
         }
-        
-        // Navegar após breve delay para animação
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             showingExplanation = false
             viewModel.moveToPreviousQuestion()
@@ -312,16 +286,12 @@ struct ExamSessionView: View {
     
     private func navigateToNextQuestion() {
         TEMFCDesign.HapticFeedback.lightImpact()
-        
         if isLastQuestion {
             showingActionSheet = true
         } else {
-            // Animar transição de saída
             withAnimation {
                 animateTransition = false
             }
-            
-            // Navegar após breve delay para animação
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                 showingExplanation = false
                 viewModel.moveToNextQuestion()
@@ -334,11 +304,8 @@ struct ExamSessionView: View {
         return viewModel.currentQuestionIndex == exam.questions.count - 1
     }
     
-    // MARK: - Método finishExam atualizado
-    
     private func finishExam() {
         print("🏁 Iniciando processo de finalização do exame")
-        
         guard let currentExam = viewModel.currentExam else {
             print("❌ Erro: Nenhum exame atual encontrado")
             return
@@ -346,22 +313,13 @@ struct ExamSessionView: View {
         
         if let completedExam = viewModel.finishExam() {
             print("✅ Exame finalizado com sucesso: \(completedExam.score)%")
-            
-            // Salvar no DataManager
             dataManager.saveCompletedExam(completedExam)
             print("💾 Exame salvo no DataManager")
-            
-            // Limpar o exame em andamento
             dataManager.removeInProgressExam(examId: currentExam.id)
-            
-            // Garantir que o viewModel tenha o completedExam definido
             viewModel.completedExam = completedExam
-            
-            // Forçar a atualização da interface para navegar para a tela de resultados
             DispatchQueue.main.async {
                 presentationMode.wrappedValue.dismiss()
             }
-            
             print("🔄 Navegação para tela de resultados iniciada")
         } else {
             print("❌ Erro: Falha ao finalizar o exame")
@@ -436,5 +394,6 @@ struct ExamSessionView_Previews: PreviewProvider {
         
         return ExamSessionView(viewModel: viewModel)
             .environmentObject(DataManager())
+            .environmentObject(SettingsManager())
     }
 }

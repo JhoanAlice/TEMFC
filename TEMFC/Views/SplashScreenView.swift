@@ -78,7 +78,7 @@ struct SplashScreenView: View {
         // Mensagem inicial e simulação de progresso
         self.loadingMessage = "Carregando recursos..."
         
-        let initialTimer = Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true) { timer in
+        _ = Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true) { timer in
             withAnimation {
                 // Avança somente até 70% enquanto o carregamento real não termina
                 if loadingProgress < 0.7 {

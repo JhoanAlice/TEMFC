@@ -1,5 +1,3 @@
-// Caminho: /Users/jhoanfranco/Documents/01 - Projetos/TEMFC/TEMFC/Views/StudyView.swift
-
 import SwiftUI
 
 struct StudyView: View {
@@ -69,31 +67,22 @@ struct StudyView: View {
                             .font(TEMFCDesign.Typography.subheadline)
                             .foregroundColor(TEMFCDesign.Colors.secondaryText)
                         
-                        // Versão alternativa da barra de pesquisa para evitar problemas de thread
-                        HStack {
-                            Image(systemName: "magnifyingglass")
-                                .foregroundColor(TEMFCDesign.Colors.secondaryText)
-                            
-                            // Usando ZStack para simular o placeholder manualmente
-                            ZStack(alignment: .leading) {
-                                if searchText.isEmpty {
-                                    Text("Buscar área temática")
-                                        .foregroundColor(Color(.placeholderText))
-                                        .font(TEMFCDesign.Typography.body)
+                        // SearchBar simplificada
+                        TextField("Buscar área temática", text: $searchText)
+                            .font(TEMFCDesign.Typography.body)
+                            .padding(.vertical, 8)
+                            .padding(.horizontal, 36)
+                            .background(TEMFCDesign.Colors.background)
+                            .cornerRadius(TEMFCDesign.BorderRadius.medium)
+                            .overlay(
+                                HStack {
+                                    Image(systemName: "magnifyingglass")
+                                        .foregroundColor(TEMFCDesign.Colors.secondaryText)
+                                        .padding(.leading, 10)
+                                    Spacer()
                                 }
-                                
-                                // Texto básico com input para evitar propriedades UIKit
-                                TextEditor(text: $searchText)
-                                    .font(TEMFCDesign.Typography.body)
-                                    .frame(height: 22)
-                                    .background(Color.clear)
-                                    .padding(.vertical, -8)
-                            }
-                        }
-                        .padding()
-                        .background(TEMFCDesign.Colors.background)
-                        .cornerRadius(TEMFCDesign.BorderRadius.medium)
-                        .padding(.top, TEMFCDesign.Spacing.s)
+                            )
+                            .padding(.top, TEMFCDesign.Spacing.s)
                     }
                     .padding()
                     .background(TEMFCDesign.Colors.background)

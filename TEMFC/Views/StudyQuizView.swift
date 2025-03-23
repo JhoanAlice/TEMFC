@@ -187,8 +187,8 @@ struct StudyQuizView: View {
         .onAppear {
             viewModel.loadQuestions(from: dataManager.exams, with: selectedTags, size: quizSize)
         }
-        .onChange(of: viewModel.currentQuestionIndex) { _ in
-            selectedOption = viewModel.userAnswers[safe: viewModel.currentQuestionIndex]
+        .onChange(of: viewModel.currentQuestionIndex) { oldValue, newValue in
+            selectedOption = viewModel.userAnswers[safe: newValue]
         }
     }
 }

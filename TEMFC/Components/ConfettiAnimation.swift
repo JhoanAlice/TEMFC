@@ -1,5 +1,3 @@
-// TEMFC/Components/ConfettiAnimation.swift
-
 import SwiftUI
 
 struct ExamConfettiPiece: Identifiable {
@@ -41,8 +39,7 @@ struct ExamConfettiView: View {
     
     private func generateConfetti() {
         let screenWidth = UIScreen.main.bounds.width
-        let screenHeight = UIScreen.main.bounds.height
-        
+        // Removido o valor não utilizado de screenHeight
         var newPieces: [ExamConfettiPiece] = []
         
         for _ in 0..<100 {

@@ -1,20 +1,18 @@
+// Path: TEMFC/Utils/KeyboardOptimization.swift
+
 import SwiftUI
 import UIKit
 
-// Configurações globais para otimização de teclado
 struct KeyboardOptimization {
+    // This method should only be called from the main thread or through DispatchQueue.main.async
     static func setupKeyboard() {
-        // Garantir que a configuração do teclado seja feita na thread principal
-        DispatchQueue.main.async {
-            UITextField.appearance().autocorrectionType = .no
-        }
+        assert(Thread.isMainThread, "KeyboardOptimization.setupKeyboard() must be called from the main thread")
+        UITextField.appearance().autocorrectionType = .no
+        UITextField.appearance().spellCheckingType = .no
     }
     
-    // Adicionar um método que pode ser chamado diretamente nas views
+    // This method is now a no-op since we'll use SwiftUI modifiers instead
     static func applyTextFieldSettings() {
-        DispatchQueue.main.async {
-            UITextField.appearance().autocorrectionType = .no
-            UITextField.appearance().spellCheckingType = .no
-        }
+        // Empty implementation - we'll use SwiftUI modifiers instead
     }
 }

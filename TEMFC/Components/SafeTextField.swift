@@ -3,18 +3,22 @@ import SwiftUI
 struct SafeTextField: View {
     let placeholder: String
     @Binding var text: String
-    
+    var isSecure: Bool = false  // Defina como true para utilizar um campo seguro
+
     var body: some View {
-        ZStack(alignment: .leading) {
-            if text.isEmpty {
-                Text(placeholder)
-                    .foregroundColor(Color(.placeholderText))
-                    .padding(.horizontal, 4)
+        Group {
+            if isSecure {
+                SecureField(placeholder, text: $text)
+            } else {
+                TextField(placeholder, text: $text)
             }
-            
-            TextField("", text: $text)
-                .disableAutocorrection(true)
-                .autocapitalization(.none)
         }
+        .autocorrectionDisabled(true)
+        .textInputAutocapitalization(.never)
+        .padding(10)
+        .overlay(
+            RoundedRectangle(cornerRadius: 8)
+                .stroke(Color.gray.opacity(0.5), lineWidth: 1)
+        )
     }
 }
