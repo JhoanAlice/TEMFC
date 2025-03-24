@@ -197,10 +197,8 @@ struct UserProfileView: View {
                         .foregroundColor(TEMFCDesign.Colors.secondaryText)
                     
                     TextField("Seu nome", text: $name)
-                        .font(TEMFCDesign.Typography.body)
-                        .padding()
-                        .background(TEMFCDesign.Colors.tertiaryBackground)
-                        .cornerRadius(TEMFCDesign.BorderRadius.small)
+                        .keyboardType(.default)
+                        .autocapitalization(.words)
                         .disabled(!isEditing)
                 }
                 
@@ -211,12 +209,7 @@ struct UserProfileView: View {
                         .foregroundColor(TEMFCDesign.Colors.secondaryText)
                     
                     TextField("Seu e-mail", text: $email)
-                        .font(TEMFCDesign.Typography.body)
-                        .padding()
-                        .background(TEMFCDesign.Colors.tertiaryBackground)
-                        .cornerRadius(TEMFCDesign.BorderRadius.small)
-                        .keyboardType(.emailAddress)
-                        .autocapitalization(.none)
+                        .keyboardType(.default)
                         .disabled(!isEditing)
                 }
                 

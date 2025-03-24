@@ -1,10 +1,10 @@
-// Caminho: /Users/jhoanfranco/Documents/01 - Projetos/TEMFC/TEMFC/Views/WelcomeView.swift
-
 import SwiftUI
 
 struct WelcomeView: View {
     @EnvironmentObject var userManager: UserManager
     @EnvironmentObject var settingsManager: SettingsManager
+
+    
     @State private var currentPage = 0
     @State private var name = ""
     @State private var email = ""
@@ -20,8 +20,7 @@ struct WelcomeView: View {
     }
     
     // Valores para o picker de ano de formatura
-    private let currentYear = Calendar.current.component(.year, from: Date())
-    private let yearRange = Calendar.current.component(.year, from: Date()) - 30 ... Calendar.current.component(.year, from: Date()) + 5
+    private let yearRange = (Calendar.current.component(.year, from: Date()) - 30)...(Calendar.current.component(.year, from: Date()) + 5)
     
     var body: some View {
         ZStack {
@@ -32,16 +31,9 @@ struct WelcomeView: View {
                 settingsManager.settings.colorTheme.primaryColor.opacity(0.8)
             ])
             
-            // Gesto para fechar o teclado ao tocar fora dos campos
-            Color.clear
-                .contentShape(Rectangle())
-                .onTapGesture {
-                    focusedField = nil
-                }
-            
-            VStack {
-                // Conteúdo do onboarding
-                Group {
+            ScrollView {
+                VStack {
+                    // Conteúdo do onboarding
                     if currentPage == 0 {
                         welcomePage
                     } else if currentPage == 1 {
@@ -49,70 +41,87 @@ struct WelcomeView: View {
                     } else {
                         registrationPage
                     }
-                }
-                .transition(.opacity)
-                
-                // Indicadores de página
-                HStack(spacing: 8) {
-                    ForEach(0..<3) { i in
-                        Circle()
-                            .fill(currentPage == i ? Color.white : Color.white.opacity(0.5))
-                            .frame(width: 8, height: 8)
+                    
+                    // Indicadores de página
+                    HStack(spacing: 8) {
+                        ForEach(0..<3) { i in
+                            Circle()
+                                .fill(currentPage == i ? Color.white : Color.white.opacity(0.5))
+                                .frame(width: 8, height: 8)
+                        }
                     }
-                }
-                .padding(.bottom, 20)
-                
-                // Botões de navegação
-                HStack {
-                    if currentPage > 0 {
-                        Button {
-                            DispatchQueue.main.async {
+                    .padding(.bottom, 20)
+                    
+                    // Botões de navegação
+                    HStack {
+                        if currentPage > 0 {
+                            Button {
+                                hideKeyboard()
                                 withAnimation {
                                     currentPage -= 1
+                                    focusedField = nil
+                                }
+                            } label: {
+                                HStack {
+                                    Image(systemName: "chevron.left")
+                                    Text("Voltar")
+                                }
+                                .foregroundColor(.white)
+                                .padding()
+                                .background(Color.white.opacity(0.2))
+                                .cornerRadius(10)
+                            }
+                        }
+                        
+                        Spacer()
+                        
+                        Button {
+                            hideKeyboard()
+                            if currentPage == 2 {
+                                completeRegistration()
+                            } else {
+                                withAnimation {
+                                    currentPage += 1
+                                    focusedField = nil
                                 }
                             }
                         } label: {
                             HStack {
-                                Image(systemName: "chevron.left")
-                                Text("Voltar")
+                                Text(currentPage == 2 ? "Começar" : "Próximo")
+                                Image(systemName: currentPage == 2 ? "checkmark" : "chevron.right")
                             }
                             .foregroundColor(.white)
                             .padding()
-                            .background(Color.white.opacity(0.2))
-                            .cornerRadius(10)
+                            .background(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .fill(Color.white.opacity(currentPage == 2 && !isFormValid ? 0.1 : 0.2))
+                            )
                         }
+                        .disabled(currentPage == 2 && !isFormValid)
                     }
-                    
-                    Spacer()
-                    
-                    Button {
-                        if currentPage == 2 {
-                            completeRegistration()
-                        } else {
-                            DispatchQueue.main.async {
-                                withAnimation {
-                                    currentPage += 1
-                                }
-                            }
-                        }
-                    } label: {
-                        HStack {
-                            Text(currentPage == 2 ? "Começar" : "Próximo")
-                            Image(systemName: currentPage == 2 ? "checkmark" : "chevron.right")
-                        }
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(
-                            RoundedRectangle(cornerRadius: 10)
-                                .fill(Color.white.opacity(currentPage == 2 && !isFormValid ? 0.1 : 0.2))
-                        )
-                    }
-                    .disabled(currentPage == 2 && !isFormValid)
+                    .padding(.horizontal, 20)
+                    .padding(.bottom, 40)
                 }
-                .padding(.horizontal, 20)
-                .padding(.bottom, 40)
+                .padding()
+            }
+            .scrollDismissesKeyboard(.interactively)
+        }
+        .toolbar {
+            ToolbarItemGroup(placement: .keyboard) {
+                Spacer()
+                Button("Pronto") {
+                    hideKeyboard()
+                }
             }
         }
+        .onTapGesture {
+            hideKeyboard()
+        }
+    }
+    
+    // Função simples para esconder o teclado
+    private func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
     
     // MARK: - Páginas do Onboarding
@@ -177,46 +186,48 @@ struct WelcomeView: View {
                 .foregroundColor(.white)
                 .frame(maxWidth: .infinity, alignment: .center)
             
+            // Campo Nome
             VStack(alignment: .leading, spacing: 8) {
                 Text("Nome")
                     .font(.headline)
                     .foregroundColor(.white)
                 
-                SafeSwiftUITextField(
-                    placeholder: "Seu nome completo",
-                    text: $name,
-                    keyboardType: .default,
-                    autocapitalization: .words,
-                    foregroundColor: .white
-                )
-                .focused($focusedField, equals: .name)
-                .padding()
-                .background(Color.white.opacity(0.2))
-                .cornerRadius(10)
+                // TextField padrão do SwiftUI
+                TextField("Seu nome completo", text: $name)
+                    .focused($focusedField, equals: .name)
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(Color.white.opacity(0.2))
+                    .cornerRadius(10)
+                    .submitLabel(.next)
+                    .onSubmit {
+                        focusedField = .email
+                    }
             }
             
+            // Campo E-mail
             VStack(alignment: .leading, spacing: 8) {
                 Text("E-mail")
                     .font(.headline)
                     .foregroundColor(.white)
                 
-                SafeSwiftUITextField(
-                    placeholder: "Seu e-mail",
-                    text: $email,
-                    keyboardType: .emailAddress,
-                    autocapitalization: .none,
-                    foregroundColor: .white
-                )
-                .focused($focusedField, equals: .email)
-                .padding()
-                .background(Color.white.opacity(0.2))
-                .cornerRadius(10)
-                .submitLabel(.done)
-                .onSubmit {
-                    focusedField = nil
-                }
+                // TextField padrão do SwiftUI
+                TextField("Seu e-mail", text: $email)
+                    .focused($focusedField, equals: .email)
+                    .foregroundColor(.white)
+                    .keyboardType(.emailAddress)
+                    .autocapitalization(.none)
+                    .padding()
+                    .background(Color.white.opacity(0.2))
+                    .cornerRadius(10)
+                    .submitLabel(.done)
+                    .onSubmit {
+                        focusedField = nil
+                        hideKeyboard()
+                    }
             }
             
+            // Especialização
             VStack(alignment: .leading, spacing: 8) {
                 Text("Especialização")
                     .font(.headline)
@@ -241,6 +252,7 @@ struct WelcomeView: View {
                 }
             }
             
+            // Ano de Formatura
             VStack(alignment: .leading, spacing: 8) {
                 Text("Ano de Formatura")
                     .font(.headline)
@@ -272,7 +284,7 @@ struct WelcomeView: View {
                     .padding(.top, 5)
             }
         }
-        .padding(30)
+        .padding(.vertical, 30)
     }
     
     private func featureItem(icon: String, title: String, description: String) -> some View {
@@ -325,5 +337,6 @@ struct WelcomeView_Previews: PreviewProvider {
         WelcomeView()
             .environmentObject(UserManager())
             .environmentObject(SettingsManager())
+            
     }
 }

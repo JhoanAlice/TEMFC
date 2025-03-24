@@ -1,5 +1,4 @@
 import SwiftUI
-import Foundation
 
 @main
 struct TEMFCApp: App {
@@ -14,12 +13,10 @@ struct TEMFCApp: App {
             ZStack {
                 Group {
                     if !userManager.isLoggedIn {
-                        // Simplified welcome view
                         WelcomeView()
                             .environmentObject(userManager)
                             .environmentObject(settingsManager)
                     } else {
-                        // Aplicativo principal
                         SplashScreenView()
                             .environmentObject(dataManager)
                             .environmentObject(userManager)
@@ -28,7 +25,6 @@ struct TEMFCApp: App {
                     }
                 }
                 
-                // Solução de fallback para resultados perdidos
                 if showLatestResult, let exam = latestCompletedExam {
                     NavigationView {
                         ExamResultView(completedExam: exam)
@@ -56,8 +52,6 @@ struct TEMFCApp: App {
                 // Configurar preferência de tamanho para diferentes tamanhos de tela
                 setDefaultSizeClass()
             }
-            .handlesExternalEvents(preferring: ["*"], allowing: ["*"])
-            .environmentObject(settingsManager)
         }
     }
     
@@ -65,10 +59,8 @@ struct TEMFCApp: App {
     private func setDefaultSizeClass() {
         let idiom = UIDevice.current.userInterfaceIdiom
         if idiom == .pad {
-            // Para iPad, habilitar modo layout multi-coluna onde apropriado
             UserDefaults.standard.set(true, forKey: "useMultiColumn")
         } else {
-            // Para iPhone, usar layout padrão
             UserDefaults.standard.set(false, forKey: "useMultiColumn")
         }
     }

@@ -69,23 +69,9 @@ struct StudyView: View {
                         
                         // SearchBar simplificada
                         TextField("Buscar área temática", text: $searchText)
-                            .font(TEMFCDesign.Typography.body)
-                            .padding(.vertical, 8)
-                            .padding(.horizontal, 36)
-                            .background(TEMFCDesign.Colors.background)
-                            .cornerRadius(TEMFCDesign.BorderRadius.medium)
-                            .overlay(
-                                HStack {
-                                    Image(systemName: "magnifyingglass")
-                                        .foregroundColor(TEMFCDesign.Colors.secondaryText)
-                                        .padding(.leading, 10)
-                                    Spacer()
-                                }
-                            )
-                            .padding(.top, TEMFCDesign.Spacing.s)
+
                     }
-                    .padding()
-                    .background(TEMFCDesign.Colors.background)
+                   
                     
                     // Configuração do quiz
                     VStack(alignment: .leading, spacing: TEMFCDesign.Spacing.s) {
