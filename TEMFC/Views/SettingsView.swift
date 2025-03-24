@@ -14,6 +14,9 @@ struct SettingsView: View {
     @State private var isAutoBackupEnabled = false
     @State private var selectedAppIcon = "Default"
     
+    // Variável de estado para mostrar a política de privacidade
+    @State private var showingPrivacyPolicy = false
+    
     @Environment(\.dismiss) var dismiss
     
     init(settingsManager: SettingsManager) {
@@ -183,8 +186,16 @@ struct SettingsView: View {
                     }
                     .padding(.vertical, 8)
                     
+                    // Link para a Política de Privacidade com contextMenu para visualização no aplicativo
                     Link(destination: URL(string: "https://temfc.com.br/privacidade")!) {
                         Label("Política de Privacidade", systemImage: "hand.raised.fill")
+                    }
+                    .contextMenu {
+                        Button {
+                            showingPrivacyPolicy = true
+                        } label: {
+                            Label("Ver no aplicativo", systemImage: "doc.text.fill")
+                        }
                     }
                     
                     Link(destination: URL(string: "https://temfc.com.br/termos")!) {
@@ -240,6 +251,10 @@ struct SettingsView: View {
                     print("Import error: \(error.localizedDescription)")
                 }
             }
+        }
+        // Sheet para exibir a política de privacidade no aplicativo
+        .sheet(isPresented: $showingPrivacyPolicy) {
+            PrivacyPolicyView()
         }
     }
     

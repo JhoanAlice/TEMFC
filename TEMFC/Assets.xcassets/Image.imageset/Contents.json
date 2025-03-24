@@ -3,32 +3,17 @@
     {
       "filename" : "DALL·E 2025-03-23 07.07.25 - Create a very clean, ultra-minimalist app icon for an educational app focused on TEMFC exam simulations. Use a vibrant blue background with subtle ora.png",
       "idiom" : "universal",
-      "platform" : "ios",
-      "size" : "1024x1024"
+      "scale" : "1x"
     },
     {
-      "appearances" : [
-        {
-          "appearance" : "luminosity",
-          "value" : "dark"
-        }
-      ],
       "filename" : "DALL·E 2025-03-23 07.07.25 - Create a very clean, ultra-minimalist app icon for an educational app focused on TEMFC exam simulations. Use a vibrant blue background with subtle ora 1.png",
       "idiom" : "universal",
-      "platform" : "ios",
-      "size" : "1024x1024"
+      "scale" : "2x"
     },
     {
-      "appearances" : [
-        {
-          "appearance" : "luminosity",
-          "value" : "tinted"
-        }
-      ],
       "filename" : "DALL·E 2025-03-23 07.07.25 - Create a very clean, ultra-minimalist app icon for an educational app focused on TEMFC exam simulations. Use a vibrant blue background with subtle ora 2.png",
       "idiom" : "universal",
-      "platform" : "ios",
-      "size" : "1024x1024"
+      "scale" : "3x"
     }
   ],
   "info" : {

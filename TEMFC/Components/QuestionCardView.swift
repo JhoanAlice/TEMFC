@@ -58,11 +58,12 @@ struct QuestionCardView: View {
                 .frame(maxWidth: 200)
             }
             
-            // Enunciado da questão
+            // Enunciado da questão com acessibilidade melhorada
             Text(question.statement)
                 .font(TEMFCDesign.Typography.body)
                 .fixedSize(horizontal: false, vertical: true)
                 .padding(.bottom, 5)
+                .accessibilityLabel("Enunciado da questão: \(question.statement)")
             
             // Vídeo (se houver)
             if let videoUrl = question.videoUrl,
@@ -80,7 +81,7 @@ struct QuestionCardView: View {
                 .foregroundColor(TEMFCDesign.Colors.text)
                 .padding(.top, 5)
             
-            // Opções
+            // Opções com acessibilidade aprimorada
             ForEach(0..<question.options.count, id: \.self) { index in
                 EnhancedOptionButton(
                     option: question.options[index],
@@ -106,6 +107,8 @@ struct QuestionCardView: View {
                     }
                 }
                 .padding(.bottom, 5)
+                .accessibilityLabel("Opção \(["A", "B", "C", "D"][index]): \(question.options[index])")
+                .accessibilityHint(isRevealed ? (index == question.correctOption ? "Resposta correta" : "Resposta incorreta") : "Toque para selecionar esta opção")
             }
             
             // Explicação (se revelada)

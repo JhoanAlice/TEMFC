@@ -52,7 +52,24 @@ struct TEMFCApp: App {
                         self.showLatestResult = true
                     }
                 }
+                
+                // Configurar preferência de tamanho para diferentes tamanhos de tela
+                setDefaultSizeClass()
             }
+            .handlesExternalEvents(preferring: ["*"], allowing: ["*"])
+            .environmentObject(settingsManager)
+        }
+    }
+    
+    // Função para configurar o tamanho padrão para iPads
+    private func setDefaultSizeClass() {
+        let idiom = UIDevice.current.userInterfaceIdiom
+        if idiom == .pad {
+            // Para iPad, habilitar modo layout multi-coluna onde apropriado
+            UserDefaults.standard.set(true, forKey: "useMultiColumn")
+        } else {
+            // Para iPhone, usar layout padrão
+            UserDefaults.standard.set(false, forKey: "useMultiColumn")
         }
     }
 }
