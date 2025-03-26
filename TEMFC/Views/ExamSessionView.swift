@@ -1,24 +1,28 @@
-// Caminho: /TEMFC/Views/ExamSessionView.swift
-
 import SwiftUI
 import AVKit
 
 struct ExamSessionView: View {
     @ObservedObject var viewModel: ExamViewModel
     @EnvironmentObject var dataManager: DataManager
-    @EnvironmentObject var settingsManager: SettingsManager  // Supondo que exista um SettingsManager
+    @EnvironmentObject var settingsManager: SettingsManager
     @Environment(\.presentationMode) var presentationMode
     @State private var showingExplanation = false
-    @State private var showingActionSheet = false
+    @State private var showingCustomDialog = false
+    @State private var actionType: ActionType? = nil
     @State private var showConfetti = false
     @State private var animateTransition = false
     
     // ScrollViewReader para controle de navegação
     @State private var scrollProxy: ScrollViewProxy? = nil
     
-    // Geradores de feedback háptico (caso não seja usado o settingsManager)
+    // Geradores de feedback háptico
     let impactMedium = UIImpactFeedbackGenerator(style: .medium)
     let notificationFeedback = UINotificationFeedbackGenerator()
+    
+    // Enum para os tipos de ação
+    private enum ActionType {
+        case finish, options
+    }
     
     var body: some View {
         ZStack {
@@ -56,6 +60,7 @@ struct ExamSessionView: View {
                                 .padding(.top)
                                 .opacity(animateTransition ? 1 : 0)
                                 .animation(.easeInOut(duration: 0.5), value: animateTransition)
+                                .accessibilityIdentifier("questionCard")
                                 
                                 Spacer(minLength: 80)
                             }
@@ -97,11 +102,33 @@ struct ExamSessionView: View {
                     .ignoresSafeArea()
                     .allowsHitTesting(false)
             }
+            
+            // Diálogo customizado (em vez de confirmationDialog)
+            if showingCustomDialog {
+                CustomDialogView(
+                    isShowing: $showingCustomDialog,
+                    title: actionType == .finish ? "Finalizar Simulado" : "Opções",
+                    message: actionType == .finish ? "Escolha uma opção:" : "O que você deseja fazer?",
+                    primaryAction: actionType == .finish ? {
+                        finishExam()
+                    } : {
+                        saveAndExit()
+                    },
+                    primaryActionText: actionType == .finish ? "Finalizar e Ver Resultados" : "Salvar e Sair",
+                    secondaryAction: actionType == .finish ? {
+                        saveAndExit()
+                    } : {
+                        presentationMode.wrappedValue.dismiss()
+                    },
+                    secondaryActionText: actionType == .finish ? "Salvar e Sair" : "Finalizar sem Salvar",
+                    isDestructive: actionType != .finish
+                )
+            }
         }
         .onAppear {
             setupOnAppear()
         }
-        .onChange(of: viewModel.currentQuestionIndex) { newValue, oldValue in
+        .onChange(of: viewModel.currentQuestionIndex) { oldValue, newValue in
             showingExplanation = false
             animateTransition = false
             
@@ -112,10 +139,13 @@ struct ExamSessionView: View {
                 scrollProxy?.scrollTo("questionCard", anchor: .top)
             }
         }
-        .actionSheet(isPresented: $showingActionSheet) {
-            createActionSheet()
-        }
         .navigationBarHidden(true)
+    }
+    
+    // Atualiza a ação a ser exibida no diálogo customizado
+    private func showActionSheet(type: ActionType) {
+        actionType = type
+        showingCustomDialog = true
     }
     
     // MARK: - Componentes da Interface
@@ -135,7 +165,12 @@ struct ExamSessionView: View {
                 Spacer()
                 Button(action: {
                     TEMFCDesign.HapticFeedback.lightImpact()
-                    showingActionSheet = true
+                    // Exibe o diálogo customizado conforme a condição
+                    if isLastQuestion && showingExplanation {
+                        showActionSheet(type: .finish)
+                    } else {
+                        showActionSheet(type: .options)
+                    }
                 }) {
                     Image(systemName: "ellipsis.circle.fill")
                         .font(.system(size: 22))
@@ -274,15 +309,6 @@ struct ExamSessionView: View {
                 }
             }
         }
-        
-        // Removido o código de navegação automática para impedir a transição imediata:
-        /*
-        if settingsManager.settings.automaticallyContinueQuizzes && !isLastQuestion {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-                navigateToNextQuestion()
-            }
-        }
-        */
     }
     
     private func navigateToPreviousQuestion() {
@@ -299,7 +325,7 @@ struct ExamSessionView: View {
     private func navigateToNextQuestion() {
         TEMFCDesign.HapticFeedback.lightImpact()
         if isLastQuestion {
-            showingActionSheet = true
+            showActionSheet(type: .finish)
         } else {
             withAnimation {
                 animateTransition = false
@@ -338,38 +364,6 @@ struct ExamSessionView: View {
         }
     }
     
-    private func createActionSheet() -> ActionSheet {
-        if isLastQuestion && showingExplanation {
-            return ActionSheet(
-                title: Text("Finalizar Simulado"),
-                message: Text("Escolha uma opção:"),
-                buttons: [
-                    .default(Text("Finalizar e Ver Resultados")) {
-                        finishExam()
-                    },
-                    .default(Text("Salvar e Sair")) {
-                        saveAndExit()
-                    },
-                    .cancel()
-                ]
-            )
-        } else {
-            return ActionSheet(
-                title: Text("Opções"),
-                message: Text("O que você deseja fazer?"),
-                buttons: [
-                    .default(Text("Salvar e Sair")) {
-                        saveAndExit()
-                    },
-                    .destructive(Text("Finalizar sem Salvar")) {
-                        presentationMode.wrappedValue.dismiss()
-                    },
-                    .cancel()
-                ]
-            )
-        }
-    }
-    
     private func saveAndExit() {
         let inProgressExam = viewModel.saveProgressAndExit()
         dataManager.saveInProgressExam(inProgressExam)
@@ -384,10 +378,106 @@ struct ExamSessionView: View {
     }
 }
 
-// MARK: - Extension with Additional Methods
-
-extension ExamSessionView {
-    // O callback onToggleFavorite já está integrado na instância de QuestionCardView acima.
+// Diálogo customizado para substituir o confirmationDialog
+struct CustomDialogView: View {
+    @Binding var isShowing: Bool
+    var title: String
+    var message: String
+    var primaryAction: () -> Void
+    var primaryActionText: String
+    var secondaryAction: () -> Void
+    var secondaryActionText: String
+    var isDestructive: Bool
+    
+    var body: some View {
+        ZStack {
+            // Background blur and dimming
+            Color.black.opacity(0.4)
+                .ignoresSafeArea()
+                .onTapGesture {
+                    withAnimation {
+                        isShowing = false
+                    }
+                }
+            
+            // Dialog content
+            VStack(spacing: 20) {
+                // Title
+                Text(title)
+                    .font(.headline)
+                    .fontWeight(.bold)
+                
+                // Message
+                if !message.isEmpty {
+                    Text(message)
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                        .multilineTextAlignment(.center)
+                }
+                
+                // Divider
+                Divider()
+                
+                // Action buttons
+                VStack(spacing: 12) {
+                    // Primary action button
+                    Button(action: {
+                        withAnimation {
+                            isShowing = false
+                        }
+                        primaryAction()
+                    }) {
+                        Text(primaryActionText)
+                            .font(.headline)
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(TEMFCDesign.Colors.primary)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                    }
+                    
+                    // Secondary action button
+                    Button(action: {
+                        withAnimation {
+                            isShowing = false
+                        }
+                        secondaryAction()
+                    }) {
+                        Text(secondaryActionText)
+                            .font(.headline)
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(isDestructive ? Color.red.opacity(0.1) : Color.gray.opacity(0.1))
+                            .foregroundColor(isDestructive ? .red : .primary)
+                            .cornerRadius(10)
+                    }
+                    
+                    // Cancel button
+                    Button(action: {
+                        withAnimation {
+                            isShowing = false
+                        }
+                    }) {
+                        Text("Cancelar")
+                            .font(.headline)
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(Color.gray.opacity(0.1))
+                            .foregroundColor(.primary)
+                            .cornerRadius(10)
+                    }
+                }
+            }
+            .padding()
+            .background(
+                RoundedRectangle(cornerRadius: 20)
+                    .fill(Color(.systemBackground))
+            )
+            .shadow(radius: 15)
+            .padding(30)
+            .transition(.scale)
+        }
+    }
 }
 
 struct ExamSessionView_Previews: PreviewProvider {

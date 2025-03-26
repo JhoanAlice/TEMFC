@@ -27,6 +27,9 @@
 		3A1481DA2D8FAA6F00D822FB /* TEMFC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TEMFC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A1481EE2D8FAA7000D822FB /* TEMFCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TEMFCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A1481F82D8FAA7000D822FB /* TEMFCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TEMFCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A5246E42D9245B7006C308C /* TEMFC.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TEMFC.xctestplan; sourceTree = "<group>"; };
+		3A5246E52D9245FC006C308C /* TEMFCTests */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TEMFCTests; sourceTree = "<group>"; };
+		3A5246E62D92460A006C308C /* TEMFCUITests */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TEMFCUITests; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -88,6 +91,9 @@
 		3A1481D12D8FAA6F00D822FB = {
 			isa = PBXGroup;
 			children = (
+				3A5246E62D92460A006C308C /* TEMFCUITests */,
+				3A5246E52D9245FC006C308C /* TEMFCTests */,
+				3A5246E42D9245B7006C308C /* TEMFC.xctestplan */,
 				3A1481DC2D8FAA6F00D822FB /* TEMFC */,
 				3A1481F12D8FAA7000D822FB /* TEMFCTests */,
 				3A1481FB2D8FAA7000D822FB /* TEMFCUITests */,

@@ -36,6 +36,7 @@ struct ExamDetailView: View {
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 16)
+                .accessibilityIdentifier("examDetailHeader")
                 
                 // Informações do exame
                 VStack(alignment: .leading, spacing: 16) {
@@ -45,27 +46,30 @@ struct ExamDetailView: View {
                             title: "Questões",
                             value: "\(exam.totalQuestions)"
                         )
+                        .accessibilityIdentifier("questionsInfoCard")
                         
                         InfoCard(
                             icon: "clock",
                             title: "Tempo Médio",
                             value: examAverageTime
                         )
+                        .accessibilityIdentifier("averageTimeInfoCard")
                     }
                     
                     Text("Sobre este Simulado")
                         .font(.headline)
                         .padding(.top, 8)
+                        .accessibilityIdentifier("aboutExamTitle")
                     
                     Text("Esta prova simula com fidelidade o formato oficial do exame TEMFC. As questões são baseadas em situações clínicas reais e seguem o conteúdo programático definido pela SBMFC.")
                         .font(.body)
                         .foregroundColor(.secondary)
+                        .accessibilityIdentifier("aboutExamDescription")
                     
                     if exam.type == .theoretical_practical {
                         HStack {
                             Image(systemName: "exclamationmark.triangle")
                                 .foregroundColor(.orange)
-                            
                             Text("Esta prova inclui questões com vídeos que reproduzem situações clínicas. Certifique-se de que seu dispositivo tem som disponível.")
                                 .font(.callout)
                                 .foregroundColor(.orange)
@@ -73,14 +77,17 @@ struct ExamDetailView: View {
                         .padding()
                         .background(Color.orange.opacity(0.1))
                         .cornerRadius(8)
+                        .accessibilityIdentifier("videoWarning")
                     }
                     
                     // Áreas Temáticas (Tags)
                     Text("Áreas Temáticas")
                         .font(.headline)
                         .padding(.top, 8)
+                        .accessibilityIdentifier("tagsTitle")
                     
                     TagsCloudView(tags: uniqueTags)
+                        .accessibilityIdentifier("tagsCloudView")
                     
                     // Histórico e melhor pontuação
                     HStack {
@@ -88,10 +95,10 @@ struct ExamDetailView: View {
                             Text("Tentativas Anteriores")
                                 .font(.caption)
                                 .foregroundColor(.secondary)
-                            
                             Text("\(previousAttempts)")
                                 .font(.headline)
                         }
+                        .accessibilityIdentifier("previousAttemptsInfo")
                         
                         Spacer()
                         
@@ -99,18 +106,18 @@ struct ExamDetailView: View {
                             Text("Melhor Pontuação")
                                 .font(.caption)
                                 .foregroundColor(.secondary)
-                            
                             Text(bestScore.isEmpty ? "--" : bestScore)
                                 .font(.headline)
                                 .foregroundColor(bestScoreColor)
                         }
+                        .accessibilityIdentifier("bestScoreInfo")
                     }
                     .padding()
                     .background(Color(.systemGray6))
                     .cornerRadius(12)
                 }
                 
-                // Botão Iniciar ou Retomar
+                // Botões de ação – Iniciar ou Continuar Simulado
                 VStack(spacing: 16) {
                     if let inProgressExam = dataManager.getInProgressExam(examId: exam.id) {
                         // Exame em andamento encontrado
@@ -128,6 +135,7 @@ struct ExamDetailView: View {
                             .background(Color.blue)
                             .cornerRadius(12)
                         }
+                        .accessibilityIdentifier("continueExamButton")
                         
                         // Informações sobre o exame em andamento
                         HStack {
@@ -135,22 +143,23 @@ struct ExamDetailView: View {
                                 Text("Progresso atual:")
                                     .font(.caption)
                                     .foregroundColor(.secondary)
-                                
                                 Text("\(inProgressExam.userAnswers.count) de \(exam.totalQuestions) questões respondidas")
                                     .font(.subheadline)
                             }
+                            .accessibilityIdentifier("inProgressInfo")
                             
                             Spacer()
                             
                             Text("Tempo: \(formattedTime(inProgressExam.elapsedTime))")
                                 .font(.subheadline)
                                 .foregroundColor(.secondary)
+                                .accessibilityIdentifier("elapsedTimeInfo")
                         }
                         .padding()
                         .background(Color.orange.opacity(0.1))
                         .cornerRadius(8)
                     } else {
-                        // Nenhum exame em andamento - Botão Iniciar com animação
+                        // Nenhum exame em andamento - Botão Iniciar Simulado
                         Button(action: {
                             let impactMed = UIImpactFeedbackGenerator(style: .medium)
                             impactMed.impactOccurred()
@@ -167,12 +176,12 @@ struct ExamDetailView: View {
                             .padding()
                             .background(Color.blue)
                             .cornerRadius(12)
+                            .accessibilityIdentifier("startExamButton")
                             // Efeito de escala ao pressionar
                             .scaleEffect(isButtonPressed ? 0.96 : 1.0)
                             .animation(.spring(response: 0.2, dampingFraction: 0.6), value: isButtonPressed)
                         }
                         .padding(.top, 20)
-                        // Detecta o toque para aplicar o efeito de escala
                         .onLongPressGesture(minimumDuration: .infinity, maximumDistance: 50, pressing: { pressing in
                             isButtonPressed = pressing
                         }, perform: {})
@@ -189,7 +198,6 @@ struct ExamDetailView: View {
                             }
                         },
                         secondaryButton: .destructive(Text("Novo Simulado")) {
-                            // Remove o exame em andamento antes de iniciar um novo
                             dataManager.removeInProgressExam(examId: exam.id)
                             viewModel.startExam(exam: exam)
                         }
@@ -199,7 +207,6 @@ struct ExamDetailView: View {
             .padding()
         }
         .navigationBarTitleDisplayMode(.inline)
-        // Definição da fullScreenCover:
         .fullScreenCover(isPresented: $viewModel.isExamActive) {
             if let completedExam = viewModel.completedExam {
                 ExamResultView(completedExam: completedExam)
@@ -222,7 +229,7 @@ struct ExamDetailView: View {
         return Array(tags).sorted()
     }
     
-    // Cálculo de número de tentativas anteriores
+    // Número de tentativas anteriores
     private var previousAttempts: Int {
         dataManager.completedExams.filter { $0.examId == exam.id }.count
     }
@@ -230,8 +237,8 @@ struct ExamDetailView: View {
     // Melhor pontuação
     private var bestScore: String {
         guard let best = dataManager.completedExams
-            .filter({ $0.examId == exam.id })
-            .max(by: { $0.score < $1.score }) else {
+                .filter({ $0.examId == exam.id })
+                .max(by: { $0.score < $1.score }) else {
             return ""
         }
         return String(format: "%.1f%%", best.score)
@@ -240,8 +247,8 @@ struct ExamDetailView: View {
     // Cor para a melhor pontuação
     private var bestScoreColor: Color {
         guard let best = dataManager.completedExams
-            .filter({ $0.examId == exam.id })
-            .max(by: { $0.score < $1.score }) else {
+                .filter({ $0.examId == exam.id })
+                .max(by: { $0.score < $1.score }) else {
             return .primary
         }
         return best.score >= 60 ? .green : .red
@@ -265,5 +272,28 @@ struct ExamDetailView: View {
         let minutes = Int(timeInterval) / 60 % 60
         let seconds = Int(timeInterval) % 60
         return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+    }
+}
+
+struct ExamDetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        ExamDetailView(exam: Exam(
+            id: "EX1",
+            name: "Exemplo de Prova",
+            type: .theoretical,
+            totalQuestions: 20,
+            questions: [
+                Question(
+                    id: 1,
+                    number: 1,
+                    statement: "Exemplo de questão.",
+                    options: ["Opção A", "Opção B", "Opção C", "Opção D"],
+                    correctOption: 0,
+                    explanation: "Esta é a explicação da questão.",
+                    tags: ["Tag1", "Tag2"]
+                )
+            ]
+        ))
+        .environmentObject(DataManager())
     }
 }

@@ -8,10 +8,10 @@ struct OptionButtonView: View {
     let isNullified: Bool
     let action: () -> Void
 
-    // Adicionar estado para controlar o efeito de pressionar
+    // Estado para controlar o efeito de pressionar
     @State private var isPressed = false
 
-    // Removida a keyword private para tornar o array acessível
+    // Array de letras das opções (A, B, C, D)
     let optionLetters = ["A", "B", "C", "D"]
 
     var body: some View {
@@ -54,16 +54,17 @@ struct OptionButtonView: View {
                             .fill(selectedIndex == index ? getOptionColor().opacity(0.1) : Color(UIColor.systemBackground))
                     )
             )
-            // Adicionar efeito de escala
+            // Efeito de escala
             .scaleEffect(isPressed ? 0.98 : 1)
             .animation(.spring(response: 0.2, dampingFraction: 0.7), value: isPressed)
         }
         .buttonStyle(PlainButtonStyle())
-        // Detectar quando o botão está sendo pressionado
+        // Detecta o toque para aplicar o efeito de escala
         .onLongPressGesture(minimumDuration: .infinity, maximumDistance: 50, pressing: { pressing in
             isPressed = pressing
         }, perform: {})
         .disabled(correctIndex != nil) // Desabilita após a resposta ser revelada
+        .accessibilityIdentifier("optionButtonView_\(index)")
     }
     
     // Determina a cor da opção baseada no contexto

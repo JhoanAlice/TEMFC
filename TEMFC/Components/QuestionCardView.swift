@@ -30,6 +30,7 @@ struct QuestionCardView: View {
                         .foregroundColor(dataManager.isFavorite(questionId: question.id) ? .yellow : .gray)
                 }
                 .padding(.trailing, 8)
+                .accessibilityIdentifier("favoriteButton")
                 
                 // Tags da questão
                 ScrollView(.horizontal, showsIndicators: false) {
@@ -56,6 +57,7 @@ struct QuestionCardView: View {
                     }
                 }
                 .frame(maxWidth: 200)
+                .accessibilityIdentifier("tagsScrollView")
             }
             
             // Enunciado da questão com acessibilidade melhorada
@@ -73,6 +75,7 @@ struct QuestionCardView: View {
                     .cornerRadius(12)
                     .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 2)
                     .padding(.bottom, 10)
+                    .accessibilityIdentifier("questionVideo")
             }
             
             // Título das alternativas
@@ -80,6 +83,7 @@ struct QuestionCardView: View {
                 .font(TEMFCDesign.Typography.headline)
                 .foregroundColor(TEMFCDesign.Colors.text)
                 .padding(.top, 5)
+                .accessibilityIdentifier("optionsTitle")
             
             // Opções com acessibilidade aprimorada
             ForEach(0..<question.options.count, id: \.self) { index in
@@ -102,11 +106,11 @@ struct QuestionCardView: View {
                                 notificationFeedback.notificationOccurred(.error)
                             }
                         }
-                        
                         onOptionSelected(index)
                     }
                 }
                 .padding(.bottom, 5)
+                .accessibilityIdentifier("optionButton_\(index)")
                 .accessibilityLabel("Opção \(["A", "B", "C", "D"][index]): \(question.options[index])")
                 .accessibilityHint(isRevealed ? (index == question.correctOption ? "Resposta correta" : "Resposta incorreta") : "Toque para selecionar esta opção")
             }
@@ -117,19 +121,17 @@ struct QuestionCardView: View {
                     HStack {
                         Image(systemName: "lightbulb.fill")
                             .foregroundColor(.yellow)
-                        
                         Text("Explicação")
                             .font(TEMFCDesign.Typography.headline)
                             .foregroundColor(TEMFCDesign.Colors.primary)
                     }
                     .id("explanationSection")
+                    .accessibilityIdentifier("explanationHeader")
                     
-                    // Aviso de questão anulada (se aplicável)
                     if question.isNullified {
                         HStack {
                             Image(systemName: "exclamationmark.triangle.fill")
                                 .foregroundColor(.orange)
-                            
                             Text("Esta questão foi anulada. Qualquer alternativa será considerada correta.")
                                 .font(TEMFCDesign.Typography.subheadline)
                                 .foregroundColor(.orange)
@@ -137,12 +139,14 @@ struct QuestionCardView: View {
                         .padding()
                         .background(Color.orange.opacity(0.1))
                         .cornerRadius(8)
+                        .accessibilityIdentifier("nullifiedWarning")
                     }
                     
                     Text(question.explanation)
                         .font(TEMFCDesign.Typography.body)
                         .foregroundColor(TEMFCDesign.Colors.text)
                         .fixedSize(horizontal: false, vertical: true)
+                        .accessibilityIdentifier("explanationText")
                 }
                 .padding()
                 .background(
@@ -159,6 +163,7 @@ struct QuestionCardView: View {
                 .fill(Color(.systemBackground))
                 .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 3)
         )
+        .accessibilityIdentifier("questionCard")
         .onAppear {
             impactFeedback.prepare()
             notificationFeedback.prepare()

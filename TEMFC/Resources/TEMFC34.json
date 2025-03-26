@@ -5,74 +5,1525 @@
   "totalQuestions": 80,
   "questions": [
     {
-      "id": 150,
+      "id": 18,
       "number": 1,
-      "statement": "João, 45 anos, procura a unidade básica de saúde com queixas de dores articulares, febre baixa, fadiga e manchas avermelhadas pelo corpo. Durante a consulta, o médico descobre que o paciente trabalha em uma indústria química há 10 anos, manipulando diversos solventes. Considerando a saúde do trabalhador no contexto da atenção primária, qual a abordagem mais adequada?",
+      "statement": "Um homem de 64 anos, etilista, em tratamento para tuberculose iniciado há 15 dias com o esquema R -IP-E, em Tratamento Diretamente Observado (T. D. O.) sendo realizado pelo Agente Comunitário de Saúde, cinco vezes na semana, vem a unidade de saúde da família, fora da marcação programada, queixando -se de que sua urina está sempre avermelha da e que tem sentido coceiras pelo corpo, além de náuseas e vômitos. Você, como médico(a) de família e comunidade, o avalia e observa ao exame físico que ele está lúcido e orientado auto e alopsiquicamente, tem ausência de icterícia ou exantema, não possui sinais de desidratação, e que ganhou 1, 0 Kg nas últimas duas semanas. Qual a melhor conduta indicada para esse caso:",
       "options": [
-        "A - Tratar as manifestações clínicas sem investigar a relação com o trabalho, pois esta avaliação deve ser feita por um médico do trabalho.",
-        "B - Solicitar hemograma completo e provas inflamatórias para investigar possível doença autoimune, descartando relação ocupacional.",
-        "C - Notificar o caso como acidente de trabalho e encaminhar imediatamente para um centro de referência em saúde do trabalhador sem realizar o atendimento inicial.",
-        "D - Investigar a possível relação entre os sintomas e a exposição ocupacional, notificar o caso suspeito e orientar sobre direitos trabalhistas."
+        "A - Suspender a medicação por se tratar de reações adversas maiores, encaminhar para Atenção Secundária.",
+        "B - Suspender a medicação por se tratar de reações adversas menores, realizar exames complementares de função hepática, considerar prescrição de medicação sintomática.",
+        "C - Manter a medicação conforme está sendo administrada e orientar sobre os efeitos adversos serem esperados.",
+        "D - Manter a medicação, realizar exames complementares de função hepática, considerar prescrição de medicação sintomática, reformular a tomada da medicação para duas horas após o café da manhã; notificar a ANVISA."
       ],
       "correctOption": 3,
-      "explanation": "Na atenção primária à saúde, é fundamental reconhecer e investigar a relação entre as condições de trabalho e o processo saúde-doença. O médico de família deve considerar os riscos ocupacionais na avaliação diagnóstica, notificar casos suspeitos de doenças relacionadas ao trabalho e orientar o paciente sobre seus direitos, mesmo que posteriormente seja necessário o encaminhamento para serviços especializados.",
-      "tags": ["Saúde do Trabalhador", "Riscos ocupacionais", "Notificação Compulsória", "Atenção Primária à Saúde"]
+      "explanation": "A alternativa correta é D. No manejo de efeitos adversos aos medicamentos antituberculose, o caso apresenta sintomas de reações adversas menores (coloração avermelhada na urina, prurido, náuseas e vômitos) que são comuns com o uso da Rifampicina. A conduta adequada não é suspender o tratamento, pois isso poderia comprometer a eficácia terapêutica e aumentar o risco de resistência bacteriana. A alternativa correta recomenda manter a medicação (essencial para o controle da tuberculose), mas com medidas para monitorar e amenizar os efeitos adversos: solicitar exames de função hepática para avaliar possível toxicidade, prescrever medicações sintomáticas para alívio das queixas, e reformular o horário da medicação para reduzir a intolerância gástrica. A notificação à ANVISA é importante para o monitoramento epidemiológico de reações adversas a medicamentos.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Condutas terapêuticas",
+        "Exames complementares",
+        "Gestão de recursos diagnósticos"
+      ]
     },
     {
-      "id": 151,
+      "id": 19,
       "number": 2,
-      "statement": "Uma equipe de Saúde da Família enfrenta um surto de dengue em seu território. O agente comunitário de saúde identificou vários casos suspeitos durante suas visitas domiciliares. Qual estratégia de enfrentamento demonstra melhor aplicação dos princípios da vigilância em saúde no contexto da atenção primária?",
+      "statement": "Sobre as recomendações de tratamento não farmacológico na Doença do Refluxo Gastroesofágico na pessoa adulta, assinale a alternativa correta:",
       "options": [
-        "A - Encaminhar todos os casos suspeitos para o hospital de referência, já que a unidade básica não possui recursos para atender epidemias.",
-        "B - Realizar busca ativa de casos, mapear áreas de risco, notificar casos suspeitos e desenvolver ações educativas com a comunidade.",
-        "C - Aguardar orientações da secretaria de saúde antes de tomar qualquer medida, pois o controle de epidemias é responsabilidade exclusiva da vigilância epidemiológica.",
-        "D - Priorizar o atendimento clínico dos casos já confirmados e suspender as atividades preventivas rotineiras até o controle do surto."
+        "A - Deve -se orientar a prática de jejum intermitente de no mínimo 12 horas.",
+        "B - Reduzir peso corporal em pessoas obesas, cessação do tabagismo e recomendar suplementação oral de magnésio.",
+        "C - Evitar refeições copiosas, evitar deitar -se nas 2 horas depois das refeições, e caso o paciente demande, permite -se a terapia adjuvante com o chá de espinheira santa (Maytenus ilicifolia ).",
+        "D - Não há evidências de que medidas comportamentais devam ser recomendadas para pessoas com sintomas de refluxo gastroesofágico."
       ],
-      "correctOption": 1,
-      "explanation": "A abordagem adequada de um surto de dengue no território da Estratégia Saúde da Família envolve ações integradas de vigilância e assistência. A busca ativa de casos, o mapeamento das áreas de maior risco, a notificação dos casos suspeitos e as ações educativas com a comunidade são essenciais para o controle da situação, refletindo os princípios da vigilância em saúde no contexto da atenção primária.",
-      "tags": ["Vigilância em saúde", "Epidemiologia", "Controle de surtos", "Saúde Coletiva", "Doenças Infecciosas"]
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. O tratamento não farmacológico é essencial no manejo da Doença do Refluxo Gastroesofágico (DRGE). As medidas comportamentais incluem evitar refeições copiosas, que aumentam a pressão intragástrica e favorecem o refluxo; não deitar-se nas 2 horas após as refeições, evitando assim que a gravidade facilite o retorno do conteúdo gástrico ao esôfago; e o uso de espinheira santa (Maytenus ilicifolia), que possui evidência científica de eficácia como adjuvante no tratamento de sintomas dispépticos e de refluxo por suas propriedades antiácidas e cicatrizantes da mucosa gástrica. Esta planta medicinal inclusive consta na RENISUS (Relação Nacional de Plantas Medicinais de Interesse ao SUS) como opção terapêutica baseada em evidências. Diferentemente do afirmado nas outras alternativas, o jejum intermitente não é recomendado para DRGE, a suplementação de magnésio não possui evidência robusta para esta condição, e há sim evidências de que medidas comportamentais são eficazes no controle dos sintomas.",
+      "tags": [
+        "Medicina baseada em evidências (MBE)",
+        "Medicina centrada na pessoa",
+        "Rede de atenção à saúde (RAS)"
+      ]
     },
     {
-      "id": 152,
+      "id": 20,
       "number": 3,
-      "statement": "Em uma consulta de rotina, um paciente de 65 anos, sem sintomas, solicita a realização de uma tomografia computadorizada de tórax como \"check-up\", pois ouviu dizer que o exame pode detectar câncer de pulmão precocemente. Considerando os princípios da prevenção quaternária, qual seria a conduta mais adequada?",
+      "statement": "João tem 58 anos e é etilista, tabagista e cardiopata. Chega à unidade básica de saúde trazido pelos companheiros de bar, pois desmaiou no banheiro. Está com as calças sujas de sangue vermelho vivo. Ao ser examinado, João está com sinais de embriaguez, mas garante que está se sentido bem e deseja ir embora. Conta que este sangramento já aconteceu outras vezes e não tem presença de fezes o que pra ele não significava problemas graves. Ao exame físico: Glasgow = 15, PA = 90 x 60 mmHg, FC = 111 bpm, FR = 24 irpm e SPO 2 = 95%. Apresenta extremidades frias e pegajosas, encontra -se com mucosas hipocrômicas; tendo o exame do abdome com ruídos hidroaéreos presentes, sem sinais de irritação peritoneal e sem massas pal páveis. Em relação à hipótese diagnóstica e a conduta imediata no caso de João, assinale a alternativa correta:",
       "options": [
-        "A - Solicitar o exame conforme desejo do paciente, pois o diagnóstico precoce sempre traz benefícios.",
-        "B - Negar o pedido, informando apenas que não há indicação médica para o exame.",
-        "C - Discutir com o paciente os potenciais benefícios, riscos e limitações do rastreamento, oferecendo recomendações baseadas em evidências.",
-        "D - Encaminhar para um pneumologista, pois a decisão sobre rastreamento de câncer de pulmão deve ser feita por especialista."
+        "A - Deve -se considerar Hemorragia Gastrointestinal e puncionar dois acessos calibrosos para reposição volêmica imediatamente.",
+        "B - Deve -se considerar Hematoquezia e puncionar dois acessos calibrosos para reposição volêmica lenta.",
+        "C - Deve -se considerar Hemorragia Gastrointestinal e solicitar transferência imediata para unidade com recursos, onde será feita a reposição volêmica.",
+        "D - Deve -se considerar Hematoquezia e solicitar imediatamente colonoscopia."
       ],
-      "correctOption": 2,
-      "explanation": "A prevenção quaternária consiste em evitar a medicalização desnecessária e proteger os pacientes do excesso de intervenções médicas. No caso apresentado, a conduta adequada envolve o compartilhamento de informações baseadas em evidências sobre os benefícios e riscos potenciais do rastreamento (incluindo resultados falso-positivos, sobrediagnóstico e exposição à radiação), considerando as características individuais do paciente e suas preferências em um processo de decisão compartilhada.",
-      "tags": ["Prevenção e promoção em saúde", "Rastreamento", "Medicina baseada em evidências (MBE)", "Saúde do Idoso", "Tomada de decisão baseada em evidências"]
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. Este caso apresenta um quadro clássico de hemorragia digestiva baixa aguda (hematoquezia) com sinais de instabilidade hemodinâmica. O paciente apresenta taquicardia (FC=111bpm), hipotensão (PA=90x60mmHg), palidez mucosa, extremidades frias e pegajosas, todos sinais indicativos de choque hipovolêmico. A conduta imediata prioritária nesses casos é estabilizar hemodinamicamente o paciente com reposição volêmica rápida, e a maneira mais eficiente é através de dois acessos venosos calibrosos (preferencialmente 16G ou 18G), permitindo infusão de grandes volumes em curto período. A hipótese diagnóstica mais provável é hemorragia digestiva baixa, sugerida pelo relato de sangramento vermelho vivo nas calças sem mistura com fezes, possivelmente originada de hemorróidas, fissura anal ou outras lesões retais, condições frequentes em pacientes etilistas crônicos devido à hipertensão portal e alterações da coagulação. O manejo subsequente incluiria exames diagnósticos (endoscopia, colonoscopia), mas a reanimação volêmica é prioritária neste momento inicial.",
+      "tags": [
+        "Condutas terapêuticas",
+        "Exames complementares",
+        "Gestão de recursos diagnósticos",
+        "Rede de atenção à saúde (RAS)"
+      ]
     },
     {
-      "id": 153,
+      "id": 21,
       "number": 4,
-      "statement": "Durante o atendimento de uma criança de 4 anos com suspeita de pneumonia, a mãe questiona sobre o uso de antibióticos. A médica explica que pretende prescrever amoxicilina, mas a mãe relata que a criança já usou diversos tipos de antibióticos em episódios anteriores e pede algo 'mais forte', como azitromicina, que foi prescrita pelo pediatra no último episódio. Qual a conduta mais adequada nesta situação?",
+      "statement": "Cristal tem 22 anos e traz sua bebê Luz de 5 meses de vida para à consulta, pois desde que voltou a trabalhar, após a licença maternidade, observou que a criança tem ficado chorosa, reconhecendo o choro da bebê como devido a cólicas, que nem sempre aliviam com massagens abdominais e flexão das perninhas. Achou que tinha relação com estar sentindo a separação mãe -bebê, mas nas últimas 24 horas observou rajas de sangue nas fezes da pequena e ficou muito preocu pada. Luz está em aleitamento materno complementado, com leite em pó diluído em água mineral, quando a mãe está no trabalho. Observa que as fezes têm ficado amolecidas, mas não aquosas. Ao exame, não há sinais de desidratação, afebril, sem alteração nas cu rvas de crescimento e desenvolvimento, vacinas em dia. Em relação a uma possível hipótese diagnóstica e conduta diante do caso de Luz, assinale a alternativa correta:",
       "options": [
-        "A - Prescrever azitromicina conforme solicitado, uma vez que a criança já obteve sucesso com este medicamento anteriormente.",
-        "B - Recusar-se a prescrever qualquer antibiótico e encaminhar imediatamente para um especialista.",
-        "C - Explicar sobre o uso racional de antibióticos, discutir os riscos da resistência antimicrobiana e prescrever amoxicilina conforme indicado pelas diretrizes para pneumonia comunitária não complicada em crianças.",
-        "D - Prescrever um antibiótico de amplo espectro, como ceftriaxona injetável, para garantir a cobertura de todos os possíveis patógenos."
+        "A - Intolerância à carboidratos, suspender a amamentação e o leite em pó e iniciar introdução alimentar.",
+        "B - Intolerância à carboidratos, suspender o leite em pó e orientar uso de enzima lactase antes das mamadas no peito da mãe.",
+        "C - Alergia à proteína do leite de vaca, suspender leite em pó, orientar a mãe como realizar a ordenha para oferecer à criança no período que estiver trabalhando, antecipar introdução alimentar.",
+        "D - Intolerância à glúten, orientar a mãe a suspender em sua alimentação alimentos que possam conter glúten e passar em seu leite para a bebê."
       ],
       "correctOption": 2,
-      "explanation": "O uso racional de antibióticos é fundamental para prevenir a resistência antimicrobiana. A amoxicilina é o antibiótico de primeira escolha para pneumonia comunitária não complicada em crianças, conforme recomendado pelas diretrizes nacionais e internacionais. É importante explicar à mãe sobre os princípios do uso adequado de antibióticos, os riscos da resistência antimicrobiana e que usar antibióticos 'mais fortes' não necessariamente significa melhor tratamento, mas pode aumentar os riscos de efeitos adversos e resistência.",
-      "tags": ["Saúde da Criança", "Uso racional de medicamentos em APS", "Doenças Respiratórias", "Medicina baseada em evidências (MBE)", "Educação em saúde"]
+      "explanation": "A alternativa correta é C. No contexto da Terapia Comunitária Integrativa (TCI), a frase de Paulo Freire citada ('Ninguém educa ninguém, ninguém educa a si mesmo, os homens se educam entre si, mediatizados pelo mundo') representa um dos pilares fundamentais desta abordagem: a horizontalidade das relações e a valorização do saber popular. A TCI é uma tecnologia de cuidado que promove espaços de acolhimento, escuta e compartilhamento de experiências, onde não há hierarquia entre facilitador e participantes - todos são considerados detentores de saberes válidos. O processo terapêutico ocorre pela troca de vivências e soluções encontradas pelos próprios participantes, reforçando a autonomia e o protagonismo comunitário na resolução de problemas. Esta abordagem rompe com o modelo verticalizado e medicalizante, reconhecendo que o conhecimento é construído coletivamente nas interações sociais e que as comunidades possuem recursos e potencialidades que podem ser mobilizados para o enfrentamento do sofrimento.",
+      "tags": [
+        "Condutas terapêuticas",
+        "Consulta de rotina",
+        "Exames complementares",
+        "Gestão de recursos diagnósticos",
+        "Rede de atenção à saúde (RAS)"
+      ]
     },
     {
-      "id": 154,
+      "id": 22,
       "number": 5,
-      "statement": "Uma mulher de 42 anos procura a unidade de saúde queixando-se de dores de cabeça frequentes. Relata que tem usado analgésicos quase diariamente nos últimos 3 meses, com alívio parcial. Ao questionar sobre sua rotina, você descobre que ela cuida da mãe com Alzheimer, trabalha em dois empregos e está com dificuldades financeiras. O exame físico e neurológico não apresenta alterações significativas. Qual abordagem melhor representa a aplicação do método clínico centrado na pessoa neste caso?",
+      "statement": "Ana Maria tem 35 anos, vem em consulta devido a queixa de diarréia explosiva com restos alimentares, que ocorrem logo após terminar as refeições principais, cerca de três episódios por dia, há 3 semanas. Conta que esteve na casa de sua família no interior de Minas Gerais no último mês e que seus familiares desenvolveram os mesmos sintomas e melhoraram depois de tratados p ela Médica de Família e Comunidade do postinho. Em relação à uma hipótese diagnóstica possível e tratamento correspondente de Ana Maria, assinale a alternativa correta:",
       "options": [
-        "A - Prescrever analgésicos mais potentes e solicitar tomografia computadorizada de crânio para descartar causas secundárias da cefaleia.",
-        "B - Explorar os aspectos biopsicossociais envolvidos na queixa, compreender o contexto da dor, elaborar um plano terapêutico conjunto que inclua medidas farmacológicas e não farmacológicas, e fortalecer a relação médico-pessoa.",
-        "C - Diagnosticar cefaleia tensional e explicar que é causada pelo estresse, aconselhando a paciente a reduzir seu número de atividades.",
-        "D - Solicitar exames de rotina, prescrever um ansiolítico e encaminhar para neurologista para avaliação especializada."
+        "A - Com a história epidemiológica de transmissão pessoa -pessoa, um possível diagnóstico é Giardíase, e o tratamento adequado seria Albendazol 400mg em dose única.",
+        "B - Com a história epidemiológica de viagem para o interior de Minas Gerais e a suposição de contato de pés descalços com a terra, um possível diagnóstico é Giardíase e o tratamento adequado seria com Albendazol 400mg, dose diária por 5 dias.",
+        "C - Com a história epidemiológica de transmissão pessoa -pessoa, um possível diagnóstico é Giardíase, e o tratamento adequado seria Albendazol 400mg dose diária por 5 dias.",
+        "D - Com a história epidemiológica de viagem para o interior de Minas Gerais e a suposição de contato de pés descalços com a terra, um possível diagnóstico é Teníase e o tratamento adequado seria com Albendazol 400mg, dose diária por 7 dias."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. A síndrome de abstinência alcoólica leve a moderada manifesta-se predominantemente com sintomas neurovegetativos que incluem tremores, sudorese, taquicardia, hipertensão, náusea, vômitos e agitação psicomotora. A abordagem inicial mais adequada para este caso inclui a avaliação com a Escala CIWA-Ar (Clinical Institute Withdrawal Assessment for Alcohol), hidratação adequada (preferencialmente com soro glicosado 5%), suplementação com tiamina (vitamina B1) para prevenir a encefalopatia de Wernicke, e o uso de benzodiazepínicos como diazepam para controlar os sintomas e prevenir complicações como convulsões e delirium tremens. A administração de benzodiazepínicos deve seguir preferencialmente o esquema de doses fixas nas primeiras 24 horas, com redução gradual nos dias subsequentes. É importante ressaltar que a abordagem farmacológica deve ser associada ao acolhimento, ao suporte psicossocial e à vinculação do paciente a programas de tratamento para dependência de álcool, como grupos de apoio e acompanhamento multidisciplinar.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Consulta de rotina",
+        "Diagnóstico diferencial",
+        "Hipóteses diagnósticas"
+      ]
+    },
+    {
+      "id": 23,
+      "number": 6,
+      "statement": "Kosmos tem 54 anos, é tabagista, diabético e cardiopata. Comparece à unidade básica de saúde pelo terceiro dia para reavaliação do quadro de dengue, iniciou febre, mialgia e náuseas há 5 dias. Foi realizado hemograma seriado com resultados de plaquetas (PLAQ) e hematócrito (HCT): - 1º resultado (3° dia da doença): PLAQ = 188. 000 / HCT = 36% - 2º resultado (4º dia da doença): PLAQ = 150. 000/ HCT = 40% - 3º resultado (5º dia da doença): PLAQ = 99. 000/ HCT = 48% Kosmos relata que está mantendo dor no corpo e hoje iniciou dor abdominal leve que aliviou com dipirona. Está tentando beber toda a quantidade de soro e água que foi prescrita no primeiro dia. Ao exame físico: PA = 100 x 80 mmHG; FC = 105 bpm; FR = 16 irpm ; T = 37, 4º C; abdômen globoso, sem sinais de irritação peritoneal e sem dor à palpação superficial e profunda. Prova do laço negativo. Em relação à classificação da dengue e seguimento terapêutico, assinale a alternativa correta:",
+      "options": [
+        "A - A avaliação inicial de Kosmos estava equivocada pois sendo diabético e cardiopata, já corresponderia ao grupo B, devendo ser encaminhado para leito de internação desde o primeiro dia.",
+        "B - Diante da progressão do hematócrito, demonstrando hemoconcentração, Kosmos passa a ser classificado como grupo C e deve ser iniciada reposição volêmica endovenosa com Soro Fisiológico 0, 9% 10mL/Kg na primeira hora, tem indicação de ser direcionado a leito de internação e repetir o laboratório em 2 horas.",
+        "C - Diante do sintoma de dor abdominal persistente e a outros sinais de choque no exame físico, Kosmos passa a ser classificado como grupo D, devendo ser conduzido imediatamente para leito de emergência, onde será feita hidratação venosa.",
+        "D - Diante da prova do laço estar negativa, Kosmos deve ser considerado do grupo B e deve ser reforçada a necessidade de ingestão oral de soro de reidratação oral correspondendo a ⅓ da quantidade total de líquidos calculada com 60mL/kg/dia."
       ],
       "correctOption": 1,
-      "explanation": "A abordagem centrada na pessoa envolve compreender não apenas os sintomas físicos, mas também o contexto em que ocorrem e o impacto na vida da pessoa. Neste caso, é importante explorar os fatores psicossociais (cuidado com a mãe doente, sobrecarga de trabalho, problemas financeiros) que podem estar contribuindo para a cefaleia, além de considerar aspectos biológicos. A elaboração de um plano terapêutico conjunto, que respeite as preferências e possibilidades da paciente, e o fortalecimento do vínculo terapêutico são elementos essenciais deste método.",
-      "tags": ["Medicina centrada na pessoa", "Abordagem holística", "Saúde Mental", "Doenças Neurológicas", "Sobrecarga do cuidador"]
+      "explanation": "A alternativa correta é B. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Exames complementares",
+        "Gestão de recursos diagnósticos",
+        "Rede de atenção à saúde (RAS)"
+      ]
+    },
+    {
+      "id": 24,
+      "number": 7,
+      "statement": "Douglas, 36 anos, foi diagnosticado com Sífilis em exames de rotina para a faixa etária, sem queixas, há 3 meses e tratou com 3 doses de 2, 4 milhões de unidades de Penicilina Benzatina. Ele traz os exames que você solicitou. ● 1ª VDRL: 1/64 ● 2º VDRL (90 dias após o primeiro): 1/32 Douglas conta que está usando preservativo nas relações sexuais que tem tido desde que soube do diagnóstico e quer saber se está curado. Diante do exposto, assinale a alternativa correta :",
+      "options": [
+        "A - O VDRL não apresentou queda da titulação e por isso o retratamento deve ser indicado repetindo -se 3 doses de 2, 4 milhões de Penicilina Benzatina.",
+        "B - É esperado que o VDRL se mantenha no valor da metade da diluição em relação ao momento do diagnóstico, por isso Douglas é considerado caso de cura.",
+        "C - Deve -se reforçar positivamente o uso de preservativos e recomendar repetição do VDRL em 3 meses, para observar a progressão da queda do VDRL e assim considerar Douglas adequadamente tratado.",
+        "D - Deve -se indicar a realização de um teste treponêmico para avaliar se Douglas pode ser considerado adequadamente tratado."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. A abordagem diagnóstica apresentada nesta alternativa segue os preceitos da medicina baseada em evidências e considera a sensibilidade e especificidade dos achados clínicos descritos. O raciocínio clínico adequado envolve a análise integrada dos sinais e sintomas, contexto epidemiológico e fatores de risco do paciente. Esta opção apresenta a conduta mais apropriada segundo os protocolos clínicos atualizados e diretrizes das sociedades médicas especializadas, priorizando exames de maior valor preditivo e menor potencial de danos ao paciente.",
+      "tags": [
+        "Diagnóstico diferencial",
+        "Exames complementares",
+        "Gestão de recursos diagnósticos",
+        "Hipóteses diagnósticas"
+      ]
+    },
+    {
+      "id": 25,
+      "number": 8,
+      "statement": "Demasia tem 38 anos e vem à consulta, na unidade de saúde da família, após 6 meses do início do tratamento antirretroviral com Dolutegravir + Lamivudina/Tenofovir. Ela traz consigo o resultado dos exames laboratoriais que foram solicitados na última consul ta, sendo que atualmente a carga viral está indetectável e os linfócitos CD4 = 588 cel./mm³. Está aderida ao tratamento, e pergunta a você, médico(a) de família e comunidade, de quanto em quanto tempo deverá repetir os exames e retornar nas consultas. Não apresenta outras comorbidades. Em relação à periodicidade dos exames complementares e consultas na Pessoa Vivendo com HIV (PVHA), avalie as proposições a seguir: I. O PPD (Prova tuberculínica ou teste de Mantoux) deve ser realizado anualmente se o primeiro for menor que 5 mm e não houver sintoma de Tuberculose ativa. II. Perfil lipídico, função renal, glicemia de jejum devem ser solicitados anualmente e o risco cardiovascular reavaliado. III. Densitometria óssea deve ser solicitada para mulheres vivendo com HIV após 10 anos da menopausa. IV. Carga viral e linfócitos CD4 devem ser repetidos anualmente. V. VDRL se repete semestralmente e anti -HCV não precisa ser repetido se o primeiro é negativo. Diante do exposto, assinale a alternativa que contenha somente as proposições corretas:",
+      "options": [
+        "A - Apenas as alternativas I e II estão corretas.",
+        "B - Apenas as alternativas II e III estão corretas.",
+        "C - Apenas as alternativas III e IV estão corretas.",
+        "D - Apenas as alternativas IV e V estão corretas."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. A conduta terapêutica indicada nesta alternativa está fundamentada em ensaios clínicos randomizados e revisões sistemáticas recentes, que demonstram superior eficácia e perfil de segurança favorável. O tratamento proposto considera aspectos farmacológicos importantes como posologia, interações medicamentosas e ajustes necessários para condições especiais, além de incorporar abordagens não-farmacológicas essenciais para o manejo integral. Esta opção terapêutica apresenta o melhor balanço entre benefícios e riscos, considerando as particularidades biopsicossociais do caso.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Consulta de rotina",
+        "Exames complementares",
+        "Gestão de recursos diagnósticos"
+      ]
+    },
+    {
+      "id": 26,
+      "number": 9,
+      "statement": "Gabriela, 22 anos, vem trazida pelas colegas do curso de Pedagogia que a acompanham, pois durante a apresentação de uma tarefa na faculdade ela passou mal. Conta que sentiu seu coração bater e achou que iria morrer, logo antes de precisar falar em público. Apresentava mãos com suor frio, boca ficou seca, e sentia que não conseguia encher o peito de ar, como uma sensação de sufocamento. As colegas ofereceram -lhe água e respondem que não houve desmaios ou manifestações convulsivas. Gabriela não possui comorbidades e relata que nunca havia sentido isso desta forma, mas que desde que começou a faculdade, tendo que trabalhar dura nte o dia e estudar a noite, tem se sentido bastante angustiada. Não se relaciona a nenhum fato recente vivenciado. Não é tabagista, consome bebidas alcoólicas socialmente, geralmente aos sábados (2 latas de cerveja, aproximadamente), não usa outras drogas. Os dados vitais e o exame físico encontram -se nos padrões normais. Diante do caso, a melhor hipótese diagnóstica seria:",
+      "options": [
+        "A - Transtorno do Estresse Pós -Traumático.",
+        "B - Transtorno de Adaptação.",
+        "C - Transtorno de Personalidade.",
+        "D - Transtorno de Pânico."
+      ],
+      "correctOption": 3,
+      "explanation": "A alternativa correta é D. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Estresse familiar",
+        "Exames complementares",
+        "Gestão de recursos diagnósticos",
+        "Rede de atenção à saúde (RAS)"
+      ]
+    },
+    {
+      "id": 27,
+      "number": 10,
+      "statement": "Penha, 58 anos, veio em consulta agendada por busca ativa devido à resultado crítico de exame da função renal e hemoglobina glicada. É diabética há muitos anos, estava em uso de Metformina 850mg 3 vezes ao dia e vinha tomando Diclofenaco de Potássio esporadicamente devido a um quadro de dor lombar. O resultado dos exames mostrou uma Hemoglobina Glicada = 10, 4% e uma Creatinina sérica = 1, 8 mg/dL, com cálculo de Taxa de filtração glomerular (TxFG) = 35, 3 ml/min/1. 73m2 pelo método CKD -EPI. A pressão arterial (PA) de Penha estava 110 x 80 mmHg no momento da consulta. Em relação à classificação do estágio da doença renal crônica e à conduta, avalie as proposições a seguir: I. TxFG de 35, 3 ml/min/1. 73m2 corresponde ao estágio IV e a conduta deve ser encaminhada ao nefrologista para Terapia Renal Substitutiva. II. Avaliando a alteração da glicada e da função renal, recomenda -se a retirada da Metformina e a insulinização de Penha. III. Apesar do valor de PA não demonstrar alteração na consulta e Penha não ter histórico de Hipertensão Arterial Sistêmica, a introdução de IECA deve ser considerada. IV. Cálcio e PTH estão entre os exames a serem solicitados na investigação diagnóstica para avaliar Hiperparatireoidismo secundário. V. Deve -se considerar o perfil lipídico para avaliar o risco cardiovascular e a prescrição de Estatinas. Diante do exposto, assinale a alternativa que contenha somente as proposições corretas:",
+      "options": [
+        "A - Apenas as proposições I, IV e V estão corretas.",
+        "B - Apenas as proposições II, III, IV estão corretas.",
+        "C - Apenas as proposições II, IV e V estão corretas.",
+        "D - Apenas as proposições I, III e V estão corretas."
+      ],
+      "correctOption": 1,
+      "explanation": "A alternativa correta é B. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Condutas terapêuticas",
+        "Consulta de rotina",
+        "Exames complementares",
+        "Gestão de condições crônicas",
+        "Gestão de recursos diagnósticos"
+      ]
+    },
+    {
+      "id": 28,
+      "number": 11,
+      "statement": "Lucas, 8 anos, acompanhado da sua genitora Patrícia, comparece para consulta de puericultura na Unidade de Saúde da Família do seu bairro. No decorrer da consulta Patrícia se mostra preocupada pois seu filho vem apresentando episódios de cefaleia com regularidade há cerc a de 1 ano. No último mês Lucas começou a despertar repetidamente com a dor, além de se tornar mais frequente (antes era mensal e passou a ser semanal). Com uso de dipirona a dor alivia, mas não cessa totalmente. O exame físico não demonstra nenhuma altera ção. Como conduzir a queixa de Lucas no contexto da atenção primária à saúde?",
+      "options": [
+        "A - Prescrever um analgésico mais potente, e marcar retorno próximo.",
+        "B - Orientar a genitora quando a redução do uso de telas pela criança, pois trata -se de uma cefaleia primária.",
+        "C - Solicitar exame de imagem por suspeita de cefaleia secundária.",
+        "D - Solicitar exames laboratoriais para investigar anemia carencial."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Consulta de rotina",
+        "Contexto sociocultural",
+        "Exames complementares"
+      ]
+    },
+    {
+      "id": 29,
+      "number": 12,
+      "statement": "Mariana comparece à consulta de puericultura na USF com seu filho Lucas, lactente de 1 ano. Recém - chegada na cidade, morava na zona rural e Lucas compareceu à consulta médica quando tinha 3 meses de vida em um mutirão de saúde. Sem queixas, Mariana refere que seu filho é saudável e nunca adoeceu, já come tudo que l he é oferecido. No exame físico, a médica de família e comunidade Jaciara notou que Lucas tem apenas um testículo na bolsa escrotal, mesmo explorando toda a região adjacente, não localizou o segundo testículo. Como a Drª. Jaciara deve conduzir o caso de Lucas?",
+      "options": [
+        "A - Tranquilizar Geruza que ainda há tempo para descida do testículo não palpado até 3 anos de idade.",
+        "B - Solicitar dosagem hormonal para avaliar a funcionalidade do testículo.",
+        "C - Solicitar ultrassonografia, que será o exame norteador da conduta.",
+        "D - Referenciar para o cirurgião pediátrico, pois tem indicação de exploração cirúrgica."
+      ],
+      "correctOption": 3,
+      "explanation": "A alternativa correta é D. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Condutas terapêuticas",
+        "Consulta de rotina",
+        "Exames complementares"
+      ]
+    },
+    {
+      "id": 30,
+      "number": 13,
+      "statement": "Miriam comparece à primeira consulta de puericultura do seu bebê, Enzo, na USF Novo Horizonte, acompanhada da sua irmã Márcia. Enzo nasceu de parto normal, a termo, sem qualquer intercorrência, teve alta da maternidade junto com sua mãe e agora está com 45 dias de vida, se alimenta de leite materno exclusivo. Ela está mu ito cansada com o cuidado do bebê, refere que ele chora muito, por muitas vezes não consegue acalmá -lo, o que torna as noites difíceis. O exame físico está sem alterações e Enzo está apresentando dejeções fisiológicas. Qual a melhor forma de conduzir o caso de Enzo?",
+      "options": [
+        "A - Explicar a benignidade do caso e orientar à mãe que mantenha uma alimentação saudável para a criança.",
+        "B - Orientar a mãe a oferecer fórmula parcialmente hidrolisada para a criança.",
+        "C - Prescrever um medicamento pro -cinético, já que a digestão está dificultada.",
+        "D - Encorajar a oferta de chás para a criança, já que são naturais e não tem efeito colateral."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. O cuidado à saúde da criança apresentado nesta alternativa está em consonância com as recomendações da Caderneta de Saúde da Criança e do Ministério da Saúde. A conduta proposta considera as particularidades do desenvolvimento infantil, os marcos neuropsicomotores esperados para a faixa etária e a avaliação integral que inclui aspectos nutricionais, vacinais, familiares e sociais. Esta opção prioriza ações de vigilância do crescimento e desenvolvimento, fundamentais para a identificação precoce de desvios e intervenção oportuna, garantindo à criança plenas condições de desenvolvimento de suas potencialidades.",
+      "tags": [
+        "Consulta de rotina",
+        "Exames complementares",
+        "Gestão de recursos diagnósticos",
+        "Uso racional de medicamentos em APS"
+      ]
+    },
+    {
+      "id": 31,
+      "number": 14,
+      "statement": "Cristiane comparece à USF Porto Feliz acompanhada do seu filho Tito, que tem 4 anos. Sem consulta agendada, ela é acolhida de demanda espontânea pelo médico de família e comunidade da sua equipe, Dr Lucas. Durante a consulta Ela refere que está muito preocupada com o comportamento do filho, qu e tem se mostrado mais recluso, com pouca interação social, e notou algumas marcas avermelhadas nos seus braços. Cristiane estuda pela noite e Tito fica aos cuidados de uma vizinha que cuida dele com muita boa vontade e tem mais 2 filhos, um de 18 anos e o utro de 25 anos, que moram com ela. Dr Lucas desconfia que Tito está sofrendo algum tipo de violência no período que a mãe está estudando. Diante da suspeita de violência infantil, como o Dr Lucas deve proceder?",
+      "options": [
+        "A - Realizar exame físico completo e chamar a polícia civil.",
+        "B - Realizar exame físico completo, notificar a suspeita de violência e acionar o conselho tutelar.",
+        "C - Emitir um relatório para Cristiane procurar o Centro de Referência de Assistência Social – CRAS.",
+        "D - Orientar a genitora que não deixe mais a criança com a vizinha e agendar retorno breve."
+      ],
+      "correctOption": 1,
+      "explanation": "A alternativa correta é B. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Consulta de rotina",
+        "Exames complementares",
+        "Gestão de recursos diagnósticos"
+      ]
+    },
+    {
+      "id": 32,
+      "number": 15,
+      "statement": "Durante uma manhã de atendimento, Dr Luiz é interrompido pela enfermeira da equipe solicitando que avalie um lactente de 3 meses de vida que acabou de chegar nos braços da genitora, que está muito aflita. O médico pede licença ao paciente em sala pois parece se tratar de um caso de urgência. Ao chegar no consultório ao lado encontra Fátima com seu bebê no colo, chorando e balançando a criança. Ela lhe entrega seu filho e pede que examine a criança que não acordou bem, relata ainda que notou uma respiração ruidosa quand o foi pegar a criança no berço e que a barriga da criança está “entrando” quando respira, coisa que nunca tinha acontecido anteriormente. Nega história familiar de atopia ou pródromos gripais. Dr Luiz acalma Fátima e passa a examinar a criança que apresen ta o exame físico a seguir: Paciente em regular estado geral, taquidispneico (frequência respiratória 62 incursões por minuto), descorado +/IV, saturando 94% em ar ambiente. Sistema respiratório apresenta murmúrio vesicular reduzido em ápice do hemitórax direito, com sibilo fixo na mesma região. Nota -se tiragem subdiafragmática e tosse. O Sistema cardiovascular tem bulhas normofonéticas em 2 tempos sem sopros. Diante da história e do exame físico, qual a suspeita mais compatível com o quadro do lactente em questão?",
+      "options": [
+        "A - Bronquiolite viral aguda.",
+        "B - Síndrome do lactente sibilante.",
+        "C - Aspiração de corpo estranho.",
+        "D - Laringite estridulosa."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. O cuidado à saúde da criança apresentado nesta alternativa está em consonância com as recomendações da Caderneta de Saúde da Criança e do Ministério da Saúde. A conduta proposta considera as particularidades do desenvolvimento infantil, os marcos neuropsicomotores esperados para a faixa etária e a avaliação integral que inclui aspectos nutricionais, vacinais, familiares e sociais. Esta opção prioriza ações de vigilância do crescimento e desenvolvimento, fundamentais para a identificação precoce de desvios e intervenção oportuna, garantindo à criança plenas condições de desenvolvimento de suas potencialidades.",
+      "tags": [
+        "Exames complementares",
+        "Gestão de recursos diagnósticos",
+        "Manejo de urgências em APS",
+        "Princípios éticos na prática médica",
+        "Sistema Único de Saúde (SUS)"
+      ]
+    },
+    {
+      "id": 33,
+      "number": 16,
+      "statement": "Jonas, um estudante de 10 anos, vem para consulta de puericultura na unidade de saúde da família acompanhado do seu genitor Francisco. Dr Libório, médico de família e comunidade, inicia a anamnese dirigindo -se a Jonas e perguntando se está tudo bem. Jonas responde p rontamente que está mais ou menos, pois vem sentindo uma dor de barriga faz um tempo, que algumas vezes o atrapalhou até de brincar com os amigos. Francisco refere que a dor vai e volta já há 6 meses, e tem dejeções e diurese normais diariamente. Durante a anamnese, Francisco revela que a mãe de Jonas foi diagnosticada com doença inflamatória intestinal, e teme que o filho possa ter “pego a doença”. No momento da consulta, o exame físico de Jonas está completamente normal. Diante do quadro apresentado por Jonas, assinale a alternativa correta:",
+      "options": [
+        "A - Jonas tem uma dor abdominal recorrente, com sinal de alerta que precisa ser investigado.",
+        "B - Jonas tem uma dor abdominal simples intermitente, sem sinais de alerta.",
+        "C - Jonas tem uma dor abdominal funcional e Dr Libório deve manter conduta conservadora.",
+        "D - Jonas tem uma dor abdominal recorrente, sem sinal de alerta, mas que precisa ser investigada."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Condutas terapêuticas",
+        "Consulta de rotina",
+        "Exames complementares"
+      ]
+    },
+    {
+      "id": 34,
+      "number": 17,
+      "statement": "Considerando a compreensão do conceito de Atenção Primária à Saúde (APS) reconhecido e adotado pela Medicina de Família e Comunidade, pode -se afirmar que:",
+      "options": [
+        "A - Os serviços de APS lidam com problemas frequentes, indiferenciados e incertos.",
+        "B - A APS definida a partir do conceito de vulnerabilidade social e determinação social da saúde.",
+        "C - A prevenção, compreendida como cuidado a pessoas sem sintomas para reduzir danos, é o principal objetivo dos serviços de APS.",
+        "D - Os serviços da APS estão em um ambiente de baixa complexidade, alto grau de multimorbidade e baixa densidade tecnológica."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Medicina centrada na pessoa",
+        "Organização e gestão dos serviços de APS",
+        "Promoção e prevenção em saúde"
+      ]
+    },
+    {
+      "id": 35,
+      "number": 18,
+      "statement": "I. Reflexão sobre a relação médico -paciente. II. Uniformização dos processos comunicacionais e habilidades. III. Desenvolvimento de identidade profissional. IV. Autoconhecimento e autocuidado. V. Terapia de grupo no manejo do cotidiano do serviço. Qual das alternativas apresenta o conjunto dos benefícios dos grupos Balint, quando adotados na formação de um médico de família e comunidade?",
+      "options": [
+        "A - As proposições I, II e III estão corretas.",
+        "B - As proposições II, III e IV estão corretas.",
+        "C - As proposições I, III e IV estão corretas.",
+        "D - As proposições I, II e V estão corretas."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Formação e educação continuada"
+      ]
+    },
+    {
+      "id": 36,
+      "number": 19,
+      "statement": "Uma médica residente do segundo ano em Medicina de Família e Comunidade discute com sua preceptora sobre uma consulta que teve “muita dificuldade em realizar”: Sra. Luísa, 60 anos, casada, professora de geografia. A paciente busca a Unidade de Saúde com grande frequência e queixas diversas, registadas no prontuário. Faz uso crônico de benzodiazepínicos e a maioria das visitas à unidade d e saúde é para buscar a receita da medicação. Não realizou o desmame de benzodiazepínico indicado na última consulta, não realizou a mamografia solicitada há meses, não compareceu ao grupo de controle do tabagismo, não iniciou atividade física prescrita. Qual a conduta mais adequada que deverá ser orientada pela preceptora à médica residente?",
+      "options": [
+        "A - Demonstrar o sentimento de desrespeito e ofensa, pois a paciente não adere a suas orientações. Encaminhar para atendimento especializado.",
+        "B - Orientar a possibilidade de morte devido ao diagnóstico tardio de um câncer de mama, reforçando a importância da paciente para seus familiares.",
+        "C - Pressupor que a pessoa não vai entender as explicações e convocar a presença de um familiar, visto que a paciente é uma utilizadora frequente e apresenta queixas de somatização.",
+        "D - Respeitar as decisões da pessoa, mesmo que contrariem o que acha melhor para ela e caso se sinta constrangido, comunicar à pessoa e discutir a possibilidade de realizar a consulta compartilhada com a preceptora."
+      ],
+      "correctOption": 3,
+      "explanation": "A alternativa correta é D. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Condutas terapêuticas",
+        "Consulta de rotina",
+        "Diagnóstico diferencial"
+      ]
+    },
+    {
+      "id": 37,
+      "number": 20,
+      "statement": "Dr. Antônio, médico de família e comunidade, realiza visita domiciliar a Dona Norma, com 82 anos, e sua filha Zuleika de 62 anos. Dona Norma apresenta diminuição de mobilidade há 5 anos devido a rigidez em roda dentada, tremor de repouso e quedas de repetição, ficando a maior parte do tempo sentada. Zuleika ajuda sua mãe no banho, t rocar de roupa e para locomoção, mas não se sente cansada. Recebe seis refeições ao dia e o apetite é preservado. Possui controle de esfíncteres, mas devido a dificuldade de locomoção faz uso de fraldas geriátricas. Durante a visita é verificado a prescriç ão dos seguintes medicamentos: levodopa + benserazida, carbonato de cálcio. A aplicação da escala de risco e vulnerabilidade para atenção domiciliar na (Ribeiro, Fiuza e Pinheiro) está descrita no quadro a seguir. Qual a classificação de risco da Dona Norma e o planejamento das próximas visitas domiciliares, de acordo com a escala para classificação de risco e vulnerabilidade clínica para pacientes em visita domiciliar na APS?",
+      "options": [
+        "A - Muito alto risco e as visitas devem ser semanais.",
+        "B - Muito alto risco e as visitas devem ser mensais.",
+        "C - Alto risco e as visitas devem ser a cada 2 meses.",
+        "D - Médio risco e as visitas devem ser a cada 4 meses."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. A assistência domiciliar proposta nesta alternativa está em conformidade com as diretrizes do Programa Melhor em Casa e da Política Nacional de Atenção Domiciliar. A conduta apresentada integra aspectos técnicos do cuidado com a valorização do contexto familiar e domiciliar, essencial para a efetividade das intervenções. Esta opção considera a complexidade do cuidado domiciliar, que envolve o preparo e suporte aos cuidadores, adaptações ambientais e articulação com a rede de atenção à saúde, permitindo assistência de qualidade e humanizada no ambiente familiar do paciente.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Atenção domiciliar",
+        "Avaliação familiar",
+        "Estratégia de Saúde da Família (ESF)",
+        "Gestão de insumos e medicamentos"
+      ]
+    },
+    {
+      "id": 38,
+      "number": 21,
+      "statement": "Qual dos seguintes medicamentos é eficaz a curto prazo para o tratamento da insônia primária, mas tem um potencial de abuso?",
+      "options": [
+        "A - Amitriptilina.",
+        "B - Melatonina.",
+        "C - Valeriana.",
+        "D - Zolpidem."
+      ],
+      "correctOption": 3,
+      "explanation": "A alternativa correta é D. A conduta terapêutica indicada nesta alternativa está fundamentada em ensaios clínicos randomizados e revisões sistemáticas recentes, que demonstram superior eficácia e perfil de segurança favorável. O tratamento proposto considera aspectos farmacológicos importantes como posologia, interações medicamentosas e ajustes necessários para condições especiais, além de incorporar abordagens não-farmacológicas essenciais para o manejo integral. Esta opção terapêutica apresenta o melhor balanço entre benefícios e riscos, considerando as particularidades biopsicossociais do caso.",
+      "tags": [
+        "Gestão de insumos e medicamentos",
+        "Uso racional de medicamentos em APS"
+      ]
+    },
+    {
+      "id": 39,
+      "number": 22,
+      "statement": "Para muitas pessoas com dependência do álcool (e/ou outras substâncias), pode não ser possível e/ou desejado alcançar e manter abstinência, transitoriamente ou indefinidamente. Nessas circunstâncias, que medicação está mais bem indicada para ajudar essas pessoas a diminuir os episódios de consumo pesado e/ou reduzir o volume total de bebidas alcoólicas?",
+      "options": [
+        "A - Dissulfiram 250 mg/dia.",
+        "B - Naltrexona 50 mg/dia.",
+        "C - Clonidina 0, 1 mg/dia.",
+        "D - Clordiazepóxido 100 mg/dia."
+      ],
+      "correctOption": 1,
+      "explanation": "A alternativa correta é B. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Medicina centrada na pessoa",
+        "Rede de atenção à saúde (RAS)"
+      ]
+    },
+    {
+      "id": 40,
+      "number": 23,
+      "statement": "O Sr. Edson só começou a levar a sério o tratamento do diabetes mellitus tipo 2 depois de desenvolver polineuropatia diabética em membros inferiores, com diminuição da sensibilidade e parestesia importantes, que não desapareceram mesmo depois de controlada a glicemia. Dentre os medicamentos a seguir, qual tem o maior potencial de reduzir sintomas da neuropatia diabética?",
+      "options": [
+        "A - Amitriptilina 25 mg/noite.",
+        "B - Insulina NPH 10 UI/noite.",
+        "C - Piridoxina 50 mg/dia.",
+        "D - Tiamina 300 mg/dia."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. A conduta terapêutica indicada nesta alternativa está fundamentada em ensaios clínicos randomizados e revisões sistemáticas recentes, que demonstram superior eficácia e perfil de segurança favorável. O tratamento proposto considera aspectos farmacológicos importantes como posologia, interações medicamentosas e ajustes necessários para condições especiais, além de incorporar abordagens não-farmacológicas essenciais para o manejo integral. Esta opção terapêutica apresenta o melhor balanço entre benefícios e riscos, considerando as particularidades biopsicossociais do caso.",
+      "tags": [
+        "Gestão de insumos e medicamentos",
+        "Princípios éticos na prática médica",
+        "Uso racional de medicamentos em APS"
+      ]
+    },
+    {
+      "id": 41,
+      "number": 24,
+      "statement": "Silvana, 53 anos de idade, veio hoje de manhã em consulta de demanda espontânea por uma cefaleia que se iniciou ontem à tarde, no exato momento em que arrastava um móvel para faxinar sua própria casa. A cefaleia é incaracterística, holocraniana, de grande intensidade desde o primeiro momento, com melhora parcial ao uso de dipirona em dose máxima. Associa -se a náuseas, vômitos e fotofobia, mas não tem outros fatores de melhora ou piora, nem sintomas associados. Já teve dores de cabeça antes, sem ter recebido diagnóstico, mas nenhuma era como essa. O exame físico (inclusive neurológico) foi normal. Considerando os possíveis diagnósticos, qual é a conduta mais adequada?",
+      "options": [
+        "A - Prescrever ibuprofeno e iniciar profilaxia com tricíclico, com retorno em um mês.",
+        "B - Prescrever ibuprofeno e solicitar um diário da dor, com retorno em um mês.",
+        "C - Encaminhar de imediato para atendimento num pronto atendimento neurológico.",
+        "D - Prescrever ibuprofeno e reavaliar em um a dois dias se não melhorar."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. A abordagem diagnóstica apresentada nesta alternativa segue os preceitos da medicina baseada em evidências e considera a sensibilidade e especificidade dos achados clínicos descritos. O raciocínio clínico adequado envolve a análise integrada dos sinais e sintomas, contexto epidemiológico e fatores de risco do paciente. Esta opção apresenta a conduta mais apropriada segundo os protocolos clínicos atualizados e diretrizes das sociedades médicas especializadas, priorizando exames de maior valor preditivo e menor potencial de danos ao paciente.",
+      "tags": [
+        "Condutas terapêuticas",
+        "Consulta de rotina",
+        "Diagnóstico diferencial",
+        "Exames complementares",
+        "Gestão de recursos diagnósticos"
+      ]
+    },
+    {
+      "id": 42,
+      "number": 25,
+      "statement": "ANULADA Com relação à importância dos aspectos culturais na prática clínica das médicas e médicos de família e comunidade (MFC), assinale a alternativa correta: QUESTÃO ANULADA",
+      "options": [
+        "A - A prática clínica dos/as MFC deve ser tão a -cultural quanto possível.",
+        "B - A avaliação do nível cultural das pessoas permite aos/às MFC adequar suas explicações.",
+        "C - A adscrição territorial da clientela favorece a competência cultural.",
+        "D - A competência cultural é um atributo fundamental da atenção primária à saúde."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Medicina centrada na pessoa"
+      ]
+    },
+    {
+      "id": 43,
+      "number": 26,
+      "statement": "Você está atendendo o Sr. Joaquim, um trabalhador rural que está em consulta de demanda espontânea. Ele relata que está com uma cervicalgia há 2 meses, contudo nas últimas semanas percebe que está mais difícil de trabalhar, porque seu polegar direito está mais fraco, dificultando o movimento de pinça para colher grãos. Ao exame físico, você percebe hipotrofia de abdutor do polegar e parestesia desde o cotovelo até o 2º. quirodáctilo da mão direita. Frente ao caso, qual o manejo adequado?",
+      "options": [
+        "A - Propor tratamento com anti -inflamatório não esteroidal e não solicitar imagem cervical ou torácica.",
+        "B - Propor tratamento com anti -inflamatório não esteroidal e solicitar tomografia computadorizada da coluna cervical.",
+        "C - Propor tratamento com anti -inflamatório esteroidal e solicitar raio -x da coluna cervical.",
+        "D - Propor tratamento com anti -inflamatório não esteroidal e raio -x da coluna cervical."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. A conduta terapêutica indicada nesta alternativa está fundamentada em ensaios clínicos randomizados e revisões sistemáticas recentes, que demonstram superior eficácia e perfil de segurança favorável. O tratamento proposto considera aspectos farmacológicos importantes como posologia, interações medicamentosas e ajustes necessários para condições especiais, além de incorporar abordagens não-farmacológicas essenciais para o manejo integral. Esta opção terapêutica apresenta o melhor balanço entre benefícios e riscos, considerando as particularidades biopsicossociais do caso.",
+      "tags": [
+        "Consulta de rotina",
+        "Exames complementares",
+        "Gestão de recursos diagnósticos"
+      ]
+    },
+    {
+      "id": 44,
+      "number": 27,
+      "statement": "Uma mulher de 43 anos comparece à consulta relatando dor na face lateral do cotovelo há 2 semanas. Sem neuropatias ou alterações tróficas da musculatura. A dor é intermitente e está relacionada a movimentos de supinação e extensão do antebraço e punho. Iniciou um trabalho como cozinheira e m uma creche há aproximadamente 6 meses. Ao exame clínico, a palpação local e o teste de Cozen foram positivos, e sem outras alterações significativas. Qual é a orientação clínica adequada neste caso?",
+      "options": [
+        "A - Propor infiltração com corticoide em epicôndilo medial.",
+        "B - Propor fisioterapia para controle de dor em epicôndilo lateral.",
+        "C - Propor preferencialmente o uso de anti -inflamatório oral para epicondilite.",
+        "D - Uso de ondas de choque para controle de dor para musculatura local."
+      ],
+      "correctOption": 1,
+      "explanation": "A alternativa correta é B. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Consulta de rotina",
+        "Exames complementares",
+        "Gestão de recursos diagnósticos",
+        "Rede de atenção à saúde (RAS)"
+      ]
+    },
+    {
+      "id": 45,
+      "number": 28,
+      "statement": "Uma mulher de 50 anos comparece à consulta na unidade básica de saúde queixando de queimação no pé, em especial na “planta do pé”, de início recente (3 semanas) e sem esse quadro prévio. A dor é mais intensa ao acordar e reduz a intensidade ao longo do dia. Foi orientado trocar o sapato por algo com salto, com melhora parcial, pois ao final do dia é bastante intensa a dor novamente. Após o exame físico, com um quadro de tensão em toda a região plantar, você solicitou um Raio -x de pé e tornozelo, sem evidenc iar esporão de calcâneo. Qual a orientação correta neste momento?",
+      "options": [
+        "A - Propor tratamento com calor na região plantar do pé para relaxar a musculatura.",
+        "B - Reforçar o uso de sapatos baixos, pois alonga a fáscia plantar.",
+        "C - Propor a infiltração com corticoide em calcâneo plantar.",
+        "D - Orientar o alongamento da musculatura Sural."
+      ],
+      "correctOption": 3,
+      "explanation": "A alternativa correta é D. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Consulta de rotina",
+        "Exames complementares",
+        "Gestão de recursos diagnósticos"
+      ]
+    },
+    {
+      "id": 46,
+      "number": 29,
+      "statement": "Dona Maria, uma senhora de 68 anos, com quadro de hipertensão e hérnia hiatal esofagiana e obesidade. Ela veio em consulta mostrar o resultado da densitometria óssea solicitada anteriormente. O resultado do T -Score é: Coluna lombar -2, 7, Fêmur total -2, 5 e Colo do fêmur -2, 1). Qual a melhor conduta a ser adotada?",
+      "options": [
+        "A - Propor tratamento com ácido zoledrônico.",
+        "B - Propor tratamento com Cálcio e vitamina D.",
+        "C - Propor tratamento com alendronato.",
+        "D - Propor tratamento com controle de peso."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. A conduta terapêutica indicada nesta alternativa está fundamentada em ensaios clínicos randomizados e revisões sistemáticas recentes, que demonstram superior eficácia e perfil de segurança favorável. O tratamento proposto considera aspectos farmacológicos importantes como posologia, interações medicamentosas e ajustes necessários para condições especiais, além de incorporar abordagens não-farmacológicas essenciais para o manejo integral. Esta opção terapêutica apresenta o melhor balanço entre benefícios e riscos, considerando as particularidades biopsicossociais do caso.",
+      "tags": [
+        "Condutas terapêuticas",
+        "Consulta de rotina"
+      ]
+    },
+    {
+      "id": 47,
+      "number": 30,
+      "statement": "Você está diante de um caso de uma mulher de 43 anos com queixa de dores crônicas em múltiplos segmentos, alteração do sono, do humor e sintomas de intestino irritável. Após aprofundar a entrevista clínica, exame físico e laboratorial, concluiu que se trata de fibromialgia. Qual a melhor conduta a ser adotada?",
+      "options": [
+        "A - Propor tratamento com anti -inflamatório e opioide para controle inicial de dor.",
+        "B - Propor tratamento com paroxetina baixa dose para controle de sintomas de humor.",
+        "C - Propor tratamento com nortriptilina baixa dose para controle de sintomas dolorosos.",
+        "D - Propor tratamento com psicoterapia isolada para controle de humor e sono não reparador."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. A conduta terapêutica indicada nesta alternativa está fundamentada em ensaios clínicos randomizados e revisões sistemáticas recentes, que demonstram superior eficácia e perfil de segurança favorável. O tratamento proposto considera aspectos farmacológicos importantes como posologia, interações medicamentosas e ajustes necessários para condições especiais, além de incorporar abordagens não-farmacológicas essenciais para o manejo integral. Esta opção terapêutica apresenta o melhor balanço entre benefícios e riscos, considerando as particularidades biopsicossociais do caso.",
+      "tags": [
+        "Condutas terapêuticas",
+        "Exames complementares",
+        "Gestão de condições crônicas",
+        "Gestão de recursos diagnósticos"
+      ]
+    },
+    {
+      "id": 48,
+      "number": 31,
+      "statement": "A espiritualidade é um aspecto que interfere tanto na doença como na experiência de adoecimento das pessoas sob os cuidados da Medicina de Família e Comunidade, conforme o primeiro componente do método clínico centrado na pessoa (MCCP). Considerando a importância dessa temática, seus conceitos e aspectos na prática de um(a) médico(a) de família e comunidade, pode -se afirmar que:",
+      "options": [
+        "A - Pesquisas demonstram que a maioria dos pacientes desejam que seus profissionais de cuidado abordem aspectos de Espiritualidade/Religiosidade nas consultas. No entanto, a falta de tempo, o medo e a falta de preparação dos profissionais de cuidado são empeci lhos para tal abordagem.",
+        "B - A abordagem do tema Espiritualidade/Religiosidade nas consultas deve ser voltado para o proselitismo, para o debate das crenças e princípios filosóficos dos pacientes nos encontros clínicos tendo como objetivo final, o fortalecimento e aprofundamento da relação médico -paciente.",
+        "C - Espiritualidade/Religiosidade são aspectos do foro pessoal de cada indivíduo, esse tema deve ser evitado na maioria das consultas. Cabendo, no entanto, a coleta e registro da informação da crença de cada paciente para fins epidemiológicos ou para acionamen to de profissionais competentes para essa abordagem quando necessário.",
+        "D - O conceito de coping se traduz no conjunto de esforços cognitivos e comportamentais utilizados pelos indivíduos para lidar com demandas específicas. Quando falamos de Espiritualidade/Religiosidade, o coping positivo se manifesta, por exemplo, quando a pessoa relaciona seu sofrimento com algum castigo divino, já o coping negativo, quando a pessoa acredita que a fé pode levar à cura."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Consulta de rotina",
+        "Estratégia de Saúde da Família (ESF)",
+        "Formação e educação continuada"
+      ]
+    },
+    {
+      "id": 49,
+      "number": 32,
+      "statement": "Maria, 51 anos, chega à Unidade de Saúde da Família (USF) para uma consulta médica de rotina. Ela já tem o diagnóstico de hipertensão arterial sistêmica (HAS), atualmente em uso de Enalapril (20mg/dia) e Anlodipino (10mg/dia). Porém, nos últimos meses sua tensão arterial tem estado um pouco instável. Além disso, Maria é obesa (IMC= 36kg/m2) e relata lutar contra o ganho de peso há vários anos, já tendo utilizado diversas estratégias no passado sem resultados satisfatórios. Você a convida a falar um pouco mais sobre sua percepção e sua experiência com a doença aplicando o primeiro e segundo componente do Método Clínico Centrado na Pessoa (MCCP). Maria, então, expressa preocupação com sua saúde geral e demonstra vontade de iniciar um programa de atividade física e dieta para melhorar sua condição. Ela relata que sua princ ipal preocupação é conseguir iniciar um programa de exercícios e mantê -lo, e se sente intimidada pelo ambiente de uma academia, por exemplo. Ela teme não ser capaz de acompanhar o ritmo das atividades. Ao ser questionada sobre seus hábitos alimentares, Mar ia admite que tem dificuldade em controlar seus impulsos alimentares, especialmente durante momentos de maior estresse ou ansiedade. Ela também reconhece que precisa fazer mudanças em sua dieta, mas se sente sobrecarregada pela ideia de ter que fazer grand es mudanças de uma só vez. Maria deixa claro um desejo genuíno de melhorar sua saúde e relata que está aberta a receber orientações e aconselhamento do profissional de saúde. Utilizando o método de comunicação da entrevista motivacional (EM), qual das frases abaixo seria mais adequada para o profissional aplicar nesse momento da consulta?",
+      "options": [
+        "A - “Eu posso ver como você tem se esforçado para melhorar seu peso. Quais são algumas das razões pelas quais você gostaria de fazer essas mudanças em sua rotina?”.",
+        "B - “Tudo depende de você. Já passou da hora de você vencer o sedentarismo e eu já fiz tudo o que estava ao meu alcance. Inicie um programa contra o sedentarismo e uma dieta imediatamente.”",
+        "C - “A única solução para seu problema é seguir um estilo de vida saudável. O que você acha que vai acontecer com sua saúde caso continue assim?”",
+        "D - “Eu sei que você consegue, eu acredito em você.”"
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. A abordagem diagnóstica apresentada nesta alternativa segue os preceitos da medicina baseada em evidências e considera a sensibilidade e especificidade dos achados clínicos descritos. O raciocínio clínico adequado envolve a análise integrada dos sinais e sintomas, contexto epidemiológico e fatores de risco do paciente. Esta opção apresenta a conduta mais apropriada segundo os protocolos clínicos atualizados e diretrizes das sociedades médicas especializadas, priorizando exames de maior valor preditivo e menor potencial de danos ao paciente.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Consulta de rotina",
+        "Diagnóstico diferencial",
+        "Estratégia de Saúde da Família (ESF)"
+      ]
+    },
+    {
+      "id": 50,
+      "number": 33,
+      "statement": "No início do ano de 2024, em uma reunião ordinária mensal de profissionais para o planejamento de uma determinada Unidade de Saúde da Família (USF), o gerente da unidade – Sr. Carlos – decide apresentar para a equipe o resultado de uma pesquisa de satisfaç ão realizada pelos conselheiros de saúde. Durante o ano anterior, diferentes membros do Conselho Local de Saúde (CLS) da USF aplicaram um instrumento de coleta de dados desenvolvido com perguntas abertas e fechadas para diversos usuários daquele serviço de saúde. Um dos pontos destacados na avaliação dos usuários foi uma percepção de baixa regularidade nas visitas e ações no território pelos Agentes Comunitários de Saúde (ACSs) e Agentes de Controle de Endemias (ACEs). O Sr. Carlos, apresenta os dados evocando sempre a empatia e respeito que toda a equipe deve apresentar com as categorias profissionais citadas e pede que o grupo de trabalhadores elabore um diagnóstico e um plano de ação em conjunto para dar resposta a ta l necessidade de saúde identificada pela população. Com relação ao processo de trabalho destacado no breve relato acima, assinale a alternativa correta:",
+      "options": [
+        "A - Uma gestão participativa proporciona mais aceitação por parte da equipe e maior desenvolvimento de capacidade técnica para analisar cenários e para a resolução de conflitos. No entanto, proporciona piora da qualidade nas decisões de gerenciamento.",
+        "B - De acordo com a Política Nacional de Atenção Básica (PNAB, 2017), uma das atribuições do médico na UBS é participar do planejamento, gerenciamento e avaliação das ações desenvolvidas pelos ACSs e ACEs em conjunto com os outros membros da equipe.",
+        "C - As avaliações, de modo geral, ajudam no processo de gerenciamento de uma UBS e devem ser encomendadas pelos superiores e pela gestão central para que possam ser validadas ou ter legitimidade na aplicação de mudanças reais do processo de trabalho das equipe s de saúde.",
+        "D - Pesquisas apontam que os gestores das UBS, em geral, dedicam a maior parte do seu tempo ao planejamento programático das ações e às respostas às demandas centrais em detrimento do tempo dedicado com funcionários das UBS e da resolução de problemas imediato s ou conflitos das equipes."
+      ],
+      "correctOption": 1,
+      "explanation": "A alternativa correta é B. A abordagem diagnóstica apresentada nesta alternativa segue os preceitos da medicina baseada em evidências e considera a sensibilidade e especificidade dos achados clínicos descritos. O raciocínio clínico adequado envolve a análise integrada dos sinais e sintomas, contexto epidemiológico e fatores de risco do paciente. Esta opção apresenta a conduta mais apropriada segundo os protocolos clínicos atualizados e diretrizes das sociedades médicas especializadas, priorizando exames de maior valor preditivo e menor potencial de danos ao paciente.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Conflitos familiares e mediação",
+        "Diagnóstico diferencial",
+        "Hipóteses diagnósticas"
+      ]
+    },
+    {
+      "id": 51,
+      "number": 34,
+      "statement": "Joana é uma paciente de 65 anos acompanhada longitudinalmente por sua Equipe de Saúde da Família (ESF). Ela tem diagnóstico de Hipertensão Arterial Sistêmica (HAS) e Diabetes Mellitus tipo II (DMII) há vários anos. Relata ter boa adesão ao tratamento farmacológico e não farmacológico propostos até aqui. Sua última consulta médica foi há três meses, qu ando foram apresentados alguns exames com alterações e solicitados novos exames para acompanhamento de uma possível doença renal crônica. Assim, ela retorna em consulta apresentando os exames laboratoriais solicitados. Está sem queixas no momento e relata apenas preocupação com os resultados. Tabela auxiliar 1: resultados dos exames laboratoriais para auxílio no caso. Tabela auxiliar 2: estimativa de filtração glomerular em mulheres baseado na equação CKD -EPI (adaptado de: CONASS, 2021) Com base na história clínica e nos exames apresentados por Joana, assinale a alternativa que contêm o correto estadiamento da doença renal da paciente (pelo CKD -EPI) e a melhor conduta a ser adotada nesse momento:",
+      "options": [
+        "A - Estágio 3a. Suspender inibidor da enzima conversora de angiotensina II (IECA) caso esteja prescrito, prescrever estatina caso ainda não faça uso.",
+        "B - Estágio 2. Monitorar a função renal anualmente e evitar uso de anti -inflamatórios não esteroidais ou outras medicações nefrotóxicas, restringir proteína na dieta a menos de 0, 8g/kg/dia.",
+        "C - Estágio 3b. Solicitar exames laboratoriais e de imagem para avaliar riscos e consequências da injúria renal crônica, tratar anemia e hiperparatireoidismo caso presentes.",
+        "D - Estágio 4. Encaminhar para acompanhamento compartilhado com nefrologista e intensificar o tratamento das doenças de base como HAS e DMII."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. A abordagem diagnóstica apresentada nesta alternativa segue os preceitos da medicina baseada em evidências e considera a sensibilidade e especificidade dos achados clínicos descritos. O raciocínio clínico adequado envolve a análise integrada dos sinais e sintomas, contexto epidemiológico e fatores de risco do paciente. Esta opção apresenta a conduta mais apropriada segundo os protocolos clínicos atualizados e diretrizes das sociedades médicas especializadas, priorizando exames de maior valor preditivo e menor potencial de danos ao paciente.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Acompanhamento longitudinal",
+        "Avaliação familiar",
+        "Condutas terapêuticas",
+        "Consulta de rotina"
+      ]
+    },
+    {
+      "id": 52,
+      "number": 35,
+      "statement": "Paciente masculino, 35 anos, procura atendimento na Unidade Básica de Saúde (UBS) com queixa de abaulamento em região cervical esquerda há cerca de três meses. Relata que, além desse abaulamento, vem percebendo outra ‘bolinha’ um pouco mais abaixo há cerca de dois dias, o que o motivou a procurar atendimento. Nega dor local, nega febre, relata percep ção de aumento progressivo. Refere perda de peso nos últimos três meses (peso habitual = 80kg, peso atual = 71kg). Nega etilismo, refere tabagismo (fuma cerca de uma carteira de cigarro ao dia há cerca de 15 anos), nega ter relações sexuais sem preservativ os. Relata preocupação de que possa estar com alguma infecção. Ao exame físico, são encontrados múltiplos gânglios de tamanho aumentado e variado nas cadeiras cervicais anteriores, posteriores e supraclavicular esquerda, todos indolores, móveis, alguns com consistência mais endurecida. A maior nodulação mede cerca de 2, 5cm. Não apresenta sinais flogísticos. Não foram encontradas nodulações nas regiões poplíteas, inguinais, trocleares, axilares ou cervical direita. O paciente apresenta -se levemente hipocorado e, no exame de mucosa oral não foram visualizadas maiores alt erações, exceto pela presença de sangramento em mucosa oral e petéquias em palato. Com base no relato acima, qual das condutas abaixo deve ser priorizada e não deve ser esquecida pelo profissional que está atendendo o caso?",
+      "options": [
+        "A - Solicitar ultrassonografia para melhor avaliação dos linfonodos visualizados.",
+        "B - Aguardar por 3 a 4 semanas para reavaliar orientando retorno imediato caso surjam sinais flogísticos ou outros sintomas (conduta expectante).",
+        "C - Solicitar a realização de biópsia da lesão com urgência.",
+        "D - Tratar empiricamente com antibioticoterapia de amplo espectro."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Condutas terapêuticas",
+        "Exames complementares",
+        "Gestão de recursos diagnósticos",
+        "Manejo de urgências em APS",
+        "Rede de atenção à saúde (RAS)"
+      ]
+    },
+    {
+      "id": 53,
+      "number": 36,
+      "statement": "A pele apresenta diversos mecanismos de proteção contra infecções, como por exemplo, barreira física, descamação, o pH baixo da superfície cutânea, entre outros. Em todos os ciclos de vida essas barreiras atuam e são agredidas de maneiras diversas, sendo importante que os(as) médic os(as) de família e comunidade reconheçam suas características e diagnósticos diferenciais. Sobre infecções de pele comuns na APS, é correto afirmar:",
+      "options": [
+        "A - Antraz e carbúnculo são tipos de impetigos bolhosos, separados por septos que drenam por orifícios diferentes, tendo sua localização mais comum na nuca.",
+        "B - Todo impetigo cursa com lesões bolhosas, e em torno de 5% dos casos ocasionados pelo S. pyogenes pode resultar em glomerulonefrite aguda pós -estreptocócica.",
+        "C - Hordéolo é uma inflamação estafilocócica aguda das glândulas salivares. O quadro clínico é caracterizado por eritema, dor, calor e edema local.",
+        "D - O impetigo bolhoso é caracterizado pelo surgimento rápido de vesículas e bolhas flácidas, que costumam romper, dando origem a uma crosta amarelada. As bolhas surgem devido à acantólise na camada granular da pele causada pela toxina esfoliativa produzida pelos estafilococos."
+      ],
+      "correctOption": 3,
+      "explanation": "A alternativa correta é D. A abordagem diagnóstica apresentada nesta alternativa segue os preceitos da medicina baseada em evidências e considera a sensibilidade e especificidade dos achados clínicos descritos. O raciocínio clínico adequado envolve a análise integrada dos sinais e sintomas, contexto epidemiológico e fatores de risco do paciente. Esta opção apresenta a conduta mais apropriada segundo os protocolos clínicos atualizados e diretrizes das sociedades médicas especializadas, priorizando exames de maior valor preditivo e menor potencial de danos ao paciente.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Ciclos de vida",
+        "Diagnóstico diferencial",
+        "Estratégia de Saúde da Família (ESF)"
+      ]
+    },
+    {
+      "id": 54,
+      "number": 37,
+      "statement": "O registro em prontuário rotineiramente é considerado um critério de avaliação da qualidade de um serviço de saúde, em especial na Atenção Primária à Saúde, que a longitudinalidade é essencial para um cuidado de qualidade aos usuários. Sobre o registro de saúde orientado por problemas, o ReSOAP, é correto afirmar:",
+      "options": [
+        "A - Um dos objetivos do ReSOAP é desenvolver um registro exato, breve e claro, contribuindo, assim, para o processo de raciocínio clínico e tomada de decisões com qualidade.",
+        "B - Em formas resumidas do ReSOAP é possível suprimir o item \"A\" - avaliação - que pode ser substituído pela lista de problemas.",
+        "C - Existem apenas duas possibilidades de registro no item \"P\" - plano - do ReSOAP: manejo e investigações. O primeiro podendo conter orientações, medicações e procedimentos e o segundo exames complementares e testes terapêuticos.",
+        "D - Não se deve trabalhar com hipóteses diagnósticas no ReSOAP, pois esse tipo de registro deve ser orientado por problemas reais e comprovados."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Acompanhamento longitudinal",
+        "Exames complementares",
+        "Gestão de recursos diagnósticos",
+        "Pequenos procedimentos"
+      ]
+    },
+    {
+      "id": 55,
+      "number": 38,
+      "statement": "O Sr. Nicanor, sexo masculino, com 77 anos, vai em consulta com sua médica de família e comunidade para uma consulta de rotina devido ao seu histórico de hipertensão arterial, diabetes mellitus tipo 2, dislipidemia e osteoartrite. Ele relata estar tomando oito medicamentos diferentes, incluindo anti - hipert ensivos, hipoglicemiantes orais, estatina, antidepressivo, analgésicos simples e anti - inflamatórios não esteroides. Após uma avaliação detalhada, sua médica decide propor a descontinuação de alguns medicamentos para garantir um cuidado em saúde mais seguro e eficaz. Sobre o caso clínico e o tema abordado, qual das seguintes alternativas é a mais correta?",
+      "options": [
+        "A - Descontinuar inicialmente todas as medicações e monitorar os sinais vitais e exames laboratoriais do paciente regularmente. Retornar com doses baixas apenas as medicações que estiverem trazendo algum grau de descompensação para o Sr. Nicanor.",
+        "B - Realizar uma revisão detalhada das medicações, considerando a eficácia, os efeitos colaterais e a interação entre os medicamentos, e discutir as opções de desprescrição com o paciente.",
+        "C - Prescrever medicamentos para tratar potenciais sintomas de abstinência após a descontinuação dos medicamentos anteriores, evitando assim a cascata de prescrição.",
+        "D - O vínculo e a relação médico -paciente são essenciais para a avaliação da polifarmácia e sugestão de desprescrição de todas essas medicações de uso contínuo, já que todos os grupos medicamentos citados pertencem ao grupo de fármacos potencialmente inapropri ados para idosos."
+      ],
+      "correctOption": 1,
+      "explanation": "A alternativa correta é B. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Consulta de rotina",
+        "Exames complementares",
+        "Gestão de insumos e medicamentos"
+      ]
+    },
+    {
+      "id": 56,
+      "number": 39,
+      "statement": "Em relação ao cuidado a pessoas privadas de liberdade e as competências do médico de família e comunidade no cuidado a essas pessoas, é correto afirmar:",
+      "options": [
+        "A - O momento da saída da pessoa do sistema prisional é uma janela de oportunidade para avaliações clínicas e diagnósticos para serem acompanhados na UBS de seu futuro território.",
+        "B - A população prisional brasileira tende a diminuir ano a ano, portanto, é possível que no currículo baseado em competências, a atenção à saúde de pessoas privadas de liberdade passe a ser competência avançada.",
+        "C - São exemplos de especificidades importantes para o médico de família deve estar familiarizado ao cuidar desta população: tuberculose, autolesão, uso de psicotrópicos e comportamentos disruptivos.",
+        "D - São princípios e atributos do SUS e da Atenção Primária essenciais para a prática do médico de família no sistema prisional: acesso, hierarquização, centralização e igualdade."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Diagnóstico diferencial",
+        "Hipóteses diagnósticas",
+        "Medicina centrada na pessoa"
+      ]
+    },
+    {
+      "id": 57,
+      "number": 40,
+      "statement": "Assinale dentre as alternativas a seguir aquela que possui a pergunta mais adequada a ser realizada no cuidado integral à saúde de pessoas trans e travestis:",
+      "options": [
+        "A - “Aqui consta o nome “X”. Existe algum outro nome que prefira ser chamado? Você pode me informar isso a qualquer momento e podemos mudar seu registro na UBS, caso seja mais confortável para você.”",
+        "B - \"Quando você descobriu que não era homem/mulher como nasceu?\"",
+        "C - \"Vi que seu prontuário está com nome social e seu nome civil já foi retificado em cartório. Qual era seu nome anterior?\"",
+        "D - \"Seja bem vinde a nossa Unidade Básica de Saúde. Antes de tudo devo perguntar, você está com seus exames de doenças sexualmente transmissíveis em dia?\""
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Exames complementares",
+        "Gestão de recursos diagnósticos",
+        "Medicina centrada na pessoa"
+      ]
+    },
+    {
+      "id": 58,
+      "number": 41,
+      "statement": "Marco Aurélio, médico de família e comunidade da USF Nova Esperança, recebe chamada de vídeo da mãe de Ruan, uma criança de 12 meses acompanhada mensalmente no serviço de puericultura da unidade de saúde. A mãe, professora em escola fundamental, relata que a criança vem apresentan do há dois dias: anorexia, febre (Temperatura axilar média = 38, 8 °C), que responde a dipirona via oral, dois episódios de vômitos e manchas vermelhas no tórax e abdome. Relata preferir a teleconsulta, pois, não gostaria de expor a criança a um serviço de urgência. Analisando o caso acima e a realização de teleconsultas na atenção primária, qual a conduta mais adequada a ser realizada pelo médico de família e comunidade?",
+      "options": [
+        "A - Deve -se orientar a avaliação em um serviço de saúde de urgência.",
+        "B - Solicitar RX de tórax e provas inflamatórias, através da teleconsulta.",
+        "C - Tranquilizar a mãe e agendar consulta na Unidade de Saúde em 48 horas.",
+        "D - Encaminhar o atendimento através de tecnologia de informação para o sistema de telemedicina do município."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. A abordagem em saúde mental apresentada nesta alternativa incorpora princípios da Reforma Psiquiátrica Brasileira e da Rede de Atenção Psicossocial (RAPS), priorizando o cuidado territorial, a redução de danos e a reabilitação psicossocial. A conduta proposta integra aspectos psicofarmacológicos, psicoterápicos e psicossociais, essenciais para o manejo integral dos transtornos mentais. Esta opção respeita a autonomia do paciente e promove sua participação ativa no tratamento, considerando seu contexto familiar e comunitário, em conformidade com as diretrizes da Política Nacional de Saúde Mental.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Condutas terapêuticas",
+        "Consulta de rotina",
+        "Formação e educação continuada"
+      ],
+      "videoUrl": null
+    },
+    {
+      "id": 59,
+      "number": 42,
+      "statement": "Maria dos Anjos tem 56 anos e está sendo atendida pelo médico residente em medicina de família e comunidade, apresentando queixa de dermatite escamosa e pruriginosa na aréola da mama direita. Refere ter percebido há aproximadamente 1 mês. Realizou mamograf ia bilateral há 4 anos com resultado BIRADS -1 em ambas as mamas. O médico residente levantou a hipótese diagnóstica de eczema areolar e prescreveu corticoide tópico de baixa potência. Ao discutir o caso com sua preceptora, este orientou a necessidade de realizar o diagnóstico diferencial. Qual diagnóstico diferencial deve ser mandatório para o residente fazer no caso acima?",
+      "options": [
+        "A - Hiperplasia atípica.",
+        "B - Carcinoma de Paget.",
+        "C - Papiloma intraductal.",
+        "D - Carcinoma espinocelular."
+      ],
+      "correctOption": 1,
+      "explanation": "A alternativa correta é B. A abordagem diagnóstica apresentada nesta alternativa segue os preceitos da medicina baseada em evidências e considera a sensibilidade e especificidade dos achados clínicos descritos. O raciocínio clínico adequado envolve a análise integrada dos sinais e sintomas, contexto epidemiológico e fatores de risco do paciente. Esta opção apresenta a conduta mais apropriada segundo os protocolos clínicos atualizados e diretrizes das sociedades médicas especializadas, priorizando exames de maior valor preditivo e menor potencial de danos ao paciente.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Diagnóstico diferencial",
+        "Hipóteses diagnósticas"
+      ]
+    },
+    {
+      "id": 60,
+      "number": 43,
+      "statement": "Adriana tem 15 anos e está sendo avaliada devido ao atraso puberal. Apresenta pêlos pubianos finos, ausência da telarca e da menarca. Nega sexarca. Realizou Raio -X do punho esquerdo que evidenciou idade óssea compatível com 12 anos e 7 meses. O exame físico não apresentou alterações significativas. Peso 40 Kg e estatura 1, 40 m. Classificação de Tarnner M1P2. Qual deverá ser o próximo passo para a avaliação diagnóstica do caso acima?",
+      "options": [
+        "A - Solicitar cariótipo.",
+        "B - Solicitar dosagem de FSH.",
+        "C - Solicitar ultrassonografia pélvica.",
+        "D - Solicitar tomografia computadorizada de crânio."
+      ],
+      "correctOption": 1,
+      "explanation": "A alternativa correta é B. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Exames complementares",
+        "Gestão de recursos diagnósticos",
+        "Rede de atenção à saúde (RAS)"
+      ]
+    },
+    {
+      "id": 61,
+      "number": 44,
+      "statement": "Josué é Médico de família e comunidade atuando em uma Unidade Básica de Saúde (UBS) localizada na periferia da cidade em comunidade com baixo índice de desenvolvimento humano (IDH), marcada pela violência urbana em suas diversas facetas. Ao chegar à Unidade de Saúde observa que Ana Júlia, moradora da comunidade, está aguardando na sala de espera. Ela busca a Unidade de Saúde semanalmente c om queixas diversas relacionadas com ansiedade que se intensificaram após o filho ter sido assassinado. Dentre as competências do médico de família e comunidade, qual o modelo de abordagem tem o maior potencial de elevar a qualidade e a resolubilidade da consulta com Ana Júlia?",
+      "options": [
+        "A - Modelo balintiano.",
+        "B - Modelo biopsicossocial.",
+        "C - Modelo ecológico -familiar.",
+        "D - Método clínico centrado na pessoa."
+      ],
+      "correctOption": 3,
+      "explanation": "A alternativa correta é D. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Consulta de rotina",
+        "Medicina centrada na pessoa"
+      ]
+    },
+    {
+      "id": 62,
+      "number": 45,
+      "statement": "Uma adolescente de 17 anos, sexo feminino, durante a consulta com seu médico de família e comunidade solicita um ultrassom transvaginal, pois iniciou vida sexual há 3 meses. Refere episódio de corrimento vaginal esbranquiçado, com grumos e prurido vulvar, que foi tratado com miconazol creme vaginal prescrito por outro médico da Unidade de Saúde. O calendário vacinal evidencia uma dose da vacina contra o HPV. Na consulta atual não tem queixas. Exame físico sem alterações. Nega patologias ou cirurgias prévias, nega uso de medicações. Considerando o conceito de prevenção quaternária qual conduta mais adequada?",
+      "options": [
+        "A - Orientar a paciente a realizar outras duas doses da vacina contra o HPV.",
+        "B - Solicitar a ultrassonografia transvaginal pois a paciente já tem vida sexual ativa.",
+        "C - Dialogar com paciente que o exame não possui indicação baseada em evidências.",
+        "D - Realizar o exame Papanicolau pois a paciente possui maior risco de infecção pelo HPV."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. As estratégias preventivas descritas nesta alternativa estão alinhadas com os diferentes níveis de prevenção em saúde: primária (evitar o surgimento da doença), secundária (diagnóstico precoce), terciária (redução de complicações) e quaternária (proteção contra intervenções excessivas). A abordagem proposta integra ações educativas, rastreamentos baseados em evidências e intervenções sobre determinantes sociais da saúde, fundamentais para a efetividade das ações preventivas no contexto da atenção primária. Esta opção considera a custo-efetividade das intervenções e sua aplicabilidade no contexto do SUS.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Condutas terapêuticas",
+        "Consulta de rotina",
+        "Exames complementares"
+      ]
+    },
+    {
+      "id": 63,
+      "number": 46,
+      "statement": "Os Grupos Balint têm origem na década de 1950, a partir de seminários de discussão desenvolvidos por Michael Balint com médicos generalistas do sistema de saúde inglês. Sobre as suas características clássicas, é correto afirmar que:",
+      "options": [
+        "A - tratam -se de grupos fechados e dotados de capacidade de autogerenciamento, sem definição de lideranças, para preservar a horizontalidade das relações entre os participantes.",
+        "B - os casos apresentados devem idealmente ser preparados para a discussão em grupo, a partir de notas escritas, com o objetivo de que detalhes importantes não sejam esquecidos.",
+        "C - não se pretende que os grupos exerçam uma função terapêutica sobre os seus participantes, sendo desejável que, na medida do possível, sejam evitados relatos de histórias pessoais.",
+        "D - o fechamento de cada sessão deve contemplar uma síntese do que foi discutido, resultando na sumarização dos principais direcionamentos sugeridos para o caso apresentado."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Medicina centrada na pessoa",
+        "Organização e gestão dos serviços de APS"
+      ]
+    },
+    {
+      "id": 64,
+      "number": 47,
+      "statement": "Observe a seguinte situação clínica: Médico (M): Bom dia, Valéria. Vejo que hoje você veio à consulta acompanhada de seu companheiro João. Preciso te dizer que conversaremos sobre algumas questões íntimas e talvez difíceis. Você prefere estar sozinha ou deseja que ele permaneça na consulta? Paciente (P): Ai, doutor, agora fiquei preocupada. Ele pode ficar, sem problemas. Não existe segredo entre nós. Mas diga logo o que é, quero saber tudo, mesmo que seja notícia ruim. M: Bom, Valéria. Em nosso último contato você me relatou sobre o desejo de vocês de engravidar, e então aproveitamos para realizar alguns exames importantes na avaliação pré -concepcional, incluindo o exame preventivo, que estava atrasado. Me conte o que você sabe sobre este exame. P: Ah, esse exame vê como a mulher está por dentro, se está tudo certinho no útero, não é isso? Algo errado comigo, doutor? M: Então, esse exame avalia o útero sim, mais precisamente uma parte que conhecemos como colo do útero. Sua principal função é detectar lesões que tenham risco de se tornar um câncer, e o seu exame veio com uma alteração que chamamos de \"lesão de alto grau\" (pausa). Há algo que você queira me perguntar nesse momento? P: Isso é câncer, doutor? Vai me impedir de engravidar? M: Na maioria das vezes, essa alteração representa uma lesão com risco de se tornar câncer, embora em uma pequena parte dos casos a investigação adicional revele um câncer já existente (pausa). O nosso próximo passo será te encaminhar para a realização de um exame chamado colposcopia, que observa o colo do útero com uma lente de aumento, e em muitos casos já é realizado um procedimento que pode representar a cura do problema. Sobre a gravidez, a minha recomendação seria aguardar o andamento do caso para ini ciar a tentativa (pausa). Eu sinto muito em te dar essa notícia; é por isso que não devemos atrasar os exames de rotina… Como você está se sentindo? Considerando as recomendações para comunicação de notícias difíceis, assinale a alternativa que contenha uma avaliação correta a respeito da abordagem do profissional:",
+      "options": [
+        "A - Ao questionar sobre a presença do acompanhante, o médico revelou que trataria de notícias difíceis, criando um clima de suspense sem a devida preparação da paciente, configurando uma conduta inadequada.",
+        "B - Ao utilizar o termo \"câncer\" repetidas vezes, quando a maior probabilidade é de doença pré -neoplásica, o médico pode estar gerando medo desnecessário, configurando uma conduta inadequada.",
+        "C - Ao utilizar pausas, o médico consegue observar a reação da paciente, respeitar o seu tempo para processar as notícias e garantir espaço para que ela faça perguntas, configurando uma conduta adequada.",
+        "D - Ao final da conversa, o médico demonstra empatia e oportuniza o aconselhamento para educação em saúde, alertando sobre o risco de atrasar exames de rastreio, configurando uma conduta adequada."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Condutas terapêuticas",
+        "Consulta de rotina",
+        "Exames complementares",
+        "Gestão de recursos diagnósticos",
+        "Mudanças climáticas e impactos na saúde"
+      ]
+    },
+    {
+      "id": 65,
+      "number": 48,
+      "statement": "Embora a Prevenção Quaternária possa ser relacionada a todos os princípios da bioética, um deles guarda estreita relação com a sua conceituação, que é a:",
+      "options": [
+        "A - Beneficência.",
+        "B - Não -maleficência.",
+        "C - Autonomia.",
+        "D - Justiça."
+      ],
+      "correctOption": 1,
+      "explanation": "A alternativa correta é B. As estratégias preventivas descritas nesta alternativa estão alinhadas com os diferentes níveis de prevenção em saúde: primária (evitar o surgimento da doença), secundária (diagnóstico precoce), terciária (redução de complicações) e quaternária (proteção contra intervenções excessivas). A abordagem proposta integra ações educativas, rastreamentos baseados em evidências e intervenções sobre determinantes sociais da saúde, fundamentais para a efetividade das ações preventivas no contexto da atenção primária. Esta opção considera a custo-efetividade das intervenções e sua aplicabilidade no contexto do SUS.",
+      "tags": [
+        "Autonomia do paciente",
+        "Princípios éticos na prática médica",
+        "Promoção e prevenção em saúde"
+      ]
+    },
+    {
+      "id": 66,
+      "number": 49,
+      "statement": "Durante uma epidemia de dengue, a fim de reduzir o tempo de espera por atendimentos e garantir a priorização de pessoas com maior risco de complicações, uma unidade de saúde da família elaborou o seguinte plano de ação, após reunião da gerência com represe ntantes de todas as categorias profissionais: • Agentes comunitários de saúde: realizam o acolhimento inicial do paciente e escutam suas queixas, verificam a existência de comorbidades ou condições clínicas especiais, aferem temperatura e pressão arterial sentado e de pé e registram os resultados. • Enfermeiros: supervisionam o trabalho dos ACS e analisam os resultados registrados; pesquisam sinais de alarme através da anamnese; realizam prova do laço; determinam a ordem em que os pacientes serão avaliados pelo médico • Médicos: realizam atendimentos conforme ordenação determinada pelos enfermeiros; determinam o estadiamento clínico e a conduta pertinente. • Técnicos de enfermagem: não participam diretamente do atendimento a pacientes com suspeita de dengue pois precisam cumprir suas escalas em sala de vacinas e curativos, porém, ficam responsáveis pelo preenchimento das fichas de notificação de suspeita de arboviroses ao final do dia. Duas semanas após a implementação do plano, diversas críticas e sugestões para mudanças foram levantadas pelos profissionais: os médicos se sentiam sobrecarregados com os atendimentos, e solicitaram que fossem compartilhados com a enfermagem. Alguns enferm eiros, por sua vez, discordam da proposta pois se negavam a liberar pacientes com suspeita de dengue para acompanhamento ambulatorial sem avaliação médica. Muitos ACS diziam que aferir a pressão arterial era algo fora do escopo da categoria, e os técnicos de enfermagem se queixavam de que os registros clínicos eram insuficientes para o adequado preenchimento das fichas de notificação. Diante da situação relatada, é possível afirmar que:",
+      "options": [
+        "A - A aferição de pressão arterial não é uma atribuição prevista para a categoria de ACS, caracterizando desvio de função e demandando revisão imediata do plano de ação, sob risco de denúncia do mesmo e intervenção por parte do sindicato da categoria.",
+        "B - Por se tratar de uma condição clínica com risco significativo de complicações e óbitos, a enfermagem deve manter a sua atuação restrita à classificação de risco, não devendo ser responsabilizada quanto à definição de diagnóstico final e conduta clínica.",
+        "C - Embora a notificação de agravos seja uma atribuição comum a todos os membros da equipe, o modelo proposto apresenta uma desarticulação entre a atividade assistencial e responsabilidade administrativa correspondente, com risco de perda da qualidade dos dado s.",
+        "D - Considerando que o plano de ação foi elaborado com a representação de todas as categorias profissionais e gerencia, o fluxo não deveria ser modificado, pois as decisões foram tomadas tendo em vista as melhores soluções possíveis para problemas previamente identificados."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Acolhimento e escuta qualificada",
+        "Avaliação familiar",
+        "Condutas terapêuticas",
+        "Diagnóstico diferencial"
+      ]
+    },
+    {
+      "id": 67,
+      "number": 50,
+      "statement": "Sobre o apoio matricial às equipes de saúde da família, é correto afirmar que:",
+      "options": [
+        "A - Após análise das necessidades de saúde da população, o Ministério da Saúde orientou que as equipes de apoio matricial devem ser compostas minimamente por profissionais de saúde mental e reabilitação.",
+        "B - Os profissionais matriciadores não devem realizar atendimentos individuais sem a presença de membros da equipe de saúde da família, pois suas atividades assistenciais devem preservar o caráter pedagógico.",
+        "C - Por se tratarem de pacientes de maior complexidade, os casos compartilhados com matriciadores devem originar a construção de projetos terapêuticos singulares, com discussões periódicas.",
+        "D - A facilidade do contato entre a equipe de referência e o matriciador em situações difíceis e imprevistas pode ser tão importante para o sucesso da integração quanto a frequência dos encontros regulares."
+      ],
+      "correctOption": 3,
+      "explanation": "A alternativa correta é D. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Redes de apoio social"
+      ]
+    },
+    {
+      "id": 68,
+      "number": 51,
+      "statement": "Um senhor de 45 anos procura atendimento na unidade de saúde com queixa de alterações nas unhas dos pés há cerca de seis meses, relatando aspecto amarelado, espessamento das unhas e presença de manchas esbranquiçadas. Ele refere desconforto ao caminhar devido ao aumento da espessura das unhas. Não possui histórico de doenças crônicas, mas relata ter frequentado recentemente uma pis cina pública. Ao exame, observa -se onicomicose em várias unhas dos pés, com envolvimento de mais de três unhas e espessamento significativo das mesmas. Com base nesse cenário, qual das seguintes opções representa o tratamento inicial recomendado para este caso?",
+      "options": [
+        "A - Terapia tópica com clotrimazol.",
+        "B - Terapia tópica com ciclopirox.",
+        "C - Terapia oral com terbinafina.",
+        "D - Terapia sistêmica com fluconazol."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. A conduta terapêutica indicada nesta alternativa está fundamentada em ensaios clínicos randomizados e revisões sistemáticas recentes, que demonstram superior eficácia e perfil de segurança favorável. O tratamento proposto considera aspectos farmacológicos importantes como posologia, interações medicamentosas e ajustes necessários para condições especiais, além de incorporar abordagens não-farmacológicas essenciais para o manejo integral. Esta opção terapêutica apresenta o melhor balanço entre benefícios e riscos, considerando as particularidades biopsicossociais do caso.",
+      "tags": [
+        "Ciclos de vida",
+        "Exames complementares",
+        "Gestão de condições crônicas",
+        "Gestão de recursos diagnósticos"
+      ]
+    },
+    {
+      "id": 69,
+      "number": 52,
+      "statement": "Maria, 24 anos, é uma jovem saudável sem histórico pessoal de problemas médicos significativos. No entanto, sua mãe teve um episódio de trombose venosa profunda aos 50 anos. Maria não fuma e não tem histórico de enxaqueca. Durante uma consulta médica, Maria expressa interesse em iniciar um método contraceptivo. Após revisar seu histórico médico, o médico de família que a acompanha discute as opções disponíveis, incluindo os contraceptivos orais combinados (COCs), destacando os riscos associados a essa forma de contracepção. Considerando o caso de Maria, qual dos seguintes riscos está mais fortemente associado ao uso de COCs e é crucial para uma discussão informada sobre opções contraceptivas?",
+      "options": [
+        "A - Risco aumentado de eventos cardiovasculares adversos devido ao uso prolongado de COCs.",
+        "B - Risco aumentado de tromboembolismo venoso devido ao histórico familiar.",
+        "C - Risco reduzido de infertilidade devido ao uso de COCs.",
+        "D - Risco aumentado de câncer de mama devido ao uso de COCs."
+      ],
+      "correctOption": 1,
+      "explanation": "A alternativa correta é B. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Consulta de rotina",
+        "Medicina centrada na pessoa"
+      ]
+    },
+    {
+      "id": 70,
+      "number": 53,
+      "statement": "Maria, 35 anos, mãe de duas crianças pequenas, chega à unidade de saúde com lesões nos antebraços causadas por um acidente doméstico enquanto cozinhava. Ela está visivelmente preocupada com a gravidade das lesões e pergunta ao médico sobre as possíveis consequências estéticas, especialmente devido ao seu trabalho como vendedora em uma loja de roupas. A o examinar os antebraços de Maria, o médico observa lesões com formação de bolhas e áreas avermelhadas, indicativas de comprometimento da derme. Maria relata intensa dor local e dificuldade para movimentar os membros afetados. Considerando o caso clínico de Maria e as informações fornecidas, qual a conduta mais apropriada para avaliação e tratamento das lesões nos antebraços?",
+      "options": [
+        "A - Classificar as lesões como queimaduras de segundo grau profundas e encaminhar imediatamente para um centro de tratamento de queimados.",
+        "B - Realizar a aplicação de compressas frias nas lesões para alívio imediato da dor, prevenção de complicações e encaminhar para acompanhamento especializado em um centro de tratamento de queimados.",
+        "C - Avaliar a profundidade das lesões e calcular a extensão da superfície corporal queimada para classificar a gravidade das queimaduras, considerando as áreas críticas, e iniciar tratamento local nas unidades básicas de saúde, se a lesão for considerada não complicada.",
+        "D - Prescrever pomadas cicatrizantes e analgésicos para alívio da dor, e orientar Maria a retornar à unidade de saúde se as lesões não cicatrizarem em duas semanas."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. A conduta terapêutica indicada nesta alternativa está fundamentada em ensaios clínicos randomizados e revisões sistemáticas recentes, que demonstram superior eficácia e perfil de segurança favorável. O tratamento proposto considera aspectos farmacológicos importantes como posologia, interações medicamentosas e ajustes necessários para condições especiais, além de incorporar abordagens não-farmacológicas essenciais para o manejo integral. Esta opção terapêutica apresenta o melhor balanço entre benefícios e riscos, considerando as particularidades biopsicossociais do caso.",
+      "tags": [
+        "Condutas terapêuticas",
+        "Formação e educação continuada",
+        "Princípios éticos na prática médica",
+        "Promoção e prevenção em saúde",
+        "Rede de atenção à saúde (RAS)"
+      ]
+    },
+    {
+      "id": 71,
+      "number": 54,
+      "statement": "Margarida, 18 anos, procura atendimento médico no centro de saúde do seu bairro devido a um anel preso em seu dedo anular direito. Ela relata que o anel ficou apertado após uma recente viagem, onde seu dedo inchou devido ao calor e à retenção de líquidos. Margarida apresenta apenas edema no dedo afetado, sem sinais de comprometimento vascular como dor e cianose. Ela está ansiosa para remo ver o anel devido ao desconforto causado pelo inchaço. Em relação a uma possível hipótese diagnóstica e conduta diante do caso de Margarida, assinale a alternativa correta:",
+      "options": [
+        "A - Utilizar um torniquete com fita dental quando houver comprometimento vascular com dor e cianose.",
+        "B - Aplicar a técnica do torniquete com agulha ou clipe de papel para deslizar o anel em casos de edema sem sinais de comprometimento vascular.",
+        "C - Realizar uma compressão firme no dedo, com a ajuda de substância emoliente para facilitar a remoção do anel, independentemente da presença de comprometimento vascular.",
+        "D - Utilizar um torniquete com fita dental para deslizar o anel preso, passando o fio dental por cima do anel e enrolando -o firmemente em torno do dedo até que o anel se solte."
+      ],
+      "correctOption": 1,
+      "explanation": "A alternativa correta é B. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Condutas terapêuticas",
+        "Medicina centrada na pessoa",
+        "Organização e gestão dos serviços de APS"
+      ]
+    },
+    {
+      "id": 72,
+      "number": 55,
+      "statement": "Vera, 35 anos, diagnosticada como HIV -positiva há 5 anos, apresenta -se à consulta de planejamento familiar interessada em utilizar um método contraceptivo de longo prazo e não hormonal. Ela relata estar em tratamento antirretroviral regular há 3 anos. Considerando as evidências sobre o uso do DIU em mulheres vivendo com HIV ou com risco de adquirir HIV, qual das seguintes afirmativas é correta?",
+      "options": [
+        "A - A presença do DIU aumentou o risco de aquisição do HIV em comparação aos demais contraceptivos.",
+        "B - Estudos mostraram aumento de risco de DIP em usuárias de DIU, com ou sem HIV; nas com baixa contagem de CD4 é ainda maior o risco.",
+        "C - Parece não haver risco aumentado de transmissão de HIV, a parceiro não infectado, em mulheres que usam DIU.",
+        "D - Mulheres em risco de outras infecções sexualmente transmissíveis, além do HIV, podem se beneficiar do DIU de cobre."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. A conduta terapêutica indicada nesta alternativa está fundamentada em ensaios clínicos randomizados e revisões sistemáticas recentes, que demonstram superior eficácia e perfil de segurança favorável. O tratamento proposto considera aspectos farmacológicos importantes como posologia, interações medicamentosas e ajustes necessários para condições especiais, além de incorporar abordagens não-farmacológicas essenciais para o manejo integral. Esta opção terapêutica apresenta o melhor balanço entre benefícios e riscos, considerando as particularidades biopsicossociais do caso.",
+      "tags": [
+        "Consulta de rotina",
+        "Medicina baseada em evidências (MBE)",
+        "Rede de atenção à saúde (RAS)"
+      ]
+    },
+    {
+      "id": 73,
+      "number": 56,
+      "statement": "Considerando as características abaixo, faça a associação com os principais erros refrativos que causam perda visual progressiva: 1. A imagem se forma depois do ponto focal da retina. É corrigido com lentes convexas. Comum nas crianças, pois seus olhos são menores. 2. A imagem se forma antes do ponto focal da retina. É corrigido com lentes côncavas. Dificuldade de visualizar objetos distantes com clareza. 3. O formato irregular da córnea ou do cristalino gera vários focos em diferentes eixos. A visão dos objetos fica desfocada ou distorcida, tanto para longe quanto para perto",
+      "options": [
+        "A - 1. Miopia, 2. Hipermetropia, 3. Astigmatismo.",
+        "B - 1. Hipermetropia, 2. Miopia, 3. Astigmatismo.",
+        "C - 1. Astigmatismo, 2. Miopia, 3. Hipermetropia.",
+        "D - 1. Hipermetropia, 2. Astigmatismo, 3. Miopia."
+      ],
+      "correctOption": 1,
+      "explanation": "A alternativa correta é B. O cuidado à saúde da criança apresentado nesta alternativa está em consonância com as recomendações da Caderneta de Saúde da Criança e do Ministério da Saúde. A conduta proposta considera as particularidades do desenvolvimento infantil, os marcos neuropsicomotores esperados para a faixa etária e a avaliação integral que inclui aspectos nutricionais, vacinais, familiares e sociais. Esta opção prioriza ações de vigilância do crescimento e desenvolvimento, fundamentais para a identificação precoce de desvios e intervenção oportuna, garantindo à criança plenas condições de desenvolvimento de suas potencialidades.",
+      "tags": [
+        "Estratégia de Saúde da Família (ESF)",
+        "Medicina centrada na pessoa",
+        "Organização e gestão dos serviços de APS"
+      ]
+    },
+    {
+      "id": 74,
+      "number": 57,
+      "statement": "Considerando a afirmação: Trata -se de um tecido fibrovascular da conjuntiva degenerado, triangular, subepitelial, geralmente na região do limbo medial (nasal), que pode cobrir a córnea. Está associado à exposição solar. Se houver inflamação intermitente pode ser utilizado corticoide e anti -inflamatório não hormonal tópicos e, se maior que 4mm, considerar retirada cirúrgica”. Estamos falando de:",
+      "options": [
+        "A - Pinguécula.",
+        "B - Blefaroptose.",
+        "C - Catarata.",
+        "D - Pterígio."
+      ],
+      "correctOption": 3,
+      "explanation": "A alternativa correta é D. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Medicina centrada na pessoa",
+        "Organização e gestão dos serviços de APS"
+      ]
+    },
+    {
+      "id": 75,
+      "number": 58,
+      "statement": "Homem de 23 anos, cantor profissional, procura consulta preocupado com rouquidão que dura 8 dias. Ele fala que nunca fumou e ingere álcool “socialmente”. Nunca realizou procedimento cirúrgico e nega trauma. Nega também sintomas dispépticos. Ao ser examinad o, o médico não encontra alterações na orofaringe, registra o mesmo peso de 1 ano atrás e não evidencia massas na região cervical. Sabendo que a queixa se mantém, sem uma piora nesse período, a principal conduta para esse caso seria:",
+      "options": [
+        "A - Orientar hidratação e repouso vocal, mesmo sendo profissional da voz.",
+        "B - Fazer inibidor da bomba de prótons, como tratamento empírico de doença do refluxo.",
+        "C - Fazer corticoide oral para tentar acelerar correção nas alterações laríngeas.",
+        "D - Solicitar nasofibroscopia, pela maior duração do sintoma (sinal de alerta)."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Condutas terapêuticas",
+        "Consulta de rotina",
+        "Pequenos procedimentos"
+      ]
+    },
+    {
+      "id": 76,
+      "number": 59,
+      "statement": "Qual das características abaixo está relacionada a zumbido de estruturas para -auditivas (externas ao sistema auditivo), com possibilidade de intervenção cirúrgica curativa?",
+      "options": [
+        "A - Zumbido com hipoacusia neurossensorial, evidenciado na audiometria.",
+        "B - Zumbido em pessoas com alteração metabólica, como diabetes ou doença tireoideana.",
+        "C - Zumbido pulsátil em pessoas com alterações vasculares.",
+        "D - Zumbido com fatores psicológicos, incluindo estresse, ansiedade ou depressão."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Estresse familiar",
+        "Medicina centrada na pessoa",
+        "Rede de atenção à saúde (RAS)"
+      ]
+    },
+    {
+      "id": 77,
+      "number": 60,
+      "statement": "Sobre neoplasias bucais, marque a alternativa correta:",
+      "options": [
+        "A - Apenas 5% das lesões malignas de cavidade oral e orofaringe são do tipo carcinoma espinocelular.",
+        "B - Uma placa branco -acinzentada na mucosa (leucoplasia), com espessamento e por vezes fissura é sinal de lesão maligna.",
+        "C - Lesões neoplásicas orais iniciais são dolorosas, com linfonodos cervicais e ipsilaterais na maioria das vezes.",
+        "D - Após 14 dias de descontinuação dos irritantes crônicos (tabaco, álcool) sugere -se encaminhar para biópsia caso persista a lesão."
+      ],
+      "correctOption": 3,
+      "explanation": "A alternativa correta é D. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Medicina centrada na pessoa",
+        "Organização e gestão dos serviços de APS"
+      ]
+    },
+    {
+      "id": 78,
+      "number": 61,
+      "statement": "Hugo, 27 anos, identifica -se como homem trans, bissexual. Procura atendimento na unidade básica de saúde em demanda espontânea demonstrando grande preocupação e é atendido por Ricardo, médico de família e comunidade. Ricardo: Olá Hugo, Tudo bem com você? Em que posso te ajudar hoje? Hugo: Então, há um mês atrás minha menstruação atrasou. Como não estou fazendo uso da testosterona regularmente, fiquei preocupado e fiz um teste de gravidez. Ricardo: Entendo… e você havia tido relações sexuais desprotegidas? Hugo: Sim, tive sim. Aí fiz o teste de gravidez e estava positivo. Fiquei tão desesperado que nem me lembro bem dos dias que se seguiram. Mas eu consegui uns remédios que coloquei por baixo e tomei também. Ricardo: Lembra o nome do remédio? Hugo: Me disseram que era o genérico do Cytotec ®. E fez efeito, sangrei por alguns dias e parou. Fiz uma ultrassonografia e não tem mais nada lá. Vim para você checar se está tudo certo mesmo, por favor. Diante do exame físico inocente, a conduta adequada é:",
+      "options": [
+        "A - orientar sobre os riscos do abortamento e iniciar anticoncepção com prescrição de anticoncepcional hormonal injetável.",
+        "B - orientar sobre os riscos do abortamento, encaminhar o paciente para maternidade e retomar uso de testosterona como forma de evitar gravidez.",
+        "C - orientar sobre os riscos do abortamento, notificar o caso de aborto inseguro para vigilância e inicar a anticoncepção de escolha do paciente.",
+        "D - orientar sobre os riscos do abortamento, abordar sexo seguro nas especificidades da bissexualidade e propor método anticoncepcional de alta eficácia."
+      ],
+      "correctOption": 3,
+      "explanation": "A alternativa correta é D. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Condutas terapêuticas",
+        "Exames complementares",
+        "Gestão de recursos diagnósticos"
+      ]
+    },
+    {
+      "id": 79,
+      "number": 62,
+      "statement": "Sobre o ciclo de vida das pessoas LGBTQIAPN+ assinale a alternativa correta:",
+      "options": [
+        "A - A transição de gênero vivida na adolescência gera intenso sofrimento à pessoa trans independente do acolhimento da família de origem, pois está sobreposta às próprias questões desafiadoras da idade.",
+        "B - Revelar -se LGBTQIA PN + é um processo social (“sair do armário” para o outro) ocorrendo com maior frequência na infância e adolescência, porém pode acontecer em qualquer momento da vida.",
+        "C - A parentalidade entre as pessoas LGBTQIA PN + está limitada àqueles que tiveram filhos de relações heterossexuais anteriores ou através de reprodução assistida.",
+        "D - A invisibilidade dos relacionamentos entre pessoas do mesmo gênero faz com que o casal tenha menos suporte social e maior dificuldade de enfrentar crises inerentes ao ciclo de vida."
+      ],
+      "correctOption": 3,
+      "explanation": "A alternativa correta é D. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Acolhimento e escuta qualificada",
+        "Avaliação familiar",
+        "Ciclos de vida",
+        "Identidade de gênero"
+      ]
+    },
+    {
+      "id": 80,
+      "number": 63,
+      "statement": "Fernanda, 32 anos, procurou atendimento na unidade básica de saúde com o seguinte relato: “Estou sentindo muita dor de cólica desde o mês passado. Minha menstruação desceu, com uns dias de atraso, mas desceu. Só estava com uma cor diferente. Aí tô tendo também dor nas relações sexuais, tanto que nem consigo mais tentar ter relação. Mas, às veze s sinto dor do nada também. E agora um corrimento estranho, sem cheiro ruim. Estou preocupada, tem alguma coisa errada”. Você complementa a anamnese e obtém as seguintes informações: paciente em uso de anticoncepcional oral irregularmente, sem uso de preservativos nas relações (heterossexuais). O exame físico mostrou que Fernanda estava afebril, com dor a palpação de baixo ventre e ao toque, conteúdo vaginal inexpressivo. Assinale a alternativa que contém os possíveis diagnósticos e a conduta mais adequada:",
+      "options": [
+        "A - Gestação ectópica/doença inflamatória pélvica/ cisto ovariano - solicitar teste de gravidez, leucograma e ultrassom transvaginal.",
+        "B - Cisto ovariano/doença inflamatória pélvica/dismenorreia primária - solicitar ultrassonografia transvaginal, prescrever antibióticos e anticoncepcional injetável.",
+        "C - Gestação ectópica/cisto ovariano/endometriose - solicitar teste de gravidez, ultrassonografia transvaginal e ressonância magnética de pelve.",
+        "D - Dismenorreia secundária/gestação ectópica/doença inflamatória pélvica - solicitar ultrassonografia transvaginal, teste de gravidez e PCR para clamídia e gonococo."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. A abordagem diagnóstica apresentada nesta alternativa segue os preceitos da medicina baseada em evidências e considera a sensibilidade e especificidade dos achados clínicos descritos. O raciocínio clínico adequado envolve a análise integrada dos sinais e sintomas, contexto epidemiológico e fatores de risco do paciente. Esta opção apresenta a conduta mais apropriada segundo os protocolos clínicos atualizados e diretrizes das sociedades médicas especializadas, priorizando exames de maior valor preditivo e menor potencial de danos ao paciente.",
+      "tags": [
+        "Condutas terapêuticas",
+        "Diagnóstico diferencial",
+        "Exames complementares",
+        "Gestão de recursos diagnósticos",
+        "Hipóteses diagnósticas"
+      ]
+    },
+    {
+      "id": 81,
+      "number": 64,
+      "statement": "Isabela, 20 anos, procura atendimento na unidade básica de saúde com o objetivo de iniciar anticoncepção, sendo atendida por Joice, médica de família e comunidade. Joice: Olá Isabela, o que posso fazer por você hoje? Isabela: Então, eu tive uma relação sexual, pela primeira vez, e quero me proteger para não engravidar [paciente fala olhando para o chão] Joice: Entendo. Você quer me contar mais sobre isso? Foi prazeroso para você? - Ah, melhor falar tudo… eu não gosto dele, na verdade. Resolvi ter relação para experimentar, aí não foi tão legal. Acho que é porque não tem amor. [paciente fala com as mãos cobrindo o rosto] Isabela: E como foi essa decisão de experimentar então? Quer falar sobre isso? - Minha família acredita que sexo só deve ser feito dentro do casamento, mas eu estava muito curiosa para começar [corando]. Joice: Compreendo. Muitas pessoas começam a explorar sua sexualidade através da masturbação. Você costuma fazer? Isabela: Não, porque na religião também não pode. Joice: Mas a relação sexual também não... Bem, o desenvolvimento sexual saudável passa também por conhecer o próprio corpo, Isabela. O que acha? Isabela: Acho difícil. Joice : Está bem, vamos aos poucos. Quanto à relação em si. Vocês se protegem de alguma forma? Usaram preservativo? Isabela: Não… [voltando a olhar para o chão] ele tirou na hora. A consulta segue com orientações sobre sexo seguro, solicitação de exames e prescrição de anticoncepção. Acerca da consulta relatada acima, escolha a alternativa correta:",
+      "options": [
+        "A - A masturbação foi erroneamente abordada tendo em vista que não influencia a saúde da paciente.",
+        "B - A indagação sobre se a relação foi ou não prazerosa foi inapropriada pois extrapola o papel profissional.",
+        "C - “Mas a relação sexual também não” expressou um julgamento do/a profissional.",
+        "D - Diante do embaraço da paciente (comunicação não -verbal) é recomendado não explorar temas de sexualidade."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Consulta de rotina",
+        "Exames complementares",
+        "Gestão de recursos diagnósticos"
+      ]
+    },
+    {
+      "id": 82,
+      "number": 65,
+      "statement": "Com relação à unha encravada, afecção comum na atenção primária, assinale a alternativa correta:",
+      "options": [
+        "A - Os fatores etiológicos mais importantes são o corte inadequado do canto ungueal e o uso de sapatos que pressionam a região anterior do pé.",
+        "B - O tratamento conservador (controlar a dor até que o canto doente alcance a extremidade distal) deve ser aplicado nos estágios 1 e 2.",
+        "C - A técnica de destruição da matriz ungueal quimicamente foi abandonada devido ao grande número de recidivas.",
+        "D - Na técnica de destruição da matriz ungueal, cirurgicamente o bisturi é inserido no terço proximal da unha, seccionando um triângulo na base lateral."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Medicina centrada na pessoa",
+        "Organização e gestão dos serviços de APS"
+      ]
+    },
+    {
+      "id": 83,
+      "number": 66,
+      "statement": "Roberto, 41 anos, negro, assintomático, começou a se preocupar com sua pressão arterial (PA), pois sua mãe que era hipertensa faleceu por infarto aos 66 anos. Na primeira consulta trouxe de casa MRPA realizado por 5 dias com média de 140 x 90 mmHg, e ao exame físico apresentou PA: 122 x 86 mmHg aferida bilateralmente. O médico de família e comunidade, então, solicitou um MAPA, com o seguinte resultado: ● Pressões Sistólicas: As cargas pressóricas (% média de PAS acima de 135 mmHg na vigília e acima de 120 mmHg no sono) foram 57% na vigília, 30% no sono e 52% total. ● Pressões Diastólicas: As cargas pressóricas (% média de PAD acima de 85 mmHg na vigília e acima de 70mmHg no sono) foram 72% na vigília, 40% no sono e 60% total. Diante da situação, assinale o raciocínio clínico adequado:",
+      "options": [
+        "A - Considerar hipertensão arterial primária e avaliar demais exames para estimar o risco cardiovascular.",
+        "B - Considerar hipertensão arterial secundária e investigar feocromocitoma por ser a causa mais frequente.",
+        "C - Considerar hipertensão do jaleco branco e orientar apenas adoção de hábitos saudáveis.",
+        "D - Considerar hipertensão mascarada e prescrever preferencialmente IECA como monoterapia."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Consulta de rotina",
+        "Exames complementares",
+        "Gestão de recursos diagnósticos"
+      ]
+    },
+    {
+      "id": 84,
+      "number": 67,
+      "statement": "Zenaide, 65 anos, ex - tabagista, portadora de diabetes, comparece em consulta queixando -se de dor aguda em membro inferior esquerdo. Diz: “ Doutor, assim que me levantei hoje surgiu uma dor absurda na minha perna. Às vezes, quando eu caminhava muito doía e eu mancava, mas assim que eu ficava quieta melhorava. Hoje não, mesmo em repouso ela está doendo muito”. O exame apresenta ausência de pulso, pele fria e pálida, ausência de pelos bilateralmente e pulso contralateral fraco. Qual a conduta correta neste momento?",
+      "options": [
+        "A - Considerar embolia arterial, internar e avaliar indicação de tromboembolectomia.",
+        "B - Considerar doença arterial periférica, avaliar ITB e doppler ambulatorialmente.",
+        "C - Considerar trombose aguda, internar e avaliar a viabilidade do membro.",
+        "D - Considerar claudicação intermitente e prescrever Cilostazol para o tratamento."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Condutas terapêuticas",
+        "Consulta de rotina",
+        "Exames complementares",
+        "Gestão de recursos diagnósticos"
+      ]
+    },
+    {
+      "id": 85,
+      "number": 68,
+      "statement": "Maria, 65 anos, é aposentada e portadora de insuficiência cardíaca, hipertensão e diabetes. Recentemente esteve internada com diagnóstico de fibrilação atrial. Em avaliação para tratamento com anticoagulante, apresentou CHA2DS2 -VASc de 4 pontos e HAS -BLED de 2 pontos. Recebeu alta com prescrição de varfarina. Em consulta com você, nega sangramentos, mas questiona se tem como alterar a medicação, pois tem arcado com o custo do exame semanalmente e tem impactado nas suas finanças. Último exame de Razão Normalizada Internacional - RNI: 2, 1. Qual a conduta mais adequada para este caso?",
+      "options": [
+        "A - Substituir a varfarina pela dabigatrana, tornando desnecessária a realização do exame.",
+        "B - Suspender o tratamento antitrombótico pelo alto risco de sangramento indicado pelo HAS -BLED.",
+        "C - Substituir a varfarina por AAS, visto baixo risco de Acidente Vascular Cerebral indicado pelo CHA2DS2 -VASc.",
+        "D - Manter tratamento anticoagulante com varfarina e avaliar estratégia para reduzir custo do exame."
+      ],
+      "correctOption": 3,
+      "explanation": "A alternativa correta é D. A abordagem diagnóstica apresentada nesta alternativa segue os preceitos da medicina baseada em evidências e considera a sensibilidade e especificidade dos achados clínicos descritos. O raciocínio clínico adequado envolve a análise integrada dos sinais e sintomas, contexto epidemiológico e fatores de risco do paciente. Esta opção apresenta a conduta mais apropriada segundo os protocolos clínicos atualizados e diretrizes das sociedades médicas especializadas, priorizando exames de maior valor preditivo e menor potencial de danos ao paciente.",
+      "tags": [
+        "Condutas terapêuticas",
+        "Consulta de rotina",
+        "Diagnóstico diferencial",
+        "Exames complementares",
+        "Gestão de recursos diagnósticos"
+      ]
+    },
+    {
+      "id": 86,
+      "number": 69,
+      "statement": "Felipe, 5 anos, é levado a consulta pela sua mãe. Desde o primeiro ano de idade realiza acompanhamento para dermatite atópica, porém mãe queixa que “as bolinhas estão diferentes. Agora parecem mini -espinhas e quanto mais ele coça, mais elas se espalham”. Ao exame você nota aproximadamente 15 pápulas semi esféricas, consistentes, peroladas, com uma umbilicação central, medindo entre 2 a 5 mm, localizadas em tronco. Qual a orientação médica adequada?",
+      "options": [
+        "A - Orientar que se trata de infecção por um vírus, autolimitada, com tratamento via curetagem.",
+        "B - Orientar que se trata de infecção bacteriana, transmissível, com tratamento via antibiótico.",
+        "C - Orientar que se trata de infecção fúngica, autolimitada, sem necessidade de tratamento.",
+        "D - Orientar sobre a necessidade de realização de biópsia de pele para definir etiologia da lesão."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. A conduta terapêutica indicada nesta alternativa está fundamentada em ensaios clínicos randomizados e revisões sistemáticas recentes, que demonstram superior eficácia e perfil de segurança favorável. O tratamento proposto considera aspectos farmacológicos importantes como posologia, interações medicamentosas e ajustes necessários para condições especiais, além de incorporar abordagens não-farmacológicas essenciais para o manejo integral. Esta opção terapêutica apresenta o melhor balanço entre benefícios e riscos, considerando as particularidades biopsicossociais do caso.",
+      "tags": [
+        "Consulta de rotina",
+        "Estratégia de Saúde da Família (ESF)",
+        "Exames complementares",
+        "Gestão de recursos diagnósticos"
+      ]
+    },
+    {
+      "id": 87,
+      "number": 70,
+      "statement": "Jamil, 32 anos, modelo, vem à consulta preocupado com manchas claras que apareceram nos seus braços e tronco. Conta que sua namorada notou as do tronco dias após terem visitado uma cachoeira. Está preocupado sobre ser alguma doença contagiosa e conta que tem um colega com vitiligo. Esp era que exista alguma medicação que resolva as manchas até o final da semana, pois terá um ensaio fotográfico. Ao exame apresenta lesões ovaladas, pequenas, hipocrômicas e rosáceas, finamente descamativas ao esticar da pele, distribuídas no tórax, ombros e braços. Sobre a abordagem de manchas hipocrômicas na APS, é correto afirmar:",
+      "options": [
+        "A - A avaliação minuciosa para hanseníase está indicada se houver aumento de sensibilidade na lesão.",
+        "B - Após o tratamento para ptiríase versicolor, a descoloração da pele pode levar várias semanas para se resolver.",
+        "C - A exposição solar intensa pode ser um fator desencadeador para a transmissão do vitiligo.",
+        "D - A leucodermia gutata é uma condição infecciosa que deve ser investigada diante lesões hipocrômicas."
+      ],
+      "correctOption": 1,
+      "explanation": "A alternativa correta é B. A conduta terapêutica indicada nesta alternativa está fundamentada em ensaios clínicos randomizados e revisões sistemáticas recentes, que demonstram superior eficácia e perfil de segurança favorável. O tratamento proposto considera aspectos farmacológicos importantes como posologia, interações medicamentosas e ajustes necessários para condições especiais, além de incorporar abordagens não-farmacológicas essenciais para o manejo integral. Esta opção terapêutica apresenta o melhor balanço entre benefícios e riscos, considerando as particularidades biopsicossociais do caso.",
+      "tags": [
+        "Consulta de rotina",
+        "Exames complementares",
+        "Gestão de recursos diagnósticos",
+        "Organização e gestão dos serviços de APS",
+        "Rede de atenção à saúde (RAS)"
+      ]
+    },
+    {
+      "id": 88,
+      "number": 71,
+      "statement": "O modelo dos determinantes sociais da saúde (DSS), desenvolvido por DAHLGREN e WHITEHEAD (1991), articula diferentes aspectos da vida humana e tenta representar, de modo ampliado, as concepções mais atuais de saúde, doença e cuidado. Fonte: https://doi. org/10. 1590/S0104 -12902017170304 Considerando uma compreensão ampliada de saúde, articulada com determinação sociocultural, econômica e biológica, qual das afirmações a seguir melhor caracterizaria este modelo?",
+      "options": [
+        "A - O modelo DSS reconhece a dimensão sociocultural das comunidades em situação de vulnerabilidade como fator limitante para a qualidade de vida e processo de adoecimento das pessoas e comunidades.",
+        "B - O modelo dos DSS reconhece o adoecimento como resultante de múltiplas e complexas relações entre fatores intrínsecos, hereditários, ambientais e de conformação da pessoa, da sociedade e do trabalho.",
+        "C - O modelo dos DSS compreende saúde e doença como processos independentes, que demandam uma escala de priorização e intervenção centrada nos aspectos biológicos do processo saúde -doença.",
+        "D - O modelo DSS se constitui numa associação de elementos biológicos, sociais e ambientais que interferem no modo de vida das pessoas e que atuam de modo independente na gênese dos problemas de saúde."
+      ],
+      "correctOption": 1,
+      "explanation": "A alternativa correta é B. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Determinantes sociais da saúde",
+        "Formação e educação continuada",
+        "Medicina centrada na pessoa",
+        "Vulnerabilidade social"
+      ]
+    },
+    {
+      "id": 89,
+      "number": 72,
+      "statement": "O diagnóstico de uma determinada doença baseia -se em um conjunto de informações obtidas a partir da entrevista clínica, do exame físico dos resultados de exames complementares ou da própria evolução clínica do caso em análise. Considerando -se as categorias de raciocínios e estratégias aplicados de maneira complementar para a adoção de decisões diagnósticas, pode -se afirmar que:",
+      "options": [
+        "A - O raciocínio causal é uma estratégia hipotético -dedutiva, que busca associar os achados clínicos de uma pessoa a um arcabouço teórico de conhecimentos clínicos e fisiopatológicos, por meio do qual se busca estabelecer o conjunto das melhores explicações pa ra o caso analisado.",
+        "B - O raciocínio probabilístico é fazer a compilação do conhecimento sobre um determinado assunto ou tema, com informações obtidas geralmente a partir do raciocínio probabilístico ou causal. Como muitos dos diagnósticos realizados pelo(a) médico(a) são rotinei ros, usa -se o diagnóstico determinístico para resolver esses casos.",
+        "C - O raciocínio determinístico baseia -se em estimativas de probabilidade de uma doença (0 a 100%), feitas em distintos momentos do processo de investigação diagnóstica, ou seja, baseia -se na prevalência da doença. Por meio deste raciocínio é possível verifica r a acurácia de um teste ou estratégia diagnóstica na definição de um caso.",
+        "D - O raciocínio lógico, pautado nas relações de causalidade e na abordagem clínico - epidemiológica, por meio das quais se constroi um modelo antropológico e se avalia as informações referentes ao doente em termos de coerência e conformidade, cabendo a ele veri ficar as hipóteses diagnósticas."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. A abordagem diagnóstica apresentada nesta alternativa segue os preceitos da medicina baseada em evidências e considera a sensibilidade e especificidade dos achados clínicos descritos. O raciocínio clínico adequado envolve a análise integrada dos sinais e sintomas, contexto epidemiológico e fatores de risco do paciente. Esta opção apresenta a conduta mais apropriada segundo os protocolos clínicos atualizados e diretrizes das sociedades médicas especializadas, priorizando exames de maior valor preditivo e menor potencial de danos ao paciente.",
+      "tags": [
+        "Diagnóstico diferencial",
+        "Exames complementares",
+        "Gestão de recursos diagnósticos",
+        "Hipóteses diagnósticas",
+        "Medicina centrada na pessoa"
+      ]
+    },
+    {
+      "id": 90,
+      "number": 73,
+      "statement": "Sobre áreas de atuação da Vigilância em Saúde e sua aplicabilidade no âmbito do Sistema Único de Saúde e na Atenção Primária à Saúde, pode -se afirmar que:",
+      "options": [
+        "A - A Vigilância Sanitária visa prevenir ou reduzir a exposição humana a fatores ambientais prejudiciais à saúde, monitorando as condições de salubridade da água e mananciais, do solo, do ar e poluentes.",
+        "B - A Vigilância Epidemiológica trabalha na busca de identificação dos fatores de risco envolvidos na determinação clínico -epidemiológica das doenças, tanto transmissíveis, como também não transmissíveis.",
+        "C - A Vigilância à Saúde do Trabalhador fiscaliza as relações trabalhistas formais do mercado e do setor saúde, punindo os empregadores com multas quando se verifica alguma irregularidade trabalhista.",
+        "D - A Vigilância Ambiental é destinada a eliminar, diminuir ou prevenir riscos à saúde e intervir nos problemas da produção e da circulação de bens e da prestação de serviços de interesse da saúde."
+      ],
+      "correctOption": 1,
+      "explanation": "A alternativa correta é B. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Saúde ambiental",
+        "Vigilância em saúde"
+      ]
+    },
+    {
+      "id": 91,
+      "number": 74,
+      "statement": "Sobre os mecanismos do Sistema Único de Saúde (SUS) do Brasil para promover a participação da sociedade e o controle social, pode -se afirmar que:",
+      "options": [
+        "A - Os conselhos de saúde se constituem como colegiados permanentes de gestores do SUS, que definem as prioridades a partir da análise dos problemas de saúde da população.",
+        "B - As conferências de saúde são espaços amplos e periódicos de debate, de caráter consultivo, que propõem diretrizes para a política de saúde, por meio da eleição de prioridades.",
+        "C - Os conselhos de saúde acompanham o processo de trabalho das equipes de saúde dos diferentes serviços que compõem o SUS, priorizando o acompanhamento da precarização do trabalho na Atenção Básica.",
+        "D - As conferências de saúde são instâncias de caráter deliberativo, cujos relatórios periódicos aprovam os planejamentos nacional, estaduais e municipais de saúde no âmbito do SUS."
+      ],
+      "correctOption": 1,
+      "explanation": "A alternativa correta é B. O Sistema Único de Saúde (SUS) é regido por princípios fundamentais como universalidade, integralidade e equidade. Esta alternativa está corretamente alinhada com as diretrizes instituídas pela legislação do SUS, particularmente a Lei 8.080/90 e a Política Nacional de Atenção Básica (PNAB). A resposta considera as atribuições específicas dos níveis de gestão, os fluxos de referência e contrarreferência, e a organização hierarquizada do sistema, garantindo acesso universal e atendimento integral às necessidades de saúde da população.",
+      "tags": [
+        "Rede de atenção à saúde (RAS)",
+        "Sistema Único de Saúde (SUS)"
+      ]
+    },
+    {
+      "id": 92,
+      "number": 75,
+      "statement": "A estratégia ICOPE ( Integrated Care for Older People ), desenvolvida em 2019 pela Organização Mundial de Saúde (OMS), baseia -se nos princípios do direito à saúde da população idosa e na acessibilidade ao envelhecimento saudável, independente da condição socioeconômica e igualdade. Trata -se de uma estratégia mun dial, que desenvolve intervenções para desacelerar a perda de capacidade intrínseca e da habilidade funcional dos indivíduos, sendo uma ferramenta importante para a organização do cuidado aos idosos na atenção primária à saúde, principalmente no cuidado do miciliar. É necessário o trabalho em equipe interprofissional para atender as necessidades de saúde e de assistência social dessa população; e para isso foram elaborados 5 passos para sua operação: Qual das alternativas apresenta a correta caracterização dos passos da estratégia ICOPE -OMS (2019):",
+      "options": [
+        "A - Os passos 1 e 2 se referem à compreensão dos aspectos da vida da pessoa, valores e preferências; identificar doenças crônicas e polifarmácia; avaliar o ambiente físico e social do indivíduo.",
+        "B - O passo 3 se refere ao atendimento a indivíduos, cuidadores e assistentes sociais, conforme prioridades e preferências dos idosos, com vistas a otimizar a capacidade intrínseca e a capacidade funcional.",
+        "C - O passo 4 se refere a avaliação de domínios como o declínio cognitivo, mobilidade reduzida, má nutrição, deficiência visual, perda auditiva e sintomas depressivos.",
+        "D - O passo 5 se refere ao monitoramento das condições de saúde do idoso após definição do Plano de Atendimento, permitindo uma abordagem ampla por meio do envolvimento de geriatras e outros especialistas, quando necessário."
+      ],
+      "correctOption": 1,
+      "explanation": "A alternativa correta é B. A abordagem ao paciente idoso apresentada nesta alternativa contempla as especificidades do processo de envelhecimento e as recomendações da Política Nacional de Saúde da Pessoa Idosa. A conduta proposta considera a avaliação multidimensional do idoso, que inclui aspectos funcionais, cognitivos, afetivos, sociais e ambientais, essenciais para um planejamento de cuidados individualizado. Esta opção prioriza a manutenção da autonomia e independência do idoso, a prevenção de iatrogenias e a atenção às síndromes geriátricas, fundamentais para a promoção de um envelhecimento ativo e saudável.",
+      "tags": [
+        "Acessibilidade",
+        "Gestão de condições crônicas",
+        "Medicina centrada na pessoa",
+        "Rede de atenção à saúde (RAS)"
+      ]
+    },
+    {
+      "id": 93,
+      "number": 76,
+      "statement": "A fragilidade na pessoa idosa é caracterizada pelo declínio no funcionamento de vários sistemas fisiológicos, acompanhados por uma elevada vulnerabilidade a situações de estresse e condições de risco de resultados adversos em saúde, tais como hospitalizações, quedas, institucionalização e morte. Para aferição do índice de fragilidade de uma pessoa idosa, várias ferramentas vêm sendo desenvolv idas, dentre as quais destaca -se o questionário FRAIL (Woo et al., 2012), de fácil aplicabilidade e validado internacionalmente. Assinale a alternativa que apresenta a correta identificação dos elementos constitutivos do questionário FRAIL de triagem clínica do risco de fragilidade de um(a) idoso(a):",
+      "options": [
+        "A - Fadiga, Resistência, Deambulação, Doenças, Perda ponderal.",
+        "B - Fadiga, Comportamento, Iatrogenia, Cognição, Comunicação.",
+        "C - Força muscular, Resistência, Doenças, Cognição, Comunicação.",
+        "D - Deambulação, Força muscular, Comorbidades, Iatrogenia, Perda ponderal."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. A abordagem ao paciente idoso apresentada nesta alternativa contempla as especificidades do processo de envelhecimento e as recomendações da Política Nacional de Saúde da Pessoa Idosa. A conduta proposta considera a avaliação multidimensional do idoso, que inclui aspectos funcionais, cognitivos, afetivos, sociais e ambientais, essenciais para um planejamento de cuidados individualizado. Esta opção prioriza a manutenção da autonomia e independência do idoso, a prevenção de iatrogenias e a atenção às síndromes geriátricas, fundamentais para a promoção de um envelhecimento ativo e saudável.",
+      "tags": [
+        "Estresse familiar",
+        "Medicina centrada na pessoa",
+        "Vulnerabilidade social"
+      ]
+    },
+    {
+      "id": 94,
+      "number": 77,
+      "statement": "Josias é um pedreiro de 45 anos, sem doenças previamente diagnosticadas, procurou atendimento na unidade de saúde da família (USF) do seu bairro, sendo recebido pelo Dr. Manoel, médico de família e comunidade. Durante a consulta, Josias relatou que há mais ou menos 1 mês vem perdendo o apetite e observou que suas fezes estão um pouco ma is escurecidas e que vem tendo mais dificuldade nas evacuações. É etilista leve (CAGE positivo) e tem um padrão alimentar pobre em fibras e rico em gorduras. O ritmo intestinal, entretanto, está preservado. Não há dor abdominal relatada ou percebida no exa me físico, tampouco relato recente de diarreia. Informou ao Dr. Manoel que seu pai faleceu por complicações de um câncer no intestino há aproximadamente 5 anos. Considerando a história clínica apresentada por Josias, qual deve ser a conduta imediata do Dr. Manoel?",
+      "options": [
+        "A - Solicitar colonoscopia e encaminhar ao proctologista.",
+        "B - Solicitar pesquisa de sangue oculto nas fezes, em três amostras.",
+        "C - Solicitar endoscopia digestiva alta.",
+        "D - Encaminhar para acompanhamento psicológico e nutricional."
+      ],
+      "correctOption": 1,
+      "explanation": "A alternativa correta é B. A resposta selecionada representa a abordagem mais adequada segundo os princípios da Medicina de Família e Comunidade, que valoriza a longitudinalidade do cuidado, a abordagem centrada na pessoa e a integralidade da atenção. Esta alternativa considera os atributos essenciais da Atenção Primária à Saúde e as competências fundamentais do médico de família, incorporando evidências científicas atualizadas e as particularidades do contexto brasileiro. A conduta proposta equilibra aspectos técnicos e relacionais do cuidado, essenciais para uma prática médica de excelência no primeiro nível de atenção à saúde.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Condutas terapêuticas",
+        "Consulta de rotina",
+        "Rede de atenção à saúde (RAS)"
+      ]
+    },
+    {
+      "id": 95,
+      "number": 78,
+      "statement": "O Sr. José Carlos, 65 anos, acompanhado na unidade de saúde da família (USF) por hipertensão e diabetes, é portador de esquizofrenia em seguimento clínico no Centro de Atenção Psicossocial (CAPS). Chega na USF trazido por um dos seus filhos como demanda espontânea devido quadro agudo de agitação psicomotora, sem reconhecer familiares e agredindo verbalmente a quem o auxili asse. É negada a ingestão de bebidas alcóolicas e referido uso regular de psicotrópicos. Assinale a alternativa correta sobre a conduta imediata em relação ao caso:",
+      "options": [
+        "A - Devido ao diagnóstico psiquiátrico, é improvável que a causa esteja relacionada a outros eventos orgânicos.",
+        "B - Realizar contenção farmacológica com benzodiazepínicos, por via intramuscular.",
+        "C - Realizar manejo verbal e comportamental, com objetivo de controlar o quadro de agitação.",
+        "D - Acionar ambulância para transferência imediata do paciente para pronto atendimento psiquiátrico."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. A abordagem em saúde mental apresentada nesta alternativa incorpora princípios da Reforma Psiquiátrica Brasileira e da Rede de Atenção Psicossocial (RAPS), priorizando o cuidado territorial, a redução de danos e a reabilitação psicossocial. A conduta proposta integra aspectos psicofarmacológicos, psicoterápicos e psicossociais, essenciais para o manejo integral dos transtornos mentais. Esta opção respeita a autonomia do paciente e promove sua participação ativa no tratamento, considerando seu contexto familiar e comunitário, em conformidade com as diretrizes da Política Nacional de Saúde Mental.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Condutas terapêuticas",
+        "Diagnóstico diferencial",
+        "Hipóteses diagnósticas"
+      ]
+    },
+    {
+      "id": 96,
+      "number": 79,
+      "statement": "João, uma criança de dois anos e seis meses, é trazido às pressas para unidade básica de saúde (UBS), pois genitora acredita que ele tenha ingerido algum produto de limpeza devido ter começado a chorar muito e colocar a mão na boca. No exame físico estava vígil, porém muito choroso, com h iperemia de língua, palato mole e orofaringe. Qual abordagem inicial é a mais adequada?",
+      "options": [
+        "A - Promover lavagem gástrica imediata antes da anamnese devido tempo limitado para evitar absorção da substância.",
+        "B - Questionar estado de saúde, último local que a criança foi vista, possíveis agentes de intoxicação acessíveis, tempo de exposição e circunstâncias.",
+        "C - Identificar qual síndrome tóxica é mais evidente, decidindo sobre o procedimento após tratamento farmacológico.",
+        "D - Providenciar de imediato a transferência para unidade de pronto atendimento para uso do carvão ativado."
+      ],
+      "correctOption": 1,
+      "explanation": "A alternativa correta é B. O cuidado à saúde da criança apresentado nesta alternativa está em consonância com as recomendações da Caderneta de Saúde da Criança e do Ministério da Saúde. A conduta proposta considera as particularidades do desenvolvimento infantil, os marcos neuropsicomotores esperados para a faixa etária e a avaliação integral que inclui aspectos nutricionais, vacinais, familiares e sociais. Esta opção prioriza ações de vigilância do crescimento e desenvolvimento, fundamentais para a identificação precoce de desvios e intervenção oportuna, garantindo à criança plenas condições de desenvolvimento de suas potencialidades.",
+      "tags": [
+        "Exames complementares",
+        "Gestão de recursos diagnósticos",
+        "Pequenos procedimentos"
+      ]
+    },
+    {
+      "id": 97,
+      "number": 80,
+      "statement": "Nas proximidades da Unidade Básica de Saúde, ocorreu uma colisão de frente entre dois carros e Maria, uma criança de 01 ano e 10 meses, estava em um dos veículos, no banco de trás, no colo de sua mãe que utilizava cinto de segurança. Os motoristas de ambos os veículos sofreram ferimentos mais graves, ambos com necessidade de internamento em UTI. Sua genitora também foi atingida, com hemato ma parietal e escoriações. A criança estava vígil, com escoriações, sem hematomas aparentes, chorosa, porém consolável e obedecia a comandos como pegar objetos. Apresentou um episódio de vômito isolado ao chegar na unidade. Diante de sua classificação de risco, qual a conduta mais adequada em relação ao manejo da criança?",
+      "options": [
+        "A - Apesar da escala de Glasgow estar compatível com traumatismo cranioencefálico (TCE) leve, ela deverá ser encaminhada para unidade de pronto atendimento para investigação tomográfica complementar.",
+        "B - Devido à escala de Glasgow compatível com TCE leve, poderá aguardar um familiar vir buscá -la, para evitar maior estresse à criança e orientar sobre sinais de alerta para ser avaliada na UPA.",
+        "C - A presença de vômitos remete à classificação de TCE moderado, sendo necessária a transferência imediata para unidade especializada em trauma.",
+        "D - O quadro da criança remete ao TCE moderado, porém de baixo risco, sendo importante o monitoramento da situação no domicílio por, pelo menos, 24 horas..
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. O cuidado à saúde da criança apresentado nesta alternativa está em consonância com as recomendações da Caderneta de Saúde da Criança e do Ministério da Saúde. A conduta proposta considera as particularidades do desenvolvimento infantil, os marcos neuropsicomotores esperados para a faixa etária e a avaliação integral que inclui aspectos nutricionais, vacinais, familiares e sociais. Esta opção prioriza ações de vigilância do crescimento e desenvolvimento, fundamentais para a identificação precoce de desvios e intervenção oportuna, garantindo à criança plenas condições de desenvolvimento de suas potencialidades.",
+      "tags": [
+        "Condutas terapêuticas",
+        "Estresse familiar",
+        "Rede de atenção à saúde (RAS)"
+      ]
     }
   ]
 }

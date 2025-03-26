@@ -12,7 +12,19 @@ struct TEMFCApp: App {
         WindowGroup {
             ZStack {
                 Group {
-                    if !userManager.isLoggedIn {
+                    // Verificar se estamos em modo de teste
+                    if ProcessInfo.processInfo.arguments.contains("UITesting") {
+                        // Em modo de teste, vamos direto para a tela principal
+                        SplashScreenView()
+                            .environmentObject(dataManager)
+                            .environmentObject(userManager)
+                            .environmentObject(settingsManager)
+                            .preferredColorScheme(settingsManager.settings.isDarkModeEnabled ? .dark : .light)
+                            .onAppear {
+                                // Certificar que estamos "logados" para testes
+                                userManager.isLoggedIn = true
+                            }
+                    } else if !userManager.isLoggedIn {
                         WelcomeView()
                             .environmentObject(userManager)
                             .environmentObject(settingsManager)
@@ -24,7 +36,7 @@ struct TEMFCApp: App {
                             .preferredColorScheme(settingsManager.settings.isDarkModeEnabled ? .dark : .light)
                     }
                 }
-                
+
                 if showLatestResult, let exam = latestCompletedExam {
                     NavigationView {
                         ExamResultView(completedExam: exam)
@@ -48,7 +60,7 @@ struct TEMFCApp: App {
                         self.showLatestResult = true
                     }
                 }
-                
+
                 // Configurar preferência de tamanho para diferentes tamanhos de tela
                 setDefaultSizeClass()
             }

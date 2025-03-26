@@ -2,77 +2,1542 @@
   "id": "TEMFC35",
   "name": "Prova TEMFC 35",
   "type": "Teórica",
+  "year": "2024",
   "totalQuestions": 80,
   "questions": [
     {
-      "id": 180,
+      "id": 119,
       "number": 1,
-      "statement": "Uma gestante de 26 anos, primigesta, na 32ª semana de gestação, apresenta queixa de corrimento vaginal esbranquiçado, grumoso, com prurido vaginal intenso. Ao exame, observa-se corrimento em grumos, aderido às paredes vaginais, sem odor fétido. Qual o diagnóstico mais provável e a conduta adequada?",
+      "statement": "Sobre as responsabilidades na execução da Política Nacional de Atenção Básica do SUS (PNAB, 2017), compete aos municípios:",
       "options": [
-        "A - Candidíase vaginal; prescrever miconazol creme vaginal por 7 dias.",
-        "B - Tricomoníase; prescrever metronidazol 2g via oral em dose única para a paciente e seu parceiro.",
-        "C - Vaginose bacteriana; prescrever metronidazol 250mg via oral 3 vezes ao dia por 7 dias.",
-        "D - Clamídia; solicitar PCR e aguardar resultado para iniciar tratamento específico."
+        "A - Verificar a qualidade e a consistência de arquivos dos sistemas de informação em saúde compilados por cada secretaria municipal, de acordo com prazos e fluxos estabelecidos para cada sistema.",
+        "B - Divulgar periodicamente os relatórios de indicadores da Atenção Básica, com intuito de assegurar o direito fundamental de acesso à informação.",
+        "C - Estabelecer diretrizes nacionais e disponibilizar instrumentos técnicos e pedagógicos que facilitem o processo de gestão, formação e educação permanente dos gestores e profissionais da Atenção Básica.",
+        "D - Programar as ações da Atenção Básica a partir de sua base territorial de acordo com as necessidades de saúde identificadas em sua população, utilizando instrumento de programação nacional vigente."
+      ],
+      "correctOption": 3,
+      "explanation": "A alternativa correta é D. De acordo com a PNAB (Política Nacional de Atenção Básica) de 2017, cabe aos municípios programar as ações da Atenção Básica com base no território sob sua gestão. O município é responsável por planejar e organizar os serviços de APS localmente, adequando as diretrizes nacionais à sua realidade e coordenando as equipes de Saúde da Família. As demais opções listam atribuições de outras esferas de gestão: a opção A, por exemplo, refere-se ao nível estadual, e a opção C descreve responsabilidades do Ministério da Saúde. Dessa forma, a alternativa D está alinhada aos princípios do SUS de descentralização e autonomia municipal na gestão da saúde.",
+      "tags": [
+        "Políticas públicas de saúde",
+        "Saúde Mental",
+        "Sistema Único de Saúde (SUS)"
+      ]
+    },
+    {
+      "id": 120,
+      "number": 2,
+      "statement": "Fernanda, 35 anos, é usuária do SUS em um município situado na zona litorânea no Nordeste brasileiro. Recentemente ela buscou a Secretaria de Saúde para formular uma denúncia sobre a dificuldade de acesso a consultas e exames especializados em um dado serviço por parte da população assistida no sistema de saúde local. Considerando-se os diferentes mecanismos do Ministério da Saúde do Brasil para efetivar a participação da sociedade na construção das políticas públicas no SUS, pode-se afirmar que:",
+      "options": [
+        "A - A Ouvidoria do SUS é o melhor mecanismo a ser acessado, pois é um canal de mediação entre os cidadãos e o SUS.",
+        "B - As Conferências Municipais de Saúde são o espaço adequado, porque reúnem representantes da comunidade e gestores para discutir falhas no sistema.",
+        "C - As Consultas Públicas online do Ministério da Saúde são a via mais rápida para queixas pontuais de usuários em relação a serviços de saúde.",
+        "D - A melhor alternativa é procurar diretamente o Conselho Nacional de Saúde, instância máxima de deliberação, para relatar o problema."
       ],
       "correctOption": 0,
-      "explanation": "O quadro descrito (corrimento esbranquiçado, grumoso, aderido às paredes vaginais, associado a prurido intenso e sem odor fétido) é característico de candidíase vaginal. Durante a gestação, o tratamento de escolha é com antifúngicos tópicos, como o miconazol creme vaginal, por 7 dias. Os antifúngicos orais, como o fluconazol, devem ser evitados na gestação.",
-      "tags": ["Saúde da Mulher", "Pré-natal", "Doenças Infecciosas", "Condutas terapêuticas"]
+      "explanation": "A alternativa correta é A. A Ouvidoria do SUS é um canal institucional para o cidadão registrar denúncias, reclamações ou sugestões, sendo uma forma efetiva de participação social no SUS. Por meio da Ouvidoria, os gestores podem identificar falhas no acesso e qualidade dos serviços e tomar providências, garantindo o direito do usuário de ser ouvido. Outros mecanismos de participação social, como conselhos de saúde ou conferências, embora importantes para formulação de políticas e controle social, não são o canal adequado para resolução ágil de um problema individual de acesso. Portanto, a Ouvidoria, como citado na alternativa A, é o mecanismo indicado para mediar a demanda da usuária junto ao sistema de saúde local, alinhando-se aos princípios de participação comunitária e transparência do SUS.",
+      "tags": [
+        "Consulta de rotina",
+        "Exames complementares",
+        "Políticas públicas de saúde",
+        "Rede de atenção à saúde (RAS)",
+        "Sistema Único de Saúde (SUS)"
+      ]
+    },
+    {
+      "id": 121,
+      "number": 3,
+      "statement": "A Estimativa rápida como ferramenta para a elaboração do diagnóstico comunitário é reconhecidamente relevante para o processo de planejamento das ações de saúde nos territórios da atenção primária e requer dos profissionais de saúde competências profissionais que, se não observadas, podem ser limitações importantes para o seu uso, devendo ser ponderadas pela equipe para verificar uma adequação da técnica às necessidades de planejamento. Diante do exposto, qual das alternativas define competências profissionais imprescindíveis ao uso da técnica da Estimativa Rápida para um diagnóstico comunitário?",
+      "options": [
+        "A - Atitude contemplativa (para refletir antes de decidir agir) e cautela (para só intervir após absoluta certeza dos resultados).",
+        "B - Entusiasmo (para mobilizar a comunidade em torno da investigação) e criatividade (para propor ações inéditas a cada problema identificado).",
+        "C - Atenção (para busca de pistas sobre problemas potenciais) e bom senso (para reexaminar a interpretação dos dados caso se mostrem muito diferentes do seu conhecimento profissional ou experiência técnica).",
+        "D - Rapidez (para finalizar a avaliação em curto prazo) e poder de persuasão (para convencer gestores e comunidade a aceitarem os achados)."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. A técnica de Estimativa Rápida para diagnóstico comunitário exige que o profissional de saúde tenha atenção concentrada às pistas e sinais levantados no território, bem como bom senso para interpretar criticamente esses dados. Atenção permite identificar problemas de saúde ocultos ou necessidades da comunidade que podem não ser evidentes à primeira vista. Já o bom senso é fundamental para reavaliar as informações obtidas, especialmente se os achados diferem muito do conhecimento prévio ou experiência do profissional, evitando conclusões precipitadas. Dessa forma, essas competências garantem que o diagnóstico comunitário seja construído de forma confiável e ajustado à realidade local, alinhado às práticas de planejamento participativo em APS.",
+      "tags": [
+        "Diagnóstico diferencial",
+        "Hipóteses diagnósticas",
+        "Políticas públicas de saúde"
+      ]
+    },
+    {
+      "id": 122,
+      "number": 4,
+      "statement": "A hipodermóclise é uma via consagrada e muito utilizada em todo o mundo para administração de fluidos e medicamentos. Considerando a utilização da hipodermóclise na atenção domiciliar assinale a alternativa correta:",
+      "options": [
+        "A - É um procedimento arriscado, indicado apenas na impossibilidade absoluta de acesso venoso em ambiente hospitalar.",
+        "B - Deve ser evitada em pacientes idosos frágeis, pelo alto risco de instabilidade hemodinâmica e dor local intensa.",
+        "C - É um procedimento de fácil realização e permite excelente manejo tanto na conservação quanto na manipulação, favorecendo o cuidado no domicílio, principalmente por familiares e cuidadores informais.",
+        "D - Sua principal indicação são os casos de administração de grandes volumes de fluidos em curto intervalo de tempo, devido à rápida absorção subcutânea."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. A hipodermóclise consiste na infusão subcutânea de líquidos e medicações e caracteriza-se por ser um procedimento simples, de baixo risco e de fácil execução no domicílio. Essa via alternativa permite um manejo mais tranquilo de hidratação e medicação em pacientes que necessitam cuidados paliativos ou domiciliares, sem a complexidade de acessos intravenosos contínuos. Por ser de fácil conservação e manipulação, a hipodermóclise pode ser realizada por familiares ou cuidadores após orientação adequada, garantindo a continuidade do cuidado no domicílio. Isso está em consonância com as práticas de atenção domiciliar que visam facilitar a assistência e promover autonomia do cuidador com segurança.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Atenção domiciliar",
+        "Cuidados paliativos",
+        "Gestão de insumos e medicamentos",
+        "Saúde do Idoso"
+      ]
+    },
+    {
+      "id": 123,
+      "number": 5,
+      "statement": "A gavagem e a gastróclise são indicadas para pessoas que não são capazes de ingerir uma quantidade adequada de nutrição por via oral, apresentando dificuldade de deglutição ou também potencial risco de broncoaspiração. Considerando essas no contexto da atenção domiciliar assinale a alternativa correta:",
+      "options": [
+        "A - No contexto domiciliar, é preferível evitar a nutrição por sonda nasoenteral, devendo-se optar sempre pela gastrostomia endoscópica percutânea.",
+        "B - A nutrição por gastróclise (infusão contínua) é contraindicada fora do ambiente hospitalar por não permitir um controle adequado de volume.",
+        "C - Em domicílio, apenas a alimentação via gastrostomia é segura, sendo desaconselhada a utilização de sondas nasais para nutrição.",
+        "D - Em domicílio, a nutrição pode ser administrada via nasogástrica, orogástrica ou nasoentérica, por gavagem ou gastróclise."
+      ],
+      "correctOption": 3,
+      "explanation": "A alternativa correta é D. Em contexto domiciliar, é possível manter a nutrição enteral através de sondas nasogástricas, orogástricas ou nasoentéricas, administrando a dieta por gavagem (uso de seringa ou bolsa para infusão intermitente) ou por gastroclise (infusão contínua controlada). Essas técnicas permitem ofertar nutrientes de forma segura a pacientes com disfagia ou risco de broncoaspiração que não conseguem se alimentar via oral, evitando desnutrição e complicações. A Atenção Domiciliar contempla esse tipo de cuidado, desde que haja orientação adequada aos cuidadores para manuseio das sondas, higiene e prevenção de broncoaspiração. Assim, a nutrição enteral domiciliar é viável e está alinhada às práticas de cuidado do SUS, assegurando assistência nutricional contínua no domicílio quando indicada.",
+      "tags": [
+        "Atenção domiciliar",
+        "Contexto sociocultural"
+      ]
+    },
+    {
+      "id": 124,
+      "number": 6,
+      "statement": "Seu Pedro é um senhor de 67 anos que trabalhou como caminhoneiro desde que tinha 14 anos, quando começou a acompanhar o pai. “Ainda sinto o cheiro do diesel que vinha do escapamento”, diz ele, ao contar sobre as suas viagens pelo Brasil afora. Foi naquela época que seu Pedro também começou a fumar até mais de uma carteira de cigarro por dia, acompanhando o pai. Seu Pedrão, como gosta de ser chamado, está iniciando o acompanhamento pela equipe de atenção domiciliar, depois da esposa procurar a UBS referindo piora da saúde do marido. Durante a visita domiciliar, Seu Pedrão relata que há três anos cansa quando sai para caminhar, e nos últimos meses diz que já está mais difícil tomar banho e fazer algumas atividades de casa que exijam mais esforço, como cuidar do jardim e lavar a calçada. Tentou diminuir bastante o consumo de cigarros, mas ainda não conseguiu parar e não achou que tivesse melhorado por causa disso. Na consulta domiciliar Seu Pedrão estava alerta, cooperativo, afebril, acianótico, saturação de O2 98%, pressão arterial 140X80 mmHg, FC 90 bpm, FR 15 ipm. Ritmo cardíaco regular, sem sopros e Murmúrio vesicular reduzido difusamente, sem presença de ruídos adventícios. Considerando o caso acima e os cuidados domiciliares, qual plano de cuidados mais adequado nessa primeira visita?",
+      "options": [
+        "A - Escutar os sentimentos, ideias e funções de seu Pedrão, realizar exame físico, explicar para ele e a família sobre a patologia, iniciar com medicações inalatórias; solicitar espirometria e outros exames laboratoriais e programar visitas com equipe multiprofissional.",
+        "B - Orientar sobre evitar esforços físicos e prescrever corticoide sistêmico por 14 dias e encaminhar para pneumologista.",
+        "C - Encorajar a prática de atividade física regular e não farmacológica, pois a principal intervenção é parar o tabagismo e retornar em 6 meses.",
+        "D - Encaminhar para serviço de reabilitação pulmonar e iniciar antibioticoterapia empírica para possível exacerbação infecciosa, considerando os achados do exame físico."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. Diante do caso de um paciente idoso tabagista com suspeita de Doença Pulmonar Obstrutiva Crônica (DPOC), a abordagem deve ser integral e centrada na pessoa. Isso inclui acolher os sentimentos e preocupações do paciente (escuta ativa) e esclarecer suas ideias sobre a doença, realizar um exame físico completo e explicar o diagnóstico provável e o tratamento à ele e à família. É apropriado iniciar terapêutica broncodilatadora inalatória precocemente para aliviar sintomas, ao mesmo tempo em que se solicitam exames confirmatórios como a espirometria e outros laboratoriais para avaliar comorbidades ou gravidade. Além disso, planejar o seguimento com uma equipe multiprofissional (como fisioterapia respiratória, apoio ao abandono do tabagismo, acompanhamento da enfermagem) garante a coordenação do cuidado e a integralidade da atenção no âmbito domiciliar, conforme preconizado pela APS.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Atenção domiciliar",
+        "Avaliação familiar",
+        "Condutas terapêuticas",
+        "Consulta de rotina"
+      ]
+    },
+    {
+      "id": 125,
+      "number": 7,
+      "statement": "Everaldo, sexo masculino, 39 anos, solteiro, caçula de oito filhos, único homem, morava com os pais octogenários, natural de Fortaleza, cursou ensino médio completo e foi auxiliar administrativo. Durante a infância, tinha bom rendimento escolar. Porém, no final do ensino fundamental II começou a se isolar, achava que os colegas e os professores falavam mal dele e “escondiam as provas”. Seu rendimento escolar caiu e no ensino médio conseguiu se formar com grande dificuldade. Teve seu primeiro transtorno psicótico aos 20 anos, durante o horário de serviço. Estava com a ideia fixa de que um colega de trabalho queria prejudicá-lo e estavam todos mancomunados para tirá-lo de lá. Ouvia vozes que diziam para se proteger do “grande perigo e inimigo”, sendo afastado do trabalho após agressão física a colegas de trabalho. Não dormia bem e passava o dia sonolento, mal comia, com receio de que colocassem algum veneno em sua refeição. Por se recusar ir à Unidade de Saúde, sua mãe solicitou ao agente comunitário de saúde uma visita domiciliar pelo médico de família e comunidade. O médico, após referência e contra referência ao psiquiatra, fez o diagnóstico de esquizofrenia, mas Everaldo não tomou a medicação, pois não concordava com o diagnóstico. Apresentou novo transtorno psicótico após a internação hospitalar, achava que estava sendo vigiado pelos vizinhos, que alguém queria matá-lo, não deixava pessoas da equipe de saúde entrar. A assistente social foi quem conseguiu criar vínculo com os pais para que se pudesse realizar o tratamento, mas o paciente não aceitava a medicação, escutava vozes que diziam para ele que queriam envenená-lo. Discutido o caso com o psiquiatra, optou-se por deixar o haloperidol decanoato injetável. A auxiliar de enfermagem e a assistente social, que tinham maior vínculo com o paciente, conseguiram convencê-lo a ser medicado. Dessa forma, foi possível iniciar o tratamento mensal e, a partir do terceiro mês, já teve controle do quadro psicótico, sem apresentar efeitos adversos, aceitando a equipe de saúde e os cuidados. Considerando o caso acima e a atenção domiciliar na perspectiva dos princípios da Atenção Primária à Saúde, qual a alternativa correta?",
+      "options": [
+        "A - A coordenação do cuidado pela equipe de APS, a abordagem multiprofissional e a construção de um projeto terapêutico singular foram fundamentais para a atenção integral e efetiva.",
+        "B - A longitudinalidade não pôde ser exercida pela equipe de APS, visto que o paciente resistia ao contato contínuo e só aceitou a intervenção após internação hospitalar.",
+        "C - O princípio de orientação comunitária foi primordial, pois a família e vizinhos foram mobilizados para controlar o comportamento de Everaldo no território.",
+        "D - A integralidade do cuidado garantiu a resolução completa do quadro, dispensando a necessidade de seguimento especializado após a estabilização inicial."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. No manejo domiciliar de pacientes com transtorno mental grave, como a esquizofrenia de Everaldo, os princípios da APS são essenciais para um cuidado efetivo. A coordenação do cuidado pela equipe de saúde da família assegurou a articulação entre diferentes níveis (atenção básica e serviço de psiquiatria), garantindo continuidade do tratamento (por exemplo, uso do haloperidol decanoato mensal). A abordagem multiprofissional, envolvendo médico, enfermagem, serviço social e outros, permitiu compreender e intervir nos diversos aspectos do caso, fortalecendo o vínculo com a família e o paciente. Além disso, a construção de um projeto terapêutico singular – ou seja, um plano de cuidado individualizado acordado entre equipe, paciente e família – foi fundamental para adaptar as intervenções à realidade de Everaldo, respeitando sua autonomia e promovendo cuidado integral conforme preconizado no SUS.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Acesso e coordenação do cuidado",
+        "Atenção domiciliar",
+        "Avaliação familiar",
+        "Diagnóstico diferencial"
+      ]
+    },
+    {
+      "id": 126,
+      "number": 8,
+      "statement": "Médico de família e comunidade realiza visita domiciliar a Sra. Ana, 82 anos, acompanhada em cuidados domiciliares pela equipe de saúde. A paciente encontra-se acamada após fratura de fêmur há 6 meses. A filha da paciente, Glória, que é a principal cuidadora, refere que a mãe está “um pouco desanimada” há dois dias e que se queixou de desconforto ao urinar e desejo de urinar várias vezes, contudo sem grande volume. Ao recolher a urina do “urinol ou comadre”, observou que a urina estava com odor fétido. Nega febre, náusea, vômito e hiporexia. Ao exame, Ana encontra-se orientada, hidratada, afebril. Pressão arterial 130X90 mmHg, FC: 89 bpm, FR: 15 ipm. Exame do aparelho cardiovascular sem alterações dignas de nota. Abdome livre. Giordano negativo, mas apresentou dor a palpação supra púbica. Ao exame da genitália: ausência de corrimento vaginal. Qual a principal hipótese diagnóstica?",
+      "options": [
+        "A - Infecção do trato urinário baixo complicada com pielonefrite.",
+        "B - Vaginite atrófica provocando disúria e polaciúria, sem infecção associada.",
+        "C - Diagnóstico presuntivo de ITU.",
+        "D - Depressão geriátrica com manifestação somática (disúria psicogênica)."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. A idosa apresenta quadro típico de infecção do trato urinário (ITU) em paciente acamada: disúria, polaciúria (vontade frequente de urinar em pequenas quantidades) e urina com odor fétido, mesmo na ausência de febre ou outros sinais sistêmicos. Em idosos, especialmente acamados, as infecções urinárias podem se manifestar de forma atípica, frequentemente sem febre, mas sintomas localizatórios como dor suprapúbica e alterações nas características da urina reforçam a suspeita clínica. Além disso, a cuidadora relatou um “desânimo” recente, o que pode ser expressão de início de infecção em idosos (manifestação inespecífica). As outras possibilidades diagnósticas (como vaginite atrófica ou outras causas de disúria) são menos prováveis diante dos achados, tornando a ITU a hipótese principal, devendo ser confirmada e tratada conforme protocolos da APS.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Atenção domiciliar",
+        "Avaliação familiar",
+        "Condutas terapêuticas",
+        "Diagnóstico diferencial"
+      ]
+    },
+    {
+      "id": 127,
+      "number": 9,
+      "statement": "A Palliative Prognostic Index (PPI) utiliza cinco marcadores para avaliação e estimativa de prognóstico em pacientes em cuidados paliativos. Qual das alternativas contém os cinco marcadores avaliados pela PPI?",
+      "options": [
+        "A - Funcionalidade por meio da PPS (Escala de performance paliativa), dispneia em repouso, ingestão oral, delirium e edema.",
+        "B - Capacidade funcional (Karnofsky), intensidade da dor (Escala Analógica), albumina sérica, valor de proteína C reativa e frequência cardíaca.",
+        "C - Índice de comorbidades, número de admissões hospitalares no último ano, saturação de O2, estado cognitivo e humor.",
+        "D - Escala de Frankl (espiritualidade), ECOG (performance status oncológico), estado nutricional, nível de creatinina e interleucina-6."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. O Índice Prognóstico em Cuidados Paliativos (Palliative Prognostic Index, PPI) utiliza cinco parâmetros clínicos para estimar o prognóstico de pacientes sob cuidados paliativos. São eles: o desempenho funcional avaliado pela Escala de Performance Paliativa (PPS), a presença de dispneia em repouso, o nível de ingestão oral (capacidade de alimentação), sinais de delirium e a presença de edema. Cada um desses fatores recebe uma pontuação que, somada, auxilia a prever a sobrevida aproximada do paciente. Portanto, a opção A lista corretamente os cinco marcadores considerados pelo PPI, refletindo aspectos cruciais do estado clínico para decisões de cuidado no final de vida.",
+      "tags": [
+        "Cuidados paliativos",
+        "Medicina centrada na pessoa",
+        "Organização e gestão dos serviços de APS"
+      ]
+    },
+    {
+      "id": 128,
+      "number": 10,
+      "statement": "A busca desenfreada para conter a rápida disseminação do vírus e as inúmeras mortes decorrentes da COVID-19 “motivou” a adoção de tratamento sem evidência robusta, em próprio protocolo, usado como fator de falsa segurança e caminho tortuoso de cuidado contra o derramamento viral. (Revista Brasileira de Medicina de Família e Comunidade, 2021). Considerando os níveis de prevenção e o caso acima, assinale a alternativa que contenha o nível que foi afetado por uma “má medicina”",
+      "options": [
+        "A - Prevenção primária.",
+        "B - Prevenção secundária.",
+        "C - Prevenção terciária.",
+        "D - Prevenção quaternária."
+      ],
+      "correctOption": 3,
+      "explanation": "A alternativa correta é D. A prevenção quaternária diz respeito à identificação de intervenções médicas desnecessárias ou potencialmente danosas, buscando proteger os pacientes do excesso de medicalização. No contexto da pandemia de COVID-19, a adoção de tratamentos sem evidência científica robusta (como certos “kits COVID” ou medicamentos experimentais usados de forma indiscriminada) representa um exemplo clássico de má prática médica que a prevenção quaternária visa coibir. Esses tratamentos ofereceram uma falsa sensação de segurança e desviaram o foco das medidas comprovadamente eficazes, podendo causar efeitos adversos e consumo inadequado de recursos. Assim, fica evidenciado que o nível de prevenção prejudicado por essa conduta foi o quaternário, pois houve falha em evitar intervenções inúteis ou nocivas no cuidado à saúde.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Imunização e controle de surtos",
+        "Medicina baseada em evidências (MBE)",
+        "Promoção e prevenção em saúde"
+      ]
+    },
+    {
+      "id": 129,
+      "number": 11,
+      "statement": "Júlia, 15 dias de vida, nascida de parto cesariana com 40 semanas de idade gestacional, alta hospitalar em 48h com peso normal e sem intercorrências. A mãe relata que a bebê mama bem no peito e troca as fraldas regularmente, mas se preocupa se ela “está enxergando e ouvindo direito”, pois a vê reagir muito pouco a estímulos. Sobre o desenvolvimento neuro-sensorial esperado nessa idade e condutas adequadas, assinale a alternativa correta:",
+      "options": [
+        "A - A voz da mãe acalma o choro, pois a audição já está em desenvolvimento.",
+        "B - O reflexo de preensão palmar já deveria ter desaparecido, então sua persistência indica atraso do desenvolvimento motor fino.",
+        "C - Nessa fase o bebê fixa o olhar em objetos brilhantes e acompanha movimentos a distância, descartando problemas visuais.",
+        "D - Deve-se encaminhar para avaliação com especialista em desenvolvimento infantil se o bebê não esboçar um sorriso social ao ser estimulado."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. Recém-nascidos de 15 dias já possuem a audição funcional e conseguem reconhecer e se acalmar com sons familiares, como a voz materna. É comum que o bebê se acalme quando ouve a mãe falar, pois o vínculo e a identificação da voz proporcionam segurança ao neonato. Esse comportamento demonstra desenvolvimento neuro-sensorial adequado para a idade, já que a capacidade auditiva está presente desde o nascimento e se aprimora nos primeiros dias de vida. As demais alternativas provavelmente descreviam situações não condizentes com o desenvolvimento típico de um neonato saudável, enquanto a resposta correta reflete um achado esperado e tranquilizador para a família.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Consulta de rotina",
+        "Rede de atenção à saúde (RAS)"
+      ]
+    },
+    {
+      "id": 130,
+      "number": 12,
+      "statement": "Paciente de 56 anos, sexo masculino, tem como comorbidade diabetes tipo II (em uso de metformina há vários anos). Procura atendimento com queixa de astenia, adinamia e tonturas leves. Ao exame físico: descorado +/4+, Glasgow 15, orientado, eupneico, com sinais vitais estáveis. Dentre as hipóteses diagnósticas, qual é a mais provável e o fator associado correto?",
+      "options": [
+        "A - Anemia aplástica - Uso crônico de metformina",
+        "B - Anemia ferropriva - Diabetes Mellitus mal controlado",
+        "C - Anemia devido à deficiência de vitamina B12 - Uso crônico de metformina",
+        "D - Anemia de doença crônica - Resistência periférica insulínica"
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. O uso crônico de metformina em pacientes diabéticos está associado à deficiência de vitamina B12, que pode levar à anemia megaloblástica. A metformina interfere na absorção de vitamina B12 no íleo, predispondo a níveis reduzidos dessa vitamina ao longo do tempo. Em um paciente de meia-idade com diabetes de longa data apresentando anemia, é importante suspeitar de deficiência de B12, especialmente se houver macrocitose ou sintomas neurológicos leves. As outras etiologias de anemia (como deficiência de ferro, doença crônica ou ácido fólico) não são diretamente ligadas ao uso da metformina, tornando a deficiência de B12 a explicação mais coerente e respaldada pelos conhecimentos farmacológicos e pelas diretrizes de acompanhamento do diabético.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Condutas terapêuticas",
+        "Consulta de rotina",
+        "Exames complementares"
+      ]
+    },
+    {
+      "id": 131,
+      "number": 13,
+      "statement": "O Sr. Josué possui 66 anos e procurou atendimento na unidade básica de saúde porque nas últimas 4 semanas vem apresentando tremores nas mãos, rigidez muscular e movimentos mais lentos. Relata que está usando, já há muitos anos, clorpromazina para insônia crônica e flunarizina para profilaxia de enxaqueca. Ao exame físico, constata-se rigidez em roda denteada e bradicinesia, sem alterações cerebelares. Qual hipótese diagnóstica está adequada ao quadro e à história medicamentosa?",
+      "options": [
+        "A - Doença de Parkinson idiopática, provavelmente desencadeada pela predisposição genética e idade avançada.",
+        "B - Síndrome cerebelar, possivelmente relacionada ao uso crônico de flunarizina.",
+        "C - Síndrome extrapiramidal, provavelmente secundária ao uso de medicação neuroléptica e bloqueador de canais de cálcio.",
+        "D - Tremor essencial familiar, agravado pelo uso de medicações sedativas."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. A descrição do caso clínico sugere que os sintomas apresentados pelo Sr. Josué decorrem de efeitos colaterais medicamentosos, caracterizando uma síndrome extrapiramidal (parkinsonismo induzido por fármacos). Antipsicóticos (neurolépticos) são conhecidos por causar sintomas extrapiramidais, como tremores, rigidez e bradicinesia, sobretudo em idosos. Além disso, alguns bloqueadores dos canais de cálcio (como a flunarizina ou a cinarizina, frequentemente usadas para vertigem ou profilaxia de migrânea) podem também induzir parkinsonismo. A concomitância ou uso prolongado desses medicamentos aumenta a probabilidade de uma síndrome extrapiramidal farmacológica. Assim, a opção C está correta ao associar o quadro clínico do paciente ao uso dessas medicações, enquanto outras hipóteses diagnósticas não condizem com o contexto medicamentoso apresentado.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Condutas terapêuticas",
+        "Diagnóstico diferencial",
+        "Gestão de condições crônicas"
+      ]
+    },
+    {
+      "id": 132,
+      "number": 14,
+      "statement": "Adolescente de 16 anos, sexo masculino, comparece à consulta com seu médico de família e comunidade, acompanhado pela mãe, que está preocupada pois o jovem “não quer saber de cuidar da saúde”. Ele não se alimenta bem, é sedentário e já experimentou cigarro e álcool. Nas últimas consultas, o adolescente demonstrou resistência a conselhos diretos. Dentre as alternativas a seguir, a mais adequada para abordar esse paciente é:",
+      "options": [
+        "A - Enfatizar os riscos de hábitos pouco saudáveis, mostrando imagens de doenças graves causadas pelo tabagismo e pela má alimentação.",
+        "B - Definir metas específicas de melhoria (como perder 5 kg em 3 meses e praticar exercício diário), com compromissos firmados por escrito pelo adolescente.",
+        "C - Realizar entrevista motivacional.",
+        "D - Sugerir que a mãe limite a mesada ou imponha consequências caso ele não melhore os hábitos de vida, para incentivá-lo a se cuidar."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. A entrevista motivacional é uma técnica de abordagem clínica centrada no paciente, especialmente útil para adolescentes com comportamentos de risco ou pouca adesão a mudanças de estilo de vida. Em vez de impor conselhos diretos, o profissional utiliza escuta ativa e perguntas abertas para explorar ambivalências, ajudando o jovem a refletir sobre os benefícios e as barreiras para a mudança. Essa estratégia está alinhada aos princípios da APS, pois promove autonomia e vínculo, respeitando o estágio de prontidão do paciente para mudar (como no modelo transteórico de mudança de comportamento). Portanto, realizar uma entrevista motivacional é a conduta mais indicada para engajar o adolescente na discussão de saúde de forma efetiva e não confrontadora, diferentemente de abordagens impositivas que poderiam gerar resistência.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Condutas terapêuticas",
+        "Consulta de rotina",
+        "Promoção e prevenção em saúde"
+      ]
+    },
+    {
+      "id": 133,
+      "number": 15,
+      "statement": "Analisando o conceito de territorialização e a organização do sistema de saúde no Brasil, na qual a responsabilidade sanitária de base geográfica é um eixo estruturante, avalie as afirmações abaixo e assinale a correta:",
+      "options": [
+        "A - No Brasil, a territorialização é um pressuposto básico da Estratégia de Saúde da Família (ESF), instituído pelo Ministério da Saúde (MS) desde 1994.",
+        "B - A delimitação territorial deixou de ser relevante após a criação dos Núcleos Ampliados de Saúde da Família (NASF), uma vez que estes ampliam a abrangência do cuidado.",
+        "C - A territorialização é uma estratégia utilizada apenas em áreas rurais ou indígenas, não sendo aplicável em grandes centros urbanos.",
+        "D - As Unidades Básicas de Saúde não precisam mais adotar território definido desde a integração das equipes de saúde bucal na ESF."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. A territorialização é um fundamento da Estratégia Saúde da Família (ESF) no Brasil, estabelecido formalmente pelo Ministério da Saúde a partir de 1994 com a implantação do PSF (Programa Saúde da Família). Isso significa que cada equipe de saúde da família atua em um território definido, responsabilizando-se pela população daquela área, o que permite conhecer melhor os problemas de saúde locais e planejar ações específicas. Essa organização territorial é parte dos princípios do SUS de descentralização e de adscrição de clientela, promovendo vínculo e continuidade do cuidado. Portanto, a afirmação da alternativa A está correta, pois reconhece que o trabalho da ESF se baseia na delimitação geográfica de responsabilidade sanitária, algo que as demais opções provavelmente não contemplavam adequadamente.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Estratégia de Saúde da Família (ESF)",
+        "Rede de atenção à saúde (RAS)",
+        "Sistema Único de Saúde (SUS)"
+      ]
+    },
+    {
+      "id": 134,
+      "number": 16,
+      "statement": "Dr. Lucas, um jovem médico residente de MFC, tem sentido uma crescente tensão em seu trabalho. Ele observa que alguns atendimentos o deixam particularmente irritado ou ansioso, principalmente quando os pacientes parecem não seguir as orientações ou voltam com os mesmos problemas. Como preceptora, qual a melhor orientação que você daria ao residente para lidar com essa situação?",
+      "options": [
+        "A - Sugerir que ele mantenha uma distância emocional maior dos pacientes, evitando se envolver demais para não se estressar.",
+        "B - Promover a reflexão sobre os aspectos emocionais envolvidos nas interações com os pacientes.",
+        "C - Aconselhá-lo a ser mais assertivo e rígido nas recomendações, para que os pacientes aprendam a importância de segui-las.",
+        "D - Orientá-lo a reduzir o tempo das consultas problemáticas e priorizar as queixas objetivas, para aumentar a eficiência e diminuir a frustração."
+      ],
+      "correctOption": 1,
+      "explanation": "A alternativa correta é B. Quando um médico de família se percebe sob tensão crescente no trabalho, é fundamental promover uma reflexão sobre os aspectos emocionais envolvidos na relação médico-paciente. Essa abordagem está alinhada à prática da Medicina Centrada na Pessoa, onde o profissional reconhece suas próprias emoções e limitações, e busca compreender como elas podem estar influenciando o cuidado. Por meio de supervisão, grupos Balint ou discussão de casos, o médico pode explorar sentimentos de frustração, ansiedade ou empatia excessiva que surgem nas consultas, aprendendo a manejá-los de forma saudável. Essa reflexão contribui para o autoconhecimento e prevenção de burnout, melhorando a qualidade da interação com os pacientes, enquanto soluções meramente técnicas ou evasivas (como se distanciar dos pacientes ou medicalizar a própria ansiedade) não resolveriam a raiz do problema.",
+      "tags": [
+        "Consulta de rotina",
+        "Diagnóstico diferencial",
+        "Hipóteses diagnósticas",
+        "Rede de atenção à saúde (RAS)"
+      ]
+    },
+    {
+      "id": 135,
+      "number": 17,
+      "statement": "Dona Maria, 60 anos, foi diagnosticada com diabetes mellitus tipo 2 há 8 anos. Ela faz uso de metformina 850 mg 3x/dia e gliclazida 60 mg/dia, além de controlar a dieta. Nos últimos exames de rotina, apresentou hemoglobina glicada de 8,5%. Ela também é hipertensa (em uso de losartana 50 mg 2x/dia) e tem microalbuminúria detectada em exames seriados. Qual das condutas abaixo é a mais adequada para otimizar o manejo glicêmico e renal desta paciente?",
+      "options": [
+        "A - Manter o esquema atual e adicionar pioglitazona, pois melhora a resistência insulínica sem efeitos renais.",
+        "B - Introduzir insulina basal de longa ação para melhorar o controle glicêmico, mantendo os demais medicamentos.",
+        "C - Substituir a gliclazida por um inibidor de SGLT-2 e associar um IECA para controle da pressão arterial e microalbuminúria.",
+        "D - Suspender a metformina devido à microalbuminúria e iniciar um inibidor de DPP-4 (gliptina) para reduzir a hemoglobina glicada."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. Em pacientes diabéticos com controle glicêmico insuficiente ou risco cardiovascular aumentado, recomenda-se modernizar o esquema terapêutico substituindo sulfonilureias (como a gliclazida) por medicações com benefícios cardiorrenais, a exemplo dos inibidores de SGLT-2. Esses agentes (ex: empagliflozina, dapagliflozina) melhoram o controle glicêmico, auxiliam na perda de peso e protegem contra eventos cardiovasculares e progressão da doença renal diabética. Além disso, a presença de microalbuminúria em uma paciente hipertensa e diabética indica lesão renal incipiente, sendo mandatório introduzir um inibidor da ECA (IECA) para controle pressórico e nefroproteção. Essa conduta está de acordo com diretrizes atuais de manejo do diabetes tipo 2, que enfatizam individualizar o tratamento visando proteção de órgãos-alvo, enquanto outras opções terapêuticas menos eficazes ou desatualizadas não ofereceriam os mesmos benefícios.",
+      "tags": [
+        "Condutas terapêuticas",
+        "Exames complementares",
+        "Gestão de condições crônicas"
+      ]
+    },
+    {
+      "id": 136,
+      "number": 18,
+      "statement": "Sr. Pedro, 58 anos, com histórico de hipertensão arterial há 10 anos, faz uso de losartana 50 mg duas vezes ao dia, porém mantém níveis pressóricos em torno de 150x95 mmHg em medidas domiciliares. Refere aderir corretamente à medicação e às orientações. Sobre a melhor conduta para este caso, assinale a alternativa correta:",
+      "options": [
+        "A - Substituir a losartana por outro anti-hipertensivo de classe diferente (por exemplo, um betabloqueador) antes de associar medicamentos.",
+        "B - Manter a losartana, adicionar um bloqueador dos canais de cálcio e recomendar mudanças no estilo de vida.",
+        "C - Aumentar a dose de losartana para 100 mg duas vezes ao dia (dose plena) e observar por mais 6 meses.",
+        "D - Encaminhar o paciente para avaliação com cardiologista por se tratar de hipertensão resistente ao tratamento inicial."
+      ],
+      "correctOption": 1,
+      "explanation": "A alternativa correta é B. Em um paciente hipertenso de longa data cujo controle pressórico está insuficiente com monoterapia de losartana, a conduta adequada é otimizar o tratamento combinando fármacos e reforçando medidas não farmacológicas. Mantém-se a losartana (um bloqueador do receptor de angiotensina) e associa-se um bloqueador de canal de cálcio, como a anlodipina, pois a terapia combinada de classes diferentes potencializa o controle da pressão arterial conforme diretrizes de hipertensão arterial. Paralelamente, é fundamental enfatizar mudanças no estilo de vida – dieta com redução de sal, prática regular de atividade física, perda de peso e moderação do álcool – que são pilares no manejo da hipertensão. Essa abordagem integrada segue as recomendações das políticas de atenção às doenças crônicas no SUS, visando reduzir riscos cardiovasculares, enquanto alternativas como aumentar exageradamente a dose de um único medicamento ou não intensificar o tratamento deixariam o paciente exposto a complicações.",
+      "tags": [
+        "Condutas terapêuticas",
+        "Consulta de rotina",
+        "Exames complementares",
+        "Gestão de condições crônicas"
+      ]
+    },
+    {
+      "id": 137,
+      "number": 19,
+      "statement": "Carlos, 45 anos, procura o médico de família e comunidade queixando-se de icterícia (pele e olhos amarelados) há cerca de 2 semanas, associada a prurido leve e urina escura. Nega febre, dor abdominal significativa ou consumo recente de álcool. Refere perda de aproximadamente 6 kg no último mês. Exame físico: ictérico +2/+4, sem hepatomegalia à palpação, discreto emagrecimento, demais parâmetros normais. Diante desse quadro, qual a hipótese diagnóstica mais provável e a conduta inicial apropriada?",
+      "options": [
+        "A - Hepatite viral aguda (provável hepatite B) – solicitar sorologias para hepatites e repouso absoluto por 14 dias.",
+        "B - Coledocolitíase com colangite – prescrever antibiótico de amplo espectro e referenciar para CPRE (colangiopancreatografia retrógrada endoscópica).",
+        "C - Neoplasia de pâncreas: solicitar ultrassonografia abdominal e tomografia de abdome, além de encaminhar para avaliação cirúrgica.",
+        "D - Anemia hemolítica autoimune: solicitar contagem de reticulócitos, haptoglobina e teste de Coombs direto, iniciando corticoide oral."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. A presença de icterícia em um adulto de meia-idade, especialmente se acompanhada de sintomas como perda de peso ou colúria (urina escura) e acolia fecal, levanta alta suspeita de obstrução biliar por neoplasia de pâncreas (particularmente de cabeça de pâncreas). Nesses casos, as diretrizes recomendam investigação imediata com exames de imagem: a ultrassonografia abdominal é um bom primeiro passo para detectar dilatação de vias biliares ou massa pancreática, seguido de tomografia computadorizada de abdome para melhor caracterização da lesão e estadiamento. Diante dessa suspeita, encaminhar o paciente para avaliação cirúrgica especializada é fundamental, já que o tratamento curativo (quando possível) passa por ressecção do tumor (como a cirurgia de Whipple). Essa conduta é condizente com o manejo adequado de uma possível neoplasia pancreática, diferentemente de outras hipóteses ou intervenções inapropriadas que não abordariam a causa obstrutiva da icterícia.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Condutas terapêuticas",
+        "Exames complementares",
+        "Gestão de insumos e medicamentos"
+      ]
+    },
+    {
+      "id": 138,
+      "number": 20,
+      "statement": "João, 58 anos, apresenta-se no consultório com queixas de dormência, formigamento e dor em queimação nos pés, evolução insidiosa há meses, piorando à noite. É hipertenso e diabético há 15 anos, em uso regular de losartana e metformina. Ao exame, pulsos presentes, pés quentes, sem lesões; teste do monofilamento de 10g alterado bilateralmente. Diante desse quadro clínico, qual a melhor conduta?",
+      "options": [
+        "A - Neuropatia periférica diabética: otimizar o controle glicêmico e iniciar tratamento para dor neuropática.",
+        "B - Doença arterial periférica: solicitar índice tornozelo-braquial e considerar revascularização.",
+        "C - Deficiência de vitamina B12: dosar níveis de B12 e iniciar suplementação intramuscular.",
+        "D - Neuropatia alcoólica: encaminhar para reabilitação e prescrever tiamina."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. Os sintomas descritos (dormência, formigamento e dor em queimação nos membros inferiores) são característicos de neuropatia periférica diabética em um paciente de 58 anos provavelmente com diabetes de longa data. A conduta recomendada é melhorar o controle glicêmico, pois a hiperglicemia crônica é a principal causa da lesão nervosa e seu controle pode evitar a progressão do quadro. Além disso, é necessário iniciar tratamento específico para a dor neuropática, utilizando medicações como antidepressivos tricíclicos, duloxetina ou anticonvulsivantes (p.ex. pregabalina ou gabapentina), conforme protocolos de manejo da dor crônica no SUS. Essa abordagem aborda tanto a etiologia quanto o sintoma, alinhada às diretrizes de cuidado do diabetes, ao contrário de intervenções que não focariam o controle metabólico e o alívio da dor adequadamente.",
+      "tags": [
+        "Condutas terapêuticas",
+        "Diagnóstico diferencial",
+        "Exames complementares",
+        "Gestão de condições crônicas",
+        "Hipóteses diagnósticas"
+      ]
+    },
+    {
+      "id": 139,
+      "number": 21,
+      "statement": "João, um lactente de 6 meses, é trazido ao consultório por sua mãe devido a episódios frequentes de regurgitação (golfadas) após as mamadas, embora esteja ganhando peso adequadamente e sem outros sintomas. A mãe está apreensiva e quer “algum remédio para refluxo” do bebê. Qual deve ser a conduta do médico de família e comunidade?",
+      "options": [
+        "A - Prescrever domperidona em dose baixa antes das mamadas, para acelerar o esvaziamento gástrico e reduzir as regurgitações.",
+        "B - Aconselhar a mãe a manter João em posição ereta após as mamadas e orientar a benignidade do caso.",
+        "C - Solicitar um exame contrastado (seriografia esôfago-gástrica) para avaliar anatomicamente o esôfago e descartar doença do refluxo gastroesofágico.",
+        "D - Encaminhar ao gastropediatra, pois todo caso de refluxo em lactentes deve ser investigado por especialista."
+      ],
+      "correctOption": 1,
+      "explanation": "A alternativa correta é B. Regurgitações ou “golfadas” em lactentes de 6 meses geralmente representam refluxo gastroesofágico fisiológico, comum nessa faixa etária e que tende a melhorar com o crescimento. A conduta recomendada na Atenção Primária é orientar medidas posturais simples, como manter o bebê em posição vertical por algum tempo após as mamadas, realizar arrotos frequentes e evitar superalimentação. Essas medidas ajudam a reduzir os episódios de regurgitação e tranquilizam a família quanto à benignidade do quadro. Não há indicação inicial de medicamentos ou investigação invasiva se a criança está ganhando peso adequadamente e não apresenta outros sinais de alarme; assim, o aconselhamento e a orientação são alinhados às boas práticas pediátricas no SUS.",
+      "tags": [
+        "Condutas terapêuticas",
+        "Gestão de insumos e medicamentos"
+      ]
+    },
+    {
+      "id": 140,
+      "number": 22,
+      "statement": "Uma mulher negra de 40 anos, moradora de uma comunidade rural, comparece à Unidade Básica de Saúde (UBS) para acompanhamento. Ela possui anemia falciforme, com crises vaso-oclusivas esporádicas na infância e adolescência. Nos últimos anos, tem apresentado complicações crônicas da doença. Considerando a organização da Rede de Atenção à Saúde, qual deve ser a conduta da equipe de atenção básica para garantir o melhor cuidado a essa paciente?",
+      "options": [
+        "A - Gerenciar todos os aspectos do tratamento na UBS, evitando encaminhamentos desnecessários, já que a APS deve resolver a maior parte dos casos crônicos.",
+        "B - Encaminhar a paciente para um centro de referência especializado em doença falciforme, promovendo um acompanhamento contínuo e multidisciplinar.",
+        "C - Fornecer na UBS estoque de analgésicos opioides potentes para que ela possa manejar as crises dolorosas em casa, sem precisar ir ao hospital.",
+        "D - Solicitar avaliação pelo NASF (Núcleo Ampliado de Saúde da Família) exclusivamente, pois o apoio matricial eliminará a necessidade de acompanhamento em outro serviço."
+      ],
+      "correctOption": 1,
+      "explanation": "A alternativa correta é B. A doença falciforme requer um acompanhamento especializado e multidisciplinar devido às suas potenciais complicações (crises vaso-oclusivas, anemia hemolítica, dano a órgãos) e às necessidades específicas de tratamento. Em uma paciente de 40 anos com essa condição, especialmente vivendo em área rural com possível dificuldade de acesso, é crucial encaminhá-la a um centro de referência em doença falciforme. Nesses centros, ela terá acesso a equipe multiprofissional (hematologistas, enfermeiros, assistente social, etc.) e a protocolos específicos (profilaxia de infecções, manejo da dor, transfusões se necessárias e aconselhamento genético). Embora a APS possa e deva acompanhar essa paciente em aspectos gerais de saúde, a integração com um serviço especializado garantirá um cuidado contínuo de maior qualidade, alinhado às políticas públicas que estabelecem linhas de cuidado específicas para doenças crônicas complexas como a falciforme.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Condutas terapêuticas",
+        "Gestão de insumos e medicamentos",
+        "Políticas públicas de saúde",
+        "Saúde da Mulher"
+      ]
+    },
+    {
+      "id": 141,
+      "number": 23,
+      "statement": "Uma mulher negra de 23 anos chega à unidade básica de saúde com relato de febre, dor abdominal e sangramento vaginal há dois dias. Ao exame, encontra-se taquicárdica, útero doloroso à palpação e colo aberto com presença de tecido. Foi diagnosticada com abortamento séptico, iniciando antibioticoterapia e procedimento uterino. Sobre o seguimento dessa paciente, após a estabilização do quadro agudo, assinale a alternativa correta:",
+      "options": [
+        "A - Como a paciente é muito jovem, deve-se focar em orientações para evitar nova gestação pelos próximos 10 anos, inclusive sugerindo laqueadura tubária.",
+        "B - Após a recuperação, encaminhar para serviço de referência em reprodução assistida, visto o risco de infertilidade pós-abortamento séptico.",
+        "C - Após a realização do tratamento adequado, é muito importante garantir, sem demora, o retorno da mulher para a abordagem sobre seu planejamento reprodutivo.",
+        "D - Não é indicado abordar planejamento reprodutivo imediatamente após um evento obstétrico complicado, devendo-se aguardar pelo menos 6 meses."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. Diante de uma mulher jovem que provavelmente enfrentou uma complicação ginecológica aguda (como um aborto séptico incompleto, sugerido por febre, dor abdominal e sangramento), além de tratar clinicamente o quadro agudo é fundamental abordar precocemente o planejamento reprodutivo. Após a estabilização e tratamento (antibioticoterapia, curetagem ou outro manejo adequado), deve-se garantir que a paciente retorne o quanto antes para discutir métodos contraceptivos eficazes e seguros, evitando novas gestações não planejadas ou de risco. Essa orientação está de acordo com as políticas de saúde reprodutiva no SUS, que enfatizam a oferta ativa de planejamento familiar pós-evento obstétrico adverso, respeitando a autonomia da mulher. Dessa forma, a alternativa C destaca a importância de integrar cuidados curativos e preventivos, assegurando acompanhamento contínuo após a emergência inicial.",
+      "tags": [
+        "Condutas terapêuticas",
+        "Diagnóstico diferencial",
+        "Exames complementares",
+        "Hipóteses diagnósticas",
+        "Rede de atenção à saúde (RAS)"
+      ]
+    },
+    {
+      "id": 142,
+      "number": 24,
+      "statement": "Analise as afirmativas abaixo a respeito dos riscos relacionados à terapia hormonal (TH) na menopausa: \nI. O uso prolongado de estrogênio sem oposição (em mulheres com útero) aumenta o risco de câncer de endométrio. \nII. A terapia estro-progestativa combinada está associada a maior risco de câncer de mama após alguns anos de uso. \nIII. A TH inicia",
+      "options": [
+        "A - Somente I e II estão corretas",
+        "B - Somente I e III estão corretas",
+        "C - Somente II e IV estão corretas",
+        "D - Somente III e IV estão corretas"
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. No contexto de terapia hormonal (TH) na menopausa, as afirmativas II e IV são as únicas verdadeiras, pois refletem riscos comprovados associados a esse tratamento. Em geral, a TH combinada (estrogênio + progestagênio) de longo prazo está relacionada a um aumento no risco de câncer de mama (afirmativa II verídica), conforme evidenciado em estudos como o WHI. Além disso, a TH, especialmente via oral, eleva o risco de eventos tromboembólicos venosos (como trombose venosa profunda e embolia pulmonar) e possivelmente de acidente vascular cerebral, tornando correta a afirmativa IV. As outras afirmativas provavelmente continham informações incorretas ou incompletas sobre os riscos (por exemplo, subestimando o risco cardiovascular ou ignorando o risco de câncer de endométrio quando do uso inadequado de estrogênio isolado). Assim, somente II e IV estão alinhadas ao conhecimento científico atual sobre os riscos da TH na menopausa.",
+      "tags": [
+        "Condutas terapêuticas",
+        "Gestão de condições crônicas"
+      ]
+    },
+    {
+      "id": 143,
+      "number": 25,
+      "statement": "A investigação das síndromes demenciais deve ser constituída por quatro etapas: anamnese, exame físico, exames complementares e aplicação de testes cognitivos. Sobre o exame físico e suas implicações diagnósticas, assinale a alternativa correta:",
+      "options": [
+        "A - A presença de sopro carotídeo em paciente idoso com quadro demencial sugere a Doença de Alzheimer como etiologia mais provável.",
+        "B - No exame físico, a presença de apraxia da marcha em quadro demencial inicial praticamente exclui a possibilidade diagnóstica de Doença de Alzheimer em sua forma pura.",
+        "C - A detecção de retinopatia hipertensiva ou diabética grave não tem relevância na avaliação de um quadro demencial.",
+        "D - O exame neurológico geralmente é normal nas demências, portanto não auxilia na diferenciação etiológica."
+      ],
+      "correctOption": 1,
+      "explanation": "A alternativa correta é B. Na avaliação de síndromes demenciais, determinados achados do exame físico podem direcionar o diagnóstico diferencial. A apraxia de marcha precoce (dificuldade de iniciar ou realizar o ato de caminhar de forma coordenada) em um paciente com demência inicial praticamente afasta a hipótese de Doença de Alzheimer pura, pois na doença de Alzheimer típica as alterações de marcha só ocorrem em fases avançadas. Esse achado é mais sugestivo de outras etiologias, como hidrocefalia de pressão normal ou demência vascular, nas quais os déficits motores aparecem precocemente. Dessa forma, a presença de apraxia de marcha no exame físico é uma pista importante e torna verdadeira a afirmativa correspondente, enquanto outras afirmações apresentadas no item provavelmente não eram acuradas em relação ao diagnóstico diferencial das demências.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Exames complementares",
+        "Saúde do Idoso"
+      ]
+    },
+    {
+      "id": 144,
+      "number": 26,
+      "statement": "As úlceras venosas representam um desafio significativo para a Medicina de Família e Comunidade devido ao seu caráter crônico e alta taxa de recorrência. Sobre a abordagem dessas lesões, assinale a alternativa correta:",
+      "options": [
+        "A - A palpação de pulsos periféricos e a realização da medida do índice tornozelo braquial são medidas importantes para se avaliar o comprometimento arterial associado.",
+        "B - A limpeza da ferida com qualquer solução antisséptica forte (como iodopovidona) é preferível, mesmo que cause ardor, pois garante menor contaminação local.",
+        "C - Não há papel para curativos especiais (como os de hidrogel ou espuma) no manejo de úlceras venosas; o fundamental é apenas a compressão externa.",
+        "D - Uma vez obtida a cicatrização da úlcera, não é necessário manter a terapia compressiva de meias ou ataduras, apenas observar."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. Na abordagem das úlceras venosas de membros inferiores, é fundamental avaliar se há comprometimento arterial concomitante, pois a presença de doença arterial periférica muda a condução terapêutica (especialmente no uso de terapias compressivas). Assim, examinar os pulsos periféricos (pedioso, tibial posterior) e medir o índice tornozelo-braquial (ITB) são passos indispensáveis para quantificar a perfusão arterial no membro acometido. Um ITB normal ou levemente reduzido permite o uso seguro de bandagens de compressão para tratar a úlcera venosa, enquanto um ITB significativamente baixo indica doença arterial importante, requerendo ajustes no manejo ou avaliação especializada. Essa conduta segue protocolos de atenção à saúde da pessoa com feridas crônicas, garantindo um cuidado integral e seguro ao paciente. As demais alternativas possivelmente negligenciavam essa avaliação, comprometendo a qualidade do cuidado.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Gestão de condições crônicas",
+        "Gestão de insumos e medicamentos",
+        "Promoção e prevenção em saúde"
+      ]
+    },
+    {
+      "id": 145,
+      "number": 27,
+      "statement": "Uma mulher de 48 anos procura a Unidade Básica de Saúde com queixa de perda involuntária e recorrente de urina aos esforços (ao tossir, espirrar ou pegar peso). Ela teve 3 partos normais no passado e está com sobrepeso. Não há sintomas urinários de urgência, infecção ou alterações neurológicas associadas. Qual deve ser a conduta inicial do médico de família e comunidade diante desse quadro?",
+      "options": [
+        "A - Orientar perda de peso e exercícios de fortalecimento do assoalho pélvico.",
+        "B - Prescrever oxibutinina (anticolinérgico) para redução da hiperatividade vesical.",
+        "C - Encaminhar para cirurgia de correção de incontinência urinária (sling) o mais breve possível.",
+        "D - Solicitar uma urodinâmica antes de qualquer medida, para confirmar o tipo de incontinência."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. Em casos de incontinência urinária de esforço, especialmente em mulheres na meia-idade, as medidas conservadoras são a primeira linha de tratamento. A perda de peso está indicada quando há sobrepeso ou obesidade, pois a redução da pressão abdominal diminui significativamente os episódios de escape urinário. Paralelamente, exercitar e fortalecer os músculos do assoalho pélvico (exercícios de Kegel) melhora o suporte uretral e o controle urinário. Essas intervenções não invasivas possuem respaldo em diretrizes clínicas e na APS por serem eficazes, seguras e de baixo custo. Outras condutas mais invasivas ou farmacológicas só são consideradas se as medidas iniciais falharem, razão pela qual a orientação proposta na alternativa A é a mais adequada inicialmente.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Ciclos de vida",
+        "Exames complementares",
+        "Rede de atenção à saúde (RAS)"
+      ]
+    },
+    {
+      "id": 146,
+      "number": 28,
+      "statement": "A sífilis é uma Infecção sexualmente Transmitida (IST) que pode e deve ser previnida, diagnosticada e tratada precocemente durante o pré-natal, a fim de evitar a transmissão congênita. Sobre a sífilis congênita, assinale a alternativa correta:",
+      "options": [
+        "A - Todo recém-nascido infectado apresenta sintomas evidentes ao nascimento, o que facilita o diagnóstico neonatal.",
+        "B - A ausência de lesões cutâneas no recém-nascido exclui a possibilidade de sífilis congênita, pois a manifestação cutânea é universal na doença.",
+        "C - Os sinais de sífilis congênita estão ausentes ao nascimento na maior parte dos casos, e os sinais precoces da doença geralmente se instalam entre a terceira e oitava semana de vida.",
+        "D - A radiografia óssea é pouco útil na investigação de sífilis congênita, uma vez que as alterações ósseas só ocorrem tardiamente, após 1 ano de idade."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. Na sífilis congênita, a maioria dos recém-nascidos infectados não apresenta sinais clínicos evidentes ao nascimento, mesmo que tenham contraído a infecção via transplacentária. Os sinais precoces da doença frequentemente manifestam-se entre a 3ª e 8ª semanas de vida, podendo incluir rinite sifilítica (\"sapinho\" ou coriza sanguinolenta), lesões cutâneas (pênfigo palmoplantar), hepatosplenomegalia, entre outros. Esse conhecimento é importante para a vigilância pós-natal: mesmo com alta hospitalar aparentemente normal, o bebê de mãe com sífilis deve ser acompanhado de perto nas primeiras semanas. Portanto, a afirmação da alternativa C está de acordo com a literatura e protocolos de vigilância epidemiológica do Ministério da Saúde, reforçando a necessidade de seguimento para detecção e tratamento precoce dos casos de sífilis congênita.",
+      "tags": [
+        "Acompanhamento longitudinal",
+        "Rede de atenção à saúde (RAS)",
+        "Saúde da Mulher"
+      ]
+    },
+    {
+      "id": 147,
+      "number": 29,
+      "statement": "Ana, 36 anos, casada, comparece a consulta com a seguinte queixa: “Há 4 meses parei o anticoncepcional para tentar engravidar, mas até agora não menstruei e o teste de gravidez que fiz deu negativo”. Relata menarca aos 12 anos, ciclos regulares até o início do uso de anticoncepcional oral há 5 anos, sem antecedentes de cirurgias pélvicas ou doenças crônicas. Exame físico sem alterações, não há sinais de hiperandrogenismo. Diante desse quadro de amenorreia, qual deve ser a investigação inicial?",
+      "options": [
+        "A - Dosagem de FSH e LH para avaliar insuficiência ovariana prematura.",
+        "B - Ressonância magnética de sela túrcica para descartar prolactinoma hipofisário.",
+        "C - Ultrassonografia transvaginal e dosagem de estradiol para avaliar síndrome dos ovários policísticos.",
+        "D - Trata-se de amenorreia secundária, avaliar prolactina, progestagênio e perfil metabólico."
+      ],
+      "correctOption": 3,
+      "explanation": "A alternativa correta é D. Ana apresenta amenorreia secundária (ausência de menstruação por 4 meses após ter suspendido o anticoncepcional, descartando-se gestação), e a investigação inicial deve abranger causas hormonais e metabólicas comuns. A dosagem de prolactina é fundamental para verificar se há hiperprolactinemia, uma das causas frequentes de amenorreia por inibição do eixo gonadotrópico. O teste com progestágeno (prova de progesterona) auxilia a avaliar se o endométrio está recebendo estímulo estrogênico adequado: a ocorrência de sangramento após o teste indica presença de estrogênio endógeno e sugere anovulação crônica, como na síndrome dos ovários policísticos (SOP). Além disso, avaliar o perfil metabólico (incluindo glicemia, perfil lipídico e eventualmente função tireoidiana) é importante, pois condições como a SOP frequentemente se associam a resistência insulínica e dislipidemia. Essa abordagem diagnóstica segue protocolos ginecológicos, permitindo identificar a causa da amenorreia e direcionar o tratamento apropriado.",
+      "tags": [
+        "Condutas terapêuticas",
+        "Consulta de rotina",
+        "Exames complementares",
+        "Rede de atenção à saúde (RAS)"
+      ]
+    },
+    {
+      "id": 148,
+      "number": 30,
+      "statement": "Julia, 25 anos, vem a unidade solicitar apoio para contracepção de emergência. Utiliza anticoncepcional injetável trimestral, mas perdeu a data da última aplicação e teve relação sexual desprotegida há 4 dias. Não deseja engravidar no momento e está angustiada. Qual a melhor conduta a ser adotada?",
+      "options": [
+        "A - Prescrever pílula do dia seguinte (levonorgestrel 1,5 mg dose única) imediatamente e aconselhar sobre uso de preservativos nos próximos 7 dias.",
+        "B - Orientar que a contracepção de emergência já não é eficaz após 72 horas, devendo aguardar a próxima menstruação para reavaliar o método contraceptivo.",
+        "C - Propõe a inserção do Diu de Cobre, para atuar como contracepção de urgência e ajuste do método contraceptivo de longo prazo.",
+        "D - Aplicar a injeção trimestral imediatamente (mesmo fora da data) e tranquilizá-la, pois isso impedirá a gestação retroativamente."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. Diante de uma usuária de contracepção injetável que solicita contracepção de emergência (provavelmente por falha ou atraso na aplicação), a inserção do DIU de cobre é uma estratégia altamente eficaz tanto como método de urgência quanto como solução contraceptiva prolongada. O DIU de cobre pode ser inserido até cinco dias após a relação desprotegida, prevenindo a gravidez de forma mais efetiva que a pílula do dia seguinte, além de oferecer proteção contínua por até 10 anos. Essa conduta aproveita o momento de demanda da paciente para ajustar seu planejamento reprodutivo a longo prazo, garantindo maior segurança contraceptiva e independência de adesão diária ou mensal. O uso do DIU de cobre como contracepção de emergência está previsto nas diretrizes de saúde reprodutiva do SUS e demonstra cuidado integral ao considerar as necessidades imediatas e futuras da paciente.",
+      "tags": [
+        "Ciclos de vida",
+        "Condutas terapêuticas",
+        "Rede de atenção à saúde (RAS)",
+        "Redes de apoio social",
+        "Saúde da População em Situação de Rua"
+      ]
+    },
+    {
+      "id": 149,
+      "number": 31,
+      "statement": "Julia trouxe seu filho João, de 1 ano e 6 meses, para consulta. Conta que há 3 dias a criança iniciou quadro de febre alta, irritabilidade e choro frequente, puxando a orelha direita. Ao exame, João apresenta membrana timpânica direita abaulada, hiperemiada, sem perfuração, e ausculta pulmonar normal. Não há outras alterações no exame físico. Diante do diagnóstico provável, qual é a conduta adequada?",
+      "options": [
+        "A - Analgésicos e antipiréticos, aguardando 2 dias para observar evolução, pois é um quadro leve e unilateral em criança nessa faixa etária.",
+        "B - Descongestionante nasal e lavagem com soro fisiológico, reservando antibiótico apenas se surgir otorreia.",
+        "C - João possui critérios para tratamento com antibiótico por 10 dias, mesmo na ausência de otorreia.",
+        "D - Indicar paracentese imediata em virtude do abaulamento timpânico, para aliviar a pressão e colher material para cultura."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. Em crianças menores de 2 anos com diagnóstico de otite média aguda (OMA) bilateral ou com sintomas importantes, as diretrizes recomendam tratamento antibiótico imediato, geralmente por 10 dias com amoxicilina. No caso descrito, João apresenta critérios clínicos que indicam OMA que deve ser tratada prontamente, ainda que não haja otorreia (secreção purulenta saindo do ouvido). A ausência de otorreia não exclui o diagnóstico de otite nem afasta a necessidade de antibiótico em quadros moderados a graves ou em lactentes jovens, pois nessa faixa etária o risco de complicações é maior e a resolução espontânea menos provável. Portanto, a conduta correta é iniciar antibioticoterapia apropriada por 10 dias, conforme preconizado pelos protocolos de atenção à saúde da criança no SUS, garantindo resolução da infecção e prevenção de complicações.",
+      "tags": [
+        "Condutas terapêuticas",
+        "Consulta de rotina",
+        "Estratégia de Saúde da Família (ESF)",
+        "Exames complementares",
+        "Rede de atenção à saúde (RAS)"
+      ]
+    },
+    {
+      "id": 150,
+      "number": 32,
+      "statement": "Olivia, 37 anos, G3P2A0, acabou de descobrir uma gravidez não planejada e veio para iniciar o pré natal. Tem antecedente de pré eclâmpsia grave em gestações anteriores, sendo a última há 5 anos. No momento, está assintomática, PA = 120 x 80 mmHg. Além dos exames de rotina do primeiro trimestre, considerando seu histórico, qual medida adicional é indicada já nessa primeira avaliação?",
+      "options": [
+        "A - Introduzir baixas doses de AAS (ácido acetilsalicílico) desde já, para prevenir recorrência de pré-eclâmpsia.",
+        "B - Repetir a curva glicêmica oral, mesmo sem critérios, para diagnóstico precoce de diabetes gestacional, dada a relação com pré-eclâmpsia.",
+        "C - Solicitar ecocardiografia fetal precoce para avaliar repercussões hipertensivas na formação cardíaca do feto.",
+        "D - Pelo quadro da paciente é prudente incluir nos exames de primeiro trimestre função renal e ácido úrico para posterior comparação."
+      ],
+      "correctOption": 3,
+      "explanation": "A alternativa correta é D. Diante de uma gestante de 37 anos, multípara, com fatores de risco ou histórico obstétrico possivelmente sugestivo (por exemplo, pré-eclâmpsia prévia ou hipertensão crônica), é prudente ampliar a avaliação inicial do pré-natal. Incluir a dosagem de creatinina sérica (função renal) e ácido úrico no primeiro trimestre fornece valores basais importantes para comparação futura, especialmente no monitoramento de pré-eclâmpsia. Durante a gravidez, elevações significativas do ácido úrico e piora da função renal podem ser indicadores precoces de comprometimento hipertensivo gestacional; ter valores de referência facilita identificar alterações patológicas ao longo do acompanhamento. Essa medida preventiva é coerente com protocolos de pré-natal de alto risco no SUS, assegurando vigilância adicional em gestantes com maior chance de complicações. Assim, a alternativa D está correta ao sugerir a inclusão desses exames neste momento.",
+      "tags": [
+        "Condutas terapêuticas",
+        "Consulta de rotina",
+        "Exames complementares",
+        "Gestão de condições crônicas",
+        "Saúde da População em Situação de Rua"
+      ]
+    },
+    {
+      "id": 151,
+      "number": 33,
+      "statement": "Joana, 28 anos, hígida, está realizando acompanhamento pré-natal na unidade. Primeira gestação, está agora com 30 semanas de gestação. Os exames do 2º trimestre mostraram hemoglobina 12 g/dL, glicemia de jejum 78 mg/dL, TOTG normal, VDRL não reagente, sorologias HIV e hepatites negativas. Apresentou bacteriúria assintomática tratada no início da gestação. No momento, encontra-se assintomática. Com base nos protocolos do pré natal, podemos afirmar que os resultados de exames de Joana estão:",
+      "options": [
+        "A - Completos e adequados, devendo-se repetir apenas VDRL e hemograma no terceiro trimestre.",
+        "B - Sugerindo possível diabetes gestacional, pois a glicemia de jejum está muito baixa; deveria ser repetido TOTG.",
+        "C - Apresenta resultados incompletos, pois além da urina rotina é necessário avaliar urocultura mesmo na ausência de sintomas.",
+        "D - Indicando anemia leve que necessitaria reposição de ferro profilático, mesmo com hemoglobina ainda normal."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. No acompanhamento pré-natal, é obrigatório realizar urocultura de rastreio para bacteriúria assintomática, mesmo que a gestante não apresente sintomas urinários. No caso de Joana, apesar de ter sido feito exame de urina tipo I (urina rotina), isso não basta para excluir infecção urinária subclínica, que é comum na gestação e, se não tratada, pode evoluir para pielonefrite e aumentar o risco de parto prematuro. Portanto, os exames apresentados estão incompletos sem a urocultura. As normas do pré-natal preconizadas pelo Ministério da Saúde incluem a solicitação de urocultura no primeiro trimestre (ou na primeira consulta) e repetição em torno da 30ª semana, evidenciando que a opção C está alinhada com as boas práticas de cuidado materno-fetal.",
+      "tags": [
+        "Acompanhamento longitudinal",
+        "Exames complementares",
+        "Imunização e controle de surtos",
+        "Saúde da Mulher"
+      ]
+    },
+    {
+      "id": 152,
+      "number": 34,
+      "statement": "No âmbito do SUS, o subsistema de atenção à saúde indígena (SASI) e a Política de Atenção à Saúde do Idoso apresentam especificidades quanto a sistemas de informação e integração de cuidados. Sobre esses temas, assinale a alternativa correta:",
+      "options": [
+        "A - O Sistema de Informações da Atenção à Saúde Indígena, além de ser restrito aos profissionais que o utilizam, possui problemas de comunicação com os demais sistemas de informação do SUS.",
+        "B - O e-SUS Atenção Básica é plenamente integrado ao SIASI (Sistema de Informação em Saúde Indígena), garantindo fluxo de dados contínuo entre os distritos sanitários indígenas e os municípios.",
+        "C - A atenção à saúde do idoso no SUS dispensa sistemas de informação específicos, pois utiliza exclusivamente o Sistema de Informações Ambulatoriais (SIA) e Hospitalares (SIH).",
+        "D - As equipes multidisciplinares de saúde indígena (EMSI) não precisam alimentar sistemas de informação próprios, apenas os sistemas nacionais, para evitar duplicidade de registros."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. O Subsistema de Atenção à Saúde Indígena (SASI) utiliza um sistema de informação próprio (SIASI) que, de fato, opera de forma isolada e com integração limitada aos demais sistemas de informação em saúde do SUS. Esse sistema restrito dificulta a comunicação e troca de informações entre os serviços de saúde indígenas e a rede geral, gerando desafios para a continuidade do cuidado e vigilância em saúde. A restrição de acesso significa que apenas profissionais vinculados à saúde indígena costumam utilizar o SIASI, o que pode levar a duplicidade de registros ou perda de dados quando o paciente transita para outros serviços. Essa fragmentação informacional contraria o princípio da integralidade do cuidado, e a afirmativa reconhece corretamente esse problema estrutural. Portanto, a alternativa A está de acordo com a realidade do SASI e do SUS.",
+      "tags": [
+        "Integralidade",
+        "Organização e gestão dos serviços de APS",
+        "Políticas públicas de saúde",
+        "Saúde Indígena",
+        "Saúde da Mulher"
+      ]
+    },
+    {
+      "id": 153,
+      "number": 35,
+      "statement": "Em caso de acidentes com animais peçonhentos assinale os cuidados imediatos corretos de acordo com o tipo de acidente:",
+      "options": [
+        "A - Nos acidentes botrópicos (jararaca), manter a área da picada para baixo do nível do coração e aplicar torniquete para evitar a disseminação do veneno.",
+        "B - Nos acidentes escorpiônicos, realizar sucção local do veneno com os lábios, se possível, e oferecer café forte para prevenir sonolência.",
+        "C - Nos acidentes elapídicos, cuidado com a oferta oral de alimentos e líquidos, pela possível dificuldade de deglutição do acidentado.",
+        "D - Nos acidentes por abelhas, não há medidas específicas no local; deve-se apenas monitorar por choque anafilático nas primeiras 12 horas."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. Em acidentes ofídicos por serpentes da família Elapidae (como as corais verdadeiras), o veneno neurotóxico pode provocar paralisia muscular, incluindo comprometimento da musculatura bulbar responsável pela deglutição. Por isso, um dos cuidados imediatos preconizados é evitar oferecer alimentos ou líquidos por via oral à vítima, pois há risco de engasgo e aspiração devido à possível dificuldade de deglutir. Essa orientação consta nos protocolos do Ministério da Saúde para manejo de acidentes com animais peçonhentos, visando prevenir complicações enquanto se aguarda o soro antiofídico. Assim, a alternativa C reflete corretamente uma medida de primeiros socorros específica para acidentes elapídicos, complementando os cuidados gerais como manter a vítima em repouso e procurar atendimento médico urgente.",
+      "tags": [
+        "Medicina centrada na pessoa",
+        "Organização e gestão dos serviços de APS"
+      ]
+    },
+    {
+      "id": 154,
+      "number": 36,
+      "statement": "Em relação aos quadros de cefaleia, em qual das alternativas encontramos a abordagem que vai gerar o maior grau de satisfação do paciente com a consulta?",
+      "options": [
+        "A - Propiciar à pessoa a oportunidade de contar tudo que queria dizer sobre a sua dor de cabeça.",
+        "B - Interromper a narrativa após aproximadamente 2 minutos para obter dados objetivos sobre a cefaleia, tornando a consulta mais resolutiva.",
+        "C - Direcionar a consulta com perguntas fechadas desde o início para otimizar o tempo e obter as informações desejadas.",
+        "D - Focar inicialmente nos antecedentes familiares de cefaleia e nas características da dieta, pois são os fatores mais relevantes na anamnese de cefaleia."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. Propiciar que o paciente exponha livremente tudo o que deseja sobre sua cefaleia é uma prática central na abordagem centrada na pessoa e tende a aumentar a satisfação com a consulta. Ao ouvir ativamente e sem interrupções, o médico permite que a pessoa expresse suas preocupações, crenças e expectativas em relação à dor de cabeça, o que não só promove um vínculo terapêutico melhor, como também fornece pistas importantes para o diagnóstico e manejo adequado. Estudos em APS mostram que pacientes ouvidos integralmente sentem-se mais acolhidos e confiantes no profissional, melhorando a adesão às orientações. Portanto, valorizar a fala do paciente antes de passar às explicações ou condutas técnicas é fundamental para um cuidado resolutivo e humanizado, alinhado ao que preconiza a Medicina de Família e Comunidade.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Consulta de rotina",
+        "Estratégia de Saúde da Família (ESF)",
+        "Gestão de insumos e medicamentos"
+      ]
+    },
+    {
+      "id": 155,
+      "number": 37,
+      "statement": "Uma médica de família e comunidade atua como preceptora de estudantes do internato de graduação de medicina, realizando discussões de caso na unidade básica de saúde. Ela apresenta um caso de uma criança de 2 anos com febre prolongada (5 dias), conjuntivite bilateral não purulenta, lábios secos e rachados, linfonodo cervical de 1,5 cm, exantema e descamação periungueal. Ao final da apresentação, pergunta aos alunos qual o diagnóstico mais provável. Diante das opções levantadas, qual delas é a correta?",
+      "options": [
+        "A - Escarlatina.",
+        "B - Doença de Still.",
+        "C - Doença de Kawasaki.",
+        "D - Sarampo."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. O caso pediátrico descrito apresenta características típicas compatíveis com a Doença de Kawasaki, uma vasculite sistêmica aguda da infância. Essa doença geralmente acomete crianças menores de 5 anos e manifesta-se por febre alta por pelo menos 5 dias associada a sinais clínicos como conjuntivite bilateral não purulenta, alterações em lábios e cavidade oral (lábios fissurados, língua em \"framboesa\"), adenopatia cervical, exantema polimorfo e alterações de extremidades (edema ou descamação periungueal). O reconhecimento imediato é fundamental, pois o tratamento precoce com imunoglobulina intravenosa e ácido acetilsalicílico reduz significativamente o risco de complicações cardíacas (aneurismas coronarianos). Assim, a alternativa que aponta Doença de Kawasaki é a correta, em consonância com o quadro clínico mencionado e as diretrizes de diagnóstico em pediatria.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Saúde da Criança",
+        "Vigilância em saúde"
+      ]
+    },
+    {
+      "id": 156,
+      "number": 38,
+      "statement": "Em visita domiciliar a uma pessoa acamada, o médico de família e comunidade de uma Unidade de Atenção Primária avalia as necessidades de saúde e o contexto social do paciente. Sobre os objetivos da visita domiciliar no âmbito da Atenção Primária, assinale a alternativa correta:",
+      "options": [
+        "A - Realizar procedimentos de média complexidade no domicílio, evitando ao máximo o encaminhamento do paciente ao ambiente hospitalar.",
+        "B - Avaliar vulnerabilidade e risco da pessoa que necessita de visita domiciliar.",
+        "C - Restringir as atividades à anamnese e exame físico, encaminhando para a unidade se houver necessidade de exames.",
+        "D - Garantir economia de recursos, uma vez que atendimentos domiciliares não geram custos adicionais em comparação à unidade."
+      ],
+      "correctOption": 1,
+      "explanation": "A alternativa correta é B. A visita domiciliar é uma ferramenta valiosa da APS para avaliar a vulnerabilidade e os riscos que envolvem o paciente em seu ambiente. Durante a visita, o médico de família e comunidade observa as condições sociais, familiares e físicas do domicílio, identificando fatores de risco (por exemplo, risco de quedas, isolamento social, condições sanitárias precárias) e necessidades de cuidado específicas. Esse olhar ampliado permite elaborar um plano de cuidado individualizado e integral, adaptado à realidade do paciente, e acionar recursos da rede de saúde ou assistência social conforme necessário. Portanto, a principal finalidade da visita domiciliar é essa avaliação contextual de vulnerabilidade e risco, o que está de acordo com os princípios da atenção domiciliar no SUS, em vez de apenas procedimentos técnicos ou consultas formais no domicílio.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Atenção domiciliar",
+        "Autonomia do paciente",
+        "Avaliação familiar",
+        "Consulta de rotina"
+      ]
+    },
+    {
+      "id": 157,
+      "number": 39,
+      "statement": "Um homem de 35 anos é encaminhado para consulta médica pela equipe de acolhimento por demanda do dia com queixa de “dor nos olhos e dificuldade para enxergar nos últimos meses”. Nega traumas ou conjuntivites recentes. Ao exame, apresenta acuidade visual diminuída e pressão intraocular aumentada. O médico suspeita do diagnóstico e inicia manejo inicial, agendando consulta especializada. Qual é a principal hipótese diagnóstica e a conduta do médico de família está correta?",
+      "options": [
+        "A - Catarata incipiente; está correto ao encaminhar, mas deveria prescrever colírio de corticoide para reduzir a inflamação.",
+        "B - Presbiopia precoce; o encaminhamento é desnecessário, bastando orientar uso de óculos para perto.",
+        "C - Descolamento de retina; deveria ter encaminhado imediatamente para emergência oftalmológica, sem necessidade de manejo na APS.",
+        "D - Glaucoma; a suspeita diagnóstica procede e o encaminhamento para especialista após manejo inicial é adequado."
+      ],
+      "correctOption": 3,
+      "explanation": "A alternativa correta é D. Os sinais e sintomas apresentados pelo paciente (como alteração insidiosa da visão periférica, eventualmente dor ocular ou sensação de pressão intraocular aumentada, e possivelmente achados no exame ocular como aumento da escavação do disco óptico) são compatíveis com glaucoma. Trata-se de uma neuropatia óptica progressiva geralmente associada à hipertensão intraocular, que pode ocorrer já na meia-idade, especialmente se houver fatores de risco (história familiar, miopia, uso de corticoides, raça negra etc.). O glaucoma é frequentemente assintomático em fases iniciais, sendo fundamental seu reconhecimento precoce para evitar perda visual irreversível. A equipe de APS, ao identificar queixas oculares sugestivas ou medir pressão intraocular elevada em uma triagem, deve suspeitar de glaucoma e encaminhar para avaliação especializada. Assim, a opção D está correta ao apontar o glaucoma como diagnóstico provável, alinhado às condutas de vigilância em saúde ocular no SUS.",
+      "tags": [
+        "Condutas terapêuticas",
+        "Consulta de rotina",
+        "Saúde do Homem",
+        "Sistema Único de Saúde (SUS)",
+        "Vigilância em saúde"
+      ]
+    },
+    {
+      "id": 158,
+      "number": 40,
+      "statement": "Assinale qual das alternativas contempla uma das \"estratégias de gestão\" da Política Nacional de Saúde Integral da População Negra (PNSIPN):",
+      "options": [
+        "A - Criar unidades de saúde exclusivas para a população negra nas capitais estaduais.",
+        "B - Estimular a miscigenação racial como forma de reduzir a prevalência de doenças genéticas específicas.",
+        "C - Priorizar o envio de profissionais de saúde brancos para atuar em comunidades quilombolas, a fim de promover a integração étnico-racial.",
+        "D - Estabelecer metas específicas para a melhoria dos indicadores de saúde da população negra, com especial atenção para as populações quilombola."
+      ],
+      "correctOption": 3,
+      "explanation": "A alternativa correta é D. A Política Nacional de Saúde Integral da População Negra (PNSIPN) estabelece estratégias de gestão para reduzir desigualdades em saúde que afetam historicamente a população negra. Uma dessas estratégias é, de fato, a definição de metas específicas para melhorar indicadores de saúde desse grupo populacional, com atenção especial às comunidades quilombolas, que apresentam vulnerabilidades e necessidades particulares. Ao estipular metas (por exemplo, redução da mortalidade materna e incidência de doenças crônicas em populações negras), os gestores podem direcionar recursos e ações afirmativas, monitorando os avanços ao longo do tempo. Essa abordagem está alinhada aos princípios de equidade do SUS, reconhecendo que grupos étnico-raciais distintos podem requerer intervenções focalizadas. Portanto, a alternativa D reflete corretamente uma estratégia de gestão prevista na PNSIPN, enquanto outras opções provavelmente não contemplavam de maneira precisa esses objetivos específicos.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Integralidade",
+        "Políticas públicas de saúde",
+        "Saúde Mental"
+      ]
+    },
+    {
+      "id": 159,
+      "number": 41,
+      "statement": "A atenção integral à saúde de crianças e adolescentes em situação de violência, inserida em uma linha de cuidado, requer ações intersetoriais e atuação ética do profissional de saúde. Considerando essa afirmativa, assinale a alternativa correta:",
+      "options": [
+        "A - Ao se identificar situações de negligência ou qualquer forma de violência por parte dos pais ou responsáveis, é essencial realizar a notificação e adotar medidas que assegurem a proteção da criança ou do(a) adolescente.",
+        "B - Em casos de suspeita de abuso sexual em criança, a principal orientação é preservar a família e evitar qualquer interferência externa, mantendo sigilo absoluto.",
+        "C - Na atenção primária, a abordagem de violência contra crianças/adolescentes limita-se ao acolhimento e ao encaminhamento para a assistência social, não cabendo papel clínico ao médico de família.",
+        "D - O ECA (Estatuto da Criança e do Adolescente) prevê que a notificação de violência só deve ser feita mediante provas concretas, para não expor indevidamente a família."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. Diante de suspeita ou confirmação de negligência ou qualquer tipo de violência contra crianças ou adolescentes por parte de seus cuidadores, o profissional de saúde tem o dever legal e ético de realizar a notificação compulsória e acionar os mecanismos de proteção. Isso inclui comunicar o Conselho Tutelar ou órgãos competentes, para que medidas sejam tomadas visando a segurança e o bem-estar imediato da criança/adolescente. A Atenção Integral à saúde desse público, conforme previsto nas linhas de cuidado do SUS e no Estatuto da Criança e do Adolescente (ECA), preconiza a proteção ativa contra violência, com abordagem intersetorial (saúde, assistência social, justiça) quando necessário. Portanto, identificar e notificar formalmente tais situações, garantindo proteção, é a conduta correta e alinhada aos princípios éticos e legais, conforme expresso na alternativa A.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Integralidade",
+        "Organização e gestão dos serviços de APS",
+        "Princípios éticos na prática médica"
+      ]
+    },
+    {
+      "id": 160,
+      "number": 42,
+      "statement": "Uma menina de 3 anos apresenta rigidez e claudicação persistentes há mais de 2 meses. O início dos sintomas foi sutil e não há história de trauma. Não há febre ou sinais de infecção. Diante desse quadro, qual das opções abaixo corresponde ao diagnóstico mais provável?",
+      "options": [
+        "A - Artrite idiopática juvenil, diante da faixa etária e tempo de afecção do quadro clínico.",
+        "B - Febre reumática, considerando a idade e os sintomas articulares.",
+        "C - Leucemia aguda, que pode cursar inicialmente apenas com manifestações articulares.",
+        "D - Sinovite transitória do quadril, dada a claudicação."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. Uma criança de 3 anos com rigidez articular e claudicação persistentes por mais de 6 semanas levanta forte suspeita de Artrite Idiopática Juvenil (AIJ). A AIJ é definida por artrite de início antes dos 16 anos, com duração prolongada (pelo menos 6 semanas) e sem causa identificável, e pode se manifestar insidiosamente nessa faixa etária. O quadro descrito – sintomas articulares crônicos sem outra explicação evidente – é típico de AIJ oligoarticular, a forma mais comum em crianças pequenas, que frequentemente acomete grandes articulações como joelhos. Reconhecer precocemente essa condição é importante para encaminhar ao tratamento adequado (anti-inflamatórios, imunomoduladores) e acompanhamento especializado (reumatologia pediátrica), prevenindo sequelas articulares. Assim, a opção A, Artrite Idiopática Juvenil, corresponde ao diagnóstico mais provável, considerando a idade e a cronicidade do quadro.",
+      "tags": [
+        "Medicina centrada na pessoa",
+        "Organização e gestão dos serviços de APS",
+        "Saúde da Criança"
+      ]
+    },
+    {
+      "id": 161,
+      "number": 43,
+      "statement": "André, homem cisgênero, branco, 26 anos, é trazido à unidade básica de saúde por um amigo devido a comportamento extremamente agitado e agressivo após provável uso de substância psicoativa. Na chegada, André grita palavras desconexas, está desorientado e tenta agredir quem se aproxima. Qual deve ser a conduta imediata do médico de família e comunidade diante dessa situação?",
+      "options": [
+        "A - Realizar contenção física e tranquilização química com medicação intramuscular, solicitando remoção do paciente pelo Serviço de Atendimento Móvel de Urgência (SAMU192).",
+        "B - Tentar conversar calmamente com André, persuadindo-o a cooperar e oferecendo água com açúcar para diminuir a agitação, antes de qualquer medicação.",
+        "C - Respeitar a autonomia do paciente, mantendo distância segura até que ele se acalme espontaneamente, evitando intervenções que poderiam violar seus direitos.",
+        "D - Aguardar apoio policial antes de qualquer intervenção, já que a unidade básica não deve manejar casos de agitação extrema."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. Em um quadro de agitação psicomotora grave com risco de agressividade, a prioridade é garantir a segurança do paciente, da equipe de saúde e de terceiros. A conduta adequada envolve realizar contenção física segura (com auxílio de profissionais treinados) e tranquilização química imediata por meio de medicação sedativa intramuscular, como combinações de antipsicótico e benzodiazepínico, conforme protocolos de emergência psiquiátrica. Paralelamente, deve-se acionar o SAMU (Serviço de Atendimento Móvel de Urgência) para transferência do paciente a um serviço de referência (UPA ou hospital), onde poderá ser avaliado e manejado em ambiente apropriado. Essa abordagem está de acordo com as diretrizes de atenção à crise em saúde mental, preservando a integridade de todos e garantindo ao paciente cuidado emergencial adequado. Alternativas menos intervencionistas seriam insuficientes diante da gravidade do caso e colocariam pessoas em risco.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Condutas terapêuticas",
+        "Saúde do Homem"
+      ]
+    },
+    {
+      "id": 162,
+      "number": 44,
+      "statement": "A enurese noturna, caracterizada pela micção involuntária durante o sono, é uma condição que ocorre em muitas crianças. Sobre seu manejo na atenção primária, qual alternativa está correta?",
+      "options": [
+        "A - A terapia de primeira escolha para todas as crianças afetadas pela enurese noturna são medidas educacionais e comportamentais act",
+        "B - O uso de medicação (como a desmopressina) é indicado logo no início do tratamento para encurtar a duração do problema.",
+        "C - Punir a criança de forma consistente após cada episódio (por exemplo, com tarefas extras) ajuda a condicionar o controle esfincteriano.",
+        "D - A enurese noturna sempre tem causa orgânica, portanto deve-se investigar malformações renais ou da bexiga em todo caso."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. O manejo inicial da enurese noturna em crianças consiste em medidas comportamentais e orientações simples, que são consideradas terapia de primeira linha. Isso inclui estabelecer hábitos miccionais regulares (orientar a criança a urinar antes de deitar e em intervalos regulares durante o dia), limitar a ingestão de líquidos nas horas que antecedem o sono e evitar bebidas cafeinadas ou açucaradas à noite. Também são úteis reforços positivos e envolvimento da criança no registro das noites secas, promovendo sua autoestima e motivação. Essas intervenções não farmacológicas apresentam bom sucesso em muitos casos e são recomendadas pelos protocolos pediátricos no SUS por serem seguras e educativas. Somente se as medidas comportamentais não surtirem efeito após algum tempo é que tratamentos adicionais (como alarmes de enurese ou medicações, ex. desmopressina) devem ser considerados. Portanto, a alternativa A está correta ao enfatizar as estratégias educacionais e comportamentais ativas como primeira escolha.",
+      "tags": [
+        "Diagnóstico diferencial",
+        "Gestão de insumos e medicamentos",
+        "Hipóteses diagnósticas",
+        "Saúde da Criança"
+      ]
+    },
+    {
+      "id": 163,
+      "number": 45,
+      "statement": "A causa mais comum da doença renal crônica (DRC) é a diabetes, dados do censo da Sociedade Brasileira de Nefrologia. Sobre o manejo do paciente diabético com DRC na atenção primária, assinale a alternativa correta:",
+      "options": [
+        "A - Metformina é segura em todos os estágios de DRC e deve ser mantida até a terapia dialítica ser iniciada.",
+        "B - Não há necessidade de adequar a meta glicêmica em pacientes diabéticos com DRC, pois o controle glicêmico não influencia a progressão da nefropatia.",
+        "C - As gliflozinas (inibidores de SGLT-2) são contraindicadas na presença de DRC moderada, devendo ser suspensas precocemente.",
+        "D - A insulina é recomendada tratamento da hiperglicemia em indivíduos com diabetes tipo 2 com taxa de filtração glomerular estimada menor que 30 mL/min/1,73m², quando a hemoglobina glicada estiver acima da meta."
+      ],
+      "correctOption": 3,
+      "explanation": "A alternativa correta é B. Em pacientes com diabetes tipo 2 que evoluem com doença renal crônica avançada (TFG estimada < 30 mL/min/1,73m² - estágio 4/5), as opções de tratamento oral da hiperglicemia tornam-se limitadas e potencialmente arriscadas, sendo a insulina o tratamento preferencial quando a hemoglobina glicada permanece acima da meta. Nesses estágios, medicações como metformina devem ser descontinuadas ou ajustadas devido ao risco aumentado de efeitos adversos (por exemplo, acidose láctica), e outras classes podem ter eficácia reduzida ou maior risco de hipoglicemia conforme diminui a função renal. A insulina, por sua vez, pode ser titulada com segurança para atingir o controle glicêmico desejado, adaptando-se à depuração renal reduzida. Essa recomendação está de acordo com diretrizes nefrológicas e endocrinológicas, que apontam a insulinoterapia como o manejo de escolha em DM2 com insuficiência renal significativa, garantindo controle metabólico adequado e redução do risco de complicações agudas. As demais opções provavelmente continham informações desalinhadas com essas orientações clínicas.",
+      "tags": [
+        "Condutas terapêuticas",
+        "Contexto sociocultural",
+        "Gestão de condições crônicas",
+        "Rede de atenção à saúde (RAS)"
+      ]
+    },
+    {
+      "id": 164,
+      "number": 46,
+      "statement": "Mariana, mulher cisgênero parda de 22 anos, procurou atendimento com sua médica de família e comunidade por estar preocupada com o próprio comportamento alimentar. Ela diz que tem episódios, uma ou duas vezes por semana, em que come grandes quantidades de comida em pouco tempo e depois sente culpa, induzindo vômito para “colocar tudo para fora”. Está muito angustiada com medo de ganhar peso, embora seu IMC seja 22. Nega uso de medicamentos para emagrecer. Segundo Mariana, isso começou há cerca de 6 meses. Sobre o caso, assinale a alternativa correta:",
+      "options": [
+        "A - Mariana provavelmente apresenta Transtorno de Compulsão Alimentar Periódica, pois há episódios de comer exagerado; a ausência de comportamentos compensatórios descarta bulimia.",
+        "B - Trata-se de bulimia nervosa do tipo não purgativo, pois ela mantém o peso normal. A conduta inicial deve ser a internação para terapia nutricional e psiquiátrica.",
+        "C - Mariana apresenta comportamentos de compulsão alimentar periódica com relato de componente purgativo indicativo de evolução à bulimia nervosa, sendo recomendada neste momento indicação de Terapia Cognitivo Comportamental; caso indisponível ou não desejada, a prescrição de inibidores de recaptação de serotonina pode minimizar os episódios compulsivos e purgativos.",
+        "D - O diagnóstico é de anorexia nervosa do tipo purgativo, já que ela se preocupa com o peso e induz vômito, apesar de não haver perda ponderal importante."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. O quadro de Mariana, com episódios recorrentes de compulsão alimentar seguidos de comportamentos purgativos (como indução de vômito ou uso inadequado de laxantes, possivelmente relatados), é compatível com bulimia nervosa. O manejo inicial mais indicado para bulimia é a psicoterapia, em especial a Terapia Cognitivo-Comportamental (TCC), que auxilia na modificação dos padrões de pensamento distorcidos sobre peso e alimentação e no controle dos episódios de compulsão e purgação. Caso a TCC não esteja disponível imediatamente ou a paciente não possa aderir, a farmacoterapia com inibidores seletivos da recaptação de serotonina (como a fluoxetina) é recomendada e comprovadamente ajuda a reduzir a frequência de compulsões e purgações. Essa abordagem está de acordo com diretrizes de tratamento dos transtornos alimentares, priorizando intervenção psicológica e, quando necessário, suporte medicamentoso, garantindo cuidado integral em saúde mental na APS.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Consulta de rotina",
+        "Saúde Mental",
+        "Saúde da Mulher"
+      ]
+    },
+    {
+      "id": 165,
+      "number": 47,
+      "statement": "Itamar, 78 anos, mora sozinho no último beco do Morro do Vento, não tem parentes de primeiro grau nas redondezas. Em uma visita domiciliar, a médica de família percebe que ele armazena a insulina (NPH) dentro de um armário na cozinha, porque não possui geladeira. Ela se preocupa, pois sabe que a insulina pode perder o efeito se conservada inadequadamente. A médica, então, pergunta a Itamar o que ele acha que poderia ser feito para resolver esse problema do armazenamento. Segundo o Método Clínico Centrado na Pessoa, tal atitude da profissional corresponde a que componente do método?",
+      "options": [
+        "A - Explorar a doença e a experiência do paciente.",
+        "B - Entender a pessoa como um todo.",
+        "C - Elaborar um plano conjunto (concordar sobre os planos e responsabilidades).",
+        "D - Incorporar prevenção e promoção de saúde ao plano."
+      ],
+      "correctOption": 1,
+      "explanation": "A alternativa correta é B. No Método Clínico Centrado na Pessoa, o terceiro componente refere-se à concordância ou estabelecimento de um plano em comum acordo entre médico e paciente (encontrar um terreno comum). Ao estimular que Itamar pensasse em uma solução para o armazenamento inadequado de sua insulina, a médica está praticando exatamente esse componente: envolve-lo ativamente na identificação do problema e na definição da conduta que melhor se adapte à sua realidade. Essa abordagem compartilhada promove autonomia do paciente e aumenta a probabilidade de adesão, pois considera as ideias e possibilidades que ele apresenta. Desse modo, a atitude da médica de família – ao invés de impor uma solução pronta – exemplifica o terceiro elemento do método centrado na pessoa, consolidando um plano de cuidado construído conjuntamente. Portanto, a alternativa B é correta ao reconhecer essa etapa fundamental do atendimento centrado no paciente.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Atenção domiciliar",
+        "Avaliação familiar",
+        "Condutas terapêuticas",
+        "Gestão de condições crônicas"
+      ]
+    },
+    {
+      "id": 166,
+      "number": 48,
+      "statement": "Pedro, 52 anos, morador da zona rural de uma região endêmica da Doença de Chagas, vem a consulta na UBS com queixa de dispneia aos pequenos esforços, edema de membros inferiores além de tontura e cansaço. Você conduz uma consulta centrada na pessoa, realiza o exame físico cuidadoso e diante da suspeita de Doença de Chagas na forma cardíaca crônica, solicita um Eletrocardiograma imediatamente. Assinale a alternativa com as possíveis alterações eletrocardiográficas que fortaleceriam as suspeitas diagnósticas:",
+      "options": [
+        "A - Frequência cardíaca maior que 130bpm ou menor que 50bpm.",
+        "B - Ritmo sinusal, QRS estreito, segmento ST isoelétrico.",
+        "C - QRS alargado (duração = 140 ms) com morfologia de bloqueio de ramo direito.",
+        "D - Ritmo Sinusal, FC 88bpm, QRS estreito, elevação do segmento ST."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. A cardiopatia chagásica crônica frequentemente apresenta alterações eletrocardiográficas características, sendo o bloqueio de ramo direito (BRD) uma das mais comuns. Um QRS alargado (≅140 ms) com morfologia de BRD indica condução intraventricular retardada pelo ramo direito, achado típico na doença de Chagas devido ao comprometimento fibroso do sistema de condução cardíaco. Essa alteração, sobretudo quando associada a bloqueio divisional anterior esquerdo (formando um bloqueio de ramo direito com hemibloqueio anterior esquerdo, padrão também frequente em Chagas), reforça a suspeita diagnóstica frente a um paciente com dispneia e sinais de insuficiência cardíaca em área endêmica. Assim, a presença de um BRD no ECG, conforme descrito na alternativa C, corrobora a hipótese de cardiopatia chagásica crônica, alinhando-se aos achados esperados nessa patologia e às diretrizes de investigação nessas situações. As demais opções provavelmente listavam traçados menos sugestivos ou inespecíficos para Chagas.",
+      "tags": [
+        "Condutas terapêuticas",
+        "Consulta de rotina",
+        "Estratégia de Saúde da Família (ESF)",
+        "Exames complementares",
+        "Gestão de condições crônicas"
+      ]
+    },
+    {
+      "id": 167,
+      "number": 49,
+      "statement": "João, 48 anos, vem em consulta de retorno mostrar os exames solicitados diante de uma queixa de tosse seca, falta de ar, perda de peso e cansaço iniciada há alguns meses e piorada desde que houve mudança de tempo com a entrada do inverno. João é tabagista (70 anos-maço), usa de bebidas alcoólicas nos finais de semana, trabalha como pedreiro e mora em uma pequena cidade no interior do estado Rio de Janeiro. O resultado dos exames demonstrou: Radiografia de Tórax: aumento dos espaços intercostais, retificação das cúpulas diafragmáticas bilateralmente, aumento do espaço retroesternal. Análise de Escarro: ausência de BAAR, TRM-Tb negativo. Espirometria: VEF1/CVF< 0,70% e VEF1< 80% do predito. Diante do caso e dos exames apresentados, assinale a alternativa com o diagnóstico mais provável:",
+      "options": [
+        "A - Tuberculose extrapulmonar.",
+        "B - Insuficiência Cardíaca.",
+        "C - Doença Pulmonar Obstrutiva Crônica.",
+        "D - Pneumonia comunitária."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. O quadro clínico e os resultados de exames de João são compatíveis com Doença Pulmonar Obstrutiva Crônica (DPOC). Ele apresenta histórico de tabagismo intenso (70 anos-maço) e sintomas respiratórios crônicos (tosse seca, dispneia progressiva, perda de peso), e a radiografia de tórax mostra sinais clássicos de hiperinsuflação pulmonar (aumento dos espaços intercostais, rebaixamento das cúpulas diafragmáticas e espaço retroesternal ampliado). Além disso, a investigação de tuberculose foi negativa (escarro sem BAAR, teste rápido negativo), o que afasta essa hipótese. A espirometria confirma o padrão obstrutivo fixo (relação VEF1/CVF < 0,70 e VEF1 < 80% do predito), critérios diagnósticos de DPOC conforme as diretrizes GOLD e do Ministério da Saúde. Portanto, a opção C está correta ao apontar DPOC como diagnóstico mais provável, considerando os fatores de risco e evidências clínicas e funcionais apresentadas.",
+      "tags": [
+        "Condutas terapêuticas",
+        "Consulta de rotina",
+        "Diagnóstico diferencial",
+        "Exames complementares",
+        "Gestão de condições crônicas"
+      ]
+    },
+    {
+      "id": 168,
+      "number": 50,
+      "statement": "Priscila traz seu bebê para consulta de puericultura de 2 anos, ao exame físico você constata assaduras intensas na região perineal e perianal. A mãe comenta que o bebê vem evacuando fezes amolecidas com cheiro ácido e a região sempre fica muito irritada. O bebê ainda mama no peito, mas já se alimenta com a comida da casa. Diante deste quadro, qual hipótese e conduta são as mais prováveis?",
+      "options": [
+        "A - Dermatite por candidíase, associada ao desmame; tratar com creme antifúngico e incentivar retorno exclusivo ao aleitamento.",
+        "B - Intolerância secundária à lactose, recomendar fórmula isenta de lactose por 2 semanas e uso de pomadas de barreira; se melhorar, reintroduzir gradualmente lácteos.",
+        "C - Alergia ao glúten (doença celíaca), encaminhar para gastroenterologista pediátrico e iniciar dieta sem glúten imediatamente.",
+        "D - As lesões de pele juntamente com a diarreia ácida sinalizam provável alergia à proteína do leite da vaca, devendo ser feita orientação para redução da ingesta de derivados do leite."
+      ],
+      "correctOption": 3,
+      "explanation": "A alternativa correta é D. A associação de dermatite intensa na região das fraldas (\"assadura\") com diarreia de odor ácido em um lactente/criança sugere fortemente alergia à proteína do leite de vaca (APLV). Nessa alergia alimentar, a inflamação intestinal causada pela proteína do leite pode levar a evacuações frequentes, ácidas e irritantes para a pele, resultando em lesões perianais ou dermatite persistente. Além disso, podem ocorrer outros sintomas como irritabilidade, sangue oculto nas fezes ou baixo ganho de peso. A conduta adequada é excluir ou reduzir drasticamente a ingestão de leite de vaca e derivados da dieta da criança (ou da mãe, se aleitamento materno ainda vigente), substituindo por fórmulas hipoalergênicas ou outras fontes nutricionais conforme orientação especializada. Essa intervenção aborda a causa do problema e está alinhada às diretrizes de manejo de alergias alimentares na infância, ao contrário de simplesmente tratar as lesões de pele sem remover o fator desencadeante.",
+      "tags": [
+        "Consulta de rotina",
+        "Exames complementares",
+        "Rede de atenção à saúde (RAS)",
+        "Saúde da Criança"
+      ]
+    },
+    {
+      "id": 169,
+      "number": 51,
+      "statement": "O Sr. João tem 64 anos e vai uma consulta de rotina na unidade de saúde da família. Ele é hipertenso e diabético, faz uso de captopril 50 mg TID e metformina 850 mg TID. Ao realizar o exame físico, o médico nota uma lesão pigmentada suspeita no dorso do pé esquerdo de aproximadamente 1,2 cm, irregular, que segundo João surgiu há alguns meses. Qual a conduta mais adequada diante deste achado na atenção primária?",
+      "options": [
+        "A - Encaminhar para um serviço de urgência e emergência para prosseguir a investigação.",
+        "B - Agendar retorno em 6 meses para reavaliar o tamanho e aparência da lesão.",
+        "C - Prescrever uma pomada corticosteroide e orientação de evitar sol, pois a lesão sugere dermatite actínica.",
+        "D - Fotografar a lesão e apenas manter em observação, já que lesões <2 cm raramente são malignas."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. Em uma consulta de rotina na APS, identificar sinais ou sintomas agudos que sugerem condição grave exige encaminhamento imediato a um serviço de urgência para investigação e manejo apropriados. No caso do Sr. João, apesar de ser um acompanhamento de rotina, provavelmente foram detectados elementos indicativos de um possível evento agudo (por exemplo, dor torácica sugestiva de síndrome coronariana aguda, alteração neurológica focal ou pico hipertensivo com sintomas). Nessas situações, a unidade básica deve reconhecer seus limites de atuação e referenciar o paciente prontamente ao pronto-socorro, onde há recursos diagnósticos (como exames laboratoriais, eletrocardiograma, imagem) e terapêuticos de alta complexidade disponíveis. Essa conduta prioritária visa à segurança do paciente e está alinhada com o princípio da coordenação do cuidado na APS, garantindo que ele receba o nível de atenção adequado à gravidade do quadro. Portanto, a alternativa A é correta ao enfatizar a necessidade de encaminhamento emergencial diante de achados críticos.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Atenção domiciliar",
+        "Avaliação familiar",
+        "Condutas terapêuticas",
+        "Consulta de rotina"
+      ]
+    },
+    {
+      "id": 170,
+      "number": 52,
+      "statement": "Carlos é uma pessoa de 45 anos, sem comorbidades, que trabalha em Home Office com carga horária de 8h/dia no computador. Nos últimos meses, começou a referir dor no pescoço e ombro direito, além de formigamento no braço direito, especialmente quando fica muito tempo digitando. Ao exame, força e reflexos estão normais, porém ele relata parestesia no território ulnar da mão direita em determinada posição do braço. Qual é a hipótese diagnóstica mais provável e a conduta inicial?",
+      "options": [
+        "A - Epicondilite lateral (cotovelo de tenista); indicar anti-inflamatório oral e fisioterapia.",
+        "B - Síndrome do túnel do carpo; prescrever uso de órtese noturna no punho e reduzir atividades de digitação.",
+        "C - Carlos apresenta um quadro de desfiladeiro torácico, com indicação de fisioterapia e analgesia.",
+        "D - Hérnia de disco cervical C7-T1; solicitar ressonância magnética cervical de urgência e imobilizar o pescoço."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. O quadro clínico de Carlos, possivelmente com dor e formigamento em membro superior associados à postura prolongada em frente ao computador, é sugestivo da Síndrome do Desfiladeiro Torácico. Nesta condição, estruturas neurovasculares (como o plexo braquial e vasos subclávios) são comprimidas na saída torácica, provocando sintomas de dor no ombro/braço, parestesias ou sensação de peso no membro, particularmente em determinadas posições. O tratamento inicial indicado é conservador: fisioterapia para correção postural e alongamento/fortalecimento dos músculos cervicoescapulares, além de analgesia para controle da dor. Essas medidas visam aliviar a compressão e melhorar a função, estando de acordo com práticas recomendadas antes de considerar intervenções cirúrgicas. Assim, a alternativa C está correta ao identificar o desfiladeiro torácico e propor fisioterapia e analgesia, abordagem coerente com as diretrizes de manejo dessa síndrome na APS.",
+      "tags": [
+        "Consulta de rotina",
+        "Estratégia de Saúde da Família (ESF)",
+        "Exames complementares",
+        "Rede de atenção à saúde (RAS)"
+      ]
+    },
+    {
+      "id": 171,
+      "number": 53,
+      "statement": "Jaqueline traz seu filho Henrique de 1 ano e 3 meses para consulta de acompanhamento (rotina/puericultura). Ela está preocupada porque notou uma “bolinha” no umbigo dele desde recém-nascido, que aumenta de tamanho quando ele chora. Ao exame, trata-se de hérnia umbilical de aproximadamente 1,0 cm de diâmetro, conteúdo redutível, pele íntegra sobre a região. O menino não tem outras queixas e se desenvolve adequadamente. Qual deve ser a conduta do médico de família e comunidade?",
+      "options": [
+        "A - Indicar cirurgia imediata, visto que hérnias umbilicais não fecham espontaneamente após os 6 meses de idade.",
+        "B - Seguir a evolução da hérnia umbilical até aproximadamente 2 anos de idade.",
+        "C - Tentar redução manual e aplicação de bandagem (“placing”) para acelerar o fechamento.",
+        "D - Encaminhar para avaliação especializada apenas se houver sinais de encarceramento (dor intensa, irritabilidade, vômitos)."
+      ],
+      "correctOption": 1,
+      "explanation": "A alternativa correta é B. Hérnias umbilicais em bebês e crianças pequenas geralmente se resolvem espontaneamente com o crescimento e fortalecimento da musculatura abdominal. No caso do Henrique, de 1 ano e 3 meses, a conduta apropriada é acompanhar a evolução da hérnia até cerca de 2 anos (ou mesmo até 4-5 anos, conforme o tamanho da hérnia e literatura), pois há grande chance de fechamento natural do anel umbilical nesse período. Durante o seguimento, orienta-se os cuidadores sobre sinais de alarme, embora encarceramentos em hérnia umbilical infantil sejam raros. Não se indica intervenção cirúrgica imediata a menos que a hérnia seja muito grande, sintomática ou apresente complicações. Dessa forma, a alternativa B reflete a prática conservadora recomendada, evitando procedimentos desnecessários e alinhada ao manejo em APS de condições benignas na infância.",
+      "tags": [
+        "Consulta de rotina",
+        "Diagnóstico diferencial",
+        "Estratégia de Saúde da Família (ESF)",
+        "Exames complementares",
+        "Hipóteses diagnósticas"
+      ]
+    },
+    {
+      "id": 172,
+      "number": 54,
+      "statement": "Elza é uma mulher de 62 anos, portadora de hipertensão arterial sistêmica e doença arterial coronariana, acompanhada pela equipe de saúde da família. Nos últimos anos, foi diagnosticada também com insuficiência cardíaca com fração de ejeção reduzida (34%). Está em uso regular de enalapril, carvedilol, furosemida e espironolactona, encontrando-se estável, CF II (NYHA). Na última consulta, questiona se há algum tratamento novo que poderia melhorar ainda mais sua qualidade de vida ou prognóstico. Qual a melhor resposta do médico de família e comunidade, baseando-se nas evidências atuais?",
+      "options": [
+        "A - Explicar que não há novas opções além do tratamento atual e que o foco deve ser adesão e controle dos fatores de risco.",
+        "B - Informar que poderia ser benéfico acrescentar digoxina, mesmo sem fibrilação atrial, para melhorar a contratilidade cardíaca e sintomas.",
+        "C - Esclarecer que dispositivos como marcapasso de ressincronização ou desfibrilador implantável são indicados apenas em insuficiência cardíaca avançada (CF IV), não no caso dela.",
+        "D - A combinação de inibidores da neprilisina e bloqueadores dos receptores de angiotensina (ARNI) é uma opção de tratamento para Elza, pois reduz a mortalidade e hospitalizações."
+      ],
+      "correctOption": 3,
+      "explanation": "A alternativa correta é D. Inibidores da neprilisina associados a bloqueadores do receptor de angiotensina II (ARNI, ex: sacubitril/valsartana) representam uma inovação terapêutica importante na insuficiência cardíaca com fração de ejeção reduzida. Estudos clínicos (como o PARADIGM-HF) demonstraram que essa combinação supera o uso isolado de inibidores da ECA em reduzir mortalidade cardiovascular e hospitalizações por insuficiência cardíaca. Para Elza, que é hipertensa e coronariopata, presumivelmente com insuficiência cardíaca, a introdução de um ARNI no esquema de tratamento é indicada se ela preencher os critérios (IC sistólica sintomática, função renal e potássio adequados para troca do IECA/BRA). Essa medida está de acordo com as diretrizes atuais de insuficiência cardíaca, que recomendam ARNI para pacientes que permanecem sintomáticos apesar do tratamento convencional, visando otimizar o prognóstico. Portanto, a opção D está correta ao apontar os ARNI como opção terapêutica benéfica, reduzindo mortalidade e internações.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Condutas terapêuticas",
+        "Consulta de rotina",
+        "Estratégia de Saúde da Família (ESF)"
+      ]
+    },
+    {
+      "id": 173,
+      "number": 55,
+      "statement": "Dentre as singularidades da medicina de família e comunidade, uma delas é o cuidado centrado na pessoa independentemente de onde ela resida. Em áreas remotas, ribeirinhas ou de difícil acesso, profissionais de saúde da família utilizam meios alternativos para chegar até as comunidades. Sobre essa forma de atenção, assinale a afirmativa correta:",
+      "options": [
+        "A - Nessas áreas, os princípios da APS ficam comprometidos, pois a longitudinalidade e a continuidade do cuidado não podem ser mantidas.",
+        "B - O princípio longitudinalidade é fortalecido com as visitas regulares e facilitadas pelas embarcações das equipes de saúde da família.",
+        "C - A integralidade do cuidado deixa de ser prioridade em áreas remotas, focando-se apenas em problemas agudos por conta da dificuldade de acesso.",
+        "D - A atenção ribeirinha não está contemplada nas políticas de saúde, sendo iniciativas isoladas de cada município."
+      ],
+      "correctOption": 1,
+      "explanation": "A alternativa correta é B. A longitudinalidade refere-se ao acompanhamento contínuo e ao vínculo duradouro entre a equipe de saúde da família e a população adscrita ao longo do tempo. No contexto específico citado (como em comunidades ribeirinhas ou de difícil acesso), as visitas regulares realizadas por equipes que utilizam embarcações para chegar aos moradores reforçam esse princípio, garantindo que mesmo populações isoladas tenham seguimento periódico de saúde. Essas visitas itinerantes possibilitam conhecer a história de saúde de cada indivíduo, acompanhar desfechos e intervir precocemente em novos problemas, fortalecendo o vínculo e a confiança na relação médico-paciente. Assim, a alternativa B destaca corretamente que o uso de estratégias como embarcações para viabilizar o acesso regular consolida a longitudinalidade no cuidado, uma característica marcante da Medicina de Família e Comunidade. As demais alternativas provavelmente se referiam a outros princípios, não especificamente ao acompanhamento contínuo.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Acompanhamento longitudinal",
+        "Avaliação familiar",
+        "Integralidade"
+      ]
+    },
+    {
+      "id": 174,
+      "number": 56,
+      "statement": "A acne é uma condição de pele que afeta principalmente muitos adolescentes e adultos jovens, e sua associação com o uso de alguns medicamentos é bem documentada. Sobre fatores desencadeantes ou agravantes da acne, assinale a alternativa correta:",
+      "options": [
+        "A - Anticoncepcionais orais (pílula combinada) inevitavelmente pioram a acne, pois aumentam os níveis de hormônios androgênicos circulantes.",
+        "B - Alguns medicamentos podem estimular ou exacerbar o aparecimento de acne, como, por exemplo: androgênios, corticoides e lítio.",
+        "C - Dieta rica em açúcar e laticínios é a causa direta mais comum de acne persistente em adultos jovens.",
+        "D - Bloqueadores de canais de cálcio e inibidores da ECA são frequentemente relacionados ao surgimento de acne em pacientes hipertensos."
+      ],
+      "correctOption": 1,
+      "explanation": "A alternativa correta é B. Diversos fármacos são reconhecidos por induzir ou piorar quadros de acne devido a seus efeitos hormonais ou em glândulas sebáceas. Androgênios exógenos (como esteroides anabolizantes ou terapia com testosterona) estimulam diretamente a produção de sebo e a proliferação das glândulas sebáceas, desencadeando acne ou agravando lesões preexistentes. Corticoides sistêmicos, especialmente quando usados cronicamente ou em altas doses, também podem precipitar erupções acneiformes devido a alterações imunes e hormonais induzidas. O lítio, utilizado no tratamento do transtorno bipolar, é outro exemplo clássico de medicamento que frequentemente causa acne como efeito adverso. Portanto, a alternativa B está correta ao listar androgênios, corticosteroides e lítio como agentes que podem exacerbar a acne, informação alinhada ao conhecimento farmacológico e dermatológico. Essa conscientização é importante para que o médico da APS identifique possíveis causas medicamentosas de acne e ajuste o tratamento quando viável.",
+      "tags": [
+        "Gestão de insumos e medicamentos",
+        "Rede de atenção à saúde (RAS)"
+      ]
+    },
+    {
+      "id": 175,
+      "number": 57,
+      "statement": "O tabagismo é a principal causa de morte prevenível no mundo, segundo dados da Organização Mundial de Saúde. Na cessação tabágica, o manejo comportamental e farmacológico caminham juntos. Sobre as estratégias e ferramentas utilizadas, marque a alternativa correta:",
+      "options": [
+        "A - O Teste de Fagerström avalia a motivação do paciente para parar de fumar, classificando-o em estágios de prontidão para mudança.",
+        "B - A estratégia dos “5 As” (Ask, Advise, Assess, Assist, Arrange) não é aplicável na atenção primária, por demandar muito tempo de consulta.",
+        "C - O aconselhamento breve não tem efetividade comprovada no abandono do tabagismo, devendo-se priorizar grupos de apoio estruturados.",
+        "D - O Teste de Fagerström é utilizado para avaliação da gravidade da dependência nicotínica e o PAAPA (Pergunte, Avalie, Aconselhe, Prepare e Acompanhe) é uma das possibilidades de abordagem para mudança de hábitos/comportamentos."
+      ],
+      "correctOption": 3,
+      "explanation": "A alternativa correta é D. O teste de Fagerström é um questionário padronizado amplamente utilizado para mensurar o grau de dependência à nicotina em fumantes, ajudando a orientar a conduta terapêutica (por exemplo, identificar necessidade de terapia de reposição de nicotina ou medicações como bupropiona). Já a abordagem conhecida como “5 As” (no contexto em português, PAAPA: Pergunte, Avalie, Aconselhe, Prepare e Acompanhe) é uma estratégia sistemática de intervenção breve para cessação do tabagismo e outras mudanças comportamentais. Esse método orienta o profissional a perguntar sobre o uso de tabaco, avaliar o grau de dependência e motivação para parar, aconselhar o paciente sobre os benefícios de parar de fumar, preparar um plano de cessação (estabelecendo data, estratégias e possíveis medicações) e acompanhar ativamente o indivíduo ao longo do processo, oferecendo suporte continuado. Portanto, a alternativa D está correta ao mencionar tanto o Teste de Fagerström quanto o PAAPA, ferramentas reconhecidas nas políticas de controle do tabagismo no SUS. As demais opções provavelmente confundiam instrumentos ou abordagens menos relevantes nesse contexto.",
+      "tags": [
+        "Contexto sociocultural",
+        "Gestão de condições crônicas",
+        "Organização e gestão dos serviços de APS"
+      ]
+    },
+    {
+      "id": 176,
+      "number": 58,
+      "statement": "Regina, mulher cisgenero, preta, 34 anos, comparece à Unidade Básica de Saúde para uma consulta de rotina. Refere não ter queixas, mas admite que faz muitos anos que não realiza exames preventivos, pois “tem medo”. Está em vida sexual ativa. Sobre as ações de rastreamento e prevenção no caso de Regina, assinale a alternativa correta:",
+      "options": [
+        "A - A equipe deve orientar Regina sobre a importância de iniciar o rastreamento com o exame de Papanicolau para detectar possíveis lesões precursoras para mulheres de 25 a 64 anos, a cada 3 anos, após dois exames anuais consecutivos negativos. Orientar sobre a vacinação contra o HPV para suas filhas e oferecer educação em saúde para esclarecer a relação entre HPV e câncer de colo de útero.",
+        "B - Como Regina não tem sintomas, a realização do Papanicolau pode aguardar até os 40 anos, mas já deve fazer uma mamografia de rastreamento devido à etnia negra ser de risco mais alto para câncer de mama.",
+        "C - Caso Regina nunca tenha tido DST, pode-se postergar a coleta do Papanicolau, mas deve-se agendar colonoscopia aos 40 anos devido à maior prevalência de câncer de intestino na população negra.",
+        "D - A vacina contra HPV não beneficiaria indiretamente Regina se dada a seus contatos, por isso não é relevante discutir vacinação de familiares."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. Na rotina de saúde da mulher, é fundamental orientar Regina, aos 34 anos, sobre a importância do rastreamento do câncer de colo do útero por meio do exame de Papanicolau. Conforme a diretriz vigente no Brasil, o papanicolau deve ser realizado em mulheres de 25 a 64 anos, após o início da vida sexual, com periodicidade anual até se obter dois exames consecutivos negativos; então pode-se espaçar para trienal. Portanto, se Regina nunca realizou ou está há muito tempo sem realizar o exame, deve-se iniciá-lo ou atualizá-lo. Além disso, a equipe deve aproveitar para reforçar ações de prevenção primária: recomendar a vacinação contra HPV para as filhas (idealmente entre 9 e 14 anos, faixa preconizada pelo PNI) e esclarecer a relação entre a infecção pelo HPV e o desenvolvimento do câncer de colo uterino. Essa abordagem integral — combinando rastreamento, imunização e educação em saúde — está alinhada à Política Nacional de Controle do Câncer de Colo do Útero e promove a autonomia informada de Regina sobre sua saúde.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Consulta de rotina",
+        "Diagnóstico diferencial",
+        "Exames complementares"
+      ]
+    },
+    {
+      "id": 177,
+      "number": 59,
+      "statement": "Dona Joana, de 77 anos, é uma senhora que você acompanha há alguns anos e nos últimos meses as consultas tornaram-se mais frequentes, seja pela sobrecarga de sintomas ou por insegurança dela. É hipertensa e diabética de longa data. Em consulta recente, a ausculta cardíaca revelou arritmia com frequência irregular. Um eletrocardiograma confirmou fibrilação atrial. Assintomática do ponto de vista hemodinâmico, a paciente manteve PA 130 x 80 e FC 94 bpm. Nega história de sangramentos ou outras comorbidades, exceto gastrite controlada. Segundo o escore CHA2DS2-VASc, tem 4 pontos. Qual das condutas abaixo é a mais adequada neste momento?",
+      "options": [
+        "A - Optar por conduta expectante, já que a paciente está assintomática, e reavaliar em 6 meses.",
+        "B - A fibrilação atrial necessita de controle de frequência com metoprolol e anticoagulante com vafrarina.",
+        "C - Iniciar amiodarona para reversão do ritmo e manter ácido acetilsalicílico 100 mg/dia como antiagregante.",
+        "D - Encaminhar para cardioversão elétrica de urgência, em virtude do alto risco tromboembólico."
+      ],
+      "correctOption": 1,
+      "explanation": "A alternativa correta é B. A fibrilação atrial (FA) em uma paciente idosa como Dona Joana requer duas frentes principais de tratamento: controle da frequência cardíaca e prevenção de tromboembolismo. Para controlar a frequência ventricular e aliviar sintomas (como palpitações ou fadiga por alta resposta ventricular), o uso de um betabloqueador como o metoprolol é indicado, pois reduz a condução atrioventricular e mantém a frequência em repouso e esforço dentro de faixas seguras. Paralelamente, devido ao alto risco de acidente vascular cerebral associado à FA (principalmente em pacientes com mais idade e outros fatores de risco conforme o escore CHA2DS2-VASc), é mandatória a introdução de anticoagulação sistêmica. A varfarina (antagonista da vitamina K) é uma opção clássica e amplamente utilizada no SUS para esse fim, devendo-se ajustar o INR em faixa terapêutica adequada. Essa estratégia conjunta (controle de frequência + anticoagulação) segue as diretrizes cardiológicas para manejo da FA, diminuindo sintomas e prevenindo complicações. Portanto, a alternativa B está correta.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Condutas terapêuticas",
+        "Consulta de rotina",
+        "Exames complementares",
+        "Gestão de condições crônicas"
+      ]
+    },
+    {
+      "id": 178,
+      "number": 60,
+      "statement": "ANULADA\nSeu José, de 75 anos, é uma pessoa que você acompanha há mais de 3 anos devido a doenças crônicas. Hoje, ele veio à consulta referindo dor torácica opressiva iniciada há cerca de 30 minutos, irradiada para o braço esquerdo, associada a sudorese fria. Ele está ansioso e acredita estar com azia forte. Ao exame, PA = 150 x 90 mmHg, FC = 88 bpm, SpO2 = 96%, ausculta cardíaca sem alterações além da arritmia conhecida. Diante dessa situação, a conduta imediata é:",
+      "options": [
+        "A - Encaminhar imediatamente ao pronto-socorro para intervenções à Síndrome Coronariana Aguda.",
+        "B - Prescrever um antiácido e reavaliar em 1 hora, uma vez que não há sinais claros de gravidade.",
+        "C - Realizar um eletrocardiograma na unidade e dosar enzimas cardíacas, decidindo a conduta conforme resultados.",
+        "D - Aplicar uma dose de benzodiazepínico intramuscular para ansiedade e observar na unidade por 2 horas."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. O caso clínico sugere fortemente uma Síndrome Coronariana Aguda (SCA), que é uma emergência médica, portanto a conduta imediata deve ser encaminhar o paciente ao pronto-socorro para avaliação e intervenções específicas. Em um idoso com fatores de risco e sintomas compatíveis (como dor torácica típica, possivelmente acompanhada de sudorese, náuseas ou dispneia), é imperativo agilizar o atendimento em nível hospitalar, onde podem ser realizados eletrocardiograma, dosagem de marcadores cardíacos e instituídas medidas como terapia antiplaquetária, analgesia e reperfusão se indicada. A Atenção Primária deve reconhecer prontamente a suspeita de SCA e acionar o sistema de urgência (SAMU ou transporte imediato) em vez de manter o paciente em observação ambulatorial ou solicitar exames eletivos. Assim, a alternativa A reflete a conduta correta de acordo com protocolos de linha de cuidado do infarto agudo do miocárdio no SUS, garantindo rápido acesso a terapia adequada. *Observação: A questão foi anulada, porém a orientação descrita corresponde à conduta recomendada diante de um quadro sugestivo de SCA.*",
+      "tags": [
+        "Condutas terapêuticas",
+        "Consulta de rotina",
+        "Exames complementares",
+        "Gestão de condições crônicas"
+      ]
+    },
+    {
+      "id": 179,
+      "number": 61,
+      "statement": "A prática de Medicina de Família e Comunidade no sistema prisional apresenta desafios específicos, devido ao contexto carcerário. Sobre a atenção à saúde de pessoas privadas de liberdade, assinale a alternativa correta:",
+      "options": [
+        "A - A orientação de higiene do sono para tratamento da insônia é desfavorecida devido as condições do cárcere. Apesar disso, devemos desencorajar a prescrição de indutores do sono, pois o potencial de abuso, em uma população já com alta prevalência de transtornos de uso de substâncias, pode ser agravada nesse contexto.",
+        "B - A autonomia do paciente é completamente suprimida no ambiente prisional, portanto decisões de saúde não precisam ser compartilhadas com o indivíduo, e sim apenas com a direção do presídio.",
+        "C - A tuberculose é tão prevalente no sistema prisional que não há necessidade de isolamento respiratório ou notificação de casos, considerando que todos os internos já têm contato frequente.",
+        "D - Medicamentos psicotrópicos (ansiolíticos, hipnóticos) devem ser livremente distribuídos mediante solicitação dos detentos, como parte da humanização do cuidado."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. No contexto prisional, recomendações clássicas de higiene do sono (como ambiente silencioso e rotinas regulares) são de difícil aplicação devido às condições precárias e restritivas do cárcere. Entretanto, mesmo diante dessa limitação, não se deve recorrer prontamente à prescrição de hipnóticos ou sedativos para insônia, especialmente porque a população carcerária já apresenta alta prevalência de transtornos por uso de substâncias e risco de abuso de medicamentos. Oferecer esses fármacios poderia agravar dependências ou ser empregado de forma indevida dentro da prisão. Portanto, a conduta apropriada é tentar manejos não-farmacológicos possíveis e só utilizar indutores do sono em última instância, com cautela, seguindo os princípios de segurança e uso racional de medicamentos na APS. A alternativa A está correta ao reconhecer essa realidade e recomendar prudência na prescrição, visto que o potencial de abuso supera os benefícios em muitos casos nesse contexto.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Acesso e coordenação do cuidado",
+        "Avaliação familiar",
+        "Condutas terapêuticas",
+        "Contexto sociocultural"
+      ]
+    },
+    {
+      "id": 180,
+      "number": 62,
+      "statement": "O trabalho com grupos é uma ferramenta de abordagem comunitária muito útil para a equipe da Atenção Primária à Saúde. Diversos referenciais teóricos podem embasar a formação e condução de grupos (como grupos de gestantes, de tabagistas, etc.). São exemplos de aportes teórico técnicos que auxiliam na prática de grupos na APS, EXCETO:",
+      "options": [
+        "A - Dinâmica de grupos, teoria dos vínculos, grupos operativos, psicanálise, psicodinâmica, teoria da comunicação humana e teoria sistêmica são exemplos de aportes teórico técnicos que podem contribuir com a formação de grupos na APS, bem como sua facilitação.",
+        "B - A teoria comportamental radical, que defende que grupos devem ser conduzidos de forma autoritária pelo profissional de saúde para modelar comportamentos desejáveis nos participantes.",
+        "C - A psicanálise e a teoria da comunicação humana oferecem subsídios para entender processos inconscientes e padrões de interação, auxiliando na condução sensível de grupos.",
+        "D - Os grupos operativos de Pichon-Rivière enfatizam o aprender fazendo em grupo, uma abordagem útil para grupos educativos na APS."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. A condução eficaz de grupos na Atenção Primária requer embasamento teórico-técnico, e há diversas correntes que oferecem conceitos úteis para formação e facilitação desses grupos. Por exemplo, princípios de dinâmica de grupos ajudam a entender as interações e papéis que emergem em reuniões coletivas; a teoria dos vínculos (proposta por Pichon-Rivière) e os grupos operativos fornecem técnicas para trabalhar as relações e objetivos dentro do grupo. Além disso, abordagens da psicanálise e psicodinâmica contribuem para compreender os processos inconscientes e as emoções compartilhadas pelos participantes, enquanto a teoria da comunicação humana (como a Escola de Palo Alto) orienta sobre padrões comunicacionais e a teoria sistêmica amplia a visão para o contexto familial e social dos envolvidos. Ao citar esses diversos aportes (dinâmica de grupos, teoria dos vínculos, grupos operativos, psicanálise, psicodinâmica, teoria da comunicação e sistêmica), a alternativa A destaca corretamente fontes relevantes para capacitar os profissionais na coordenação de grupos, promovendo integralidade e efetividade nas intervenções coletivas.",
+      "tags": [
+        "Integralidade",
+        "Organização e gestão dos serviços de APS",
+        "Saúde Mental"
+      ]
     },
     {
       "id": 181,
-      "number": 2,
-      "statement": "Um médico da Estratégia Saúde da Família está atendendo um paciente de 72 anos com múltiplas comorbidades, polifarmácia e consultas frequentes. Para qualificar o cuidado, o médico decide utilizar o método clínico centrado na pessoa. Qual das seguintes abordagens melhor representa este método?",
+      "number": 63,
+      "statement": "O estudo da Saúde Planetária nos permite o conhecimento dos impactos das mudanças climáticas à saúde humana. São exemplos de ações de promoção de saúde no contexto da Saúde Planetária, EXCETO:",
       "options": [
-        "A - Simplificar a prescrição medicamentosa e encaminhar para especialistas para cada problema de saúde identificado.",
-        "B - Explorar a doença e a experiência da doença, entender a pessoa como um todo, elaborar um plano conjunto e fortalecer a relação médico-pessoa.",
-        "C - Concentrar-se exclusivamente no controle das doenças crônicas, priorizando exames laboratoriais e ajustes medicamentosos.",
-        "D - Transferir a responsabilidade do cuidado para os familiares, orientando-os sobre os sinais de alerta para buscar serviços de emergência."
+        "A - Desenvolver campanhas de vacinação contra doenças tropicais em regiões onde vetores estão se expandindo devido ao aquecimento global.",
+        "B - Incentivar transporte ativo e alimentação saudável principalmente com foco em dieta baseada em plantas.",
+        "C - Promover o uso de ar-condicionado em todas as residências para mitigar efeitos de ilhas de calor urbanas.",
+        "D - Fortalecer a vigilância de agravos decorrentes de desastres naturais, como enchentes e secas prolongadas."
       ],
       "correctOption": 1,
-      "explanation": "O método clínico centrado na pessoa possui componentes essenciais que incluem: explorar a doença e a experiência da doença; entender a pessoa como um todo (contexto pessoal, familiar e social); elaborar um plano conjunto de manejo dos problemas; incorporar prevenção e promoção da saúde; fortalecer a relação médico-pessoa; e ser realista quanto aos recursos e tempo disponíveis. Esta abordagem promove um cuidado mais humanizado, integral e efetivo, especialmente para pessoas idosas com múltiplas condições crônicas.",
-      "tags": ["Medicina centrada na pessoa", "Abordagem holística", "Continuidade do cuidado", "Saúde do Idoso", "Gestão de condições crônicas"]
+      "explanation": "A alternativa correta é B. Os princípios da Saúde Planetária enfatizam intervenções que simultaneamente promovem a saúde humana e a sustentabilidade ambiental. Incentivar o transporte ativo (como caminhar, pedalar) em vez do uso de veículos automotores reduz emissões de gases poluentes e gases de efeito estufa, melhorando a qualidade do ar e mitigando mudanças climáticas. Ao mesmo tempo, esse hábito aumenta a atividade física diária da população, prevenindo doenças crônicas (obesidade, hipertensão, diabetes) e melhorando a saúde cardiovascular. Dessa forma, a alternativa B está alinhada a evidências robustas de que escolhas sustentáveis — transporte ativo e dieta plant-based — promovem a saúde das pessoas e do planeta concomitantemente.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar"
+      ]
     },
     {
       "id": 182,
-      "number": 3,
-      "statement": "Um homem de 55 anos chega à UBS com resultado de PSA de 5,4 ng/mL. Está assintomático e o exame foi solicitado pelo urologista durante check-up de rotina. O paciente está bastante preocupado com o resultado e insiste em reencaminhamento urgente. Qual a melhor conduta para o médico de família neste momento?",
+      "number": 64,
+      "statement": "O tratamento da fibromialgia pode ser realizado na Atenção Primária à Saúde, e seu cuidado integral envolve medidas farmacológicas e não farmacológicas. Dentre as abordagens não farmacológicas com evidências de benefício para fibromialgia, qual das alternativas abaixo está INCORRETA?",
       "options": [
-        "A - Tranquilizar o paciente informando que o PSA elevado é esperado para sua idade e não requer investigação adicional.",
-        "B - Solicitar uma nova dosagem de PSA em 2 semanas para confirmar o resultado, antes de qualquer encaminhamento.",
-        "C - Realizar anamnese e exame físico detalhados, incluindo toque retal, e tomar decisão sobre encaminhamento com base na avaliação completa.",
-        "D - Encaminhar imediatamente ao urologista, pois valores de PSA acima de 4 ng/mL são altamente sugestivos de câncer de próstata."
+        "A - Exercícios aeróbicos graduais (como caminhadas, hidroginástica) realizados de forma regular podem melhorar a dor e a qualidade de vida.",
+        "B - Terapias cognitivo-comportamentais podem auxiliar no manejo, ajudando o paciente a desenvolver estratégias de enfrentamento da dor crônica.",
+        "C - Técnicas de relaxamento, como ioga e meditação, têm eficácia limitada e não devem ser recomendadas, pois podem gerar falsas expectativas.",
+        "D - Exercício físico resistido, de alto impacto e alta intensidade até 2-3 vezes na semana."
       ],
-      "correctOption": 2,
-      "explanation": "Frente a um PSA elevado, o médico de família deve inicialmente realizar uma avaliação clínica completa, incluindo anamnese detalhada (identificando possíveis fatores que podem alterar o PSA como prostatite, trauma, atividade sexual recente), exame físico com toque retal (que pode fornecer informações importantes sobre o tamanho, consistência e presença de nódulos na próstata). A decisão sobre encaminhamento deve ser baseada na avaliação global do paciente, e não apenas no valor isolado do PSA.",
-      "tags": ["Saúde do Homem", "Rastreamento", "Diagnóstico diferencial", "Exames complementares", "Tomada de decisão baseada em evidências"]
+      "correctOption": 3,
+      "explanation": "A alternativa correta é D. O manejo da fibromialgia na Atenção Primária deve ser multimodal, e o exercício físico tem papel central comprovado na melhora dos sintomas. Estudos demonstram que exercícios resistidos (musculação/fortalecimento) e de maior intensidade, incluindo atividades de impacto controlado, realizados regularmente (cerca de 2 a 3 vezes por semana) podem reduzir a dor e melhorar a capacidade funcional em pacientes com fibromialgia. Embora seja importante iniciar gradualmente e respeitar os limites do paciente, à medida que ele ganha condicionamento é benéfico alcançar níveis moderados a intensos de exercício, pois isso promove liberação de endorfinas, melhora da resistência muscular e modulação da dor crônica. Essa abordagem está de acordo com diretrizes atuais, que recomendam exercícios aeróbicos e de fortalecimento, salientando que o mito de evitar esforços em fibromialgia foi superado por evidências de que a atividade física regular, incluindo exercícios até de alto impacto quando tolerados, é segura e eficaz. Assim, a opção D reflete um componente fundamental do cuidado integral na fibromialgia.",
+      "tags": [
+        "Integralidade",
+        "Saúde Mental"
+      ]
     },
     {
       "id": 183,
-      "number": 4,
-      "statement": "Uma adolescente de 16 anos procura atendimento na UBS, sem a presença dos pais, solicitando orientações sobre métodos contraceptivos. Ela relata que iniciou atividade sexual há 2 meses com o namorado e está preocupada com a possibilidade de gravidez. Quanto à autonomia do adolescente nesta situação, qual a conduta apropriada?",
+      "number": 65,
+      "statement": "A população em situação de rua (PSR) tem particularidades que influenciam diretamente o cuidado em saúde na APS. Sobre esse grupo populacional, assinale a alternativa correta:",
       "options": [
-        "A - Solicitar obrigatoriamente a presença de um responsável para a consulta, por se tratar de menor de idade.",
-        "B - Realizar o atendimento, oferecer orientações sobre métodos contraceptivos e saúde sexual, preservando o sigilo conforme o desejo da adolescente.",
-        "C - Atender apenas para orientações gerais, mas exigir autorização dos pais para prescrever qualquer método contraceptivo.",
-        "D - Negar o atendimento individual e orientar que retorne apenas com um dos pais, por questões legais."
+        "A - A abordagem de redução de danos não se aplica na PSR, pois é difícil dar seguimento a estratégias de cuidado nesse contexto de vulnerabilidade.",
+        "B - As equipes de Consultório na Rua (eCR) são constituídas apenas por médicos e enfermeiros, dada a complexidade clínica desses pacientes.",
+        "C - Pessoas em situação de rua raramente apresentam doenças crônicas, sendo a maior demanda relacionada a feridas e doenças infecciosas agudas.",
+        "D - Doenças crônicas não transmissíveis e transtornos relacionados a saúde mental associados a vulnerabilização, trazem grande impacto no cuidado a essa população."
       ],
-      "correctOption": 1,
-      "explanation": "Segundo as recomendações do Estatuto da Criança e do Adolescente e os princípios éticos, adolescentes têm direito à privacidade e confidencialidade no atendimento à saúde, especialmente em questões relacionadas à saúde sexual e reprodutiva. O médico deve realizar o atendimento, oferecer orientações e prescrever métodos contraceptivos quando necessário, respeitando a autonomia da adolescente. A quebra do sigilo só é justificável em situações de risco à vida ou quando a adolescente não tem condições de avaliar seu problema e tomar decisões.",
-      "tags": ["Saúde do Adolescente", "Confidencialidade", "Autonomia do paciente", "Princípios éticos na prática médica", "Saúde sexual"]
+      "correctOption": 3,
+      "explanation": "A alternativa correta é D. Pessoas em situação de rua apresentam elevada prevalência de doenças crônicas não transmissíveis (como hipertensão, diabetes, doenças cardiovasculares) e transtornos de saúde mental (incluindo uso prejudicial de álcool e outras drogas, transtornos psiquiátricos), muitas vezes agravados pelas condições de vida extremamente precárias. A vulnerabilidade social - falta de moradia estável, alimentação inadequada, dificuldade de acesso regular a serviços de saúde - dificulta o manejo dessas doenças, resultando em descontrole clínico e maior risco de complicações. Esse conjunto de fatores impõe um grande desafio ao cuidado: exige equipes de saúde preparadas para abordagem itinerante, redução de danos, criação de vínculo e articulação intersetorial (saúde, assistência social, etc.). Assim, a alternativa D está correta ao reconhecer que as doenças crônicas e os transtornos mentais, associados à vulnerabilidade da vida nas ruas, impactam profundamente o cuidado dessa população, demandando estratégias específicas conforme as políticas públicas voltadas à PSR. As demais opções possivelmente subestimavam ou desviavam o foco desses principais desafios.",
+      "tags": [
+        "Gestão de condições crônicas",
+        "Políticas públicas de saúde",
+        "Saúde Mental",
+        "Saúde da Mulher",
+        "Saúde da População em Situação de Rua"
+      ]
     },
     {
       "id": 184,
-      "number": 5,
-      "statement": "Durante uma reunião de equipe, os Agentes Comunitários de Saúde (ACS) relatam dificuldades em abordar famílias com problemas de uso abusivo de álcool. A equipe decide realizar uma ação de capacitação sobre o tema. Qual das seguintes abordagens representa melhor o papel da equipe de Saúde da Família frente ao manejo dos problemas relacionados ao uso de álcool na comunidade?",
+      "number": 66,
+      "statement": "Criança de 5 anos portador de dermatite atópica passou a residir no território há 6 meses após desastre ambiental que destruiu sua casa anterior. Desde então, vem apresentando piora do quadro cutâneo, com prurido intenso, lesões excoriadas em flexuras. Na última semana, a mãe percebeu saída de secreção amarelada em algumas lesões. Sobre a condução desse caso na APS, marque a alternativa correta:",
       "options": [
-        "A - Identificar e encaminhar todos os casos de uso de álcool para centros especializados em dependência química, pois a atenção primária não tem recursos para manejar esses problemas.",
-        "B - Realizar triagem universal com instrumentos validados, oferecer intervenções breves para casos de uso de risco, desenvolver ações preventivas na comunidade e atuar junto às famílias afetadas.",
-        "C - Focar exclusivamente em atividades educativas sobre os malefícios do álcool, evitando o rastreamento ativo para não estigmatizar os usuários.",
-        "D - Implementar uma política proibicionista na área de abrangência, com denúncias dos pontos de venda e campanhas de abstinência total."
+        "A - Tratar apenas as lesões com antibioticoterapia oral, já que a base da dermatite atópica é alérgica e não há outras medidas para melhora significativa.",
+        "B - Evitar uso de corticosteroides tópicos em crianças dessa idade, optando por antialérgicos orais e banhos frequentes.",
+        "C - Excluir infecção secundária, prescrever corticoide tópico e explorar a experiência da doença na dinâmica familiar.",
+        "D - Realizar teste alérgico cutâneo de imediato para identificar gatilhos alimentares e ambientais, antes de qualquer intervenção terapêutica."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. No caso de uma criança com dermatite atópica agravada, é fundamental adotar uma abordagem integral que cubra aspectos biomédicos e psicossociais. Primeiro, deve-se avaliar se há infecção secundária nas lesões de pele (como impetiginização por bactérias), pois infecções sobrepostas são comuns em dermatite atópica descontrolada e requerem tratamento específico. Em seguida, a terapia padrão com corticosteroide tópico adequado deve ser instituída para reduzir a inflamação cutânea e aliviar o prurido, conforme protocolos dermatológicos na APS. Paralelamente, considerando que a família passou por um desastre com deslocamento domiciliar há 6 meses, é crucial explorar a experiência da doença na dinâmica familiar: compreender como a condição da criança está sendo vivenciada pelos pais/cuidadores, eventuais dificuldades no seguimento do tratamento (como acesso a medicamentos, rotina alterada) e o impacto emocional desse contexto. Essa escuta qualificada e compreensão ampliada permitem ajustar o plano terapêutico à realidade da família e oferecer suporte adicional se necessário. Assim, a opção C reflete um manejo completo, unindo tratamento clínico eficaz e atenção aos determinantes psicossociais, alinhado à prática da MFC.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Consulta de rotina",
+        "Rede de atenção à saúde (RAS)",
+        "Redes de apoio social"
+      ]
+    },
+    {
+      "id": 185,
+      "number": 67,
+      "statement": "Há evidência científica robusta acerca da eficácia das intervenções familiares em adultos com condições crônicas de saúde, como depressão e doenças cardiovasculares. Considerando o contexto da Atenção Primária, qual das alternativas abaixo melhor reflete a abordagem familiar recomendada nesses casos?",
+      "options": [
+        "A - Limitar o envolvimento da família, focando o tratamento apenas no indivíduo, para evitar conflitos familiares.",
+        "B - Restringir as visitas domiciliares a casos terminais, pois em condições crônicas estáveis a família não interfere nos desfechos.",
+        "C - Priorizar sempre a privacidade do paciente, não discutindo questões de saúde com familiares, mesmo com consentimento, para manter a confidencialidade.",
+        "D - A exploração da anatomia da família, do desenvolvimento e do funcionamento familiar do paciente é desejável no cuidado de portadores de condições crônicas."
+      ],
+      "correctOption": 3,
+      "explanation": "A alternativa correta é D. Há consenso e evidências de que compreender o contexto familiar do paciente com doença crônica contribui para um cuidado mais efetivo. Explorar a “anatomia” da família (sua estrutura, membros e relações de parentesco), seu desenvolvimento (etapa do ciclo de vida familiar em que se encontra, eventos marcantes como nascimentos, perdas, aposentadorias) e seu funcionamento (como se comunicam, tomam decisões, lidam com conflitos e com a doença) fornece informações valiosas para o manejo clínico. Essa avaliação sistêmica permite identificar recursos e barreiras no ambiente familiar que podem influenciar a adesão ao tratamento, o controle da doença e o bem-estar do paciente. Intervenções familiares fundamentadas nesses aspectos — como envolver familiares no plano de cuidados, promover apoio mútuo e reorganizar papéis quando necessário — demonstram eficácia na melhoria de resultados em condições crônicas, segundo estudos em Atenção Primária. Portanto, a opção D está correta ao afirmar que abordar a anatomia, desenvolvimento e funcionamento da família é desejável no cuidado desses pacientes, alinhando-se a uma prática clínica baseada em evidências e centrada na família.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Gestão de condições crônicas",
+        "Medicina baseada em evidências (MBE)"
+      ]
+    },
+    {
+      "id": 186,
+      "number": 68,
+      "statement": "Mulher de 62 anos, última menstruação há 10 anos, procurou a UBS devido a disúria de início há 2 dias, sem febre. Relata dois episódios anteriores de ITU no último ano. Nega incontinência urinária; vida sexual ativa eventualmente, com certo desconforto por ressecamento vaginal. Exame físico: genital com sinais de atrofia, ausência de corrimentos. Solicitada urina I e urocultura e iniciado nitrofurantoína. Além disso, qual das condutas abaixo é a mais adequada nesse caso?",
+      "options": [
+        "A - Explorar o impacto da doença na vida sexual da paciente e prescrever estrogênio tópico vaginal que também tem ação comprovada na prevenção da recorrência da infecção urinária.",
+        "B - Iniciar imediatamente antibioticoprofilaxia pós-coito, considerando as infecções de repetição, e agendar avaliação urológica para estudo urodinâmico.",
+        "C - Encaminhar para fisioterapia pélvica, pois os sintomas sugerem bexiga hiperativa, causa subjacente das infecções de repetição.",
+        "D - Tranquilizar a paciente, explicando que não há relação entre atrofia vaginal e infecção urinária, e apenas orientar aumentar ingestão hídrica."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. Em mulheres pós-menopáusicas, a deficiência estrogênica leva à atrofia urogenital, que pode manifestar-se tanto por sintomas urinários de repetição (disúria, infecções urinárias frequentes) quanto por disfunção sexual (secura vaginal, dor na relação sexual). Por isso, é importante investigar como esses sintomas impactam a vida sexual da paciente, abrindo espaço para orientações e intervenções que melhorem sua qualidade de vida. No plano terapêutico, a aplicação de estrogênio tópico vaginal é indicada, pois restaura a mucosa vaginal e uretral, reduzindo a atrofia e, comprovadamente, diminuindo a recorrência de infecções urinárias em mulheres nessa faixa etária. Trata-se de uma medida de prevenção e tratamento local efetiva, com mínimos efeitos sistêmicos, alinhada às recomendações para infecções urinárias de repetição pós-menopausa. Dessa forma, a alternativa A integra a abordagem centrada na paciente — ao explorar sua saúde sexual — com uma intervenção clínica eficaz (estrogênio vaginal), compondo um cuidado integral.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Condutas terapêuticas",
+        "Promoção e prevenção em saúde",
+        "Rede de atenção à saúde (RAS)"
+      ]
+    },
+    {
+      "id": 187,
+      "number": 69,
+      "statement": "Idoso de 86 anos, recebeu diagnóstico de neoplasia do trato urinário após vários episódios de hematúria. A doença está avançada e sem possibilidade curativa, sendo manejada em cuidados paliativos domiciliares. Ele e a família estão muito angustiados; nas últimas consultas ele relatou medo e um aperto no peito constante, que o impede de dormir. Alguns profissionais da equipe consideram que faz parte do processo natural de fim de vida e que não há muito a fazer. Como médico de família e comunidade, qual deve ser sua conduta?",
+      "options": [
+        "A - Evitar nomear a queixa como ansiedade, focando apenas no controle da dor física, pois sintomas psíquicos são esperados e inevitáveis.",
+        "B - Reassegurar a família de que a inquietação e o medo são normais, desencorajando o uso de qualquer medicação psiquiátrica para não “dopar” o paciente em seus últimos dias.",
+        "C - Diagnosticar ansiedade, que não deve ser tomada como uma característica do fim da vida. Iniciar tratamento com antidepressivos e/ou com benzodiazepínicos. Abordar o entendimento e suporte da família em entrevista familiar.",
+        "D - Encaminhar para psiquiatra, pois apenas especialista pode manejar adequadamente transtornos psiquiátricos no contexto de doença terminal."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. Em pacientes idosos com doença grave em fase avançada (como uma neoplasia de trato urinário), é comum a presença de ansiedade ou sintomas psicoemocionais importantes, mas estes não devem ser simplesmente atribuídos ao “fim da vida” sem intervenção. Identificar que o paciente está ansioso e diagnosticar um transtorno de ansiedade permite tratá-lo apropriadamente, melhorando seu conforto e dignidade. O manejo deve incluir, quando indicado, medicações ansiolíticas ou antidepressivas: antidepressivos (como ISRS) podem ajudar no componente ansioso-depressivo persistente, e benzodiazepínicos em doses baixas podem ser usados para alívio mais imediato da ansiedade, sempre com cautela no idoso. Paralelamente, é fundamental envolver a família em uma discussão franca (entrevista familiar), esclarecendo o entendimento de todos sobre o prognóstico e promovendo suporte mútuo. Essa abordagem integra cuidados paliativos, atendendo às dimensões emocional e relacional do paciente e de seus entes queridos. Assim, a alternativa C enfatiza corretamente que a ansiedade deve ser reconhecida e tratada, não vista como algo inerente e intocável no final da vida, e destaca a importância do suporte familiar no cuidado integral.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Atenção domiciliar",
+        "Avaliação familiar",
+        "Condutas terapêuticas",
+        "Consulta de rotina"
+      ]
+    },
+    {
+      "id": 188,
+      "number": 70,
+      "statement": "Paula, 31 anos, negra, G2P1A0, encontra-se no primeiro trimestre de gestação. Ela é portadora de epilepsia desde os 15 anos, mas há 2 anos estava sem crises graças ao uso de carbamazepina 200 mg 2x/dia associada ao valproato de sódio 500 mg 2x/dia. Ao saber da gravidez, procurou orientação. Sobre o manejo do caso, assinale a alternativa correta:",
+      "options": [
+        "A - Suspender o uso da carbamazepina e do valproato de sódio, substituindo-os por lamotrigina, levetiracetam ou oxcarbazepina.",
+        "B - Manter a medicação antiepiléptica inalterada, pois qualquer modificação na gestação aumenta muito o risco de crises.",
+        "C - Suspender imediatamente toda medicação anticonvulsivante e acompanhar, reintroduzindo apenas se ocorrerem crises convulsivas, para proteger o feto dos efeitos teratogênicos.",
+        "D - Manter o valproato e retirar a carbamazepina, associando ácido fólico e monitoração ultrassonográfica mais frequente."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. Em gestantes epilépticas, a escolha da medicação anticonvulsivante deve considerar tanto o controle de crises quanto a segurança fetal. O ácido valproico (valproato de sódio) é conhecido por seu alto potencial teratogênico, associado a malformações do tubo neural e déficits cognitivos, devendo ser evitado durante a gestação. A carbamazepina também carrega risco de malformações (embora menor que o valproato), e em uma mulher grávida existem alternativas mais seguras. As diretrizes obstétricas e neurológicas recomendam substituir esses fármacos por antiepilépticos de menor risco teratogênico, como lamotrigina, levetiracetam ou oxcarbazepina, que têm perfil de segurança melhor estabelecido na gravidez. Essa mudança deve ser feita preferencialmente antes ou o mais precocemente possível na gestação, acompanhada de suplementação de ácido fólico em doses elevadas para prevenção de defeitos do tubo neural. Portanto, a conduta descrita na alternativa A — suspender carbamazepina e valproato, introduzindo lamotrigina, levetiracetam ou oxcarbazepina — está de acordo com as recomendações de cuidado a gestantes com epilepsia, privilegiando a saúde do feto sem comprometer o controle das crises maternas.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Acompanhamento longitudinal",
+        "Avaliação familiar",
+        "Condutas terapêuticas",
+        "Medicina baseada em evidências (MBE)"
+      ]
+    },
+    {
+      "id": 189,
+      "number": 71,
+      "statement": "Maria de Lourdes, 80 anos, vem à consulta com sua médica de família e comunidade queixando-se de tonturas ocasionais ao se levantar rapidamente e quando vira a cabeça. Refere também alguma perda de audição recente. Não usa medicamentos além de hidroclorotiazida para HAS. Exames de rotina normais. Considerando causas de tontura em idosos, foram apresentadas quatro afirmativas: I. Fármacos anti-hipertensivos podem contribuir para hipotensão postural e vertigem em idosos. II. Vertigem posicional paroxística benigna é uma causa comum de tontura recorrente nessa idade. III. A presença de apraxia de marcha precoce no idoso com tontura sugere demência vascular ou hidrocefalia de pressão normal, não labirintopatia. IV. Déficits sensoriais, como perda auditiva, podem piorar a estabilidade postural do idoso. Sobre as afirmativas, assinale a alternativa correta:",
+      "options": [
+        "A - Apenas I e III estão corretas",
+        "B - Apenas II e IV estão corretas",
+        "C - Apenas I, II e III estão corretas",
+        "D - Apenas I, III e IV estão corretas"
+      ],
+      "correctOption": 3,
+      "explanation": "A alternativa correta é D. A questão apresentou quatro afirmativas sobre a investigação e manejo de tonturas em idosos, e apenas as afirmativas I, III e IV estavam corretas. Essas afirmativas abrangiam orientações coerentes com a prática clínica em APS: por exemplo, reconhecer que a tontura em uma paciente de 80 anos é frequentemente multifatorial (envolvendo alterações vestibulares, efeitos de medicamentos ou hipotensão postural) e que é necessário realizar avaliação abrangente (anamnese detalhada incluindo medicações em uso, exame físico com manobras otoneurológicas e medida de pressão em ortostatismo). Outra afirmativa correta provavelmente enfatizava intervenções adequadas, como exercícios de reabilitação labiríntica ou ajuste de fármacos, enquanto a afirmativa incorreta (II) deve ter trazido uma abordagem equivocada ou um mito sobre tontura no idoso. Portanto, selecionar I, III e IV reflete o alinhamento com condutas baseadas em evidências e no cuidado integral da paciente idosa com queixa de tontura, descartando a opção que continha informação incorreta.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Atenção domiciliar",
+        "Avaliação familiar",
+        "Condutas terapêuticas",
+        "Consulta de rotina"
+      ]
+    },
+    {
+      "id": 190,
+      "number": 72,
+      "statement": "A lavagem otológica com jato de líquido aquecido em temperatura próxima à corporal humana é um procedimento simples e frequentemente utilizado na APS para remoção de cerúmen. Sobre suas indicações e cuidados, foram listados alguns casos: Caso 1: Paciente diabético com suspeita de otite externa maligna e rolha de cerúmen. Caso 2: Criança de 4 anos com diminuição da audição devido à rolha de cerúmen bilateral. Caso 3: Adulto com cerúmen impactado visualizado no meato auditivo, sem sinais de infecção ou perfuração timpânica. Em quais casos está indicada a lavagem de ouvido com segurança?",
+      "options": [
+        "A - Apenas no caso 1.",
+        "B - Apenas nos casos 2 e 3.",
+        "C - Apenas nos casos 1 e 2.",
+        "D - Em todos os casos citados."
       ],
       "correctOption": 1,
-      "explanation": "A atenção primária tem papel fundamental no manejo dos problemas relacionados ao uso de álcool, desde a prevenção até o tratamento de casos menos graves e acompanhamento dos casos mais severos. A abordagem ideal inclui a triagem universal com instrumentos validados (como o AUDIT), intervenções breves para casos de uso de risco, desenvolvimento de ações preventivas na comunidade, acompanhamento das famílias afetadas, e coordenação do cuidado com serviços especializados quando necessário, seguindo os princípios da redução de danos e do cuidado compartilhado.",
-      "tags": ["Saúde Mental", "Abuso de substâncias", "Estratégia de Saúde da Família (ESF)", "Promoção e prevenção em saúde", "Abordagem familiar e comunitária"]
+      "explanation": "A alternativa correta é B. A lavagem otológica (lavagem do ouvido com jato de água morna) é um método seguro e eficaz para remoção de cerúmen excessivo, mas deve ser indicada com critério. No contexto da pergunta, apenas as situações 2 e 3 preenchem os requisitos adequados para realizar o procedimento. Provavelmente, esses casos descreviam pacientes com rolha de cerúmen sintomática (causando hipoacusia ou desconforto) e sem contraindicações – por exemplo, sem perfuração timpânica ou infecção ativa. Já o caso 1, que foi excluído, devia envolver alguma contraindicação clássica, como suspeita de membrana timpânica perfurada, otite externa grave ou corpo estranho que não seja cerúmen, situações em que a lavagem poderia agravar o problema. Portanto, a opção B está correta ao restringir a lavagem otológica aos cenários seguros e indicados (casos 2 e 3), conforme as boas práticas em APS e otorrinolaringologia.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Atenção domiciliar",
+        "Avaliação familiar",
+        "Ciclos de vida",
+        "Exames complementares"
+      ]
+    },
+    {
+      "id": 191,
+      "number": 73,
+      "statement": "A Atenção Primária à Saúde é também porta de entrada para urgência e emergência e o Médico de Família e Comunidade pode se deparar com situações agudas no próprio território. Em caso de ingestão acidental de solução cáustica (ex.: criança que bebeu um produto de limpeza), qual das condutas abaixo deve ser feita imediatamente na APS, enquanto se aguarda a transferência para um serviço de referência?",
+      "options": [
+        "A - Diluir o agente via oral através da administração de água ou leite, evitar indução de vômito e realizar encaminhamento imediato para emergência devido ao risco de perfuração esofágica.",
+        "B - Provocar vômito mecânico (irritação faríngea) para expelir o agente, depois dar suco cítrico para neutralizar a base ingerida e observar por 4 horas.",
+        "C - Oferecer carvão ativado diluído em água, pois absorve eficazmente substâncias cáusticas, e encaminhar para endoscopia ambulatorial no mesmo dia.",
+        "D - Administrar bicarbonato de sódio via oral para neutralizar o ácido ou vinagre para neutralizar a base, e manter em observação por 12 horas na unidade."
+      ],
+      "correctOption": 0,
+      "explanation": "A alternativa correta é A. No manejo inicial de ingestão de substâncias cáusticas (como produtos de limpeza alcalinos ou ácidos) na APS, a conduta recomendada é diluir o agente e encaminhar imediatamente o paciente para atendimento especializado, evitando medidas que possam piorar o quadro. Isso significa oferecer prontamente água ou leite para ingerir, com o intuito de diluir o produto cáustico ainda presente no esôfago/estômago, desde que o paciente esteja consciente e sem risco de aspiração. Deve-se, por outro lado, evitar induzir vômito ou realizar lavagem gástrica, pois a regurgitação do agente corrosivo pode causar novas lesões no esôfago e orofaringe e aumentar o risco de perfuração. Após os primeiros cuidados, o paciente deve ser encaminhado emergencialmente ao hospital, onde poderá ser avaliado por endoscopia precoce e receber tratamento intensivo caso necessário. A alternativa A descreve precisamente esses passos (diluição oral, não induzir vômito e referência imediata), estando de acordo com os protocolos de urgência toxicológica no SUS.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Condutas terapêuticas",
+        "Exames complementares",
+        "Saúde da Criança"
+      ]
+    },
+    {
+      "id": 192,
+      "number": 74,
+      "statement": "O campo da Saúde Planetária investiga as interdependências entre a saúde dos sistemas naturais do planeta e a saúde humana. Qual das seguintes ações promove benefícios simultâneos para a saúde das pessoas e para o meio ambiente?",
+      "options": [
+        "A - Prescrição de medicamentos fitoterápicos em vez de sintéticos, por serem “naturais” e não gerarem resíduos químicos.",
+        "B - O incentivo a deslocamentos urbanos por meio de transportes ativos como caminhadas ou bicicletas.",
+        "C - Desestimular campanhas de vacinação em massa para reduzir a pegada de carbono associada à produção de imunobiológicos.",
+        "D - Substituir todas as fontes de proteína animal por suplementos vitamínicos sintéticos, evitando a pecuária."
+      ],
+      "correctOption": 1,
+      "explanation": "A alternativa correta é B. Uma das estratégias centrais em Saúde Planetária é promover mudanças nos hábitos de deslocamento urbano que beneficiem simultaneamente a saúde humana e a sustentabilidade ambiental. Incentivar o transporte ativo – como caminhar ou andar de bicicleta em vez de usar veículos motorizados individuais – contribui para a redução da emissão de poluentes atmosféricos e gases de efeito estufa, melhorando a qualidade do ar e mitigando mudanças climáticas locais. Ao mesmo tempo, esse hábito aumenta a atividade física diária da população, prevenindo doenças crônicas (obesidade, hipertensão, diabetes) e melhorando a saúde cardiovascular. Dessa forma, a adoção de deslocamentos ativos nas cidades ilustra perfeitamente a interdependência entre a saúde do planeta e das pessoas: menos poluição e trânsito, mais bem-estar e qualidade de vida. A opção B está de acordo com esse modelo de intervenção sustentável e saudável, conforme enfatizado pelo campo da Saúde Planetária.",
+      "tags": [
+        "Condutas terapêuticas",
+        "Gestão de condições crônicas"
+      ]
+    },
+    {
+      "id": 193,
+      "number": 75,
+      "statement": "Maria, 45 anos, trabalha como diarista e é tabagista. Procurou atendimento para relatar um quadro de dor articular: há cerca de 3 meses sente dor e rigidez nas pequenas articulações das mãos, principalmente pela manhã (dura cerca de 1 hora até “soltar”). No exame físico, nota-se sinovite em punhos e em 2 articulações metacarpofalangeanas bilateralmente. Não há deformidades estabelecidas. Considerando a principal hipótese diagnóstica, quais exames complementares iniciais são mais apropriados?",
+      "options": [
+        "A - Nenhum exame adicional é necessário para diagnóstico; iniciar tratamento empírico com anti-inflamatórios e fisioterapia.",
+        "B - Solicitar exames laboratoriais como hemograma, ácido úrico, função hepática e renal, fator reumatoide, PCR, VHS e anti-CCP, além de radiografia das articulações afetadas.",
+        "C - Pedir sorologia para chikungunya e citomegalovírus, devido ao padrão de poliartralgia, e ultrassonografia de mãos para avaliar derrame articular.",
+        "D - Dosagem de vitamina D e paratormônio, pois dores nas mãos nessa faixa etária geralmente relacionam-se a desmineralização óssea."
+      ],
+      "correctOption": 1,
+      "explanation": "A alternativa correta é B. Diante de uma paciente de 45 anos, tabagista, com quadro sugestivo de artrite (provavelmente dores articulares, rigidez matinal ou edema em articulações periféricas), é indicado proceder a uma investigação laboratorial e de imagem abrangente para elucidar o diagnóstico. Exames de sangue como hemograma e provas inflamatórias (VHS, PCR) avaliam a presença e intensidade de inflamação sistêmica. A dosagem de fator reumatoide e anticorpo anti-CCP (peptídeo citrulinado) é fundamental para verificar a hipótese de artrite reumatoide, uma vez que esses autoanticorpos estão presentes em muitos casos e têm valor prognóstico. O ácido úrico é solicitado para afastar ou confirmar gota como diagnóstico diferencial, especialmente se houver suspeita de artrite gotosa. Função hepática e renal são importantes tanto para avaliar condições associadas quanto para planejamento de tratamento (monitorar toxicidade de eventuais medicamentos). Por fim, radiografias das articulações acometidas ajudam a visualizar sinais de artrite (erosões ósseas, redução de espaços articulares) que apoiam o diagnóstico e grau de lesão. Assim, a conduta proposta na alternativa B – solicitar esse painel de exames e imagem – está de acordo com as recomendações de investigação de poliartrite na APS, sendo abrangente e direcionada para confirmar artrite reumatoide ou identificar outras artrites inflamatórias.",
+      "tags": [
+        "Condutas terapêuticas",
+        "Exames complementares"
+      ]
+    },
+    {
+      "id": 194,
+      "number": 76,
+      "statement": "Dra Renata divide seu horário de trabalho como Médica de Família entre atividades assistenciais, apoio matricial e preceptoria de estudantes. Durante uma discussão de caso, um estudante pergunta sobre o uso de analgésicos em puérperas que amamentam, citando o receio de prescrever morfina no pós-parto de uma paciente com dor importante após cirurgia. Qual deve ser a orientação de Dra Renata nesse contexto?",
+      "options": [
+        "A - Morfina é absolutamente contraindicada durante a amamentação; deve-se optar apenas por dipirona ou ibuprofeno.",
+        "B - A lactação deve ser interrompida caso seja necessária qualquer medicação opióide para controlar a dor, para evitar depressão respiratória no bebê.",
+        "C - Informar ao estudante que morfina pode ser prescrita com cautela, pois sua excreção no leite materno é baixa desde que sua dose seja controlada e o bebê seja observado.",
+        "D - Recomendar substituir a morfina por codeína, por ser um opióide mais fraco e, portanto, seguro na lactação."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. A médica deve orientar o estudante que, embora sempre devamos ter cautela ao prescrever fármacos para lactantes, a morfina pode ser utilizada em mulheres que amamentam sob determinadas condições de segurança. A excreção da morfina no leite materno é relativamente baixa quando usada em doses terapêuticas controladas, e a biodisponibilidade oral para o lactente também é limitada. Portanto, se a paciente necessitar de analgesia potente (por exemplo, no manejo de uma dor aguda intensa ou pós-operatória), é possível prescrever morfina, desde que se use a menor dose eficaz pelo menor tempo necessário e que se faça monitoramento do lactente (observando sedação excessiva, dificuldade de mamar ou alterações respiratórias no bebê). Essa conduta está alinhada com referências de segurança medicamentosa na lactação, que classificam a morfina como compatível com a amamentação em contexto de uso controlado. A alternativa C reflete essa orientação equilibrada: nem proibir um medicamento necessário por medo infundado, nem usar sem critério – mas sim informar e prescrever com cautela. As outras opções possivelmente ou exageravam o risco ou negligenciavam a segurança do binômio mãe-bebê.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Gestão de insumos e medicamentos",
+        "Redes de apoio social",
+        "Saúde da Criança"
+      ]
+    },
+    {
+      "id": 195,
+      "number": 77,
+      "statement": "A sexualidade é aspecto fundamental da saúde geral. Sobre a comunicação afirmativa e como profissionais da APS podem abordar a diversidade sexual e de gênero, assinale a alternativa correta:",
+      "options": [
+        "A - Deve-se sempre pressupor a heterossexualidade do paciente, a menos que ele ou ela corrija essa suposição, para evitar constrangimentos.",
+        "B - Perguntas sobre orientação sexual ou identidade de gênero são irrelevantes no cuidado clínico, devendo ser evitadas em consultas de rotina.",
+        "C - A abordagem deve ser individualizada, demonstrando empatia, validando e reconhecendo as emoções, permitindo silêncios e buscando entender de forma genuína e livre de preconceitos a vivência de gênero e sexualidade de cada pessoa.",
+        "D - O uso de linguagem neutra ou de pronomes preferenciais não é recomendado, pois pode confundir outros pacientes e a equipe."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. A comunicação afirmativa em saúde sexual e de gênero envolve criar um ambiente acolhedor onde o paciente se sinta respeitado em sua individualidade. Isso significa que o profissional deve conduzir a conversa de forma personalizada, demonstrando empatia genuína – ou seja, buscando compreender os sentimentos e experiências do paciente sem julgamentos. Validar e reconhecer as emoções que emergem (por exemplo, medos, dúvidas ou alívio ao falar sobre o assunto) é essencial para que a pessoa se sinta legitimada. Também é importante saber manejar o silêncio quando o paciente precisa de tempo para se expressar, e fazer perguntas abertas que permitam entender sua vivência de gênero e sexualidade de forma autêntica e livre de preconceitos. Essa abordagem centrada na pessoa e livre de suposições prévias é recomendada nas diretrizes de cuidado à população LGBTQIA+, pois constrói confiança e melhora a qualidade do cuidado. A alternativa C resume precisamente esses elementos, enquanto outras opções talvez apresentassem condutas menos acolhedoras ou generalistas.",
+      "tags": [
+        "Contexto sociocultural",
+        "Saúde Mental"
+      ]
+    },
+    {
+      "id": 196,
+      "number": 78,
+      "statement": "O principal modelo de cuidados colaborativos no Brasil se chama \"apoio matricial\", ou ainda \"matriciamento\". Sobre o apoio matricial na APS, assinale a alternativa correta:",
+      "options": [
+        "A - Caracteriza-se pela transferência de responsabilidade do caso para a equipe especializada, que assume o cuidado da pessoa, enquanto a APS mantém papel apenas administrativo.",
+        "B - Consiste em encaminhar todos os casos complexos automaticamente para níveis secundários/terciários, desafogando a APS de decisões difíceis.",
+        "C - Fortalecer as equipes de atenção primária à saúde tanto discutindo casos e fazendo educação permanente quanto, em menor grau, atendendo em conjunto.",
+        "D - Aplicar protocolos rígidos e padronizados de atenção, desconsiderando as singularidades locais, para garantir uniformidade de condutas."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. O “apoio matricial” (matriciamento) é uma estratégia de organização do cuidado em que equipes especialistas (como saúde mental, NASF-AB, etc.) atuam em suporte às equipes da Atenção Primária, fortalecendo-as na resolução de casos. O principal objetivo é capacitar e corresponsabilizar a equipe da APS por meio de discussões de casos e educação permanente, ampliando as competências do médico de família e sua equipe para lidar com situações complexas. Isso ocorre em reuniões de matriciamento, construção conjunta de projetos terapêuticos e orientação técnico-pedagógica. Em menor proporção, o apoio matricial também pode envolver atendimentos conjuntos ou compartilhados (especialista e APS atendendo o paciente juntos) e, quando necessário, encaminhamentos qualificados. Dessa forma, o matriciamento não se resume a “passar” o paciente para o especialista, mas sim em trabalhar colaborativamente para que a APS seja resolutiva. A alternativa C reflete corretamente essa lógica: foco em discussão de casos e educação permanente para a APS, eventualmente realizando atendimentos em conjunto. Esse é o modelo preconizado no SUS para cuidados colaborativos.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Rede de atenção à saúde (RAS)",
+        "Redes de apoio social"
+      ]
+    },
+    {
+      "id": 197,
+      "number": 79,
+      "statement": "Nem tudo são flores na medicina de família e comunidade. Assinale a alternativa mais apropriada sobre um desafio enfrentado frequentemente na prática da APS:",
+      "options": [
+        "A - A restrição de acesso à APS é a principal causa de sobrecarga das urgências; quanto menos pessoas procuram a unidade básica, mais tranquilo fica o sistema.",
+        "B - A coordenação do cuidado não é função do médico de APS, pois os pacientes podem autogerenciar seus encaminhamentos sem prejuízo.",
+        "C - Ao admitirmos que as pessoas definam o quão urgentes são seus problemas, podemos sobrecarregar nossos serviços com um determinado perfil de pessoas.",
+        "D - A longitudinalidade dispensa registros ou prontuários detalhados, já que o médico de família conhece seus pacientes pelo nome e história."
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. Apesar dos valores positivos da APS, existem desafios práticos na organização dos serviços. A afirmativa destaca um problema real: se o serviço de saúde adota integralmente a percepção do paciente sobre a urgência de seu problema (ou seja, atende prioritariamente quem diz estar em urgência sem critérios técnicos), corre-se o risco de sobrecarregar o atendimento com demandas de um perfil específico de usuário – muitas vezes pessoas mais ansiosas, insistentes ou de maior acesso à informação – em detrimento de outros casos que podem ser igualmente ou mais graves, porém de pacientes menos assertivos. Em outras palavras, permitir que cada pessoa defina totalmente a urgência pode distorcer o fluxo de atendimento, gerando superlotação e comprometendo a equidade. Portanto, embora seja importante acolher as queixas e valorizar a perspectiva do paciente, é necessário também aplicar protocolos de classificação de risco ou critérios de gravidade para organizar o cuidado. A opção C reconhece essa dificuldade, mostrando a necessidade de equilíbrio entre acesso facilitado e gestão adequada da demanda. As demais alternativas possivelmente minimizavam ou ignoravam esses obstáculos práticos na MFC.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Promoção e prevenção em saúde"
+      ]
+    },
+    {
+      "id": 198,
+      "number": 80,
+      "statement": "Criança de 8 anos em consulta para renovação de receita de metilfenidato. Diagnóstico recente de Transtorno de Déficit de Atenção/Hiperatividade (TDAH) feito pelo especialista e prescrição iniciada há 2 meses. Na anamnese, a mãe comenta que não notou muita melhora e que o menino tem tido problemas na escola e em casa. Segundo ela, parece mais irritado e com pouco apetite. Qual deve ser a conduta inicial do médico de família e comunidade?",
+      "options": [
+        "A - Dobrar a dose de metilfenidato, já que não houve melhora, e reavaliar em 1 mês.",
+        "B - Acionar a equipe multiprofissional, explorar o contexto da criança e sua família e reavaliar o diagnóstico para confirmação ou diagnóstico diferencial.",
+        "C - Interromper o uso do metilfenidato e encaminhar imediatamente para serviço de saúde mental (CAPSij) em virtude dos efeitos colaterais.",
+        "D - Aconselhar os pais a buscarem uma escola especial, pois a escola regular não está conseguindo lidar com a criança."
+      ],
+      "correctOption": 1,
+      "explanation": "A alternativa correta é B. Diante de uma criança de 8 anos com diagnóstico recente de TDAH em uso de metilfenidato, o médico de família deve ter uma postura proativa e abrangente antes de simplesmente renovar a receita. É fundamental acionar a equipe multiprofissional da UBS (como psicólogo, pedagogo do NASF, assistente social) para apoiar a avaliação e as intervenções não farmacológicas, incluindo orientação aos pais e professores, técnicas comportamentais e acompanhamento psicopedagógico. Paralelamente, é necessário explorar o contexto em que a criança está inserida: condições familiares (rotina, limites, possíveis situações de estresse ou violência), ambiente escolar (dificuldades de aprendizado, bullying, suporte educacional) e hábitos de vida. Muitas vezes, problemas contextuais podem exacerbar ou até ser confundidos com sintomas de TDAH. Por isso, reavaliar criticamente o diagnóstico é recomendável – confirmar se os critérios diagnósticos foram bem preenchidos e descartar outros transtornos ou causas (como ansiedade, problemas de audição/visão, transtorno de aprendizagem). Essa conduta assegura que o tratamento (farmacológico e não farmacológico) seja realmente necessário e adequado. A opção B reflete esse cuidado integral e centrado na família, indo além da simples prescrição e buscando um manejo mais completo e preciso da situação.",
+      "tags": [
+        "Abordagem centrada na família",
+        "Avaliação familiar",
+        "Condutas terapêuticas",
+        "Consulta de rotina",
+        "Contexto sociocultural"
+      ]
     }
   ]
 }

@@ -3,12 +3,13 @@ import SwiftUI
 struct ExamListView: View {
     @EnvironmentObject var dataManager: DataManager
     let examType: Exam.ExamType
-    @State private var showingCreateExamSheet = false  // Property to control the sheet
-
+    @State private var showingCreateExamSheet = false
+    
     var body: some View {
         NavigationView {
             ZStack {
-                TEMFCDesign.Colors.groupedBackground.ignoresSafeArea()
+                TEMFCDesign.Colors.groupedBackground
+                    .ignoresSafeArea()
                 
                 ScrollView {
                     VStack(spacing: TEMFCDesign.Spacing.l) {
@@ -25,18 +26,20 @@ struct ExamListView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal, TEMFCDesign.Spacing.m)
                         
-                        // List of available exams
+                        // Lista de exames disponíveis com identificador para testes de UI
                         ForEach(dataManager.getExamsByType(type: examType)) { exam in
                             NavigationLink(destination: ExamDetailView(exam: exam)) {
                                 EnhancedExamRowView(exam: exam)
                             }
                             .buttonStyle(PlainButtonStyle())
+                            .accessibilityIdentifier("examRow_\(exam.id)")
                         }
                     }
                     .padding(.vertical, TEMFCDesign.Spacing.m)
                 }
+                .accessibilityIdentifier("examListView")
                 
-                // Floating button for creating custom exam
+                // Botão flutuante para criação de simulado personalizado
                 VStack {
                     Spacer()
                     HStack {
@@ -57,6 +60,7 @@ struct ExamListView: View {
                         }
                         .padding()
                         .accessibility(label: Text("Criar simulado personalizado"))
+                        .accessibilityIdentifier("createExamButton")
                     }
                 }
             }
@@ -78,7 +82,7 @@ struct EnhancedExamRowView: View {
     
     var body: some View {
         HStack(alignment: .top, spacing: TEMFCDesign.Spacing.m) {
-            // Icon
+            // Ícone
             ZStack {
                 Circle()
                     .fill(exam.type == .theoretical ?
@@ -102,7 +106,7 @@ struct EnhancedExamRowView: View {
                     .font(TEMFCDesign.Typography.subheadline)
                     .foregroundColor(TEMFCDesign.Colors.secondaryText)
                 
-                // Display main tags
+                // Exibir as principais tags
                 if !uniqueTags(exam).isEmpty {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: TEMFCDesign.Spacing.xxs) {
@@ -141,6 +145,7 @@ struct EnhancedExamRowView: View {
                 .shadow(color: Color.black.opacity(0.05), radius: 8, x: 0, y: 2)
         )
         .padding(.horizontal, TEMFCDesign.Spacing.m)
+        .accessibilityIdentifier("examRow")
     }
     
     private func uniqueTags(_ exam: Exam) -> [String] {
@@ -154,7 +159,7 @@ struct EnhancedExamRowView: View {
     }
     
     private func estimatedTime(_ questionCount: Int) -> String {
-        let estimatedMinutes = questionCount * 2 // Approximately 2 minutes per question
+        let estimatedMinutes = questionCount * 2 // Aproximadamente 2 minutos por questão
         if estimatedMinutes < 60 {
             return "\(estimatedMinutes) min"
         } else {

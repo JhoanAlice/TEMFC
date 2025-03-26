@@ -50,6 +50,7 @@ struct EnhancedOptionButton: View {
             .contentShape(Rectangle())
         }
         .buttonStyle(PlainButtonStyle())
+        .accessibilityIdentifier("optionButton_\(index)")
         .padding()
         .background(
             RoundedRectangle(cornerRadius: 16)

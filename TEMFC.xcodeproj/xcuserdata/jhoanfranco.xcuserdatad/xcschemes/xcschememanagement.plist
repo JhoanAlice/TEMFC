@@ -7,7 +7,35 @@
 		<key>TEMFC.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>TEMFCTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>TEMFCUITests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>3A1481D92D8FAA6F00D822FB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3A1481ED2D8FAA7000D822FB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3A1481F72D8FAA7000D822FB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
