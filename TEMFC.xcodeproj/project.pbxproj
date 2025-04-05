@@ -27,9 +27,7 @@
 		3A1481DA2D8FAA6F00D822FB /* TEMFC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TEMFC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A1481EE2D8FAA7000D822FB /* TEMFCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TEMFCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A1481F82D8FAA7000D822FB /* TEMFCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TEMFCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A5246E42D9245B7006C308C /* TEMFC.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TEMFC.xctestplan; sourceTree = "<group>"; };
-		3A5246E52D9245FC006C308C /* TEMFCTests */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TEMFCTests; sourceTree = "<group>"; };
-		3A5246E62D92460A006C308C /* TEMFCUITests */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TEMFCUITests; sourceTree = "<group>"; };
+		3A1675A52D9487EA00AD2CCF /* TEMFCTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TEMFCTests.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -91,9 +89,7 @@
 		3A1481D12D8FAA6F00D822FB = {
 			isa = PBXGroup;
 			children = (
-				3A5246E62D92460A006C308C /* TEMFCUITests */,
-				3A5246E52D9245FC006C308C /* TEMFCTests */,
-				3A5246E42D9245B7006C308C /* TEMFC.xctestplan */,
+				3A1675A52D9487EA00AD2CCF /* TEMFCTests.xctestplan */,
 				3A1481DC2D8FAA6F00D822FB /* TEMFC */,
 				3A1481F12D8FAA7000D822FB /* TEMFCTests */,
 				3A1481FB2D8FAA7000D822FB /* TEMFCUITests */,
@@ -190,7 +186,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1620;
-				LastUpgradeCheck = 1620;
+				LastUpgradeCheck = 1630;
 				TargetAttributes = {
 					3A1481D92D8FAA6F00D822FB = {
 						CreatedOnToolsVersion = 16.2;
@@ -206,11 +202,11 @@
 				};
 			};
 			buildConfigurationList = 3A1481D52D8FAA6F00D822FB /* Build configuration list for PBXProject "TEMFC" */;
-			developmentRegion = en;
+			developmentRegion = "pt-BR";
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 3A1481D12D8FAA6F00D822FB;
 			minimizedProjectReferenceProxies = 1;
@@ -297,23 +293,27 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TEMFC/Preview Content\"";
-				DEVELOPMENT_TEAM = WVK76KCVQ2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TEMFC/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "TEMFC Simulados";
+				INFOPLIST_KEY_CFBundleDisplayName = "Simulados TEMFC";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "O TEMFC precisa acessar sua câmera para que você possa adicionar uma foto ao seu perfil.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "O TEMFC precisa acessar sua biblioteca de fotos para que você possa selecionar uma foto para seu perfil.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Suas informações de uso ajudam a melhorar a experiência de estudo e a personalizar o conteúdo.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jhoanfranco.Simulados.TEMFC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -331,23 +331,27 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TEMFC/Preview Content\"";
-				DEVELOPMENT_TEAM = WVK76KCVQ2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TEMFC/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "TEMFC Simulados";
+				INFOPLIST_KEY_CFBundleDisplayName = "Simulados TEMFC";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "O TEMFC precisa acessar sua câmera para que você possa adicionar uma foto ao seu perfil.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "O TEMFC precisa acessar sua biblioteca de fotos para que você possa selecionar uma foto para seu perfil.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Suas informações de uso ajudam a melhorar a experiência de estudo e a personalizar o conteúdo.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jhoanfranco.Simulados.TEMFC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -391,6 +395,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = WVK76KCVQ2;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -454,6 +459,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = WVK76KCVQ2;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -481,7 +487,6 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WVK76KCVQ2;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				MARKETING_VERSION = 1.0;
@@ -500,7 +505,6 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WVK76KCVQ2;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				MARKETING_VERSION = 1.0;
@@ -518,7 +522,6 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WVK76KCVQ2;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jhoanfranco.Simulados.TEMFCUITests;
@@ -535,7 +538,6 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WVK76KCVQ2;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jhoanfranco.Simulados.TEMFCUITests;

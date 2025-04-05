@@ -1,3 +1,5 @@
+// Caminho: TEMFC/Views/EnhancedOptionButton.swift
+
 import SwiftUI
 
 struct EnhancedOptionButton: View {
@@ -8,7 +10,7 @@ struct EnhancedOptionButton: View {
     let isNullified: Bool
     let action: () -> Void
     
-    // Estado para controlar efeito de pressionar
+    // Estado para controlar o efeito de pressionar
     @State var isPressed = false
     
     // Array de letras das alternativas
@@ -29,12 +31,12 @@ struct EnhancedOptionButton: View {
                         .foregroundColor(.white)
                 }
                 
-                // Texto da opção - Correção importante aqui
+                // Texto da opção
                 Text(option)
                     .font(.system(.body, design: .rounded))
                     .foregroundColor(.primary)
                     .multilineTextAlignment(.leading)
-                    .fixedSize(horizontal: false, vertical: true) // Esta linha é crucial para evitar que o texto seja truncado
+                    .fixedSize(horizontal: false, vertical: true) // Evita truncamento do texto
                     .padding(.vertical, 8)
                 
                 Spacer()
@@ -50,7 +52,14 @@ struct EnhancedOptionButton: View {
             .contentShape(Rectangle())
         }
         .buttonStyle(PlainButtonStyle())
-        .accessibilityIdentifier("optionButton_\(index)")
+        // Acessibilidade melhorada
+        .accessibility(identifier: "optionButton_\(index)")
+        .accessibility(label: Text("Opção \(optionLetters[index]): \(option)"))
+        .accessibility(hint: Text(correctIndex != nil ?
+            (index == correctIndex ? "Resposta correta" :
+            (index == selectedIndex ? "Resposta incorreta" : "")) : ""))
+        .accessibility(addTraits: selectedIndex == index ? .isSelected : [])
+        .accessibility(addTraits: correctIndex == index ? .playsSound : [])
         .padding()
         .background(
             RoundedRectangle(cornerRadius: 16)
@@ -67,6 +76,8 @@ struct EnhancedOptionButton: View {
         }, perform: {})
         .disabled(correctIndex != nil)
     }
+    
+    // MARK: - Métodos de Customização Visual
     
     // Cor de fundo para o círculo da letra
     func getLetterBackgroundColor() -> Color {
@@ -125,27 +136,27 @@ struct EnhancedOptionButton: View {
             if index == correctIndex {
                 return "checkmark.circle.fill"
             } else if index == selectedIndex {
-                return "xmark.circle.fill"
+                            return "xmark.circle.fill"
+                        }
+                    }
+                    
+                    return "circle.fill"
+                }
+                
+                // Cor do ícone
+                func getIconColor() -> Color {
+                    if isNullified {
+                        return .orange
+                    }
+                    
+                    if let correctIndex = correctIndex {
+                        if index == correctIndex {
+                            return .green
+                        } else if index == selectedIndex {
+                            return .red
+                        }
+                    }
+                    
+                    return .blue
+                }
             }
-        }
-        
-        return "circle.fill"
-    }
-    
-    // Cor do ícone
-    func getIconColor() -> Color {
-        if isNullified {
-            return .orange
-        }
-        
-        if let correctIndex = correctIndex {
-            if index == correctIndex {
-                return .green
-            } else if index == selectedIndex {
-                return .red
-            }
-        }
-        
-        return .blue
-    }
-}

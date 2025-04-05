@@ -1,16 +1,18 @@
+// TEMFC/Utils/TEMFCDesign.swift
+
 import SwiftUI
 
-/// Design System do App TEMFC
+/// Main design system for the TEMFC app
 struct TEMFCDesign {
-    // MARK: - Tipografia
+    // MARK: - Typography
     struct Typography {
-        // Títulos
+        // Titles
         static let largeTitle = Font.system(.largeTitle, design: .rounded, weight: .bold)
         static let title = Font.system(.title, design: .rounded, weight: .bold)
         static let title2 = Font.system(.title2, design: .rounded, weight: .semibold)
         static let title3 = Font.system(.title3, design: .rounded, weight: .semibold)
         
-        // Corpo
+        // Body
         static let headline = Font.system(.headline, design: .rounded)
         static let subheadline = Font.system(.subheadline, design: .rounded)
         static let body = Font.system(.body, design: .rounded)
@@ -20,47 +22,40 @@ struct TEMFCDesign {
         static let caption2 = Font.system(.caption2, design: .rounded)
     }
     
-    // MARK: - Cores
+    // MARK: - Colors
     struct Colors {
-        // Cores principais (tons de azul mais modernos)
-        static let primary = Color(red: 0.0, green: 0.478, blue: 1.0) // Azul mais vibrante
-        static let secondary = Color(red: 0.25, green: 0.54, blue: 0.89) // Azul médio
-        static let tertiary = Color(red: 0.0, green: 0.65, blue: 0.85) // Azul esverdeado
+        // Primary colors (modern blue tones)
+        static let primary = Color(red: 0.0, green: 0.478, blue: 1.0)
+        static let secondary = Color(red: 0.25, green: 0.54, blue: 0.89)
+        static let tertiary = Color(red: 0.0, green: 0.65, blue: 0.85)
         
-        // Cores de acento (mais vibrantes)
+        // Accent colors
         static let accent = Color.orange
-        static let accentSecondary = Color(red: 1.0, green: 0.8, blue: 0.0) // Amarelo ouro
+        static let accentSecondary = Color(red: 1.0, green: 0.8, blue: 0.0)
         
-        // Esquemas de gradiente
-        static let mainGradient = LinearGradient(
-            gradient: Gradient(colors: [primary, secondary.opacity(0.8)]),
-            startPoint: .topLeading,
-            endPoint: .bottomTrailing
-        )
-        
-        // Cores adicionais
+        // Status colors
         static let success = Color.green
         static let error = Color.red
         static let warning = Color.orange
         static let info = Color.blue
         
-        // Cores de fundo
+        // Background colors
         static let background = Color(.systemBackground)
         static let secondaryBackground = Color(.secondarySystemBackground)
         static let tertiaryBackground = Color(.tertiarySystemBackground)
         static let groupedBackground = Color(.systemGroupedBackground)
         
-        // Cores de texto
+        // Text colors
         static let text = Color(.label)
         static let secondaryText = Color(.secondaryLabel)
         static let tertiaryText = Color(.tertiaryLabel)
         static let placeholderText = Color(.placeholderText)
         
-        // Cores de separador e linha
+        // Separator colors
         static let separator = Color(.separator)
         static let opaqueSeparator = Color(.opaqueSeparator)
         
-        // Gradientes
+        // Gradients
         static let primaryGradient = LinearGradient(
             gradient: Gradient(colors: [primary, secondary]),
             startPoint: .topLeading,
@@ -73,38 +68,42 @@ struct TEMFCDesign {
             endPoint: .bottomTrailing
         )
         
-        // Método para gerar cor para tags baseado no hash da string
-        static func tagColor(for tag: String) -> Color {
-            // Mapeamento de categorias para cores harmoniosas
-            let tagMap: [String: Color] = [
-                // Cores principais por área temática
-                "Saúde da Mulher": Color(red: 0.9, green: 0.4, blue: 0.6),         // Rosa suave
-                "Saúde da Criança": Color(red: 0.3, green: 0.7, blue: 0.9),        // Azul claro
-                "Saúde Mental": Color(red: 0.5, green: 0.4, blue: 0.8),            // Roxo médio
-                "Saúde do Idoso": Color(red: 0.8, green: 0.6, blue: 0.3),          // Âmbar dourado
-                "Medicina centrada na pessoa": Color(red: 0.3, green: 0.7, blue: 0.5), // Verde médio
-                "Atenção Primária à Saúde": Color(red: 0.2, green: 0.5, blue: 0.8), // Azul médio
-                "Urgências em APS": Color(red: 0.9, green: 0.4, blue: 0.3),        // Vermelho suave
-                "Doenças Crônicas": Color(red: 0.6, green: 0.3, blue: 0.7),        // Roxo médio
-                
-                // Categorias adicionais com cores harmoniosas
-                "SUS": Color(red: 0.2, green: 0.6, blue: 0.8),                    // Azul celeste
-                "Prevenção e Promoção": Color(red: 0.4, green: 0.8, blue: 0.4),    // Verde limão suave
-                "Saúde Coletiva": Color(red: 0.5, green: 0.7, blue: 0.3),          // Verde oliva
-                "Procedimentos": Color(red: 0.7, green: 0.4, blue: 0.3),           // Terracota
-                "Diagnóstico": Color(red: 0.3, green: 0.5, blue: 0.7),             // Azul aço
-                "Terapêutica": Color(red: 0.5, green: 0.3, blue: 0.5),             // Púrpura média
-                "Ética e Bioética": Color(red: 0.7, green: 0.7, blue: 0.3)         // Amarelo mostarda
-            ]
+        // MARK: - Tag color generation
+
+        /// Tag category color mapping
+        private static let tagColorMap: [String: Color] = [
+            // Main thematic areas
+            "Saúde da Mulher": Color(red: 0.9, green: 0.4, blue: 0.6),         // Soft pink
+            "Saúde da Criança": Color(red: 0.3, green: 0.7, blue: 0.9),        // Light blue
+            "Saúde Mental": Color(red: 0.5, green: 0.4, blue: 0.8),            // Medium purple
+            "Saúde do Idoso": Color(red: 0.8, green: 0.6, blue: 0.3),          // Golden amber
+            "Medicina centrada na pessoa": Color(red: 0.3, green: 0.7, blue: 0.5), // Medium green
+            "Atenção Primária à Saúde": Color(red: 0.2, green: 0.5, blue: 0.8), // Medium blue
+            "Urgências em APS": Color(red: 0.9, green: 0.4, blue: 0.3),        // Soft red
+            "Doenças Crônicas": Color(red: 0.6, green: 0.3, blue: 0.7),        // Medium purple
             
-            // Verifique correspondências exatas e parciais
-            for (key, color) in tagMap {
+            // Additional categories
+            "SUS": Color(red: 0.2, green: 0.6, blue: 0.8),                     // Sky blue
+            "Prevenção e Promoção": Color(red: 0.4, green: 0.8, blue: 0.4),    // Soft lime green
+            "Saúde Coletiva": Color(red: 0.5, green: 0.7, blue: 0.3),          // Olive green
+            "Procedimentos": Color(red: 0.7, green: 0.4, blue: 0.3),           // Terracotta
+            "Diagnóstico": Color(red: 0.3, green: 0.5, blue: 0.7),             // Steel blue
+            "Terapêutica": Color(red: 0.5, green: 0.3, blue: 0.5),             // Medium purple
+            "Ética e Bioética": Color(red: 0.7, green: 0.7, blue: 0.3)         // Mustard yellow
+        ]
+        
+        /// Generate a color for a tag based on its content
+        /// - Parameter tag: The tag string
+        /// - Returns: A color appropriate for the tag
+        static func tagColor(for tag: String) -> Color {
+            // Check for exact and partial matches
+            for (key, color) in tagColorMap {
                 if tag.contains(key) || key.contains(tag) {
                     return color
                 }
             }
             
-            // Geração de cor baseada no hash (refinada para cores mais agradáveis)
+            // Generate a color based on hash (refined for more pleasing colors)
             let hash = abs(tag.hashValue)
             let hue = Double(hash % 1000) / 1000.0
             let saturation = 0.6 + (Double(hash % 200) / 1000.0) // 0.6-0.8
@@ -114,7 +113,7 @@ struct TEMFCDesign {
         }
     }
     
-    // MARK: - Espaçamento
+    // MARK: - Spacing
     struct Spacing {
         static let xxxs: CGFloat = 2
         static let xxs: CGFloat = 4
@@ -127,7 +126,7 @@ struct TEMFCDesign {
         static let xxxl: CGFloat = 64
     }
     
-    // MARK: - Bordas e Cantos
+    // MARK: - Border Radius
     struct BorderRadius {
         static let small: CGFloat = 8
         static let medium: CGFloat = 12
@@ -136,15 +135,15 @@ struct TEMFCDesign {
         static let pill: CGFloat = 999
     }
     
-    // MARK: - Sombras
+    // MARK: - Shadows
     struct Shadows {
-        static let small: Shadow = Shadow(color: .black.opacity(0.1), radius: 2, x: 0, y: 1)
-        static let medium: Shadow = Shadow(color: .black.opacity(0.1), radius: 4, x: 0, y: 2)
-        static let large: Shadow = Shadow(color: .black.opacity(0.1), radius: 8, x: 0, y: 4)
-        static let xl: Shadow = Shadow(color: .black.opacity(0.15), radius: 16, x: 0, y: 8)
+        static let small = Shadow(color: .black.opacity(0.1), radius: 2, x: 0, y: 1)
+        static let medium = Shadow(color: .black.opacity(0.1), radius: 4, x: 0, y: 2)
+        static let large = Shadow(color: .black.opacity(0.1), radius: 8, x: 0, y: 4)
+        static let xl = Shadow(color: .black.opacity(0.15), radius: 16, x: 0, y: 8)
     }
     
-    // MARK: - Animações
+    // MARK: - Animations
     struct Animations {
         static let short = Animation.easeInOut(duration: 0.2)
         static let medium = Animation.easeInOut(duration: 0.3)
@@ -155,13 +154,14 @@ struct TEMFCDesign {
         static let springSnappy = Animation.spring(response: 0.3, dampingFraction: 0.8)
     }
     
-    // MARK: - Feedback Háptico
+    // MARK: - Haptic Feedback
     struct HapticFeedback {
         private static let impactLight = UIImpactFeedbackGenerator(style: .light)
         private static let impactMedium = UIImpactFeedbackGenerator(style: .medium)
         private static let impactHeavy = UIImpactFeedbackGenerator(style: .heavy)
         private static let notificationFeedback = UINotificationFeedbackGenerator()
         
+        /// Prepares all feedback generators for immediate use
         static func prepareAll() {
             impactLight.prepare()
             impactMedium.prepare()
@@ -169,47 +169,57 @@ struct TEMFCDesign {
             notificationFeedback.prepare()
         }
         
+        /// Generates a light impact feedback
         static func lightImpact() {
             impactLight.impactOccurred()
         }
         
+        /// Generates a medium impact feedback
         static func mediumImpact() {
             impactMedium.impactOccurred()
         }
         
+        /// Generates a heavy impact feedback
         static func heavyImpact() {
             impactHeavy.impactOccurred()
         }
         
+        /// Generates a success notification feedback
         static func success() {
             notificationFeedback.notificationOccurred(.success)
         }
         
+        /// Generates a warning notification feedback
         static func warning() {
             notificationFeedback.notificationOccurred(.warning)
         }
         
+        /// Generates an error notification feedback
         static func error() {
             notificationFeedback.notificationOccurred(.error)
         }
         
+        /// Feedback for selection changes
         static func selectionChanged() {
             lightImpact()
         }
         
+        /// Feedback for button presses
         static func buttonPressed() {
             mediumImpact()
         }
     }
-    
-    // MARK: - Componentes de UI
-    
-    // Card
-    struct Card: ViewModifier {
-        var padding: CGFloat = Spacing.m
-        var cornerRadius: CGFloat = BorderRadius.medium
-        var shadowStyle: Shadow = Shadows.medium
-        var backgroundColor: Color = Colors.background
+}
+
+// MARK: - ViewModifiers
+
+extension TEMFCDesign {
+    // Card ViewModifier
+    struct CardModifier: ViewModifier {
+        var padding: CGFloat = TEMFCDesign.Spacing.m
+        var cornerRadius: CGFloat = TEMFCDesign.BorderRadius.medium
+        var shadow: Shadow = TEMFCDesign.Shadows.medium
+        var backgroundColor: Color = TEMFCDesign.Colors.background
         
         func body(content: Content) -> some View {
             content
@@ -217,13 +227,13 @@ struct TEMFCDesign {
                 .background(
                     RoundedRectangle(cornerRadius: cornerRadius)
                         .fill(backgroundColor)
-                        .shadow(color: shadowStyle.color, radius: shadowStyle.radius, x: shadowStyle.x, y: shadowStyle.y)
+                        .shadow(color: shadow.color, radius: shadow.radius, x: shadow.x, y: shadow.y)
                 )
         }
     }
     
-    // Tag
-    struct Tag: ViewModifier {
+    // Tag ViewModifier
+    struct TagModifier: ViewModifier {
         var backgroundColor: Color
         var textColor: Color = .white
         
@@ -240,8 +250,8 @@ struct TEMFCDesign {
         }
     }
     
-    // ActionButton
-    struct ActionButton: ViewModifier {
+    // Button ViewModifier
+    struct ButtonModifier: ViewModifier {
         var isPrimary: Bool = true
         var isFullWidth: Bool = false
         
@@ -259,77 +269,52 @@ struct TEMFCDesign {
                 .foregroundColor(isPrimary ? .white : Colors.primary)
         }
     }
-    
-    // NavBar
-    struct NavBar: ViewModifier {
-        func body(content: Content) -> some View {
-            content
-                .padding(.horizontal, Spacing.m)
-                .padding(.vertical, Spacing.s)
-                .background(
-                    Rectangle()
-                        .fill(Colors.background)
-                        .shadow(color: Colors.separator.opacity(0.5), radius: 5, x: 0, y: 5)
-                )
-        }
-    }
-    
-    // MARK: - Extensões para uso fácil
-    
-    // Card extension
-    static func card(
-        padding: CGFloat = Spacing.m,
-        cornerRadius: CGFloat = BorderRadius.medium,
-        shadowStyle: Shadow = Shadows.medium,
-        backgroundColor: Color = Colors.background
-    ) -> Card {
-        return Card(padding: padding, cornerRadius: cornerRadius, shadowStyle: shadowStyle, backgroundColor: backgroundColor)
-    }
-    
-    // Tag extension
-    static func tag(backgroundColor: Color, textColor: Color = .white) -> Tag {
-        return Tag(backgroundColor: backgroundColor, textColor: textColor)
-    }
-    
-    // ActionButton extension
-    static func actionButton(isPrimary: Bool = true, isFullWidth: Bool = false) -> ActionButton {
-        return ActionButton(isPrimary: isPrimary, isFullWidth: isFullWidth)
-    }
-    
-    // NavBar extension
-    static func navBar() -> NavBar {
-        return NavBar()
-    }
 }
 
-// Extensões para facilitar o uso
-extension View {
-    func temfcCard(
-        padding: CGFloat = TEMFCDesign.Spacing.m,
-        cornerRadius: CGFloat = TEMFCDesign.BorderRadius.medium,
-        shadowStyle: Shadow = TEMFCDesign.Shadows.medium,
-        backgroundColor: Color = TEMFCDesign.Colors.background
-    ) -> some View {
-        self.modifier(TEMFCDesign.Card(padding: padding, cornerRadius: cornerRadius, shadowStyle: shadowStyle, backgroundColor: backgroundColor))
-    }
-    
-    func temfcTag(backgroundColor: Color, textColor: Color = .white) -> some View {
-        self.modifier(TEMFCDesign.Tag(backgroundColor: backgroundColor, textColor: textColor))
-    }
-    
-    func temfcActionButton(isPrimary: Bool = true, isFullWidth: Bool = false) -> some View {
-        self.modifier(TEMFCDesign.ActionButton(isPrimary: isPrimary, isFullWidth: isFullWidth))
-    }
-    
-    func temfcNavBar() -> some View {
-        self.modifier(TEMFCDesign.NavBar())
-    }
-}
+// MARK: - Shadow Helper
 
-// Helper para shadow
 struct Shadow {
     var color: Color
     var radius: CGFloat
     var x: CGFloat
     var y: CGFloat
+}
+
+// MARK: - View Extensions
+
+extension View {
+    /// Applies the card style to a view
+    func temfcCard(
+        padding: CGFloat = TEMFCDesign.Spacing.m,
+        cornerRadius: CGFloat = TEMFCDesign.BorderRadius.medium,
+        shadow: Shadow = TEMFCDesign.Shadows.medium,
+        backgroundColor: Color = TEMFCDesign.Colors.background
+    ) -> some View {
+        self.modifier(TEMFCDesign.CardModifier(
+            padding: padding,
+            cornerRadius: cornerRadius,
+            shadow: shadow,
+            backgroundColor: backgroundColor
+        ))
+    }
+    
+    /// Applies the tag style to a view
+    func temfcTag(backgroundColor: Color, textColor: Color = .white) -> some View {
+        self.modifier(TEMFCDesign.TagModifier(backgroundColor: backgroundColor, textColor: textColor))
+    }
+    
+    /// Applies the button style to a view
+    func temfcButton(isPrimary: Bool = true, isFullWidth: Bool = false) -> some View {
+        self.modifier(TEMFCDesign.ButtonModifier(isPrimary: isPrimary, isFullWidth: isFullWidth))
+    }
+    
+    /// Applies primary button style to a view
+    func temfcPrimaryButton(isFullWidth: Bool = false) -> some View {
+        self.temfcButton(isPrimary: true, isFullWidth: isFullWidth)
+    }
+    
+    /// Applies secondary button style to a view
+    func temfcSecondaryButton(isFullWidth: Bool = false) -> some View {
+        self.temfcButton(isPrimary: false, isFullWidth: isFullWidth)
+    }
 }

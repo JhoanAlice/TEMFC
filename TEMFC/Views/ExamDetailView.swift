@@ -1,10 +1,11 @@
+// TEMFC/Views/ExamDetailView.swift
+
 import SwiftUI
 
 struct ExamDetailView: View {
     let exam: Exam
     @StateObject private var viewModel = ExamViewModel()
     @EnvironmentObject var dataManager: DataManager
-    @Environment(\.presentationMode) var presentationMode
     @State private var showingResumeAlert = false
     @State private var isButtonPressed = false
 
@@ -68,7 +69,7 @@ struct ExamDetailView: View {
                     
                     if exam.type == .theoretical_practical {
                         HStack {
-                            Image(systemName: "exclamationmark.triangle")
+                            Image(systemName: "exclamationmark.triangle.fill")
                                 .foregroundColor(.orange)
                             Text("Esta prova inclui questões com vídeos que reproduzem situações clínicas. Certifique-se de que seu dispositivo tem som disponível.")
                                 .font(.callout)
@@ -135,7 +136,9 @@ struct ExamDetailView: View {
                             .background(Color.blue)
                             .cornerRadius(12)
                         }
+                        .id("continueExamButton")
                         .accessibilityIdentifier("continueExamButton")
+                        .accessibilityLabel("Continuar Simulado")
                         
                         // Informações sobre o exame em andamento
                         HStack {
@@ -176,15 +179,11 @@ struct ExamDetailView: View {
                             .padding()
                             .background(Color.blue)
                             .cornerRadius(12)
-                            .accessibilityIdentifier("startExamButton")
-                            // Efeito de escala ao pressionar
-                            .scaleEffect(isButtonPressed ? 0.96 : 1.0)
-                            .animation(.spring(response: 0.2, dampingFraction: 0.6), value: isButtonPressed)
                         }
+                        .id("startExamButton")
+                        .accessibilityIdentifier("startExamButton")
+                        .accessibilityLabel("Iniciar Simulado")
                         .padding(.top, 20)
-                        .onLongPressGesture(minimumDuration: .infinity, maximumDistance: 50, pressing: { pressing in
-                            isButtonPressed = pressing
-                        }, perform: {})
                     }
                 }
                 .padding(.top, 20)
@@ -272,28 +271,5 @@ struct ExamDetailView: View {
         let minutes = Int(timeInterval) / 60 % 60
         let seconds = Int(timeInterval) % 60
         return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
-    }
-}
-
-struct ExamDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        ExamDetailView(exam: Exam(
-            id: "EX1",
-            name: "Exemplo de Prova",
-            type: .theoretical,
-            totalQuestions: 20,
-            questions: [
-                Question(
-                    id: 1,
-                    number: 1,
-                    statement: "Exemplo de questão.",
-                    options: ["Opção A", "Opção B", "Opção C", "Opção D"],
-                    correctOption: 0,
-                    explanation: "Esta é a explicação da questão.",
-                    tags: ["Tag1", "Tag2"]
-                )
-            ]
-        ))
-        .environmentObject(DataManager())
     }
 }

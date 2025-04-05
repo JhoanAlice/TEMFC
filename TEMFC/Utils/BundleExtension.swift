@@ -20,19 +20,73 @@ extension Bundle {
         }
     }
     
-    // Obter todos os arquivos JSON do bundle
+    // Obter todos os arquivos JSON do bundle e subdiretórios
     var allJSONFiles: [String] {
-        let resourceKeys: Set<URLResourceKey> = [.nameKey, .isDirectoryKey]
         guard let bundleURL = self.resourceURL else { return [] }
+        let fileManager = FileManager.default
         
-        do {
-            let fileURLs = try FileManager.default.contentsOfDirectory(at: bundleURL, includingPropertiesForKeys: Array(resourceKeys), options: .skipsHiddenFiles)
-            return fileURLs
-                .filter { $0.pathExtension == "json" }
-                .map { $0.deletingPathExtension().lastPathComponent }
-        } catch {
-            print("❌ Erro ao listar arquivos JSON do bundle: \(error)")
-            return []
+        var jsonFiles: [String] = []
+        
+        // Função recursiva para buscar arquivos JSON
+        func findJSONFiles(in directory: URL) {
+            do {
+                let contents = try fileManager.contentsOfDirectory(at: directory, 
+                                                                  includingPropertiesForKeys: nil, 
+                                                                  options: [.skipsHiddenFiles])
+                
+                for url in contents {
+                    var isDir: ObjCBool = false
+                    if fileManager.fileExists(atPath: url.path, isDirectory: &isDir) {
+                        if isDir.boolValue {
+                            findJSONFiles(in: url)
+                        } else if url.pathExtension.lowercased() == "json" {
+                            jsonFiles.append(url.deletingPathExtension().lastPathComponent)
+                        }
+                    }
+                }
+            } catch {
+                print("❌ Erro ao listar conteúdo do diretório \(directory.path): \(error)")
+            }
         }
+        
+        findJSONFiles(in: bundleURL)
+        return jsonFiles
+    }
+    
+    // Busca todas as URLs de arquivos JSON no bundle e subdiretórios
+    func findAllJSONFileURLs() -> [(name: String, url: URL, directory: String?)] {
+        guard let bundleURL = self.resourceURL else { return [] }
+        let fileManager = FileManager.default
+        
+        var jsonFiles: [(name: String, url: URL, directory: String?)] = []
+        
+        // Função recursiva para buscar arquivos JSON
+        func findJSONFiles(in directory: URL, parentDir: String? = nil) {
+            do {
+                let contents = try fileManager.contentsOfDirectory(at: directory, 
+                                                                 includingPropertiesForKeys: nil, 
+                                                                 options: [.skipsHiddenFiles])
+                
+                for url in contents {
+                    var isDir: ObjCBool = false
+                    if fileManager.fileExists(atPath: url.path, isDirectory: &isDir) {
+                        if isDir.boolValue {
+                            // Subdiretório - processa recursivamente
+                            let dirName = url.lastPathComponent
+                            findJSONFiles(in: url, parentDir: dirName)
+                        } else if url.pathExtension.lowercased() == "json" {
+                            // Arquivo JSON encontrado
+                            let fileName = url.deletingPathExtension().lastPathComponent
+                            jsonFiles.append((name: fileName, url: url, directory: parentDir))
+                        }
+                    }
+                }
+            } catch {
+                print("❌ Erro ao listar conteúdo do diretório \(directory.path): \(error)")
+            }
+        }
+        
+        findJSONFiles(in: bundleURL)
+        return jsonFiles
     }
 }

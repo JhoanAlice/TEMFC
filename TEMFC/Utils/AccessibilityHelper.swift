@@ -1,3 +1,5 @@
+// Caminho: TEMFC/Utils/AccessibilityHelper.swift
+
 import SwiftUI
 
 // Utilitário para melhorar a acessibilidade no app
@@ -20,6 +22,27 @@ struct AccessibilityHelper {
     // Função para agrupar elementos para acessibilidade
     static func group(_ label: String) -> some ViewModifier {
         return AccessibilityGroupModifier(label: label)
+    }
+}
+
+// Extensão para facilitar o uso de identificadores consistentes nos testes
+extension AccessibilityHelper {
+    struct TestIdentifiers {
+        static let theoreticalTab = "theoreticalExamsTab"
+        static let practicalTab = "practicalExamsTab"
+        static let studyTab = "studyTab"
+        static let performanceTab = "performanceTab"
+        
+        static let startExamButton = "startExamButton"
+        static let questionCard = "questionCard"
+        static let settingsButton = "settingsButton"
+        
+        // Identificadores para elementos de questão
+        static let optionButton = "optionButton_"
+        static let explanationSection = "explanationSection"
+        
+        // Identificadores para linhas de exame
+        static let examRow = "examRow_"
     }
 }
 

@@ -1,3 +1,5 @@
+// TEMFC/Views/SplashScreenView.swift
+
 import SwiftUI
 
 struct SplashScreenView: View {
@@ -6,6 +8,8 @@ struct SplashScreenView: View {
     @State private var loadingProgress = 0.0
     @State private var examLoadingFinished = false
     @EnvironmentObject var dataManager: DataManager
+    @EnvironmentObject var userManager: UserManager
+    @EnvironmentObject var settingsManager: SettingsManager
     
     var body: some View {
         ZStack {
@@ -17,9 +21,11 @@ struct SplashScreenView: View {
             ])
             
             if isActive {
-                // Se ativo, mostra a HomeView
-                HomeView()
+                // Se ativo, mostra a MainTabView (nova estrutura de navegação)
+                MainTabView()
                     .environmentObject(dataManager)
+                    .environmentObject(userManager)
+                    .environmentObject(settingsManager)
                     .transition(.opacity)
             } else {
                 // Interface de carregamento com indicador de progresso
@@ -111,6 +117,9 @@ struct SplashScreenView: View {
                 }
             }
         }
+        
+        // Iniciar o carregamento real dos exames
+        dataManager.loadAndProcessExams()
     }
 }
 
@@ -118,5 +127,7 @@ struct SplashScreenView_Previews: PreviewProvider {
     static var previews: some View {
         SplashScreenView()
             .environmentObject(DataManager())
+            .environmentObject(UserManager())
+            .environmentObject(SettingsManager())
     }
 }

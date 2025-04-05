@@ -1,10 +1,12 @@
+// TEMFC/Views/HomeView.swift
+
 import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var dataManager: DataManager
     @EnvironmentObject var userManager: UserManager
     @EnvironmentObject var settingsManager: SettingsManager
-    @State private var selectedTab = 0
+    @AppStorage("selectedTab") private var selectedTab = 0
     @State private var showingSettings = false
     @State private var showingProfile = false
     
@@ -14,79 +16,118 @@ struct HomeView: View {
     }
     
     var body: some View {
-        ZStack(alignment: .bottom) {
-            // Main content area – changes based on selectedTab
-            VStack(spacing: 0) {
-                // Barra superior personalizada (oculta em testes para facilitar a navegação)
-                if !isUITesting {
-                    CustomTopBar(showingProfile: $showingProfile, showingSettings: $showingSettings)
+        // Conteúdo principal
+        ZStack {
+            TabView(selection: $selectedTab) {
+                // Tab 0: Home
+                NavigationView {
+                    HomeTabView()
+                        .environmentObject(dataManager)
                         .environmentObject(userManager)
+                        .environmentObject(settingsManager)
+                        .navigationBarTitleDisplayMode(.large)
                 }
+                .navigationViewStyle(StackNavigationViewStyle())
+                .tag(0)
                 
-                // Conteúdo principal baseado na aba selecionada
-                Group {
-                    if selectedTab == 0 {
-                        NavigationView {
-                            ExamListView(examType: .theoretical)
-                                .environmentObject(dataManager)
-                                .navigationTitle("Prova Teórica")
-                                .navigationBarTitleDisplayMode(.large)
-                                .accessibilityIdentifier("theoreticalExamsTab")
-                        }
-                        .navigationViewStyle(StackNavigationViewStyle())
-                    } else if selectedTab == 1 {
-                        NavigationView {
-                            ExamListView(examType: .theoretical_practical)
-                                .environmentObject(dataManager)
-                                .navigationTitle("Prova Teórico-Prática")
-                                .navigationBarTitleDisplayMode(.large)
-                                .accessibilityIdentifier("practicalExamsTab")
-                        }
-                        .navigationViewStyle(StackNavigationViewStyle())
-                    } else if selectedTab == 2 {
-                        NavigationView {
-                            StudyView()
-                                .environmentObject(dataManager)
-                                .navigationTitle("Estudo")
-                                .navigationBarTitleDisplayMode(.large)
-                                .accessibilityIdentifier("studyTab")
-                        }
-                        .navigationViewStyle(StackNavigationViewStyle())
-                    } else {
-                        NavigationView {
-                            PerformanceView()
-                                .environmentObject(dataManager)
-                                .navigationTitle("Desempenho")
-                                .navigationBarTitleDisplayMode(.large)
-                                .accessibilityIdentifier("performanceTab")
-                        }
-                        .navigationViewStyle(StackNavigationViewStyle())
-                    }
+                // Tab 1: Teórica
+                NavigationView {
+                    ExamListView(examType: .theoretical)
+                        .environmentObject(dataManager)
+                        .navigationBarTitleDisplayMode(.large)
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .navigationViewStyle(StackNavigationViewStyle())
+                .tag(1)
+                
+                // Tab 2: Teórico-Prática
+                NavigationView {
+                    ExamListView(examType: .theoretical_practical)
+                        .environmentObject(dataManager)
+                        .navigationBarTitleDisplayMode(.large)
+                }
+                .navigationViewStyle(StackNavigationViewStyle())
+                .tag(2)
+                
+                // Tab 3: Estudo
+                NavigationView {
+                    StudyView()
+                        .environmentObject(dataManager)
+                        .navigationBarTitleDisplayMode(.large)
+                }
+                .navigationViewStyle(StackNavigationViewStyle())
+                .tag(3)
+                
+                // Tab 4: Desempenho
+                NavigationView {
+                    PerformanceView()
+                        .environmentObject(dataManager)
+                        .navigationBarTitleDisplayMode(.large)
+                }
+                .navigationViewStyle(StackNavigationViewStyle())
+                .tag(4)
             }
-            .padding(.bottom, isUITesting ? 0 : 70) // Não reservamos espaço para a tab bar em testes
             
-            // Custom tab bar - Oculta durante testes de UI para facilitar o acesso direto
+            // Barra de navegação inferior personalizada
             if !isUITesting {
-                HStack {
-                    ForEach(0..<4) { index in
-                        Spacer()
-                        tabButton(index: index)
-                        Spacer()
+                VStack {
+                    Spacer()
+                    // Custom top bar - implementação modificada para usar componentes padrão
+                    VStack {
+                        HStack {
+                            // Botão de perfil
+                            Button(action: {
+                                showingProfile = true
+                            }) {
+                                HStack(spacing: 8) {
+                                    profileImageView
+                                    
+                                    Text(userManager.currentUser.displayName)
+                                        .font(.headline)
+                                        .foregroundColor(TEMFCDesign.Colors.text)
+                                }
+                            }
+                            .buttonStyle(PlainButtonStyle())
+                            .accessibilityIdentifier("profileButton")
+                            
+                            Spacer()
+                            
+                            // Botão de configurações
+                            Button(action: {
+                                showingSettings = true
+                            }) {
+                                Image(systemName: "gearshape.fill")
+                                    .font(.system(size: 22))
+                                    .foregroundColor(TEMFCDesign.Colors.secondaryText)
+                            }
+                            .id("settingsButton")
+                            .accessibilityIdentifier("settingsButton")
+                            .accessibilityLabel("Configurações")
+                        }
+                        .padding()
+                        .background(TEMFCDesign.Colors.background)
                     }
+                    .accessibilityIdentifier("topBar")
+                    
+                    HStack {
+                        ForEach(0..<5) { index in
+                            Spacer()
+                            tabButton(index: index)
+                            Spacer()
+                        }
+                    }
+                    .padding(.vertical, 12)
+                    .background(
+                        RoundedRectangle(cornerRadius: 30)
+                            .fill(Color.white)
+                            .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: -5)
+                    )
+                    .padding(.horizontal, 20)
+                    .padding(.bottom, 20)
+                    .id("mainTabBar")
+                    .accessibilityIdentifier("tabBar")
                 }
-                .padding(.vertical, 12)
-                .background(
-                    RoundedRectangle(cornerRadius: 30)
-                        .fill(Color.white)
-                        .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: -5)
-                )
-                .padding(.horizontal, 20)
-                .padding(.bottom, 20)
             }
         }
-        .edgesIgnoringSafeArea(.bottom)
         .sheet(isPresented: $showingSettings) {
             NavigationView {
                 SettingsView(settingsManager: settingsManager)
@@ -105,18 +146,42 @@ struct HomeView: View {
                     .navigationBarTitleDisplayMode(.inline)
             }
         }
-        .onAppear {
-            print("HomeView appeared with \(dataManager.exams.count) exams loaded")
-        }
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                NavigationLink(destination: ExamHistoryListView()) {
-                    Image(systemName: "clock.arrow.circlepath")
-                        .font(.title3)
+    }
+    
+    // View auxiliar para o perfil do usuário
+    private var profileImageView: some View {
+        Group {
+            if let imageData = userManager.currentUser.profileImage,
+               let uiImage = UIImage(data: imageData) {
+                Image(uiImage: uiImage)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 36, height: 36)
+                    .clipShape(Circle())
+            } else {
+                ZStack {
+                    Circle()
+                        .fill(TEMFCDesign.Colors.primary.opacity(0.1))
+                    Text(userInitials)
+                        .font(.system(size: 14, weight: .bold))
+                        .foregroundColor(TEMFCDesign.Colors.primary)
                 }
-                .accessibilityIdentifier("examHistoryLink")
+                .frame(width: 36, height: 36)
             }
-            // Outros ToolbarItems podem ser adicionados aqui conforme necessário
+        }
+    }
+    
+    private var userInitials: String {
+        if userManager.currentUser.name.isEmpty {
+            return "?"
+        }
+        let components = userManager.currentUser.name.components(separatedBy: " ")
+        if components.count > 1 {
+            let firstInitial = components.first?.prefix(1) ?? ""
+            let lastInitial = components.last?.prefix(1) ?? ""
+            return "\(firstInitial)\(lastInitial)".uppercased()
+        } else {
+            return String(userManager.currentUser.name.prefix(1)).uppercased()
         }
     }
     
@@ -129,13 +194,15 @@ struct HomeView: View {
                 Group {
                     switch index {
                     case 0:
-                        Image(systemName: selectedTab == 0 ? "doc.text.fill" : "doc.text")
+                        Image(systemName: selectedTab == 0 ? "house.fill" : "house")
                     case 1:
-                        Image(systemName: selectedTab == 1 ? "video.fill" : "video")
+                        Image(systemName: selectedTab == 1 ? "doc.text.fill" : "doc.text")
                     case 2:
-                        Image(systemName: selectedTab == 2 ? "book.fill" : "book")
+                        Image(systemName: selectedTab == 2 ? "video.fill" : "video")
                     case 3:
-                        Image(systemName: selectedTab == 3 ? "chart.bar.fill" : "chart.bar")
+                        Image(systemName: selectedTab == 3 ? "book.fill" : "book")
+                    case 4:
+                        Image(systemName: selectedTab == 4 ? "chart.bar.fill" : "chart.bar")
                     default:
                         Image(systemName: "circle")
                     }
@@ -154,80 +221,12 @@ struct HomeView: View {
     
     private func tabTitle(for index: Int) -> String {
         switch index {
-        case 0: return "Teórica"
-        case 1: return "T-Prática"
-        case 2: return "Estudo"
-        case 3: return "Desempenho"
+        case 0: return "Home"
+        case 1: return "Teórica"
+        case 2: return "T-Prática"
+        case 3: return "Estudo"
+        case 4: return "Desempenho"
         default: return ""
-        }
-    }
-}
-
-struct CustomTopBar: View {
-    @EnvironmentObject var userManager: UserManager
-    @Binding var showingProfile: Bool
-    @Binding var showingSettings: Bool
-    
-    var body: some View {
-        HStack {
-            // Botão de perfil
-            Button(action: {
-                showingProfile = true
-            }) {
-                HStack(spacing: 8) {
-                    if let imageData = userManager.currentUser.profileImage,
-                       let uiImage = UIImage(data: imageData) {
-                        Image(uiImage: uiImage)
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 36, height: 36)
-                            .clipShape(Circle())
-                    } else {
-                        ZStack {
-                            Circle()
-                                .fill(TEMFCDesign.Colors.primary.opacity(0.1))
-                            Text(initialsFromName)
-                                .font(.system(size: 14, weight: .bold))
-                                .foregroundColor(TEMFCDesign.Colors.primary)
-                        }
-                        .frame(width: 36, height: 36)
-                    }
-                    
-                    Text(userManager.currentUser.displayName)
-                        .font(.headline)
-                        .foregroundColor(TEMFCDesign.Colors.text)
-                }
-            }
-            .buttonStyle(PlainButtonStyle())
-            .accessibilityIdentifier("profileButton")
-            
-            Spacer()
-            
-            // Botão de configurações
-            Button(action: {
-                showingSettings = true
-            }) {
-                Image(systemName: "gearshape.fill")
-                    .font(.system(size: 22))
-                    .foregroundColor(TEMFCDesign.Colors.secondaryText)
-            }
-            .accessibilityIdentifier("settingsButton")
-        }
-        .padding()
-        .background(TEMFCDesign.Colors.background)
-    }
-    
-    private var initialsFromName: String {
-        if userManager.currentUser.name.isEmpty {
-            return "?"
-        }
-        let components = userManager.currentUser.name.components(separatedBy: " ")
-        if components.count > 1 {
-            let firstInitial = components.first?.prefix(1) ?? ""
-            let lastInitial = components.last?.prefix(1) ?? ""
-            return "\(firstInitial)\(lastInitial)".uppercased()
-        } else {
-            return String(userManager.currentUser.name.prefix(1)).uppercased()
         }
     }
 }

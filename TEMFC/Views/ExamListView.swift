@@ -1,16 +1,60 @@
+// TEMFC/Views/ExamListView.swift
+
 import SwiftUI
 
 struct ExamListView: View {
     @EnvironmentObject var dataManager: DataManager
     let examType: Exam.ExamType
     @State private var showingCreateExamSheet = false
+    @State private var exams: [Exam] = []
+    @State private var isLoading = true
     
     var body: some View {
-        NavigationView {
-            ZStack {
-                TEMFCDesign.Colors.groupedBackground
-                    .ignoresSafeArea()
-                
+        // Importante: Remova o NavigationView, pois a MainTabView já fornece o contexto de navegação.
+        ZStack {
+            TEMFCDesign.Colors.groupedBackground
+                .ignoresSafeArea()
+            
+            if isLoading {
+                ProgressView("Carregando exames...")
+                    .padding()
+                    .background(
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(Color(.systemBackground))
+                    )
+                    .shadow(radius: 5)
+                    .onAppear {
+                        // Log que estamos carregando
+                        print("🔄 ExamListView: Carregando exames do tipo \(examType.rawValue)...")
+                    }
+            } else if exams.isEmpty {
+                VStack(spacing: 20) {
+                    Image(systemName: "doc.text.magnifyingglass")
+                        .font(.system(size: 60))
+                        .foregroundColor(.gray)
+                    
+                    Text("Nenhum simulado \(examType.rawValue) disponível")
+                        .font(.title3)
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.secondary)
+                    
+                    Button(action: {
+                        showingCreateExamSheet = true
+                    }) {
+                        Label("Criar Simulado Personalizado", systemImage: "plus.circle.fill")
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(TEMFCDesign.Colors.primary)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                    }
+                    .padding(.horizontal, 40)
+                    .padding(.top, 20)
+                }
+                .padding()
+                .accessibilityIdentifier("noExamsView")
+            } else {
+                // Lista de exames
                 ScrollView {
                     VStack(spacing: TEMFCDesign.Spacing.l) {
                         // Header
@@ -25,147 +69,106 @@ struct ExamListView: View {
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal, TEMFCDesign.Spacing.m)
+                        .accessibilityIdentifier("examListHeader")
                         
-                        // Lista de exames disponíveis com identificador para testes de UI
-                        ForEach(dataManager.getExamsByType(type: examType)) { exam in
+                        // Lista de exames usando o novo ExamCardView
+                        ForEach(exams) { exam in
                             NavigationLink(destination: ExamDetailView(exam: exam)) {
-                                EnhancedExamRowView(exam: exam)
+                                ExamCardView(exam: exam)
+                                    .contentShape(Rectangle()) // Garante que toda a área seja tappable
                             }
                             .buttonStyle(PlainButtonStyle())
+                            .id("examRow_\(exam.id)")
                             .accessibilityIdentifier("examRow_\(exam.id)")
+                            .padding(.horizontal, TEMFCDesign.Spacing.m)
                         }
                     }
                     .padding(.vertical, TEMFCDesign.Spacing.m)
                 }
-                .accessibilityIdentifier("examListView")
-                
-                // Botão flutuante para criação de simulado personalizado
-                VStack {
+                .accessibilityIdentifier("examListScrollView")
+                .refreshable {
+                    await refreshExams()
+                }
+            }
+            
+            // Botão flutuante para criação de simulado personalizado
+            VStack {
+                Spacer()
+                HStack {
                     Spacer()
-                    HStack {
-                        Spacer()
-                        Button(action: {
-                            TEMFCDesign.HapticFeedback.buttonPressed()
-                            showingCreateExamSheet = true
-                        }) {
-                            Image(systemName: "plus")
-                                .font(.title2)
-                                .foregroundColor(.white)
-                                .padding()
-                                .background(
-                                    Circle()
-                                        .fill(TEMFCDesign.Colors.primary)
-                                        .shadow(color: TEMFCDesign.Colors.primary.opacity(0.3), radius: 10, x: 0, y: 5)
-                                )
-                        }
-                        .padding()
-                        .accessibility(label: Text("Criar simulado personalizado"))
-                        .accessibilityIdentifier("createExamButton")
+                    Button(action: {
+                        TEMFCDesign.HapticFeedback.buttonPressed()
+                        showingCreateExamSheet = true
+                    }) {
+                        Image(systemName: "plus")
+                            .font(.title2)
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(
+                                Circle()
+                                    .fill(TEMFCDesign.Colors.primary)
+                                    .shadow(color: TEMFCDesign.Colors.primary.opacity(0.3), radius: 10, x: 0, y: 5)
+                            )
                     }
+                    .padding()
+                    .accessibility(label: Text("Criar simulado personalizado"))
+                    .accessibilityIdentifier("createExamButton")
                 }
             }
-            .onAppear {
-                print("ExamListView for \(examType.rawValue) appeared with \(dataManager.getExamsByType(type: examType).count) exams")
-            }
-            .sheet(isPresented: $showingCreateExamSheet) {
-                CreateCustomExamView(examType: examType)
-                    .environmentObject(dataManager)
-            }
-            .navigationTitle(examType == .theoretical ? "Prova Teórica" : "Prova Teórico-Prática")
-            .navigationBarTitleDisplayMode(.large)
+        }
+        .onAppear {
+            loadExams()
+            print("ExamListView appeared for \(examType.rawValue)")
+        }
+        .sheet(isPresented: $showingCreateExamSheet) {
+            CreateCustomExamView(examType: examType)
+                .environmentObject(dataManager)
         }
     }
-}
-
-struct EnhancedExamRowView: View {
-    let exam: Exam
     
-    var body: some View {
-        HStack(alignment: .top, spacing: TEMFCDesign.Spacing.m) {
-            // Ícone
-            ZStack {
-                Circle()
-                    .fill(exam.type == .theoretical ?
-                          TEMFCDesign.Colors.primary.opacity(0.1) :
-                          TEMFCDesign.Colors.accent.opacity(0.1))
-                    .frame(width: 60, height: 60)
-                
-                Image(systemName: exam.type == .theoretical ? "doc.text.fill" : "video.fill")
-                    .font(.system(size: 24))
-                    .foregroundColor(exam.type == .theoretical ?
-                                    TEMFCDesign.Colors.primary :
-                                    TEMFCDesign.Colors.accent)
+    // MARK: - Métodos para Carga de Dados
+    
+    private func loadExams() {
+        isLoading = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            // Log the state before filtering
+            print("\n🔍 DIAGNÓSTICO DE EXAMLISTVIEW PARA TIPO: \(self.examType.rawValue)")
+            print("Total de exames disponíveis: \(self.dataManager.exams.count)")
+            
+            // Log each exam in the DataManager
+            for (index, exam) in self.dataManager.exams.enumerated() {
+                print("[\(index+1)] Exame em DataManager: \(exam.name) (\(exam.id)) - Tipo: \(exam.type.rawValue)")
             }
             
-            VStack(alignment: .leading, spacing: TEMFCDesign.Spacing.xs) {
-                Text(exam.name)
-                    .font(TEMFCDesign.Typography.headline)
-                    .foregroundColor(TEMFCDesign.Colors.text)
+            // Now filter and assign
+            self.exams = self.dataManager.getExamsByType(type: self.examType)
+            
+            print("\nExames filtrados para tipo \(self.examType.rawValue): \(self.exams.count)")
+            if self.exams.isEmpty {
+                print("⚠️ ATENÇÃO: Nenhum exame encontrado para o tipo \(self.examType.rawValue)!")
                 
-                Text("\(exam.totalQuestions) questões • \(estimatedTime(exam.totalQuestions))")
-                    .font(TEMFCDesign.Typography.subheadline)
-                    .foregroundColor(TEMFCDesign.Colors.secondaryText)
-                
-                // Exibir as principais tags
-                if !uniqueTags(exam).isEmpty {
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: TEMFCDesign.Spacing.xxs) {
-                            ForEach(uniqueTags(exam).prefix(3), id: \.self) { tag in
-                                Text(tag)
-                                    .temfcTag(
-                                        backgroundColor: TEMFCDesign.Colors.tagColor(for: tag),
-                                        textColor: .white
-                                    )
-                            }
-                            
-                            if uniqueTags(exam).count > 3 {
-                                Text("+\(uniqueTags(exam).count - 3)")
-                                    .temfcTag(
-                                        backgroundColor: TEMFCDesign.Colors.secondaryText,
-                                        textColor: .white
-                                    )
-                            }
-                        }
-                    }
-                    .padding(.top, TEMFCDesign.Spacing.xxs)
+                // Verificar se há problema com enum comparação
+                for exam in self.dataManager.exams {
+                    let typeMatch = exam.type == self.examType
+                    let rawValues = "Exame: \(exam.type.rawValue), Filtro: \(self.examType.rawValue)"
+                    print("- \(exam.id): Correspondência de tipo: \(typeMatch) (\(rawValues))")
+                }
+            } else {
+                for exam in self.exams {
+                    print("- Exame carregado: \(exam.name) (\(exam.id)), Questões: \(exam.questions.count)")
                 }
             }
             
-            Spacer()
-            
-            Image(systemName: "chevron.right")
-                .font(.system(size: 14, weight: .semibold))
-                .foregroundColor(TEMFCDesign.Colors.secondaryText)
-                .padding(.top, 4)
+            self.isLoading = false
         }
-        .padding(TEMFCDesign.Spacing.m)
-        .background(
-            RoundedRectangle(cornerRadius: TEMFCDesign.BorderRadius.medium)
-                .fill(TEMFCDesign.Colors.background)
-                .shadow(color: Color.black.opacity(0.05), radius: 8, x: 0, y: 2)
-        )
-        .padding(.horizontal, TEMFCDesign.Spacing.m)
-        .accessibilityIdentifier("examRow")
     }
     
-    private func uniqueTags(_ exam: Exam) -> [String] {
-        var allTags = Set<String>()
-        for question in exam.questions {
-            for tag in question.tags {
-                allTags.insert(tag)
+    private func refreshExams() async {
+        await withCheckedContinuation { continuation in
+            DispatchQueue.main.async {
+                self.loadExams()
+                continuation.resume()
             }
-        }
-        return Array(allTags).sorted()
-    }
-    
-    private func estimatedTime(_ questionCount: Int) -> String {
-        let estimatedMinutes = questionCount * 2 // Aproximadamente 2 minutos por questão
-        if estimatedMinutes < 60 {
-            return "\(estimatedMinutes) min"
-        } else {
-            let hours = estimatedMinutes / 60
-            let minutes = estimatedMinutes % 60
-            return minutes > 0 ? "\(hours)h \(minutes)min" : "\(hours)h"
         }
     }
 }

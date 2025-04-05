@@ -16,6 +16,7 @@ struct SettingsView: View {
     
     // Variável de estado para mostrar a política de privacidade
     @State private var showingPrivacyPolicy = false
+    @State private var showingHelpSection = false
     
     @Environment(\.dismiss) var dismiss
     
@@ -201,6 +202,12 @@ struct SettingsView: View {
                     Link(destination: URL(string: "https://temfc.com.br/termos")!) {
                         Label("Termos de Uso", systemImage: "doc.text.fill")
                     }
+                    
+                    Button {
+                        showingHelpSection = true
+                    } label: {
+                        Label("Centro de Ajuda", systemImage: "questionmark.circle.fill")
+                    }
                 }
                 
                 // Seção de Acompanhamento
@@ -252,9 +259,12 @@ struct SettingsView: View {
                 }
             }
         }
-        // Sheet para exibir a política de privacidade no aplicativo
+        // Sheets para exibir a política de privacidade e ajuda no aplicativo
         .sheet(isPresented: $showingPrivacyPolicy) {
             PrivacyPolicyView()
+        }
+        .sheet(isPresented: $showingHelpSection) {
+            HelpView()
         }
     }
     

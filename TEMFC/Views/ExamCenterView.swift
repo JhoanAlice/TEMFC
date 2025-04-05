@@ -1,3 +1,5 @@
+// TEMFC/Views/ExamCenterView.swift
+
 import SwiftUI
 
 struct ExamCenterView: View {
@@ -34,7 +36,7 @@ struct ExamCenterView: View {
                 
                 // Botão para criar exame personalizado
                 Button(action: {
-                    // Lógica para criar exame personalizado (será implementada posteriormente)
+                    // Lógica para criar exame personalizado (a ser implementada)
                 }) {
                     HStack {
                         Image(systemName: "plus.circle.fill")
@@ -61,52 +63,5 @@ struct ExamCenterView: View {
         } else {
             return dataManager.exams
         }
-    }
-}
-
-// Componente de cartão de exame
-struct ExamCardView: View {
-    let exam: Exam
-    
-    var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            // Cabeçalho do exame
-            HStack {
-                Image(systemName: exam.type == .theoretical ? "doc.text.fill" : "video.fill")
-                    .font(.title2)
-                    .foregroundColor(.blue)
-                
-                Text(exam.name)
-                    .font(.headline)
-                
-                Spacer()
-                
-                Text(exam.type.rawValue)
-                    .font(.subheadline)
-                    .padding(.horizontal, 8)
-                    .padding(.vertical, 4)
-                    .background(Color.blue.opacity(0.1))
-                    .foregroundColor(.blue)
-                    .cornerRadius(8)
-            }
-            
-            Divider()
-            
-            // Informações do exame
-            HStack {
-                Label("\(exam.totalQuestions) questões", systemImage: "list.bullet")
-                    .font(.caption)
-                    .foregroundColor(.secondary)
-                
-                Spacer()
-                
-                Image(systemName: "chevron.right")
-                    .foregroundColor(.secondary)
-            }
-        }
-        .padding()
-        .background(Color(.systemBackground))
-        .cornerRadius(12)
-        .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 2)
     }
 }

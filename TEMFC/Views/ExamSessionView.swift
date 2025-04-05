@@ -1,3 +1,5 @@
+// Caminho: TEMFC/Views/ExamSessionView.swift
+
 import SwiftUI
 import AVKit
 
@@ -60,7 +62,10 @@ struct ExamSessionView: View {
                                 .padding(.top)
                                 .opacity(animateTransition ? 1 : 0)
                                 .animation(.easeInOut(duration: 0.5), value: animateTransition)
-                                .accessibilityIdentifier("questionCard")
+                                .accessibilityIdentifier(AccessibilityHelper.TestIdentifiers.questionCard)
+                                .accessibilityElement(children: .contain)
+                                .accessibilityLabel("Questão \(viewModel.currentQuestionIndex + 1)")
+                                .accessibilityHint("Questão com múltiplas alternativas. Selecione uma opção.")
                                 
                                 Spacer(minLength: 80)
                             }
@@ -162,6 +167,8 @@ struct ExamSessionView: View {
                         .foregroundColor(TEMFCDesign.Colors.text)
                 }
                 .padding(.horizontal)
+                .accessibilityElement(children: .combine)
+                .accessibilityLabel("Tempo decorrido: \(formattedTime(viewModel.elapsedTime))")
                 Spacer()
                 Button(action: {
                     TEMFCDesign.HapticFeedback.lightImpact()
@@ -236,6 +243,9 @@ struct ExamSessionView: View {
             }
             .disabled(viewModel.currentQuestionIndex == 0)
             .opacity(viewModel.currentQuestionIndex == 0 ? 0.5 : 1)
+            .accessibilityLabel("Questão anterior")
+            .accessibilityHint("Navegar para a questão anterior")
+            .accessibilityIdentifier("previousQuestionButton")
             
             Spacer()
             
@@ -255,6 +265,9 @@ struct ExamSessionView: View {
                     )
                     .foregroundColor(.white)
                 }
+                .accessibilityLabel(isLastQuestion ? "Finalizar exame" : "Próxima questão")
+                .accessibilityHint(isLastQuestion ? "Concluir o exame e ver resultados" : "Avançar para a próxima questão")
+                .accessibilityIdentifier(isLastQuestion ? "finishExamButton" : "nextQuestionButton")
             }
         }
         .padding(.horizontal, 20)
@@ -406,6 +419,7 @@ struct CustomDialogView: View {
                 Text(title)
                     .font(.headline)
                     .fontWeight(.bold)
+                    .accessibilityAddTraits(.isHeader)
                 
                 // Message
                 if !message.isEmpty {

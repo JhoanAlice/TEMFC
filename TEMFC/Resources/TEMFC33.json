@@ -1,0 +1,107 @@
+{
+  "id": "TEMFC33",
+  "name": "Prova TEMFC 33",
+  "type": "Teórica",
+  "year": "2023",
+  "totalQuestions": 5,
+  "questions": [
+    {
+      "id": 1,
+      "number": 1,
+      "statement": "Paciente de 42 anos, sexo feminino, comparece à consulta com Médico de Família e Comunidade relatando dor lombar de forte intensidade há 3 dias, após carregar sacolas pesadas de supermercado. Nega trauma direto, irradiação para membros inferiores, alterações de sensibilidade ou motricidade. Não apresenta sintomas urinários ou intestinais. Ao exame físico, apresenta dor à palpação da musculatura paravertebral lombar e contratura muscular. Manobra de Lasègue negativa bilateralmente. Qual a conduta mais adequada nesse momento?",
+      "options": [
+        "A - Solicitar ressonância magnética de coluna lombar para descartar hérnia discal",
+        "B - Prescrever repouso absoluto por uma semana e anti-inflamatórios não esteroidais",
+        "C - Recomendar manutenção das atividades habituais conforme tolerado, prescrever analgésicos e compressas mornas",
+        "D - Encaminhar para fisioterapia de urgência e prescrever relaxantes musculares por 30 dias"
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. Para lombalgias agudas sem sinais de alerta (como a descrita no caso), a conduta inicial mais adequada segundo evidências atuais é recomendar a manutenção das atividades habituais conforme tolerado pelo paciente, evitando o repouso prolongado que pode piorar a evolução. Deve-se prescrever analgésicos simples (como paracetamol ou dipirona) e terapias complementares como compressas mornas. Não há indicação para exames de imagem na fase inicial de lombalgias sem sinais de alerta (red flags). O repouso absoluto está contraindicado, pois aumenta o risco de cronificação. O encaminhamento para fisioterapia não é urgente neste momento, podendo ser considerado se não houver melhora em 2-4 semanas.",
+      "tags": [
+        "Condutas terapêuticas",
+        "Dor lombar",
+        "Medicina baseada em evidências",
+        "Musculoesquelético"
+      ]
+    },
+    {
+      "id": 2,
+      "number": 2,
+      "statement": "Homem de 52 anos, hipertenso e diabético, em uso regular de Losartana 50mg duas vezes ao dia e Metformina 850mg duas vezes ao dia, vem à consulta para avaliação de rotina. Está assintomático e seus exames mostram: Glicemia de jejum 142 mg/dL, Hemoglobina glicada 7,8%, Creatinina 1,1 mg/dL, Microalbuminúria 45 mg/24h, PA no consultório 144x92 mmHg. Qual a conduta mais adequada para otimização do tratamento deste paciente?",
+      "options": [
+        "A - Manter esquema atual e reavaliar em 6 meses",
+        "B - Associar hidroclorotiazida 25mg/dia e aumentar metformina para 1g duas vezes ao dia",
+        "C - Associar anlodipino 5mg/dia e iniciar uso de inibidor de SGLT2",
+        "D - Substituir losartana por enalapril e metformina por sulfoniluréia"
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. O paciente apresenta hipertensão não controlada (PA 144x92 mmHg) e diabetes também não controlado (HbA1c 7,8%), além de lesão em órgão-alvo (microalbuminúria). A associação de anlodipino (bloqueador de canal de cálcio) é adequada para otimização do tratamento da hipertensão, complementando o bloqueio do sistema renina-angiotensina-aldosterona já proporcionado pela losartana. Para o diabetes, a adição de inibidor de SGLT2 é particularmente benéfica, pois esta classe de medicamentos demonstra proteção renal e cardiovascular em pacientes com microalbuminúria, que é o caso. Manter o esquema atual não é adequado frente ao não controle. A hidroclorotiazida não seria a melhor escolha inicial para associação em paciente diabético com microalbuminúria. Não há necessidade de substituir losartana por enalapril, já que ambos atuam no sistema renina-angiotensina-aldosterona, e a substituição da metformina por sulfoniluréia não é recomendada como primeira medida em caso de não controle.",
+      "tags": [
+        "Diabetes",
+        "Hipertensão",
+        "Condutas terapêuticas",
+        "Doenças crônicas",
+        "Farmacologia"
+      ]
+    },
+    {
+      "id": 3,
+      "number": 3,
+      "statement": "Durante uma consulta de pré-natal de rotina com gestante de 28 semanas, primigesta, sem intercorrências até o momento, você decide abordar o plano de parto. Sobre este instrumento, assinale a alternativa correta:",
+      "options": [
+        "A - Deve ser elaborado exclusivamente no terceiro trimestre, quando a gestante já realizou o curso de gestantes",
+        "B - É um documento formal padronizado que deve ser assinado pela gestante e anexado ao prontuário",
+        "C - Permite à gestante expressar suas preferências para o parto, mas deve ser flexível e adaptável às circunstâncias clínicas",
+        "D - Deve focar exclusivamente em aspectos técnicos como tipo de parto e analgesia, evitando questões emocionais"
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. O plano de parto é um instrumento de autonomia e protagonismo da gestante que permite a ela expressar suas preferências, desejos e expectativas em relação ao momento do parto. Entretanto, é fundamental que seja encarado como um documento flexível e adaptável às circunstâncias clínicas que possam surgir durante o trabalho de parto e parto, priorizando sempre a segurança da mãe e do bebê. Não é necessário aguardar o terceiro trimestre ou que a gestante faça curso de gestantes para elaborar o plano de parto. Também não existe um documento formal padronizado, podendo ser elaborado de várias formas. Por fim, o plano de parto deve abranger tanto aspectos técnicos quanto emocionais, culturais e sociais do nascimento, não devendo se restringir a questões puramente técnicas.",
+      "tags": [
+        "Saúde da mulher",
+        "Pré-natal",
+        "Medicina centrada na pessoa",
+        "Comunicação clínica"
+      ]
+    },
+    {
+      "id": 4,
+      "number": 4,
+      "statement": "Uma comunidade apresenta elevados índices de gravidez na adolescência. A equipe de saúde da família decide implementar um programa de educação sexual e reprodutiva na escola local. Qual abordagem está mais alinhada aos princípios da promoção da saúde?",
+      "options": [
+        "A - Focar exclusivamente na distribuição de contraceptivos na escola, garantindo acesso fácil aos métodos",
+        "B - Realizar palestras mensais sobre as consequências negativas da gravidez precoce, enfatizando os riscos",
+        "C - Desenvolver grupos interativos com adolescentes, professores e familiares, abordando sexualidade, direitos reprodutivos e projeto de vida",
+        "D - Encaminhar todas as adolescentes para consultas individuais com ginecologista para prescrição de contraceptivos hormonais"
+      ],
+      "correctOption": 2,
+      "explanation": "A alternativa correta é C. A promoção da saúde, conforme definido na Carta de Ottawa, vai além de intervenções biomédicas, contemplando o empoderamento das pessoas e comunidades para maior controle sobre sua saúde. No contexto da saúde sexual e reprodutiva de adolescentes, uma abordagem alinhada a esses princípios deve ser participativa, envolvendo diversos atores (adolescentes, professores, familiares), intersetorial (saúde e educação) e abordar aspectos amplos como sexualidade, direitos reprodutivos e projetos de vida, não apenas questões biológicas ou contraceptivas. As outras alternativas apresentam abordagens reducionistas, focadas apenas em contraceptivos (A e D) ou baseadas em táticas de medo (B), que não promovem autonomia e empoderamento.",
+      "tags": [
+        "Saúde do adolescente",
+        "Promoção da saúde",
+        "Educação em saúde",
+        "Intersetorialidade",
+        "Saúde sexual e reprodutiva"
+      ]
+    },
+    {
+      "id": 5,
+      "number": 5,
+      "statement": "Mulher de 68 anos vem à consulta para mostrar exames de rotina. Está assintomática, realiza caminhadas três vezes por semana e tem alimentação equilibrada. Histórico de hipertensão e osteopenia. Faz uso de losartana e suplemento de cálcio e vitamina D. Entre seus exames, observa-se: Glicemia de jejum 112 mg/dL; HbA1c 6,3%; Colesterol total 215 mg/dL; HDL 52 mg/dL; LDL 138 mg/dL; Triglicerídeos 125 mg/dL. Qual a conduta mais adequada?",
+      "options": [
+        "A - Iniciar metformina e estatina imediatamente",
+        "B - Orientar medidas comportamentais para risco cardiovascular e pré-diabetes, reavaliando em 3-6 meses",
+        "C - Iniciar apenas estatina, pois o LDL está acima do alvo para idosos",
+        "D - Tranquilizar a paciente informando que todos os exames estão normais para a idade"
+      ],
+      "correctOption": 1,
+      "explanation": "A alternativa correta é B. A paciente apresenta pré-diabetes (glicemia de jejum 112 mg/dL e HbA1c 6,3%) e dislipidemia leve a moderada. Considerando sua idade, ausência de sintomas, prática regular de atividade física e alimentação equilibrada, a abordagem inicial mais adequada é intensificar as orientações comportamentais (atividade física, alimentação, controle do peso) e reavaliar em 3-6 meses. Iniciar medicações imediatamente (metformina e estatina) seria uma abordagem excessivamente medicalizada para o caso apresentado, especialmente considerando que a paciente tem bons hábitos e que o risco cardiovascular global provavelmente não é muito elevado. Por outro lado, afirmar que todos os exames estão normais seria negligenciar alterações que merecem atenção e seguimento, ainda que não necessitem intervenção farmacológica imediata.",
+      "tags": [
+        "Prevenção quaternária",
+        "Medicina baseada em evidências",
+        "Risco cardiovascular",
+        "Dislipidemia",
+        "Diabetes"
+      ]
+    }
+  ]
+}

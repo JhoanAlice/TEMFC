@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "D39186A1-C3BD-4BB3-A3A8-4A4016A42E50",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:TEMFC.xcodeproj",
+        "identifier" : "3A1481ED2D8FAA7000D822FB",
+        "name" : "TEMFCTests"
+      }
+    }
+  ],
+  "version" : 1
+}
